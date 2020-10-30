@@ -25,6 +25,10 @@ import re
 datatest['descripcion_del_hecho - Final'] = datatest['descripcion_del_hecho - Final'].apply(lambda x: re.sub('[^\w\s]','',x))
 datatest['descripcion_del_hecho - Final'] = datatest['descripcion_del_hecho - Final'].apply(lambda x: re.sub('\d+','',x))
 
+countedWords = []
+
+for desc in datatest['descripcion_del_hecho - Final']:
+    countedWords.append(len(desc))
 #Save
 #datatest.iloc[:].to_csv('../dataset/descripciones-test.csv',sep=' ', index=False, header=True)
 
@@ -33,10 +37,28 @@ datatest['descripcion_del_hecho - Final'] = datatest['descripcion_del_hecho - Fi
 '''
 #nltk.download('stopwords')
 from nltk.corpus import stopwords
+from nltk.corpus import swadesh
+
+dictionary = ['vh','amb','av','avenida','ambulancia','cruza','calle','policia','impacto','observo','conductor','rotonda','casco']
+#Added stopword dictionary
+
+for word in swadesh.words('es'):
+    dictionary.append(word)
+
+for word in stopwords.words('spanish'):
+    dictionary.append(word)
 
 datatest['descripcion_del_hecho - Final'] = datatest['descripcion_del_hecho - Final'].apply(
-    lambda x: " ".join(x for x in x.split() if x not in stopwords.words('spanish'))
+    lambda x: " ".join(x for x in x.split() if x not in dictionary)
 )
+
+countedWordsDeleted = []
+for desc in datatest['descripcion_del_hecho - Final']:
+    countedWordsDeleted.append(len(desc))
+
+print(countedWords)
+print(countedWordsDeleted)
+
 #print(datatest)
 '''
     Tokenize
@@ -53,13 +75,11 @@ datatest['descripcion_del_hecho - Final'] = datatest['descripcion_del_hecho - Fi
     Pos tagger
 '''
 
-import nltk
 #nltk.download('averaged_perceptron_tagger')
 #nltk.download('wordnet')
 from nltk.tag import pos_tag
 
 datatest['descripcion_del_hecho - Final']= datatest['descripcion_del_hecho - Final'].apply(pos_tag)
-#print(datatest)
 
 #datatest.iloc[:].to_csv('../dataset/descripciones-test.csv',sep=' ', index=False, header=True)
 
@@ -78,10 +98,25 @@ def get_words(tag):
 
 datatest['descripcion_del_hecho - Final']= datatest['descripcion_del_hecho - Final'].apply(lambda x: [(word, get_words(pos_tag)) for (word, pos_tag) in x])
 
-#print(datatest)
+for desc in datatest['descripcion_del_hecho - Final']:
+    for value in desc:
+        if(value[1] is 'v' or value[1] is 'r'):
+            desc.remove(value)
 
+countedWordsDeleted2 = []
+for desc in datatest['descripcion_del_hecho - Final']:
+    countedWordsDeleted2.append(len(desc))
+
+print(countedWordsDeleted2)
+'''
+    Lemmatization
+'''
 from nltk.stem import WordNetLemmatizer
 datatest['descripcion_del_hecho - Final']= datatest['descripcion_del_hecho - Final'].apply(lambda x: [WordNetLemmatizer().lemmatize(word,tag) for word, tag in x])
 #print(datatest)
+
+from nltk.probability import FreqDist
+for value in datatest['descripcion_del_hecho - Final']:
+    frecuency = FreqDist(value)
 
 datatest.iloc[:].to_csv('../dataset/descripciones-test.csv',sep=' ', index=False, header=True)

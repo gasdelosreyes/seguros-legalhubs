@@ -10,18 +10,18 @@ from nltk.tag import pos_tag
 '''
     Create a dictionary
 '''
+# Elimina palabras que no sirven y las stopwords.
 def Dictionary():
     dic = ['vh','amb','av','avenida','ambulancia','cruza','calle','policia','impacto','observo','conductor','rotonda','casco']
-    # print(stopwords.words('spanish'))
     for i in stopwords.words('spanish'):
         if(i is not 'derecha' or i is not 'izquierda'):
             dic.append(i)
-    # print(swadesh.words('es'))
     for i in swadesh.words('es'):
         if(i is not 'derecha' or i is not 'izquierda'):
             dic.append(i)
     return dic
 
+#Elimina las palabras del words, text es un string. Falta que busque 'interv'
 def deleteExtraData(text):
     words = ['intervino','interviene','ampliacion','formalizo']
     for w in words:
@@ -30,12 +30,11 @@ def deleteExtraData(text):
             text = text.split(w)[0]
     return text
 
+#Tokeniza y después te muestra las 30 más frecuentes.
 def tokenization(text):
     words = word_tokenize(text)
     freq = nltk.FreqDist(words)
     print(freq.most_common(30))
-    # tagged = pos_tag(words)
-    # print(tagged)
 
 openfile = pd.read_excel('../dataset/casos_universidad.xlsx')
 
@@ -63,7 +62,7 @@ dataset = dataset.apply(lambda x: x.astype(str).str.lower())
         (\r\r?|\n) -> Delete line breaks
         \d+ -> Delete all the numbers
 '''
-
+#Este segmento limpia las palabras de los hexadecimales y borra las palabras con Dictionary().
 dataset['descripcion_del_hecho - Final'] = dataset['descripcion_del_hecho - Final'].apply(
     lambda x: re.sub('[^\w\s]','',x)
 )

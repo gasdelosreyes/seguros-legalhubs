@@ -33,7 +33,7 @@ for desc in datatest['descripcion_del_hecho - Final']:
 #datatest.iloc[:].to_csv('../dataset/descripciones-test.csv',sep=' ', index=False, header=True)
 
 '''
-    StopWords 
+    StopWords
 '''
 #nltk.download('stopwords')
 from nltk.corpus import stopwords
@@ -109,7 +109,7 @@ for desc in datatest['descripcion_del_hecho - Final']:
 
 print(countedWordsDeleted2)
 '''
-    Lemmatization
+   Lemmatization
 '''
 from nltk.stem import WordNetLemmatizer
 datatest['descripcion_del_hecho - Final']= datatest['descripcion_del_hecho - Final'].apply(lambda x: [WordNetLemmatizer().lemmatize(word,tag) for word, tag in x])

@@ -7,6 +7,7 @@ from nltk.probability import FreqDist
 from nltk.tokenize import word_tokenize
 from nltk.tag import pos_tag
 import nltk
+from nltk.collocations import *
 from nltk.corpus import wordnet,stopwords,swadesh
 import re
 
@@ -70,35 +71,7 @@ peaton = cleaner(peaton)
 bici = cleaner(bici)
 auto = cleaner(auto)
 
-
 # %%
-
-
-# %% [markdown]
-# moto['word_tokenize'] = moto['descripcion_del_hecho - Final']
-# moto['word_tokenize']=moto['word_tokenize'].apply(word_tokenize)
-# moto = moto.rename(columns={'descripcion_del_hecho - Final':'descripcion'})
-# 
-# 
-# %% [markdown]
-# moto['pos_tag'] = moto['word_tokenize']
-# moto['pos_tag'] = moto['pos_tag'].apply(pos_tag)
-# %% [markdown]
-# def get_words(tag):
-#     if tag.startswith('J'):
-#         return wordnet.ADJ
-#     elif tag.startswith('V'):
-#         return wordnet.VERB
-#     elif tag.startswith('N'):
-#         return wordnet.NOUN
-#     elif tag.startswith('R'):
-#         return wordnet.ADV
-#     else:
-#         return wordnet.NOUN
-# 
-# %% [markdown]
-# moto['pos_tag']= moto['pos_tag'].apply(lambda x: [(word, get_words(pos_tag)) for (word, pos_tag) in x])
-# 
-# %% [markdown]
-# moto.head()
-
+moto.to_csv(path + 'moto_clean.csv',sep=';',index=False,header=True)
+    
+# %%

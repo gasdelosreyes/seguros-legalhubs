@@ -1,17 +1,14 @@
 # %%
-from os import sep
-from nltk import data
-from nltk.probability import FreqDist
-from nltk.text import Text
+import re
+
 import nltk
 import pandas as pd
-import matplotlib.pyplot as plt
-import re
-from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.corpus import swadesh
-from nltk.tag import pos_tag
-
+from nltk.probability import FreqDist
+from nltk.text import Text
+from nltk.tokenize import word_tokenize
+from fuzzywuzzy import fuzz
 # %%
 '''
     Create a dictionary
@@ -66,21 +63,22 @@ def tokenization(text):
 
 def max_ratio(w):
     try:
-        dic = ['parte', 'circulaba', 'delantera', 'delantero', 'delante', 'enfrente', 'izquierda', 'derecha', 'lateral', 'colisiona',
-               'colision', 'colisiono', 'colisionada', 'colisionado', 'colisionando', 'trasero', 'trasera', 'impacta', 'impacto',
-               'impactado', 'impactada', 'embiste', 'embistio', 'embestido', 'iba', 'venia', 'frente', 'lado', 'detras',
-               'atras', 'costado', 'choca', 'choco', 'chocando', 'choque', 'costado', 'frontal', 'parte']
+        dic = ['parte','circulaba','delantera','delantero','delante','enfrente','izquierda','izquierdo','derecha','lateral',
+               'colisiona','colision','colisiono','colisionada','colisionado','colisionando','trasero','trasera','impacta',
+               'impacto','impactado','impactada','embiste','embistio','embestido','iba','venia','frente','lado','detras',
+           'atras','costado','choca','choco','chocando','choque','costado','frontal']
+
         aux = 0
-        word = ''
+        word=''
         for i in dic:
-            if aux <= fuzz.ratio(w, i) and 80 < fuzz.ratio(w, i) or 90 < fuzz.partial_ratio(w, i):
-                aux = max(fuzz.ratio(w, i), fuzz.partial_ratio(w, i))
-                word = i
-        # print(w,word)
-        if word != '':
+            if (aux<=fuzz.ratio(w,i) and 80<=fuzz.ratio(w,i)) or 90<=fuzz.partial_ratio(w,i):
+                aux=max(fuzz.ratio(w,i),fuzz.partial_ratio(w,i))
+                word=i
+        #print(w,word)
+        if word!='':
             return word
         return w
-        # return w hay que poner para usar, mientras me sirve para evaluar
+        #return w hay que poner para usar, mientras me sirve para evaluar
     except:
         return w
 

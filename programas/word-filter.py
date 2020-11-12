@@ -33,7 +33,8 @@ def Dictionary():
 
 
 def deleteExtraData(text):
-    words = ['interv', 'amplia', 'formal']
+    #'formal' Se quito momentanemanete, algunas frases arrancan con formalizo
+    words = ['interv', 'amplia']
     for w in words:
         if w in text:
             text = text.split(w)[0]
@@ -42,7 +43,6 @@ def deleteExtraData(text):
 
 # Retorna una lista de las palabras cuya frecuencia es menor a 'value'
 # si value=20 retorna la frecuencia de las de 10 dentro de las de 20.
-
 
 def deleteFrequence(freq, tokens, value):
     deletetokens = []
@@ -54,27 +54,15 @@ def deleteFrequence(freq, tokens, value):
     return deletetokens
 
 
-# Tokeniza y después te muestra las 30 más frecuentes.
-
-
-def tokenization(text):
-    words = word_tokenize(text)
-    freq = nltk.FreqDist(words)
-    print(freq.most_common(30))
-
-
 # Devuelve la palabra más cercana según el algoritmo de levenshtein
-
 
 def max_ratio(w):
     try:
-        dic = ['parte', 'circulaba', 'delantera', 'delantero', 'delante', 'enfrente', 'izquierda', 'izquierdo',
-               'derecha', 'lateral',
-               'colisiona', 'colision', 'colisiono', 'colisionada', 'colisionado', 'colisionando', 'trasero', 'trasera',
-               'impacta',
-               'impacto', 'impactado', 'impactada', 'embiste', 'embistio', 'embestido', 'iba', 'venia', 'frente',
-               'lado', 'detras',
-               'atras', 'costado', 'choca', 'choco', 'chocando', 'choque', 'costado', 'frontal']
+        dic = ['parte', 'circulaba', 'delantera', 'delantero', 'delante', 'enfrente', 'izquierda', 'izquierdo', 'derecha', 'lateral', 'colisiona', 'colision', 'colisiono', 'colisionada', 'colisionado', 'colisionando', 'trasero', 'trasera',
+               'impacta', 'impacto', 'impactado', 'impactada', 'embiste', 'embistio', 'embestido', 'iba', 'venia', 'frente','lado', 'detras','atras', 'costado', 'choca', 'choco', 'chocando', 'choque', 'costado', 'frontal' ,'asegurado', 'cae', 'venia', 'piso', 'aseg', 'lesiones', 'medios', 'vehiculo', 'ocupante', 'persona',
+               'datos', 'propios', 'desplazamientos', 'solo', 'llegar', 'puerta', 'cayo', 'ultima', 'hecho', 'caen', 'maniobra', 'acompanante', 'segun', 'pavimento', 'hospital', 'espejo', 'ambos', 'habia', 'suelo',
+               'tenia', 'frena', 'mecanica', 'levanta', 'ocupantes', 'momento', 'dolor', 'velocidad', 'version', 'personas', 'san', 'asfalto', 'marcha', 'llevaba', 'retira', 'mismo', 'sola', 'produce', 'ingresar',
+               'puesto', 'trasladado', 'luz', 'presentaba', 'retiro', 'maniobro', 'tomar', 'asfalto']
 
         aux = 0
         word = ''
@@ -129,9 +117,9 @@ dataframe = dataframe.iloc[:, [5, 11, 7]]
 # len = 1171 rows x 3 columns
 
 # guardamos solo las columnas de interes
-dataframe.to_csv('../dataset/casos_filtrados.csv', index=False, header=True)
+dataframe.to_csv('../dataset/casos_filtrados.csv', sep=',', index=False, header=True)
 
-dataset = pd.read_csv('../dataset/casos_filtrados.csv')
+dataset = pd.read_csv('../dataset/casos_filtrados.csv', sep=',')
 # len = 1249 rows x 3 columns PRLOBLEMS!!
 # Algo esta pasando en el to_csv porque esta metiendo comprometida en la columna
 # de descripcion del hecho.
@@ -171,29 +159,29 @@ dataset['descripcion_del_hecho - Final'] = dataset['descripcion_del_hecho - Fina
 dataset['descripcion_del_hecho - Final'] = dataset['descripcion_del_hecho - Final'].apply(
     lambda x: " ".join(x for x in x.split() if x not in Dictionary())
 )
-# le cambié el separador por una ',' simple :)
-dataset.to_csv('../dataset/casos_filtrados_regex.csv',
-               index=False, header=True)
+# # le cambié el separador por una ',' simple :)
+# dataset.to_csv('../dataset/casos_filtrados_regex.csv',
+#                index=False, header=True)
 
 for row in dataset['descripcion_del_hecho - Final']:
     dataset.loc[dataset['descripcion_del_hecho - Final'] == row,
                 'descripcion_del_hecho - Final'] = deleteExtraData(row)
 
-# le cambié el separador por una ',' simple :)
-dataset.to_csv('../dataset/casos_filtrados_cut.csv',
-               index=False, header=True)
+
+
+'''
+    Apply Levenshtein algorithm
+'''
+# # le cambié el separador por una ',' simple :)
+# dataset.to_csv('../dataset/casos_filtrados_cut.csv',
+#                index=False, header=True)
 
 # si vamos a hacer estadística sobre todas las palabras y tokenizarlas el ; no es necesario.11/11/2020
 # estoy teniendo problemas porque en el csv me esta agregando lineas en la columna de descripcion del hecho
-fstring = ''
-for row in dataset['descripcion_del_hecho - Final']:
-    fstring += row + ';'
 
-tokens = word_tokenize(fstring)
+# tokens = word_tokenize(fstring)
 
-nltkText = Text(tokens)
 
-f = FreqDist(nltkText)
 
 # fstring = deleteFrequence(f, nltkText, fstring, 30)
 
@@ -211,11 +199,59 @@ f = FreqDist(nltkText)
 #         twenty.append(w)
 # print(deletetokens)
 # print(twenty)
-dataset.insert(2, 'frecuencias-10', '')
-dataset.insert(3, 'frecuencias-20', '')
-dataset.insert(4, 'frecuencias-30', '')
-dataset.insert(5, 'frecuencias-40', '')
-dataset.insert(6, 'frecuencias-50', '')
+
+# dataset.to_csv('../dataset/casos_filtrados_frequences.csv',
+#                index=False, header=True)
+
+# dataset = pd.read_csv('../dataset/casos_filtrados_frequences.csv')
+dataset.insert(2, 'fuzzy', dataset['descripcion_del_hecho - Final'])
+
+for row1 in dataset['fuzzy']:
+    try:
+        row = row1.split()
+        row2 = []
+        for w in row:
+            row2.append(max_ratio(w))
+        row = ' '.join(row2)
+        dataset['fuzzy'].replace(row1, row)
+    except TypeError:
+        continue
+
+fstring = ''
+for row in dataset['fuzzy']:
+    fstring += row + ' '
+
+tokens = word_tokenize(fstring)
+
+nltkText = Text(tokens)
+
+f = FreqDist(nltkText)
+
+# new_tok = []
+# for w in tokens:
+#     new_tok.append(max_ratio(w))
+
+# nltkText = Text(tokens)
+# f = FreqDist(nltkText)
+# common1 = f.most_common(100)
+
+# tokens = new_tok
+# new_tok = []
+
+# for w in tokens:
+#     new_tok.append(max_ratio_anti(w))
+# tokens = new_tok
+
+# nltkText = Text(tokens)
+# f = FreqDist(nltkText)
+# common2 = f.most_common(100)
+
+
+dataset.insert(3, 'frecuencias-10', '')
+dataset.insert(4, 'frecuencias-20', '')
+dataset.insert(5, 'frecuencias-30', '')
+dataset.insert(6, 'frecuencias-40', '')
+dataset.insert(7, 'frecuencias-50', '')
 
 f10 = deleteFrequence(f, nltkText, 10)
 f20 = deleteFrequence(f, nltkText, 20)
@@ -223,66 +259,28 @@ f30 = deleteFrequence(f, nltkText, 30)
 f40 = deleteFrequence(f, nltkText, 40)
 f50 = deleteFrequence(f, nltkText, 50)
 
-dataset['frecuencias-10'] = dataset['descripcion_del_hecho - Final'].apply(
+dataset['frecuencias-10'] = dataset['fuzzy'].apply(
     lambda x: " ".join(x for x in x.split() if x not in f10)
 )
 
-dataset['frecuencias-20'] = dataset['descripcion_del_hecho - Final'].apply(
+dataset['frecuencias-20'] = dataset['fuzzy'].apply(
     lambda x: " ".join(x for x in x.split() if x not in f20)
 )
 
-dataset['frecuencias-30'] = dataset['descripcion_del_hecho - Final'].apply(
+dataset['frecuencias-30'] = dataset['fuzzy'].apply(
     lambda x: " ".join(x for x in x.split() if x not in f30)
 )
 
-dataset['frecuencias-40'] = dataset['descripcion_del_hecho - Final'].apply(
+dataset['frecuencias-40'] = dataset['fuzzy'].apply(
     lambda x: " ".join(x for x in x.split() if x not in f40)
 )
 
-dataset['frecuencias-50'] = dataset['descripcion_del_hecho - Final'].apply(
+dataset['frecuencias-50'] = dataset['fuzzy'].apply(
     lambda x: " ".join(x for x in x.split() if x not in f50)
 )
 
-dataset.to_csv('../dataset/casos_filtrados_frequences.csv',
-               index=False, header=True)
-
-dataset = pd.read_csv('../dataset/casos_filtrados_frequences.csv')
-col = 'descripcion_del_hecho - Final'
-for row1 in dataset[col]:
-    try:
-        row = row1.split()
-        row2 = []
-        for w in row:
-            row2.append(max_ratio(w))
-        row = ' '.join(row2)
-        dataset.replace(row1, row)
-    except TypeError:
-        continue
-
-fstring = ''
-for row in dataset[col]:
-    fstring += str(row) + ' '
-
-tokens = word_tokenize(fstring)
-new_tok = []
-for w in tokens:
-    new_tok.append(max_ratio(w))
-
-nltkText = Text(tokens)
-f = FreqDist(nltkText)
-common1 = f.most_common(100)
-
-tokens = new_tok
-new_tok = []
-
-for w in tokens:
-    new_tok.append(max_ratio_anti(w))
-tokens = new_tok
-
-nltkText = Text(tokens)
-f = FreqDist(nltkText)
-common2 = f.most_common(100)
-
+dataset.to_csv('../dataset/casos_filtrados_total.csv', sep=';',
+                index=False, header=True)
 # Comparar los hapaxes con las palabras positivas del dic con un ratio mayor a 70 para extraer las que esten mal
 # escritas
 dic = ['parte', 'circulaba', 'delantera', 'delantero', 'delante', 'enfrente', 'izquierda', 'derecha', 'lateral',

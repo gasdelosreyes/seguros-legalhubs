@@ -1,14 +1,12 @@
 import re
 
-import nltk
 import pandas as pd
+from fuzzywuzzy import fuzz
 from nltk.corpus import stopwords
 from nltk.corpus import swadesh
 from nltk.probability import FreqDist
 from nltk.text import Text
 from nltk.tokenize import word_tokenize
-from fuzzywuzzy import fuzz
-from matplotlib import pyplot as plt
 
 '''
     Create a dictionary
@@ -34,7 +32,7 @@ def Dictionary():
 
 
 def deleteExtraData(text):
-    #'formal' Se quito momentanemanete, algunas frases arrancan con formalizo
+    # 'formal' Se quito momentanemanete, algunas frases arrancan con formalizo
     words = ['interv', 'amplia']
     for w in words:
         if w in text:
@@ -59,30 +57,13 @@ def deleteFrequence(freq, tokens, value):
 
 def max_ratio(w):
     try:
-        dic = ['parte', 'circulaba', 'delantera', 'delantero', 'delante', 'enfrente', 'izquierda', 'izquierdo', 'derecha', 'lateral', 'colisiona', 'colision', 'colisiono', 'colisionada', 'colisionado', 'colisionando', 'trasero', 'trasera',
-               'impacta', 'impacto', 'impactado', 'impactada', 'embiste', 'embistio', 'embestido', 'iba', 'venia', 'frente','lado', 'detras','atras', 'costado', 'choca', 'choco', 'chocando', 'choque', 'costado', 'frontal' ,'asegurado', 'cae', 'venia', 'piso', 'aseg', 'lesiones', 'medios', 'vehiculo', 'ocupante', 'persona',
-               'datos', 'propios', 'desplazamientos', 'solo', 'llegar', 'puerta', 'cayo', 'ultima', 'hecho', 'caen', 'maniobra', 'acompanante', 'segun', 'pavimento', 'hospital', 'espejo', 'ambos', 'habia', 'suelo',
-               'tenia', 'frena', 'mecanica', 'levanta', 'ocupantes', 'momento', 'dolor', 'velocidad', 'version', 'personas', 'san', 'asfalto', 'marcha', 'llevaba', 'retira', 'mismo', 'sola', 'produce', 'ingresar',
-               'puesto', 'trasladado', 'luz', 'presentaba', 'retiro', 'maniobro', 'tomar', 'asfalto']
-
-        aux = 0
-        word = ''
-        for i in dic:
-            if (aux <= fuzz.ratio(w, i) and 80 <= fuzz.ratio(w, i)) or 90 <= fuzz.partial_ratio(w, i):
-                aux = max(fuzz.ratio(w, i), fuzz.partial_ratio(w, i))
-                word = i
-        # print(w,word)
-        if word != '':
-            return word
-        return w
-        # return w hay que poner para usar, mientras me sirve para evaluar
-    except TypeError:
-        return w
-
-
-def max_ratio_anti(w):
-    try:
-        dic = ['asegurado', 'cae', 'venia', 'piso', 'aseg', 'lesiones', 'medios', 'vehiculo', 'ocupante', 'persona',
+        dic = ['parte', 'circulaba', 'delantera', 'delantero', 'delante', 'enfrente', 'izquierda', 'izquierdo',
+               'derecha', 'lateral', 'colisiona', 'colision', 'colisiono', 'colisionada', 'colisionado', 'colisionando',
+               'trasero', 'trasera',
+               'impacta', 'impacto', 'impactado', 'impactada', 'embiste', 'embistio', 'embestido', 'iba', 'venia',
+               'frente', 'lado', 'detras', 'atras', 'costado', 'choca', 'choco', 'chocando', 'choque', 'costado',
+               'frontal', 'asegurado', 'cae', 'venia', 'piso', 'aseg', 'lesiones', 'medios', 'vehiculo', 'ocupante',
+               'persona',
                'datos', 'propios', 'desplazamientos', 'solo', 'llegar', 'puerta', 'cayo', 'ultima', 'hecho', 'caen',
                'maniobra', 'acompanante', 'segun', 'pavimento', 'hospital', 'espejo', 'ambos', 'habia', 'suelo',
                'tenia', 'frena', 'mecanica', 'levanta', 'ocupantes', 'momento', 'dolor', 'velocidad', 'version',
@@ -103,7 +84,6 @@ def max_ratio_anti(w):
     except TypeError:
         return w
 
-
 col = 'descripcion_del_hecho - Final'
 
 dataframe = pd.read_excel('../dataset/casos_universidad.xlsx')
@@ -118,9 +98,9 @@ dataframe = dataframe.iloc[:, [5, 11, 7]]
 # len = 1171 rows x 3 columns
 
 # guardamos solo las columnas de interes
-#dataframe.to_csv('../dataset/casos_filtrados.csv', index=False, header=True)
+# dataframe.to_csv('../dataset/casos_filtrados/casos_filtrados.csv', index=False, header=True)
 
-dataset = pd.read_csv('../dataset/casos_filtrados.csv', sep=',')
+dataset = pd.read_csv('../dataset/casos_filtrados/casos_filtrados.csv')
 # len = 1249 rows x 3 columns PRLOBLEMS!!
 # Algo esta pasando en el to_csv porque esta metiendo comprometida en la columna
 # de descripcion del hecho.
@@ -135,11 +115,6 @@ dataset = dataset.drop(del_row)
 
 # todo a minuscula
 dataset = dataset.apply(lambda x: x.astype(str).str.lower())
-
-# countedWords = []
-
-# for desc in dataset['descripcion_del_hecho - Final']:
-#     countedWords.append(len(desc))
 
 '''
     Apply regular expression
@@ -161,7 +136,7 @@ dataset['descripcion_del_hecho - Final'] = dataset['descripcion_del_hecho - Fina
     lambda x: " ".join(x for x in x.split() if x not in Dictionary())
 )
 # le cambié el separador por una ',' simple :)
-#dataset.to_csv('../dataset/casos_filtrados_regex.csv',
+# dataset.to_csv('../dataset/casos_filtrados/casos_filtrados_regex.csv',
 #               index=False, header=True)
 
 for row in dataset['descripcion_del_hecho - Final']:
@@ -169,77 +144,31 @@ for row in dataset['descripcion_del_hecho - Final']:
                 'descripcion_del_hecho - Final'] = deleteExtraData(row)
 
 # le cambié el separador por una ',' simple :)
-#dataset.to_csv('../dataset/casos_filtrados_cut.csv',
+# dataset.to_csv('../dataset/casos_filtrados/casos_filtrados_cut.csv',
 #             index=False, header=True)
 
 
 '''
     Apply Levenshtein algorithm
 '''
-# # le cambié el separador por una ',' simple :)
-# dataset.to_csv('../dataset/casos_filtrados_cut.csv',
-#                index=False, header=True)
 
-# si vamos a hacer estadística sobre todas las palabras y tokenizarlas el ; no es necesario.11/11/2020
-# estoy teniendo problemas porque en el csv me esta agregando lineas en la columna de descripcion del hecho
-
-# tokens = word_tokenize(fstring)
-
-
-
-# fstring = deleteFrequence(f, nltkText, fstring, 30)
-
-
-# '''
-#     Frequences less than 10
-#     Frequences less than 20
-# '''
-# deletetokens = []
-# twenty = []
-# for w in nltkText:
-#     if(f[w] <= 10):
-#         deletetokens.append(w)
-#     if(f[w] > 10 and f[w] <= 20):
-#         twenty.append(w)
-# print(deletetokens)
-# print(twenty)
-
-# dataset.to_csv('../dataset/casos_filtrados_frequences.csv',
-#                index=False, header=True)
-
-# dataset = pd.read_csv('../dataset/casos_filtrados_frequences.csv')
+# dataset = pd.read_csv('../dataset/casos_filtrados/casos_filtrados_frequences.csv')
 dataset.insert(2, 'fuzzy', dataset['descripcion_del_hecho - Final'])
 
-dataset['frecuencias-20'] = dataset['descripcion_del_hecho - Final'].apply(
-    lambda x: " ".join(x for x in x.split() if x not in f20)
-)
-
-dataset['frecuencias-30'] = dataset['descripcion_del_hecho - Final'].apply(
-    lambda x: " ".join(x for x in x.split() if x not in f30)
-)
-
-dataset['frecuencias-40'] = dataset['descripcion_del_hecho - Final'].apply(
-    lambda x: " ".join(x for x in x.split() if x not in f40)
-)
-
-dataset['frecuencias-50'] = dataset['descripcion_del_hecho - Final'].apply(
-    lambda x: " ".join(x for x in x.split() if x not in f50)
-)
-
-#dataset.to_csv('../dataset/casos_filtrados_frequences.csv',
+# dataset.to_csv('../dataset/casos_filtrados/casos_filtrados_frequences.csv',
 #               index=False, header=True)
 
-dataset = pd.read_csv('../dataset/casos_filtrados_frequences.csv')
+#dataset = pd.read_csv('../dataset/casos_filtrados_frequences.csv')
 col = 'descripcion_del_hecho - Final'
-for row1 in dataset[col]:
+for row1 in dataset['fuzzy']:
     try:
         row = row1.split()
         row2 = []
         for w in row:
             row2.append(max_ratio(w))
         row = ' '.join(row2)
-        dataset.replace(row1, row)
-    except :
+        dataset['fuzzy'].replace(row1, row)
+    except:
         continue
 
 fstring = ''
@@ -304,8 +233,8 @@ dataset['frecuencias-50'] = dataset['fuzzy'].apply(
     lambda x: " ".join(x for x in x.split() if x not in f50)
 )
 
-dataset.to_csv('../dataset/casos_filtrados_total.csv', sep=';',
-                index=False, header=True)
+dataset.to_csv('../dataset/casos_filtrados/casos_filtrados_total.csv',
+               index=False, header=True)
 # Comparar los hapaxes con las palabras positivas del dic con un ratio mayor a 70 para extraer las que esten mal
 # escritas
 dic = ['parte', 'circulaba', 'delantera', 'delantero', 'delante', 'enfrente', 'izquierda', 'derecha', 'lateral',
@@ -314,5 +243,3 @@ dic = ['parte', 'circulaba', 'delantera', 'delantero', 'delante', 'enfrente', 'i
        'impacto',
        'impactado', 'impactada', 'embiste', 'embistio', 'embestido', 'iba', 'venia', 'frente', 'lado', 'detras',
        'atras', 'costado', 'choca', 'choco', 'chocando', 'choque', 'costado', 'frontal', 'parte']
-
-plt.hist(f)

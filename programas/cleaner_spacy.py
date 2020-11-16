@@ -2,7 +2,7 @@
 # Tokenizamos y luego tag
 # %%
 from scipy.sparse import data
-from sklearn import feature_extraction, model_selection, naive_bayes, pipeline, manifold, preprocessing, feature_selection,metrics
+from sklearn import feature_extraction, model_selection, naive_bayes, pipeline, manifold, preprocessing, feature_selection, metrics
 import matplotlib.pyplot as plt
 import seaborn as sns
 from os import sep
@@ -15,10 +15,10 @@ path = '../dataset/'
 # %%
 nlp = es_core_news_sm.load()
 # %%
-bici = pd.read_csv('../dataset/bici_clean.csv', sep=';')
-moto = pd.read_csv('../dataset/moto_clean.csv', sep=';')
-auto = pd.read_csv('../dataset/auto_clean.csv', sep=';')
-peaton = pd.read_csv('../dataset/peaton_clean.csv', sep=';')
+bici = pd.read_csv('../dataset/casos/bici_clean.csv', sep=';')
+moto = pd.read_csv('../dataset/casos/moto_clean.csv', sep=';')
+auto = pd.read_csv('../dataset/casos/auto_clean.csv', sep=';')
+peaton = pd.read_csv('../dataset/casos/peaton_clean.csv', sep=';')
 # %%
 bici['descripcion_del_hecho - Final'] = bici['descripcion_del_hecho - Final'].astype(
     str).apply(str.split)
@@ -38,10 +38,10 @@ peaton.to_csv(path + 'token/peaton_token.csv')
 #Tokenization - Etiquetado - Lemmatization
 # La función nlp recibe un string
 # El objeto Doc es una secuencia de objetos Token, osea cada fila de la columnda es un Doc.
-bici = pd.read_csv('../dataset/bici_clean.csv', sep=';')
-moto = pd.read_csv('../dataset/moto_clean.csv', sep=';')
-auto = pd.read_csv('../dataset/auto_clean.csv', sep=';')
-peaton = pd.read_csv('../dataset/peaton_clean.csv', sep=';')
+bici = pd.read_csv('../dataset/casos/bici_clean.csv', sep=';')
+moto = pd.read_csv('../dataset/casos/moto_clean.csv', sep=';')
+auto = pd.read_csv('../dataset/casos/auto_clean.csv', sep=';')
+peaton = pd.read_csv('../dataset/casos/peaton_clean.csv', sep=';')
 
 bici['descripcion_del_hecho - Final'] = bici['descripcion_del_hecho - Final'].astype(
     str).apply(nlp)
@@ -89,10 +89,10 @@ dataset = dataset.rename(columns={'Idenx original': 'Index original'})
 dataset = pd.concat([dataset, pd.get_dummies(
     dataset['tipo_de_accidente'])], axis=1)
 dataset.sort_index()
-#%%
+# %%
 
 dtf_train, dtf_test = model_selection.train_test_split(dataset, test_size=0.1)
-#%%
+# %%
 y_train = dtf_train["auto - auto"].values
 y_test = dtf_test["auto - auto"].values
 # %%
@@ -105,7 +105,7 @@ vectorizer = feature_extraction.text.CountVectorizer(
     max_features=10000)
 corpus = dtf_train['descripcion_del_hecho - Final'].astype(str)
 vectorizer.fit(corpus)
-x_train = vectorizer.transform(corpus)  
+x_train = vectorizer.transform(corpus)
 dic_vocab = vectorizer.vocabulary_
 
 # %%
@@ -137,11 +137,11 @@ for cat in np.unique(y):
         ["y", "score"], ascending=[True, False])
 
     dtf_features = dtf_features[dtf_features["score"] > p_value_limit]
-#%%
+# %%
 X_names = dtf_features["feature"].unique().tolist()
 
 # %%
-#aca refiteamos
+# aca refiteamos
 vectorizer = feature_extraction.text.TfidfVectorizer(vocabulary=X_names)
 vectorizer.fit(corpus)
 X_train = vectorizer.transform(corpus)
@@ -150,9 +150,10 @@ dic_vocabulary = vectorizer.vocabulary_
 classifier = naive_bayes.MultinomialNB()
 
 # %%
-## pipeline
-model = pipeline.Pipeline([("vectorizer", vectorizer),("classifier", classifier)])## train classifier
-model["classifier"].fit(X_train, y_train)## test
+# pipeline
+model = pipeline.Pipeline(
+    [("vectorizer", vectorizer), ("classifier", classifier)])  # train classifier
+model["classifier"].fit(X_train, y_train)  # test
 X_test = dtf_test["descripcion_del_hecho - Final"].values
 predicted = model.predict(X_test)
 predicted_prob = model.predict_proba(X_test)
@@ -160,14 +161,14 @@ predicted_prob = model.predict_proba(X_test)
 # %%
 classes = np.unique(y_test)
 y_test_array = pd.get_dummies(y_test, drop_first=False).values
-## Plot confusion matrix
+# Plot confusion matrix
 # 82% de precision con un 0.3 y 0.2
 # 86% de precision con un 0.1
 cm = metrics.confusion_matrix(y_test, predicted)
 fig, ax = plt.subplots()
-sns.heatmap(cm, annot=True, fmt='d', ax=ax, cmap=plt.cm.Blues, 
+sns.heatmap(cm, annot=True, fmt='d', ax=ax, cmap=plt.cm.Blues,
             cbar=False)
-ax.set(xlabel="Pred", ylabel="True", xticklabels=classes, 
+ax.set(xlabel="Pred", ylabel="True", xticklabels=classes,
        yticklabels=classes, title="Confusion matrix")
 plt.yticks(rotation=0)
 fig, ax = plt.subplots(nrows=1, ncols=2)

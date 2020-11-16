@@ -8,6 +8,7 @@ from nltk.probability import FreqDist
 from nltk.text import Text
 from nltk.tokenize import word_tokenize
 from fuzzywuzzy import fuzz
+from matplotlib import pyplot as plt
 
 '''
     Create a dictionary
@@ -117,7 +118,7 @@ dataframe = dataframe.iloc[:, [5, 11, 7]]
 # len = 1171 rows x 3 columns
 
 # guardamos solo las columnas de interes
-dataframe.to_csv('../dataset/casos_filtrados.csv', sep=',', index=False, header=True)
+#dataframe.to_csv('../dataset/casos_filtrados.csv', index=False, header=True)
 
 dataset = pd.read_csv('../dataset/casos_filtrados.csv', sep=',')
 # len = 1249 rows x 3 columns PRLOBLEMS!!
@@ -159,14 +160,17 @@ dataset['descripcion_del_hecho - Final'] = dataset['descripcion_del_hecho - Fina
 dataset['descripcion_del_hecho - Final'] = dataset['descripcion_del_hecho - Final'].apply(
     lambda x: " ".join(x for x in x.split() if x not in Dictionary())
 )
-# # le cambié el separador por una ',' simple :)
-# dataset.to_csv('../dataset/casos_filtrados_regex.csv',
-#                index=False, header=True)
+# le cambié el separador por una ',' simple :)
+#dataset.to_csv('../dataset/casos_filtrados_regex.csv',
+#               index=False, header=True)
 
 for row in dataset['descripcion_del_hecho - Final']:
     dataset.loc[dataset['descripcion_del_hecho - Final'] == row,
                 'descripcion_del_hecho - Final'] = deleteExtraData(row)
 
+# le cambié el separador por una ',' simple :)
+#dataset.to_csv('../dataset/casos_filtrados_cut.csv',
+#             index=False, header=True)
 
 
 '''
@@ -206,15 +210,36 @@ for row in dataset['descripcion_del_hecho - Final']:
 # dataset = pd.read_csv('../dataset/casos_filtrados_frequences.csv')
 dataset.insert(2, 'fuzzy', dataset['descripcion_del_hecho - Final'])
 
-for row1 in dataset['fuzzy']:
+dataset['frecuencias-20'] = dataset['descripcion_del_hecho - Final'].apply(
+    lambda x: " ".join(x for x in x.split() if x not in f20)
+)
+
+dataset['frecuencias-30'] = dataset['descripcion_del_hecho - Final'].apply(
+    lambda x: " ".join(x for x in x.split() if x not in f30)
+)
+
+dataset['frecuencias-40'] = dataset['descripcion_del_hecho - Final'].apply(
+    lambda x: " ".join(x for x in x.split() if x not in f40)
+)
+
+dataset['frecuencias-50'] = dataset['descripcion_del_hecho - Final'].apply(
+    lambda x: " ".join(x for x in x.split() if x not in f50)
+)
+
+#dataset.to_csv('../dataset/casos_filtrados_frequences.csv',
+#               index=False, header=True)
+
+dataset = pd.read_csv('../dataset/casos_filtrados_frequences.csv')
+col = 'descripcion_del_hecho - Final'
+for row1 in dataset[col]:
     try:
         row = row1.split()
         row2 = []
         for w in row:
             row2.append(max_ratio(w))
         row = ' '.join(row2)
-        dataset['fuzzy'].replace(row1, row)
-    except TypeError:
+        dataset.replace(row1, row)
+    except :
         continue
 
 fstring = ''
@@ -290,13 +315,4 @@ dic = ['parte', 'circulaba', 'delantera', 'delantero', 'delante', 'enfrente', 'i
        'impactado', 'impactada', 'embiste', 'embistio', 'embestido', 'iba', 'venia', 'frente', 'lado', 'detras',
        'atras', 'costado', 'choca', 'choco', 'chocando', 'choque', 'costado', 'frontal', 'parte']
 
-#     tokenization(row)
-
-# countedWordsDeleted = []
-# for desc in dataset['descripcion_del_hecho - Final']:
-#     countedWordsDeleted.append(len(desc))
-
-# plt.plot(countedWords)
-# plt.plot(countedWordsDeleted)
-# plt.ylabel('Words per Description')
-# plt.show()
+plt.hist(f)

@@ -15,10 +15,10 @@ import numpy as np
 import gensim
 path = '../dataset/'
 # %%
-bici = pd.read_csv('../dataset/bici_clean.csv', sep=';')
-moto = pd.read_csv('../dataset/moto_clean.csv', sep=';')
-auto = pd.read_csv('../dataset/auto_clean.csv', sep=';')
-peaton = pd.read_csv('../dataset/peaton_clean.csv', sep=';')
+bici = pd.read_csv('../dataset/casos/bici_clean.csv', sep=';')
+moto = pd.read_csv('../dataset/casos/moto_clean.csv', sep=';')
+auto = pd.read_csv('../dataset/casos/auto_clean.csv', sep=';')
+peaton = pd.read_csv('../dataset/casos/peaton_clean.csv', sep=';')
 dataset = pd.DataFrame()
 dataset = pd.concat([bici, moto, auto, peaton])
 dataset.pop('Unnamed: 0')

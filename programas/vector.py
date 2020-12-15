@@ -1,12 +1,12 @@
-
+# %%
 import pandas as pd
 import nltk
 import gensim
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 from gensim.models.doc2vec import TaggedDocument, Doc2Vec
-import random
 from functions import *
+
 path_dat = '../dat/'
 
 # no pude importar el modulo de funciones :(
@@ -17,8 +17,14 @@ path_dat = '../dat/'
 
 df = pd.read_csv('../dat/versiones.csv')
 df_model = pd.read_csv('../dat/auto.csv')
-
-
+df_model['descripcion_del_hecho - Final'] = df_model['descripcion_del_hecho - Final'].apply(cleaner)
+for i, w in enumerate(df_model['descripcion_del_hecho - Final']):
+    w = w.replace('izquierdo', 'izquierda')
+    w = w.replace('derecho', 'derecha')
+    w = w.replace('delantero', 'delantera')
+    w = w.replace('trasero', 'trasera')
+    df_model.loc[i, 'descripcion_del_hecho - Final'] = w
+# %%
 fstring = ''
 for i in df_model['descripcion_del_hecho - Final']:
     fstring += i + ' '
@@ -32,12 +38,13 @@ biGrams = [' '.join(i) for i in biGrams]
 
 triGrams = pd.Series(nltk.ngrams(tokens, 3))
 triGrams = [' '.join(i) for i in triGrams]
+
 cuartiGrams = pd.Series(nltk.ngrams(tokens, 4))
 
 
 corpus = [biGrams] + [triGrams] + [nltk.tokenize.word_tokenize(i) for i in df_model['descripcion_del_hecho - Final']]
 
-
+# %%
 dic = gensim.corpora.Dictionary(corpus)
 tfidf = gensim.models.TfidfModel(dictionary=dic, normalize=True)  # normaliza por defecto?
 corpus_vectors = [tfidf[dic.doc2bow(i)] for i in corpus]
@@ -99,7 +106,7 @@ target = Labeler()
 #                       NEW CORPUS                  #
 #####################################################
 
-
+# %%
 index = pd.read_csv(path_dat + 'index.csv')
 
 fstring = ''
@@ -112,38 +119,59 @@ new_biGrams = [' '.join(i) for i in new_biGrams]
 new_triGrams = pd.Series(nltk.ngrams(tokens, 3))
 new_triGrams = [' '.join(i) for i in new_triGrams]
 
-new_corpus = [nltk.tokenize.word_tokenize(i) for i in df_model.loc[index['0'], 'descripcion_del_hecho - Final']]
+# Solo descripciones estructuradas
+new_corpus = [nltk.tokenize.word_tokenize(i) for i in df_model.loc[index['0'], 'descripcion_del_hecho - Final']] + [new_biGrams] + [new_triGrams]
+
+corpus1 = new_corpus.copy()
 
 dic = gensim.corpora.Dictionary(new_corpus)
-tfidf = gensim.models.TfidfModel(dictionary=dic, normalize=True)
+
+tfidf = gensim.models.TfidfModel(dictionary=dic, normalize=True, smartirs='lnc')
+# Al tfidf le damos los tokens, bigramas y trigramas como si fueran docs
 corpus_vectors = [tfidf[dic.doc2bow(i)] for i in new_corpus]
+diccionario = dic.id2token
 
 new_corpus = [
     TaggedDocument(words, [idx])
     for idx, words in enumerate(new_corpus)
 ]
+# new_corpus[0]-->tokens
+# new_corpus[1]-->biGrams
+# new_corpus[2]-->triGrams
 
-model = Doc2Vec(new_corpus, vector_size=300, min_count=3, seed=1)
-print(len(model.wv.vectors), len(new_corpus))
+model = Doc2Vec(new_corpus, vector_size=300, min_count=5, seed=1)
 
-len(corpus_vectors)
+
+vec = []
+for i in corpus1:
+    try:
+        vec.append(model[i])
+    except:
+        pass
+vec1 = [j for i in vec for j in i]
+
 
 pca = PCA(n_components=2)
-pca_tokens = pca.fit_transform(model.wv.vectors)  # esto tenes que arreglar porque no esta bien
+# Fitteamos el PCA con tokens,bi y triGrams de las descripiones estructuradas
+# vamos a usar este mismo algortimo entrenado para todos.
+pca = pca.fit(vec1)
+pca_tokens = pca.transform(vec1)
 pca_df = pd.DataFrame(data=pca_tokens, columns=['x', 'y'])
 fig = plt.figure(figsize=(10, 6))
 plt.grid()
 ax = fig.add_subplot(111)
-ax.set_title('vectors crudos')
+# ax.set_title('vectors crudos')
 # for i in range(len(target_vec)):
 # ax.annotate(target[i], (pca_df.loc[i, 'x'], pca_df.loc[i, 'y']))
 ax.scatter(pca_df.x, pca_df.y)
+
+# %%
 
 ######################################################################################################################
 
 
 def conIdxPart(w):
-    part = ['parte', 'lateral']
+    part = ['parte']  # , 'lateral']
     idx = nltk.ConcordanceIndex(nltk.tokenize.word_tokenize(w))
     aux = ''
     for j in part:
@@ -156,6 +184,9 @@ def conIdxPart(w):
 
     return aux.split(', ')
 
+
+# esto solo toma los contextos de parte y lateral y a
+# diferencia de conIdxPart no solapa las oraciones
 
 new_df_model = []
 for i in df_model.loc[index['0'], 'descripcion_del_hecho - Final']:
@@ -177,7 +208,7 @@ for i in new_df_model:
     fstring += i + ' '
 
 tokens = nltk.tokenize.word_tokenize(fstring)
-# random.shuffle(tokens)
+# me parece que hay que tomar bi y tri en cada contexto
 new_biGrams = pd.Series(nltk.ngrams(tokens, 2))
 new_biGrams = [' '.join(i) for i in new_biGrams]
 new_triGrams = pd.Series(nltk.ngrams(tokens, 3))
@@ -210,61 +241,74 @@ vector_size = 300
 
 model = Doc2Vec(new_corpus, vector_size=vector_size, seed=1)
 pca = PCA(n_components=2)
+# %%
+to_fit = []
+for i in test_cor:
+    try:
+        if len(model[i]) != 300:
+            for j in model[i]:
+                to_fit.append(j)
+        else:
+            to_fit.append(model[i])
+    except:
+        to_fit.append(model.infer_vector(i))
 
+pca = pca.fit(to_fit)
+
+# %%
 # vector de etiquetas de categoria, nos da una idea de donde se encuentran las palabras que
 # buscamos en el espacio vectorial
 
 target_vec = []
-target2 = ['izquierdo', 'derecho', 'trasera', 'delantera', 'izquierda', 'derecha', 'atras', 'adelante']
+target2 = ['trasera', 'delantera', 'izquierda', 'derecha']
 target3 = ['parte', 'lateral', 'parte lateral']
 
 for i in range(len(target2)):
     try:
         target_vec.append(model[target2[i]])
-        print(target2[i])
+        # print(target2[i])
     except KeyError:
         pass
+# %%
 # aca se guardan los vectores del modelo, es decir cada vector correspondiente
 # a cada contexto con la que se entreno el modelo
 mod_vec = []
+seguidor = {'contexto': [], 'vector': []}
 for i in test_cor:
     try:
-        mod_vec.append(pca.fit_transform(model[i]))
-
+        mod_vec.append(GeoCenter(pca.transform(model[i])))
+        seguidor['contexto'].append(i)
+        seguidor['vector'].append(GeoCenter(pca.transform(model[i])))
     except:
         pass
 
-aux = []
-for i in mod_vec:
-    for j in i:
-        aux.append(j)
+# %%
 
 
-# print(pca.fit(target_vec).noise_variance_)
-# pca_tokens = pca.fit_transform(model.wv.vectors)
-
-pca_df = pd.DataFrame(data=aux, columns=['x', 'y'])
-fig = plt.figure(figsize=(12, 8))
+pca_df = pd.DataFrame(data=mod_vec, columns=['x', 'y'])
+fig = plt.figure(figsize=(15, 10))
 plt.grid()
 ax = fig.add_subplot(111)
 
 # for i in range(len(target_vec)):
 #    ax.annotate(target2[i], (pca_df.loc[i, 'x'], pca_df.loc[i, 'y']))
+import random
+
 ax.scatter(pca_df.x, pca_df.y)
-pca_tokens = pca.fit_transform(target_vec)
-pca_df = pd.DataFrame(data=pca_tokens, columns=['x', 'y'])
-for i in range(len(target_vec)):
-    ax.annotate(target2[i], (pca_df.loc[i, 'x'], pca_df.loc[i, 'y']))
-ax.scatter(pca_df.x, pca_df.y)
-#plt.savefig(path_dat + 'good_dist_today.png')
+for i in range(10):
+    ran = random.randint(0, len(seguidor['contexto']))
+    ax.annotate(' '.join(seguidor['contexto'][ran]), (seguidor['vector'][ran][0], seguidor['vector'][ran][1]), fontsize=12, alpha=0.9)
 
-#######
-# *Resta dividir el data set en train-test para poder comparar mejor los resultados
+# pca_tokens = pca.transform(target_vec)
+# pca_df = pd.DataFrame(data=pca_tokens, columns=['x', 'y'])
+# for i in range(len(target_vec)):
+#     ax.annotate(target2[i], (pca_df.loc[i, 'x'], pca_df.loc[i, 'y']))
+# ax.scatter(pca_df.x, pca_df.y)
+# plt.savefig(path_dat + 'its_beautiful.png')
 
-# *Guardar el modelo con los parametros entrenados para poder utilizarlo en otro
-# programa.
 
-#######
+# %%
+
 
 # Aca empieza el kmeans
 from sklearn.cluster import KMeans
@@ -275,16 +319,14 @@ for i in range(2, 11):
 
     kmeans = KMeans(n_clusters=i)
     # se lo entrena
-    kmeans.fit(aux)
-    print(silhouette_score(aux, kmeans.labels_, metric='euclidean'))
+    kmeans.fit(mod_vec)
+    print(silhouette_score(mod_vec, kmeans.labels_, metric='euclidean'))
 
-kmeans = KMeans(n_clusters=4)
+kmeans = KMeans(n_clusters=8)
 # se lo entrena
-kmeans.fit(aux)
+kmeans.fit(mod_vec)
 
-pca = PCA(n_components=2)
-
-df_pca = pd.DataFrame(data=aux, columns=['x', 'y'])
+df_pca = pd.DataFrame(data=mod_vec, columns=['x', 'y'])
 
 df_pca['cluster'] = pd.Series(kmeans.labels_)
 
@@ -293,5 +335,21 @@ fig = plt.figure(figsize=(10, 6))
 ax = fig.add_subplot(111)
 
 color = np.array(['red', 'green', 'blue', 'orange'])
-plt.title('silhouette_score ' + str(silhouette_score(aux, kmeans.labels_, metric='euclidean')))
+plt.title('silhouette_score ' + str(silhouette_score(mod_vec, kmeans.labels_, metric='euclidean')))
 ax.scatter(x=df_pca.x, y=df_pca.y, c=color[df_pca.cluster])
+
+# %%
+import seaborn as sns
+sns.lmplot('x', 'y', data=df_pca, hue='cluster', fit_reg=False)
+plt.savefig(path_dat + 'sns_more_beautiful.png')
+# ax=fig.add_subplot(221)
+# ax.scatter(x=df_pca[df_pca['cluster']==0].x,y=df_pca[df_pca['cluster']==0].y)
+
+# ax=fig.add_subplot(222)
+# ax.scatter(x=df_pca[df_pca['cluster']==1].x,y=df_pca[df_pca['cluster']==1].y)
+
+# ax=fig.add_subplot(223)
+# ax.scatter(x=df_pca[df_pca['cluster']==2].x,y=df_pca[df_pca['cluster']==2].y)
+
+# ax=fig.add_subplot(224)
+# ax.scatter(x=df_pca[df_pca['cluster']==3].x,y=df_pca[df_pca['cluster']==3].y)

@@ -1,12 +1,17 @@
 # %%
-import pandas as pd
-import nltk
 import gensim
-from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
-from gensim.models.doc2vec import TaggedDocument, Doc2Vec
-from functions import *
+import nltk
+import numpy as np
+import pandas as pd
+import seaborn as sns
 
+from functions import *
+from gensim.models.doc2vec import Doc2Vec
+from gensim.models.doc2vec import TaggedDocument
+from sklearn.cluster import KMeans
+from sklearn.decomposition import PCA
+from sklearn.metrics import silhouette_score
 path_dat = '../dat/'
 
 # no pude importar el modulo de funciones :(
@@ -135,9 +140,6 @@ new_corpus = [
     TaggedDocument(words, [idx])
     for idx, words in enumerate(new_corpus)
 ]
-# new_corpus[0]-->tokens
-# new_corpus[1]-->biGrams
-# new_corpus[2]-->triGrams
 
 model = Doc2Vec(new_corpus, vector_size=300, min_count=5, seed=1)
 
@@ -168,23 +170,6 @@ ax.scatter(pca_df.x, pca_df.y)
 # %%
 
 ######################################################################################################################
-
-
-def conIdxPart(w):
-    part = ['parte']  # , 'lateral']
-    idx = nltk.ConcordanceIndex(nltk.tokenize.word_tokenize(w))
-    aux = ''
-    for j in part:
-        concor = idx.find_concordance(j)
-        for i in range(len(concor)):
-            aux += ' '.join(concor[i][0][-2:]) + ' ' + concor[i][1] + ' ' + ' '.join(concor[i][2][:2])
-            aux += ', '
-            i += 2
-            print(aux)
-
-    return aux.split(', ')
-
-
 # esto solo toma los contextos de parte y lateral y a
 # diferencia de conIdxPart no solapa las oraciones
 
@@ -196,21 +181,21 @@ for i in df_model.loc[index['0'], 'descripcion_del_hecho - Final']:
         concor = idx.find_concordance(j)
         for i in range(len(concor)):
             new_df_model.append(' '.join(concor[i][0][-2:]) + ' ' + concor[i][1] + ' ' + ' '.join(concor[i][2][:2]))
-            i += 2
+            #i += 2
 
 #new_df_model = df_model.loc[index['0'], 'descripcion_del_hecho - Final'].apply(conIdxPart)
 
-new_df_model[:5]
-
+print(new_df_model[:5])
 
 fstring = ''
 for i in new_df_model:
     fstring += i + ' '
 
 tokens = nltk.tokenize.word_tokenize(fstring)
-# me parece que hay que tomar bi y tri en cada contexto
+
 new_biGrams = pd.Series(nltk.ngrams(tokens, 2))
 new_biGrams = [' '.join(i) for i in new_biGrams]
+
 new_triGrams = pd.Series(nltk.ngrams(tokens, 3))
 new_triGrams = [' '.join(i) for i in new_triGrams]
 
@@ -232,16 +217,14 @@ tfidf = gensim.models.TfidfModel(dictionary=dic, normalize=True, smartirs='lnc')
 corpus_vectors = [tfidf[dic.doc2bow(i)] for i in new_corpus]
 new_corpus = [TaggedDocument(words, [idx_tag]) for idx_tag, words in enumerate(new_corpus)]
 
-
 print(new_corpus[:5])
-
 
 # entrenamos el modelo con el new_corpus etiquetado, cada 'doc' es en realidad un contexto.
 vector_size = 300
 
-model = Doc2Vec(new_corpus, vector_size=vector_size, seed=1)
-pca = PCA(n_components=2)
-# %%
+model = Doc2Vec(new_corpus, vector_size=vector_size)
+pca = PCA(n_components=2, svd_solver='full', whiten=True)
+
 to_fit = []
 for i in test_cor:
     try:
@@ -255,7 +238,7 @@ for i in test_cor:
 
 pca = pca.fit(to_fit)
 
-# %%
+
 # vector de etiquetas de categoria, nos da una idea de donde se encuentran las palabras que
 # buscamos en el espacio vectorial
 
@@ -269,11 +252,13 @@ for i in range(len(target2)):
         # print(target2[i])
     except KeyError:
         pass
-# %%
+
 # aca se guardan los vectores del modelo, es decir cada vector correspondiente
 # a cada contexto con la que se entreno el modelo
 mod_vec = []
 seguidor = {'contexto': [], 'vector': []}
+
+
 for i in test_cor:
     try:
         mod_vec.append(GeoCenter(pca.transform(model[i])))
@@ -281,9 +266,9 @@ for i in test_cor:
         seguidor['vector'].append(GeoCenter(pca.transform(model[i])))
     except:
         pass
-
-# %%
-
+        # mod_vec.append(GeoCenter(pca.transform([model.infer_vector(i)])))
+        # seguidor['contexto'].append(i)
+        # seguidor['vector'].append(GeoCenter(pca.transform([model.infer_vector(i)])))
 
 pca_df = pd.DataFrame(data=mod_vec, columns=['x', 'y'])
 fig = plt.figure(figsize=(15, 10))
@@ -306,22 +291,18 @@ for i in range(10):
 # ax.scatter(pca_df.x, pca_df.y)
 # plt.savefig(path_dat + 'its_beautiful.png')
 
-
-# %%
-
-
 # Aca empieza el kmeans
-from sklearn.cluster import KMeans
-from sklearn.decomposition import PCA
-from sklearn.metrics import silhouette_score
-
-for i in range(2, 11):
+# %%
+sil = {'sil': [], 'idx': []}
+for i in range(2, 15):
 
     kmeans = KMeans(n_clusters=i)
     # se lo entrena
     kmeans.fit(mod_vec)
-    print(silhouette_score(mod_vec, kmeans.labels_, metric='euclidean'))
-
+    sil['sil'].append(silhouette_score(mod_vec, kmeans.labels_, metric='euclidean'))
+    sil['idx'].append(i)
+# plt.plot(sil['idx'],sil['sil'])
+# plt.savefig(path_dat+'sil.png')
 kmeans = KMeans(n_clusters=8)
 # se lo entrena
 kmeans.fit(mod_vec)
@@ -336,20 +317,116 @@ ax = fig.add_subplot(111)
 
 color = np.array(['red', 'green', 'blue', 'orange'])
 plt.title('silhouette_score ' + str(silhouette_score(mod_vec, kmeans.labels_, metric='euclidean')))
-ax.scatter(x=df_pca.x, y=df_pca.y, c=color[df_pca.cluster])
+#ax.scatter(x=df_pca.x, y=df_pca.y, c=color[df_pca.cluster])
+
+sns.lmplot('x', 'y', data=df_pca, hue='cluster', fit_reg=False)
+# plt.savefig(path_dat + 'sns_more_beautiful.png')
+
+# df_pca.to_csv(path_dat + 'context_cluster_8.csv')
+
+################################################################################
+# Continuamos el análisis con los clusters para ver de que descripción vienen
+################################################################################
+# %%
+for i in range(len(seguidor['vector'])):
+    if seguidor['vector'][i][0] == seguidor['vector'][0][0] and seguidor['vector'][i][1] == seguidor['vector'][0][1]:
+        print(seguidor['contexto'][i], i)
+# %%
+df_pca['contexto'] = pd.Series()
+for i in range(len(df_pca['cluster'])):
+    for j in range(len(seguidor['vector'])):
+        if df_pca['x'][i] == seguidor['vector'][j][0] and df_pca['y'][i] == seguidor['vector'][j][1]:
+            df_pca['contexto'][i] = ' '.join(seguidor['contexto'][j])
+            break
+#df_pca = df_pca.sort_values('cluster')
+
+# df_pca.to_csv(path_dat + 'cluster_final.csv')
+# %%
+
+
+# aca se van a guardar pares ordenados [idx de contexto, idx de la descripción]
+linker = []
+
+for i, c in enumerate(df_pca['contexto']):
+    for j, v in enumerate(df_model['descripcion_del_hecho - Final']):
+        if c in v:
+            linker.append([i, j])
+            break
+# vamos a formar ahora una lista de contextos por cada descripción
+ctxs = []
+desc = []
+k = 0
+
+for i in range(len(linker)):
+    k = linker[i][1]
+    desc.append(df_model['descripcion_del_hecho - Final'][k])
+    aux = []
+    for j in linker[i:]:
+        if j[1] == k:
+            aux.append(j[0])
+    ctxs.append(list(set(aux)))
+desc = list(set(desc))
+# %%
+# al parecer el cluster 7 corresponde con la parte delantera
+target = ['trasera', 'delantera', 'izquierda', 'derecha', 'frontal', 'parte', 'lateral', 'atras', 'adelante']
+categorias = []
+for i in range(8):
+    dic_cluster = {}
+    for k in df_pca['contexto'][df_pca['cluster'] == i]:
+        for j in k.split():
+            try:
+                # dic_cluster[j]+=1
+                if 3 < len(j) and j != 'parte' and j != 'lateral':
+                    dic_cluster[j] += 1
+            except KeyError:
+                dic_cluster[j] = 0
+    # print('Cluster número',i,'\n',dic_cluster)
+    tot = np.sum(list(dic_cluster.values()))
+    for i in dic_cluster.keys():
+        dic_cluster[i] = round(dic_cluster[i] / tot * 100.0, 2)
+    categorias.append(dic_cluster)
+
+categorias_final = []
+for idx, i in enumerate(categorias):
+    dic_final = {}
+    suma = 0
+    print('Cluster ', idx)
+    i = sorted(i.items(), key=lambda x: x[1], reverse=True)
+
+    for j in i:
+        if j[0] in target:
+            dic_final[j[0]] = j[1]
+            print("{} {}%    ".format(j[0], j[1]), end="\t\t")
+            suma += j[1]
+    categorias_final.append(dic_final)
+    print('---', round(suma, 2), '%')
+    print()
 
 # %%
-import seaborn as sns
-sns.lmplot('x', 'y', data=df_pca, hue='cluster', fit_reg=False)
-plt.savefig(path_dat + 'sns_more_beautiful.png')
-# ax=fig.add_subplot(221)
-# ax.scatter(x=df_pca[df_pca['cluster']==0].x,y=df_pca[df_pca['cluster']==0].y)
-
-# ax=fig.add_subplot(222)
-# ax.scatter(x=df_pca[df_pca['cluster']==1].x,y=df_pca[df_pca['cluster']==1].y)
-
-# ax=fig.add_subplot(223)
-# ax.scatter(x=df_pca[df_pca['cluster']==2].x,y=df_pca[df_pca['cluster']==2].y)
-
-# ax=fig.add_subplot(224)
-# ax.scatter(x=df_pca[df_pca['cluster']==3].x,y=df_pca[df_pca['cluster']==3].y)
+fig = plt.figure(figsize=(15, 10))
+fig.add_subplot(241)
+plt.bar(categorias_final[0].keys(), categorias_final[0].values())
+plt.title('Cluster 0')
+fig.add_subplot(242)
+plt.bar(categorias_final[1].keys(), categorias_final[1].values())
+plt.title('Cluster 1')
+fig.add_subplot(243)
+plt.bar(categorias_final[2].keys(), categorias_final[2].values())
+plt.title('Cluster 2')
+fig.add_subplot(244)
+plt.bar(categorias_final[3].keys(), categorias_final[3].values())
+plt.title('Cluster 3')
+fig.add_subplot(245)
+plt.bar(categorias_final[4].keys(), categorias_final[4].values())
+plt.title('Cluster 4')
+fig.add_subplot(246)
+plt.bar(categorias_final[5].keys(), categorias_final[5].values())
+plt.title('Cluster 5')
+fig.add_subplot(247)
+plt.bar(categorias_final[6].keys(), categorias_final[6].values())
+plt.title('Cluster 6')
+fig.add_subplot(248)
+plt.bar(categorias_final[7].keys(), categorias_final[7].values())
+plt.title('Cluster 7')
+plt.suptitle('Distribución de clusters',fontsize=20)
+# plt.savefig(path_plots+'clusters.jpg')

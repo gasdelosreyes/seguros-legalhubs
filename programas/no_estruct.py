@@ -26,34 +26,42 @@ pd.options.display.max_colwidth = 120
 # lo que voy a hacer despues es formar todos los contextos de interes para cada des-
 # cripcion, vectorizar los contetos y tomar la media entre contextos de una misma des-
 # cripcion para poder clasificar la descripción. (por que no hice esto antes?)
+ 
+def clean(serie):
+    """Limpia la columna donde estan las descripciones 
 
-to_rep = [
+    :function: estructura todas las descripciones
+    :returns: void
+
+    """
+    to_rep = [
     'izq.*? ', 'derecho', 'delantero', 'trasero', 'frontal', 'lat.*? ', 'lado',
     'frente', 'de atras', 'puerta', 'parte lateral', 'choque',
     r'tercero .* impacta', 'desde izq.*? ', 'vh.*? ', 'colis.*? ', 'choc.*? ',
     'impac.*? ', 'su delat.*? ', ' p ', 'aseg.*? ', 'emb.*? ', 'redg.*? ',
     'parte parte', 'roza', 'golp.*? ', 'contra\s', 'por detras', 'detras',
     ' ro '
-]  # tentativo ,'precede']
+    ]  # tentativo ,'precede']
 
-for_rep = [
+    for_rep = [
     'izquierda ', 'derecha', 'delantera', 'trasera', 'parte delantera',
     'parte ', 'parte', 'parte delantera', 'en parte trasera', 'parte', 'parte',
     'mi parte delantera', 'tercero impacta', 'en parte izquierda ',
     'vehiculo ', 'colisiona ', 'colisiona ', 'colisiona ',
     'su parte delantera ', ' parte ', 'asegurado ', 'colisiona ', '', 'parte',
     'colisiona', 'colisiona ', 'con ', 'en parte trasera', 'trasera', 'tercero'
-]  #,'con parte delantera']
-
-df = df.drop(columns=df.columns[0])
-for i, w in enumerate(df['no_estruc']):
-    # w=re.sub('desde izquierda','en parte izquierda',w)
-    for j in range(len(to_rep) - 1):
-        w = re.sub(to_rep[j], for_rep[j], w)
-    w = re.sub(to_rep[len(to_rep) - 1], for_rep[len(for_rep) - 1],
+    ]  #,'con parte delantera']
+    
+    for i, w in enumerate(serie):
+        # w=re.sub('desde izquierda','en parte izquierda',w)
+        for j in range(len(to_rep) - 1):
+            w = re.sub(to_rep[j], for_rep[j], w)
+        w = re.sub(to_rep[len(to_rep) - 1], for_rep[len(for_rep) - 1],
                w)  #esto se puso muy extraño
-    df.loc[i, 'no_estruc'] = w
-
+        serie[i]= w
+   
+clean(df[no_estruc])
+df = df.drop(columns=df.columns[0])
 aux = []
 for w in df['no_estruc']:
     if 'aseg' in w:

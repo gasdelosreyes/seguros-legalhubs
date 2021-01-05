@@ -119,7 +119,7 @@ def separador(ds):
     ds['cod_accidente'] = ds['cod_accidente'].str.strip()
     for idx, value in enumerate(ds['cod_accidente']):
         if value.startswith('p'):
-            ds.iloc[idx] = 'peaton'
+            ds.loc[idx,'cod_accidente'] = 'peaton'
     ds_a = ds[ds['cod_accidente'] == 'aa']
     ds_m = ds[ds['cod_accidente'] == 'am']
     ds_b = ds[ds['cod_accidente'] == 'aci']
@@ -149,14 +149,13 @@ if __name__=="__main__":
     dataframe['descripcion'] = dataframe['descripcion'].apply(cleaner)
     dataframe['descripcion'] = dataframe['descripcion'].apply(nonStop)
     dataframe['descripcion'] = clean(dataframe['descripcion'])
-
     '''
         Divide el DataFrame en 4 DataFrames, cada uno por categoria.
     '''
     auto,moto,bici,peaton = separador(dataframe)
     print(len(auto),len(moto),len(bici),len(peaton))
 
-    dataframe.to_csv('../dataset/casos/auto.csv', sep=',', index=False, header=True)
-    dataframe.to_csv('../dataset/casos/moto.csv', sep=',', index=False, header=True)
-    dataframe.to_csv('../dataset/casos/bici.csv', sep=',', index=False, header=True)
-    dataframe.to_csv('../dataset/casos/peaton.csv', sep=',', index=False, header=True)
+    auto.to_csv('../dataset/casos/auto.csv', index=False, header=True)
+    moto.to_csv('../dataset/casos/moto.csv', index=False, header=True)
+    bici.to_csv('../dataset/casos/bici.csv', index=False, header=True)
+    peaton.to_csv('../dataset/casos/peaton.csv', index=False, header=True)

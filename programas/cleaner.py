@@ -70,6 +70,34 @@ def cleaner(w):
     return w
 
 
+def changeStrings(row):
+    vector = [
+        (r'vw','vehiculo'),(r'veh','vehiculo'),(r'vena','venia'),
+        (r'derecho', 'derecha'), (r'delantero', 'delantera'), (r'trasero', 'trasera'), (r'frontal', 'parte delantera'), (r'lado', 'parte'),
+        (r'frente delantero', 'parte delantera'), (r'de atras', 'en parte trasera'), (r'pb','parte'), (r'puerta', 'parte'), (r'parte lateral', 'parte'),
+        (r'conmi','con mi'), (r'choque', 'mi parte delantera'),(r'circ','circulaba'), (r'stro','siniestro'), (r'ero','tercero'),(r'gge','garage'),
+        (r' p ', ' parte '), (r'contra\s', 'con '), (r'por detras', 'en parte trasera'), (r'detras','trasera'),(r'parte parte', 'parte'), (r'roza', 'colisiona'),
+        (r' ro ', 'tercero'),(r'gral','general'),(r'paragolpes delantero','parte delantera'), (r'trompa','delantera')
+    ]
+    words = []
+    for w in row.split():
+        for value in vector:
+            if(w == value[0]):
+                w = value[1]
+        words.append(w)
+    row = ' '.join(words)
+    return row
+
+def changeRegex(row):
+    vector = [ 
+        (r'izq.*? ', 'izquierda '), (r'lat.*? ', 'parte '), (r'av.*? ', 'avenida '), (r'amb.*? ', 'ambulancia '),
+        (r'tercero .* impacta', 'tercero impacta'), (r'desde izq.*? ', 'en parte izquierda '), (r'vh.*? ', 'vehiculo '), (r'colis.*? ', 'colisiona '), (r'\scho.*? ', 'colisiona '),
+        (r'\simpac.*? ', 'colisiona '), (r'su delat.*? ', 'su parte delantera '), (r'aseg.*? ', 'asegurado '), (r'emb.*? ', 'colisiona '), (r'redg.*? ',''),(r'\sgolp.*? ','colisiona')
+    ]
+    for value in vector:
+        row = re.sub(value[0],value[1], row)
+    return row
+
 def clean(serie):
     """
     Limpia la columna donde estan las descripciones 
@@ -78,38 +106,13 @@ def clean(serie):
     :returns: devuelve la misma descripcion pero con las palabras de to_rep a for_rep
 
     """
-    # TODO: hacer con pares ordenados
-    to_rep = [
-        r'izq.*? ', 'derecho', 'delantero', 'trasero', 'frontal', r'lat.*? ', 'lado',
-        'frente', 'de atras', 'puerta', 'parte lateral', 'choque',
-        r'tercero .* impacta', r'desde izq.*? ', r'vh.*? ', r'colis.*? ', r'choc.*? ',
-        r'impac.*? ', r'su delat.*? ', ' p ', r'aseg.*? ', r'emb.*? ', r'redg.*? ',
-        'parte parte', 'roza', r'golp.*? ', r'contra\s', 'por detras', 'detras',
-        ' ro '
-    ]  # tentativo ,'precede']
+    for index, row in enumerate(serie):
+        serie.iloc[index] = changeStrings(row)
 
-    for_rep = [
-        'izquierda ', 'derecha', 'delantera', 'trasera', 'parte delantera', 'parte ',
-        'parte', 'parte delantera', 'en parte trasera', 'parte', 'parte',
-        'mi parte delantera', 'tercero impacta', 'en parte izquierda ',
-        'vehiculo ', 'colisiona ', 'colisiona ', 'colisiona ',
-        'su parte delantera ', ' parte ', 'asegurado ', 'colisiona ', '', 'parte',
-        'colisiona', 'colisiona ', 'con ', 'en parte trasera', 'trasera', 'tercero'
-    ]  # ,'con parte delantera']
-
-    for i, w in enumerate(serie):
-        try:
-            for j in range(len(to_rep) - 1):
-                w = re.sub(to_rep[j], for_rep[j], w)
-            # esto se puso muy extraño
-            w = re.sub(to_rep[len(to_rep) - 1], for_rep[len(for_rep) - 1], w)
-        except:
-            pass
-        serie.iloc[i] = w
-    return serie
-
-# algunas stopwords que no aportan valor
-
+    for index, row in enumerate(serie):
+        serie.iloc[index] = changeRegex(row)
+    
+    return serie 
 
 def nonStop(w):
     return ' '.join(i for i in w.split() if i not in ['el', 'la', 'los', 'las', 'ellos', 'nosotros', 'lo', 'le',
@@ -152,16 +155,16 @@ if __name__ == "__main__":
             del_row.append(i)
 
     dataframe = dataframe.drop(del_row)
-    print(dataframe['descripcion'][1000])
+    # print(dataframe['descripcion'][59:61])
     dataframe['descripcion'] = dataframe['descripcion'].apply(cleaner)
     dataframe['descripcion'] = dataframe['descripcion'].apply(nonStop)
     dataframe['descripcion'] = clean(dataframe['descripcion'])
-    print(dataframe['descripcion'][1000])
     '''
         Divide el DataFrame en 4 DataFrames, cada uno por categoria.
     '''
     auto, moto, bici, peaton = separador(dataframe)
     print(len(auto), len(moto), len(bici), len(peaton))
+    print(auto['descripcion'][49])
 
     auto.to_csv('../dataset/casos/auto.csv', index=False, header=True)
     moto.to_csv('../dataset/casos/moto.csv', index=False, header=True)

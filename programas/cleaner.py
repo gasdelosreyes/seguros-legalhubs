@@ -72,12 +72,12 @@ def cleaner(w):
 
 def changeStrings(row):
     vector = [
-        (r'vw','vehiculo'),(r'veh','vehiculo'),(r'vena','venia'),
+        (r'vw','vehiculo'),(r'veh','vehiculo'),(r'vena','venia'),(r'guardabarro','parte'),(r'guardabarros','parte'),
         (r'derecho', 'derecha'), (r'delantero', 'delantera'), (r'trasero', 'trasera'), (r'frontal', 'parte delantera'), (r'lado', 'parte'),
         (r'frente delantero', 'parte delantera'), (r'de atras', 'en parte trasera'), (r'pb','parte'), (r'puerta', 'parte'), (r'parte lateral', 'parte'),
         (r'conmi','con mi'), (r'choque', 'mi parte delantera'),(r'circ','circulaba'), (r'stro','siniestro'), (r'ero','tercero'),(r'gge','garage'),
-        (r' p ', ' parte '), (r'contra\s', 'con '), (r'por detras', 'en parte trasera'), (r'detras','trasera'),(r'parte parte', 'parte'), (r'roza', 'colisiona'),
-        (r' ro ', 'tercero'),(r'gral','general'),(r'paragolpes delantero','parte delantera'), (r'trompa','delantera')
+        (r' p ', ' parte '), (r'contra\s', 'con '), (r'por detras', 'en parte trasera'), (r'detras','trasera'), (r'roza', 'colisiona'),
+        (r' ro ', ' tercero '),(r'gral','general'),(r'paragolpes delantera','parte delantera'),(r'paragolpes','delantera'),(r'paragolpe','delantera'), (r'trompa','delantera'),(r'parte parte', 'parte')
     ]
     words = []
     for w in row.split():
@@ -90,13 +90,41 @@ def changeStrings(row):
 
 def changeRegex(row):
     vector = [ 
-        (r'izq.*? ', 'izquierda '), (r'lat.*? ', 'parte '), (r'av.*? ', 'avenida '), (r'amb.*? ', 'ambulancia '),
-        (r'tercero .* impacta', 'tercero impacta'), (r'desde izq.*? ', 'en parte izquierda '), (r'vh.*? ', 'vehiculo '), (r'colis.*? ', 'colisiona '), (r'\scho.*? ', 'colisiona '),
-        (r'\simpac.*? ', 'colisiona '), (r'su delat.*? ', 'su parte delantera '), (r'aseg.*? ', 'asegurado '), (r'emb.*? ', 'colisiona '), (r'redg.*? ',''),(r'\sgolp.*? ','colisiona')
+        (r' izq.*? ', ' izquierda '),(r'\sder.*? ',' derecha ') , (r'lat.*? ', 'parte '), (r'av.*? ', 'avenida '),
+        (r'amb.*? ', 'ambulancia '),(r'tercero .* impacta', 'tercero impacta'), (r'desde izq.*? ', 'en parte izquierda '),
+        (r'vh.*? ', 'vehiculo '), (r'colis.*? ', 'colisiona '), (r'\scho.*? ', ' colisiona '),(r'\simpac.*? ', ' colisiona '),
+        (r'su delat.*? ', 'su parte delantera '), (r'aseg.*? ', 'asegurado '), (r'emb.*? ', 'colisiona '), (r'redg.*? ',''),
+        (r' golp.*? ',' colisiona ')
     ]
     for value in vector:
         row = re.sub(value[0],value[1], row)
     return row
+
+def cleanRatios(w):
+    try:
+        if(len(w) < 4):
+            return w
+        dic = ['izquierda','derecha','izquierdo','derecho', 'paragolpe']
+        aux = 0
+        word = ''
+        for i in dic:
+            if (aux <= fuzz.partial_ratio(w, i) and 100 <= fuzz.partial_ratio(w, i)):
+                aux = fuzz.partial_ratio(w, i)
+                word = i
+        if word != '':
+            print(str(w) + '    CAMBIE POR    ' + str(word))
+            return word
+        return w
+    except TypeError:
+        return w
+
+# def convertionCleanRow(row):
+#     row = row.split()
+#     words = []
+#     for w in row:
+#         words.append(cleanRatios(w))
+#         row = ' '.join(words)
+#     return row
 
 def clean(serie):
     """
@@ -106,6 +134,9 @@ def clean(serie):
     :returns: devuelve la misma descripcion pero con las palabras de to_rep a for_rep
 
     """
+    for index, row in enumerate(serie):
+        serie.iloc[index] = ' '.join(list(map(cleanRatios,row.split())))
+    
     for index, row in enumerate(serie):
         serie.iloc[index] = changeStrings(row)
 
@@ -163,9 +194,7 @@ if __name__ == "__main__":
         Divide el DataFrame en 4 DataFrames, cada uno por categoria.
     '''
     auto, moto, bici, peaton = separador(dataframe)
-    print(len(auto), len(moto), len(bici), len(peaton))
-    print(auto['descripcion'][49])
-
+    
     auto.to_csv('../dataset/casos/auto.csv', index=False, header=True)
     moto.to_csv('../dataset/casos/moto.csv', index=False, header=True)
     bici.to_csv('../dataset/casos/bici.csv', index=False, header=True)

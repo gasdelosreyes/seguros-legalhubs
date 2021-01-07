@@ -15,39 +15,42 @@ from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 from sklearn.metrics import silhouette_score
 
-def get_scores(bowCorpus, tokenizedContexts, vector_size=300, training=100,seed=None):
-    scores = []       
+def getSeedScore(bowCorpus, tokenizedContexts, vector_size=300,seed=None):
+    randomSeed = random.randint(1, 2**32 - 1)
+    # np.random.seed(randomSeed)
+    kmeans = KMeans(n_clusters=8)
+    model = Doc2Vec(bowCorpus, vector_size=vector_size, seed=randomSeed)
+    pca = PCA(n_components=2, svd_solver='full', whiten=True)
+
+    to_fit = []
+    # for value in tokenizedContexts:
+    #     # try:
+    #     #     if len(model[value]) != vector_size:
+    #     #         for j in model[value]:
+    #     #             to_fit.append(j)
+    #     #     else:
+    #     #         to_fit.append(model[value])
+    #     # except:
+    #     #     pass
+    #     for vector in model.docvecs.vectors_docs:
+    #         to_fit.append(vector)
+
+    pca = pca.fit(model.docvecs.vectors_docs)
+    # mod_vec = [GeoCenter(pca.transform(i)) for i in model.docvecs.vectors_docs]
+    for i in tokenizedContexts:
+        try:
+            mod_vec.append(GeoCenter(pca.transform(model[i])))
+        except:
+            pass
+
+    kmeans.fit(mod_vec)
+    return (silhouette_score(mod_vec, kmeans.labels_, metric='euclidean'), randomSeed)
+
+def maxScore(bowCorpus,tokenizedCorpus,training=100):
+    score = []       
     for k in tq(range(training)):
-        randomSeed = random.randint(1, 2**32 - 1)
-        #np.random.seed(randomSeed)
-        kmeans = KMeans(n_clusters=8)
-        model = Doc2Vec(bowCorpus, vector_size=vector_size, seed=randomSeed)
-        pca = PCA(n_components=2, svd_solver='full', whiten=True) 
-
-        to_fit = []
-        for value in tokenizedContexts:
-            # if(not model[value]):
-            #     print(str(value) + 'NO ESTA EN EL MODELO')
-            try:
-                if len(model[value]) != vector_size:
-                    for j in model[value]:
-                        to_fit.append(j)
-                else:
-                    to_fit.append(model[value])
-            except:
-                pass
-
-        pca = pca.fit(to_fit)
-        mod_vec = []
-        for i in tokenizedContexts:
-            try:
-                mod_vec.append(GeoCenter(pca.transform(model[i])))
-            except:
-                pass
-
-        kmeans.fit(mod_vec)
-        scores.append((silhouette_score(mod_vec, kmeans.labels_, metric='euclidean'), randomSeed))
-    return scores
+        score.append(getSeedScore(bowCorpus,tokenizedCorpus))
+    return max(score)
 
 def get_concordance(vector,window=2,key='parte'):
     array = []
@@ -65,12 +68,11 @@ print(pd.Series(df_model).value_counts())
 tokenizedCorpus = [nltk.tokenize.word_tokenize(i) for i in df_model].copy()
 bowCorpus = [TaggedDocument(words, [idx_tag]) for idx_tag, words in enumerate(tokenizedCorpus)]
 
-seed = max(get_scores(bowCorpus,tokenizedCorpus))[1]
-#seed = 3951625859
-print(seed)
+seed = maxScore(bowCorpus,tokenizedCorpus)[1]
 
 with open('seed.txt','w') as f:
     f.write(str(seed))
+
 
 np.random.seed(seed)
 model = Doc2Vec(bowCorpus, vector_size=300, seed=seed) 

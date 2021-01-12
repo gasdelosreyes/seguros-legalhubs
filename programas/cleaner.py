@@ -69,15 +69,15 @@ def cleaner(w):
         w = w.replace(row[0], row[1])
     return w
 
-
 def changeStrings(row):
     vector = [
         (r'vw','vehiculo'),(r'veh','vehiculo'),(r'vena','venia'),(r'guardabarro','parte'),(r'guardabarros','parte'),
         (r'derecho', 'derecha'), (r'delantero', 'delantera'), (r'trasero', 'trasera'), (r'frontal', 'parte delantera'), (r'lado', 'parte'),
-        (r'frente delantero', 'parte delantera'), (r'de atras', 'en parte trasera'), (r'pb','parte'), (r'puerta', 'parte'), (r'parte lateral', 'parte'),
+        (r'pb','parte'), (r'puerta', 'parte'),
         (r'conmi','con mi'), (r'choque', 'mi parte delantera'),(r'circ','circulaba'), (r'stro','siniestro'), (r'ero','tercero'),(r'gge','garage'),
-        (r' p ', ' parte '), (r'contra\s', 'con '), (r'por detras', 'en parte trasera'), (r'detras','trasera'), (r'roza', 'colisiona'),
-        (r' ro ', ' tercero '),(r'gral','general'),(r'paragolpes delantera','parte delantera'),(r'paragolpes','delantera'),(r'paragolpe','delantera'), (r'trompa','delantera'),(r'parte parte', 'parte')
+        (r' p ', ' parte '), (r'contra\s', 'con '), (r'detras','trasera'),(r'atras','trasera'),(r'atraz','trasera'), (r'roza', 'colisiona'),
+        (r' ro ', ' tercero '),(r'gral','general'),(r'paragolpe','delantera'), (r'trompa','delantera'),(r'izq', 'izquierda'),
+        (r'toco','colisiona'),(r'adelante','delantera'),(r'izquierdo','izquierda'),(r'posterior','delantera')
     ]
     words = []
     for w in row.split():
@@ -90,19 +90,38 @@ def changeStrings(row):
 
 def changeRegex(row):
     vector = [ 
-        (r' izq.*? ', ' izquierda '),(r'\sder.*? ',' derecha ') , (r'lat.*? ', 'parte '), (r'av.*? ', 'avenida '),
-        (r'amb.*? ', 'ambulancia '),(r'tercero .* impacta', 'tercero impacta'), (r'desde izq.*? ', 'en parte izquierda '),
-        (r'vh.*? ', 'vehiculo '), (r'colis.*? ', 'colisiona '), (r'\scho.*? ', ' colisiona '),(r'\simpac.*? ', ' colisiona '),
-        (r'su delat.*? ', 'su parte delantera '), (r'aseg.*? ', 'asegurado '), (r'emb.*? ', 'colisiona '), (r'redg.*? ',''),
-        (r' golp.*? ',' colisiona ')
+        (r'\sder.*? ',' derecha ') , (r'lat.*? ', 'parte '), (r'av.*? ', 'avenida '), (r'posterior','delantera'),
+        (r'amb.*? ', 'ambulancia '),(r'tercero .* impacta', 'tercero impacta'), (r'desde izq.*? ', 'en parte izquierda '),(r'parte parte', 'parte'),(r'parte parte parte','parte'),
+        (r'vh.*? ', 'vehiculo '), (r'colis.*? ', 'colisiona '), (r'\scho.*? ', ' colisiona '),(r'\simpac.*? ', ' colisiona '), (r'parte lateral', 'parte'),
+        (r'su delat.*? ', 'su parte delantera '), (r'aseg.*? ', 'asegurado '), (r'emb.*? ', 'colisiona '), (r'redg.*? ',''),(r'paragolpe delantera','parte delantera'),
+        (r'frente delantero', 'parte delantera'), (r'de atras', 'en parte trasera'), (r'por detras', 'en parte trasera'),(r'parte conductor','parte izquierda'),
+        (r' golp.*? ',' colisiona '),(r'delant.*? ','delantera '),(r'contacto','colisiona'),(r'parte acompanante','parte derecha'),(r'parte medio','parte')
     ]
     for value in vector:
         row = re.sub(value[0],value[1], row)
     return row
 
+def ratios(w):
+    try:
+        dic = [
+            'trasera','delantera','izquierda','derecha','acompanante'
+        ]
+        aux = 0
+        word = ''
+        for i in dic:
+            if (aux <= fuzz.ratio(w, i) and 80 <= fuzz.ratio(w, i)):
+                aux = fuzz.ratio(w, i)
+                word = i
+        if word != '':
+            print(str(w) + '    CAMBIE POR    ' + str(word))
+            return word
+        return w
+    except TypeError:
+        return w
+
 def cleanRatios(w):
     try:
-        if(len(w) < 4):
+        if(len(w) <= 5):
             return w
         dic = ['izquierda','derecha','izquierdo','derecho', 'paragolpe']
         aux = 0
@@ -112,19 +131,11 @@ def cleanRatios(w):
                 aux = fuzz.partial_ratio(w, i)
                 word = i
         if word != '':
-            print(str(w) + '    CAMBIE POR    ' + str(word))
+            #print(str(w) + '    CAMBIE POR    ' + str(word))
             return word
         return w
     except TypeError:
         return w
-
-# def convertionCleanRow(row):
-#     row = row.split()
-#     words = []
-#     for w in row:
-#         words.append(cleanRatios(w))
-#         row = ' '.join(words)
-#     return row
 
 def clean(serie):
     """
@@ -138,6 +149,9 @@ def clean(serie):
         serie.iloc[index] = ' '.join(list(map(cleanRatios,row.split())))
     
     for index, row in enumerate(serie):
+        serie.iloc[index] = ' '.join(list(map(ratios,row.split())))
+
+    for index, row in enumerate(serie):
         serie.iloc[index] = changeStrings(row)
 
     for index, row in enumerate(serie):
@@ -147,7 +161,8 @@ def clean(serie):
 
 def nonStop(w):
     return ' '.join(i for i in w.split() if i not in ['el', 'la', 'los', 'las', 'ellos', 'nosotros', 'lo', 'le',
-                                                      'que', 'un', 'se', 'de', 'a', 'y', 'sobre', 'cuando', 'do', 'una'])
+                                                      'que', 'un', 'se', 'de', 'a', 'y', 'sobre', 'cuando', 'do', 'una',
+                                                      'en', 'del', 'al','me','ella'])
 
 
 def separador(ds):

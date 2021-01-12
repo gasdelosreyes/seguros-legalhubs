@@ -6,6 +6,7 @@ import pandas as pd
 import seaborn as sns
 from tqdm import tqdm as tq
 import random
+import os
 
 from functions import *
 from cleaner import *
@@ -17,34 +18,13 @@ from sklearn.metrics import silhouette_score
 
 def getSeedScore(bowCorpus, tokenizedContexts, vector_size=300,seed=None):
     randomSeed = random.randint(1, 2**32 - 1)
-    # np.random.seed(randomSeed)
     kmeans = KMeans(n_clusters=8)
     model = Doc2Vec(bowCorpus, vector_size=vector_size, seed=randomSeed)
     pca = PCA(n_components=2, svd_solver='full', whiten=True)
-
-    to_fit = []
-    # for value in tokenizedContexts:
-    #     # try:
-    #     #     if len(model[value]) != vector_size:
-    #     #         for j in model[value]:
-    #     #             to_fit.append(j)
-    #     #     else:
-    #     #         to_fit.append(model[value])
-    #     # except:
-    #     #     pass
-    #     for vector in model.docvecs.vectors_docs:
-    #         to_fit.append(vector)
-
     pca = pca.fit(model.docvecs.vectors_docs)
-    # mod_vec = [GeoCenter(pca.transform(i)) for i in model.docvecs.vectors_docs]
-    for i in tokenizedContexts:
-        try:
-            mod_vec.append(GeoCenter(pca.transform(model[i])))
-        except:
-            pass
+    kmeans.fit(model.docvecs.vectors_docs)
 
-    kmeans.fit(mod_vec)
-    return (silhouette_score(mod_vec, kmeans.labels_, metric='euclidean'), randomSeed)
+    return (silhouette_score(model.docvecs.vectors_docs, kmeans.labels_, metric='euclidean'), randomSeed)
 
 def maxScore(bowCorpus,tokenizedCorpus,training=100):
     score = []       
@@ -52,31 +32,53 @@ def maxScore(bowCorpus,tokenizedCorpus,training=100):
         score.append(getSeedScore(bowCorpus,tokenizedCorpus))
     return max(score)
 
+def checkWrongContext(string):
+    parts = ['parte delantera izquierda','parte trasera izquierda','parte delantera derecha','parte delantera izquierda',
+            'parte trasera derecha','parte trasera izquierda','parte delantera','parte trasera','parte derecha','parte izquierda']
+    for value in parts:
+        if(re.search(value, string)):
+            return True
+    return False
+    
 def get_concordance(vector,window=2,key='parte'):
     array = []
+    deleteArray = []
     for value in vector:
         index = nltk.ConcordanceIndex(nltk.tokenize.word_tokenize(value))
         concordance = index.find_concordance(key)
         for i in range(len(concordance)):
-            array.append(' '.join(concordance[i][0][-(window):]) + ' ' + concordance[i][1] + ' ' + ' '.join(concordance[i][2][:(window)]))
+            string = ' '.join(concordance[i][0][-(window):]) + ' ' + concordance[i][1] + ' ' + ' '.join(concordance[i][2][:(window)])
+            if(checkWrongContext(string)):
+                array.append(string)
+            else:
+                deleteArray.append(string)
+    print(deleteArray)
     return array
     
 df = pd.read_csv('../dataset/casos/auto.csv')
+
 df_model = get_concordance(df['descripcion'])
-print(pd.Series(df_model).value_counts())
+# print(pd.Series(df_model).value_counts())
 
 tokenizedCorpus = [nltk.tokenize.word_tokenize(i) for i in df_model].copy()
 bowCorpus = [TaggedDocument(words, [idx_tag]) for idx_tag, words in enumerate(tokenizedCorpus)]
+seed = 0
 
-seed = maxScore(bowCorpus,tokenizedCorpus)[1]
-
-with open('seed.txt','w') as f:
-    f.write(str(seed))
-
+if(os.path.exists("seed.txt")):
+    f = open("seed.txt", "r")
+    txt = f.read()
+    match = re.search(r',\ (.*?)\)',txt)
+    if(match):
+        seed = int(match.group(1))
+else:
+    seed = maxScore(bowCorpus,tokenizedCorpus)
+    with open('seed.txt','w') as f:
+        f.write(str(seed))
+        seed = seed[1]
 
 np.random.seed(seed)
 model = Doc2Vec(bowCorpus, vector_size=300, seed=seed) 
-pca = PCA(n_components=2, svd_solver='full', whiten=True) 
+pca = PCA(n_components=2, svd_solver='full', whiten=True)
 
 to_fit = []
 for i in tokenizedCorpus:
@@ -109,4 +111,3 @@ print(silhouette_score(mod_vec, kmeans.labels_, metric='euclidean'))
 ax.grid()
 ax.scatter(pca_df.x, pca_df.y)
 plt.savefig('test_plot.png')
-

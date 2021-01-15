@@ -52,7 +52,6 @@ def get_concordance(vector,window=2,key='parte'):
                 array.append(string)
             else:
                 deleteArray.append(string)
-    print(deleteArray)
     return array
     
 df = pd.read_csv('../dataset/casos/auto.csv')
@@ -101,7 +100,8 @@ for i in tokenizedCorpus:
         seguidor['vector'].append(GeoCenter(pca.transform(model[i])))
     except:
         pass
-kmeans = KMeans(n_clusters=8)
+
+kmeans = KMeans(n_clusters=8, random_state=0)
 kmeans.fit(mod_vec)
 pca_df = pd.DataFrame(data=mod_vec, columns=['x', 'y'])
 fig = plt.figure(figsize=(15, 10))

@@ -75,9 +75,9 @@ def changeStrings(row):
         (r'derecho', 'derecha'), (r'delantero', 'delantera'), (r'trasero', 'trasera'), (r'frontal', 'parte delantera'), (r'lado', 'parte'),
         (r'pb','parte'), (r'puerta', 'parte'),
         (r'conmi','con mi'), (r'choque', 'mi parte delantera'),(r'circ','circulaba'), (r'stro','siniestro'), (r'ero','tercero'),(r'gge','garage'),
-        (r' p ', ' parte '), (r'contra\s', 'con '), (r'detras','trasera'),(r'atras','trasera'),(r'atraz','trasera'), (r'roza', 'colisiona'),
+        (r' p ', ' parte '), (r'contra\s', 'con '), (r'detras','trasera'),(r'atras','trasera'), (r'roza', 'colisiona'),
         (r' ro ', ' tercero '),(r'gral','general'),(r'paragolpe','delantera'), (r'trompa','delantera'),(r'izq', 'izquierda'),
-        (r'toco','colisiona'),(r'adelante','delantera'),(r'izquierdo','izquierda'),(r'posterior','delantera')
+        (r'toco','colisiona'),(r'adelante','delantera'),(r'izquierdo','izquierda'),(r'posterior','delantera'),(r'vehiculo','')
     ]
     words = []
     for w in row.split():
@@ -104,7 +104,7 @@ def changeRegex(row):
 def ratios(w):
     try:
         dic = [
-            'trasera','delantera','izquierda','derecha','acompanante'
+            'trasera','delantera','izquierda','derecha','acompanante','atras','vehiculo'
         ]
         aux = 0
         word = ''
@@ -113,7 +113,7 @@ def ratios(w):
                 aux = fuzz.ratio(w, i)
                 word = i
         if word != '':
-            print(str(w) + '    CAMBIE POR    ' + str(word))
+            # print(str(w) + '    CAMBIE POR    ' + str(word))
             return word
         return w
     except TypeError:
@@ -123,7 +123,7 @@ def cleanRatios(w):
     try:
         if(len(w) <= 5):
             return w
-        dic = ['izquierda','derecha','izquierdo','derecho', 'paragolpe']
+        dic = ['izquierda','derecha','izquierdo','derecho', 'paragolpe','vehiculo']
         aux = 0
         word = ''
         for i in dic:
@@ -160,9 +160,10 @@ def clean(serie):
     return serie 
 
 def nonStop(w):
+    #me
     return ' '.join(i for i in w.split() if i not in ['el', 'la', 'los', 'las', 'ellos', 'nosotros', 'lo', 'le',
                                                       'que', 'un', 'se', 'de', 'a', 'y', 'sobre', 'cuando', 'do', 'una',
-                                                      'en', 'del', 'al','me','ella'])
+                                                      'en', 'del', 'al','ella','del','por','con','no','si','ni','en'])
 
 
 def separador(ds):

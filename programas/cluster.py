@@ -54,11 +54,27 @@ def get_concordance(vector,window=2,key='parte'):
                 deleteArray.append(string)
     return array
     
+def getNGrams(corpus,number):
+    fstring = ''
+    for row in corpus:
+        fstring += row + ' '
+    tokens = word_tokenize(fstring)
+    array = []
+    n_series = pd.Series(nltk.ngrams(tokens, number))
+    n_values = n_series.value_counts().index
+    n_counts = n_series.value_counts().values
+    for ngram in n_values:
+        string = ' '.join(i for i in ngram)
+        if(checkWrongContext(string)):
+            array.append(string)
+    return array
 df = pd.read_csv('../dataset/casos/auto.csv')
 
 df_model = get_concordance(df['descripcion'])
 # print(pd.Series(df_model).value_counts())
 
+print(getNGrams(df['descripcion'],3))
+sys.exit()
 tokenizedCorpus = [nltk.tokenize.word_tokenize(i) for i in df_model].copy()
 bowCorpus = [TaggedDocument(words, [idx_tag]) for idx_tag, words in enumerate(tokenizedCorpus)]
 seed = 0

@@ -13,8 +13,6 @@ for row in df['descripcion']:
 
 tokens = word_tokenize(fstring)
 
-nltkText = Text(tokens)
-
 fileCreated = open("bigrams.txt","w")
 bigrams_series = pd.Series(nltk.ngrams(tokens, 2))
 bigrams_values = bigrams_series.value_counts().index
@@ -25,7 +23,7 @@ plt.subplots_adjust(left=0.25, bottom=None, right=None, top=None, wspace=None, h
 plt.title('20 Bigramas con mayor frecuencia')
 plt.ylabel('Bigramas')
 plt.xlabel('N de ocurrencias')
-plt.show('bigrams.png')
+plt.savefig('bigrams.png')
 plt.clf()
 for i in range(len(bigrams_values)):
     fileCreated.write('BIGRAMA: ' + str(bigrams_values[i]) + ' - CANTIDAD: ' + str(bigrams_counts[i]) + '\n')
@@ -42,7 +40,7 @@ plt.subplots_adjust(left=0.25, bottom=None, right=None, top=None, wspace=None, h
 plt.title('20 Trigramas con mayor frecuencia')
 plt.ylabel('Trigramas')
 plt.xlabel('N de ocurrencias')
-plt.show('trigrams.png')
+plt.savefig('trigrams.png')
 plt.clf()
 for i in range(len(trigrams_values)):
     fileCreated.write('TRIGRAMA: ' + str(trigrams_values[i]) + ' - CANTIDAD: ' + str(trigrams_counts[i]) + '\n')
@@ -59,7 +57,7 @@ plt.subplots_adjust(left=0.25, bottom=None, right=None, top=None, wspace=None, h
 plt.title('20 5gramas con mayor frecuencia')
 plt.ylabel('5GRAMAS',labelpad=2)
 plt.xlabel('N de ocurrencias')
-plt.show('5grams.png')
+plt.savefig('5grams.png')
 plt.clf()
 for i in range(len(pentagram_values)):
     fileCreated.write('5GRAMA: ' + str(pentagram_values[i]) + ' - CANTIDAD: ' + str(pentagram_counts[i]) + '\n')

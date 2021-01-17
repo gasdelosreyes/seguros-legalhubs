@@ -1,0 +1,4001 @@
+x,y,descripcion,cluster
+2.4883142,1.1204567,"['colisiona parte delantera', 'parte delantera parte', 'parte trasera tercero']",5
+1.1351804,-0.59368616,['parte delantera izquierda'],6
+-0.7418785,-0.05012728,['su parte trasera'],1
+-0.7408191,-0.0445897,"['mi parte delantera', 'parte trasera derecha', 'parte delantera parte']",1
+1.2087446,-0.268167,"['mi parte delantera', 'colisiona parte trasera']",6
+-0.73723644,-0.040418174,"['su parte delantera', 'parte delantera parte']",1
+1.5065871,1.1767143,['colisiona parte delantera'],5
+1.5123616,0.88439643,['su parte delantera'],5
+2.000646,0.7619387,"['su parte delantera', 'parte delantera parte', 'parte trasera tercero']",5
+1.0664243,-0.32996213,"['parte delantera izquierda', 'su parte delantera', 'parte trasera derecha']",6
+1.1207564,0.38001508,"['colisiona parte delantera', 'parte delantera parte', 'parte trasera tercero']",7
+2.6840377,0.9143628,"['su parte delantera', 'parte delantera parte']",5
+1.3674179,-0.62850654,"['parte delantera izquierda', 'parte trasera derecha']",6
+1.9455725,0.79733217,"['su parte delantera', 'parte delantera parte', 'parte trasera tercero']",5
+1.8531973,0.9477706,"['su parte delantera', 'su parte trasera']",5
+1.6820594,-1.3207238,"['colisiona parte delantera', 'parte delantera parte', 'parte trasera tercero']",3
+2.5358088,1.0784007,"['mi parte delantera', 'parte trasera izquierda', 'su parte trasera']",5
+1.7804941,0.0720887,"['colisiona parte delantera', 'parte trasera tercero']",7
+2.2317562,0.9246159,"['su parte delantera', 'parte delantera parte']",5
+2.1473947,1.6916714,"['colisiona parte delantera', 'parte trasera izquierda', 'parte delantera parte']",5
+2.0114305,0.55956167,"['parte delantera izquierda', 'su parte delantera']",7
+1.8740364,0.8919184,"['su parte delantera', 'su parte trasera']",5
+1.2918183,0.09416977,"['mi parte delantera', 'parte delantera derecha', 'su parte delantera']",7
+1.6433587,0.018340552,"['mi parte delantera', 'parte delantera parte', 'parte trasera tercero']",7
+1.4248995,0.17035037,"['su parte delantera', 'parte delantera parte']",7
+1.42501,1.1448263,['colisiona parte trasera'],5
+2.7012124,2.3508296,['colisiona parte trasera'],5
+1.6804898,0.7979076,"['colisiona parte trasera', 'parte trasera derecha']",5
+0.9710214,-2.0833309,"['mi parte delantera', 'parte delantera derecha', 'su parte delantera']",4
+1.0653545,-2.097864,"['parte delantera derecha', 'su parte delantera']",4
+2.0486195,-2.757999,['su parte trasera'],4
+1.1054085,1.8019016,"['mi parte delantera', 'parte delantera parte']",2
+1.4686049,0.046759285,['colisiona parte trasera'],7
+1.3604671,-0.2814415,"['parte trasera izquierda', 'parte trasera derecha', 'su parte trasera']",6
+1.4719586,2.575915,"['mi parte delantera', 'parte delantera parte']",2
+1.1100333,-2.1005306,['parte delantera derecha'],4
+1.4210329,-1.445529,['parte delantera parte'],3
+1.6356667,1.737276,"['mi parte delantera', 'su parte delantera', 'parte delantera parte', 'parte trasera tercero']",5
+-0.7442224,-0.045386743,"['su parte delantera', 'parte delantera parte', 'parte trasera tercero']",1
+1.0347131,-0.2744075,"['colisiona parte delantera', 'parte delantera izquierda']",6
+1.2440387,1.0697932,['parte delantera derecha'],5
+2.51089,2.590298,"['parte delantera izquierda', 'su parte delantera', 'parte trasera derecha']",2
+-0.75017375,-0.037730344,['parte trasera tercero'],1
+-0.7399194,-0.03951596,"['parte delantera derecha', 'su parte delantera']",1
+-0.74271345,-0.040285572,['su parte trasera'],1
+1.8158273,1.4735031,"['colisiona parte delantera', 'parte trasera izquierda', 'parte delantera parte']",5
+1.3867037,-0.549816,"['su parte delantera', 'parte delantera parte']",6
+-0.74176705,-0.038016785,['colisiona parte delantera'],1
+1.042418,-0.33564028,"['mi parte delantera', 'su parte trasera', 'parte trasera tercero']",6
+2.0575204,-1.0312673,"['su parte delantera', 'parte delantera parte', 'parte trasera tercero']",0
+1.845336,0.533864,"['su parte delantera', 'su parte trasera']",7
+1.4198843,0.029893529,"['parte delantera derecha', 'su parte delantera', 'parte trasera izquierda']",7
+1.4177796,-0.30116388,['parte delantera izquierda'],6
+1.0011209,-0.4460352,"['colisiona parte delantera', 'parte delantera izquierda']",6
+1.5371056,1.1873362,"['mi parte delantera', 'parte delantera parte']",5
+-0.7444734,-0.043591015,['parte delantera izquierda'],1
+1.2169352,-0.3692955,['mi parte delantera'],6
+2.215725,1.6200327,['colisiona parte trasera'],5
+2.669926,1.0377684,['colisiona parte delantera'],5
+1.8061687,0.06828697,"['mi parte delantera', 'parte delantera derecha', 'parte delantera parte']",7
+1.8323808,-0.71443015,"['colisiona parte trasera', 'parte trasera tercero']",0
+1.1424333,-0.44151717,['su parte delantera'],6
+1.2494651,-0.66062754,['su parte delantera'],6
+1.8243015,2.4642441,"['colisiona parte trasera', 'parte trasera derecha']",2
+1.1078644,-0.4304654,['su parte delantera'],6
+0.71025705,2.2892172,"['su parte delantera', 'parte delantera parte', 'parte trasera tercero']",2
+1.1785431,-2.142418,"['parte delantera derecha', 'su parte delantera']",4
+1.2115035,-0.25852215,"['parte delantera derecha', 'parte delantera izquierda', 'su parte delantera']",6
+1.5415891,2.4971335,"['colisiona parte trasera', 'parte trasera derecha']",2
+2.3903143,-0.33713356,"['parte delantera izquierda', 'su parte delantera']",0
+1.2260791,0.37648445,"['colisiona parte trasera', 'su parte delantera']",7
+1.1956147,0.33214155,['parte delantera izquierda'],7
+-0.7469983,-0.044397872,['parte delantera parte'],1
+-0.7322997,-0.046853054,"['mi parte delantera', 'su parte trasera']",1
+1.6694356,-2.0950718,"['parte delantera izquierda', 'su parte delantera']",4
+-0.7408416,-0.04166477,['parte trasera derecha'],1
+-0.7468073,-0.044766087,"['parte delantera izquierda', 'su parte delantera', 'parte delantera parte']",1
+1.297907,0.34588993,['su parte delantera'],7
+-0.74110097,-0.044049755,"['mi parte delantera', 'su parte trasera']",1
+-0.7405018,-0.047870584,"['mi parte delantera', 'su parte trasera']",1
+-0.735718,-0.04526596,['parte delantera derecha'],1
+2.625676,1.0400722,['mi parte delantera'],5
+1.6164777,0.052889112,"['colisiona parte delantera', 'parte trasera tercero']",7
+-0.7462858,-0.04170074,"['mi parte delantera', 'su parte delantera']",1
+-0.7430662,-0.040295023,"['colisiona parte trasera', 'parte trasera tercero']",1
+1.6701998,-0.4674925,"['parte delantera derecha', 'su parte delantera', 'parte trasera izquierda', 'parte delantera parte']",0
+1.3608958,-2.4480143,['colisiona parte delantera'],4
+2.1315446,-0.06824263,"['parte delantera derecha', 'colisiona parte delantera']",0
+1.0279884,-1.3987086,"['colisiona parte delantera', 'parte trasera derecha']",3
+1.2167025,-0.5126445,['parte delantera parte'],6
+1.1520525,0.9919147,['mi parte delantera'],5
+-0.74021834,-0.041468125,['su parte delantera'],1
+1.2563168,2.2287343,['parte trasera derecha'],2
+-0.7415283,-0.04118964,"['parte delantera izquierda', 'su parte delantera', 'parte trasera derecha']",1
+1.6140885,-0.044986013,"['mi parte delantera', 'su parte trasera']",7
+1.2160803,-1.224879,"['colisiona parte trasera', 'parte trasera derecha']",3
+1.4705045,0.60130227,['su parte trasera'],7
+1.1451241,0.17071775,"['parte delantera derecha', 'su parte delantera']",7
+1.5962781,0.44931746,"['mi parte delantera', 'parte delantera izquierda', 'parte trasera izquierda', 'su parte trasera']",7
+1.5707712,1.4466693,"['mi parte delantera', 'su parte delantera', 'parte delantera parte', 'parte trasera tercero']",5
+-0.7415058,-0.044790514,"['su parte delantera', 'parte delantera parte', 'parte trasera tercero']",1
+1.2028325,-0.23840743,['colisiona parte trasera'],6
+0.99209976,2.4055712,"['mi parte delantera', 'parte trasera izquierda', 'su parte trasera']",2
+2.0932522,0.38387492,"['colisiona parte trasera', 'colisiona parte delantera', 'parte delantera parte']",7
+1.3248452,1.2213488,['parte trasera tercero'],5
+2.0646021,-0.8016201,"['su parte delantera', 'parte trasera izquierda', 'parte delantera parte']",0
+1.4041795,-0.046534345,['parte delantera derecha'],6
+-0.738413,-0.040399447,"['mi parte delantera', 'parte delantera derecha']",1
+-0.7425712,-0.041262712,['su parte trasera'],1
+1.1948471,-0.35741797,['colisiona parte delantera'],6
+-0.73931146,-0.040476322,"['parte delantera izquierda', 'su parte delantera', 'parte trasera derecha', 'su parte trasera', 'parte delantera parte', 'parte trasera tercero']",1
+1.8551371,-0.4797809,['parte trasera izquierda'],0
+1.351817,-1.1976204,"['colisiona parte trasera', 'parte delantera derecha', 'colisiona parte delantera']",3
+1.276044,1.0175319,['mi parte delantera'],5
+0.83438087,2.2286053,"['colisiona parte delantera', 'parte delantera izquierda', 'parte trasera derecha']",2
+-0.7380905,-0.040325098,"['colisiona parte trasera', 'parte trasera tercero']",1
+1.2695842,0.25066984,"['mi parte delantera', 'parte delantera parte']",7
+1.2781751,-1.2436303,['su parte trasera'],3
+1.6821606,-0.81440574,"['mi parte delantera', 'su parte trasera']",0
+1.5950068,1.1591054,['parte delantera parte'],5
+1.3403516,-2.229783,['parte trasera derecha'],4
+1.304599,-0.29384533,"['colisiona parte trasera', 'parte trasera izquierda']",6
+1.1519899,0.044879034,['colisiona parte trasera'],6
+1.256698,0.8439671,"['colisiona parte trasera', 'su parte delantera', 'parte delantera parte']",5
+2.328687,2.88444,['mi parte delantera'],2
+-0.7346758,-0.05258868,['parte trasera derecha'],1
+-0.7349193,-0.038265854,['colisiona parte trasera'],1
+-0.74054974,-0.049145386,"['colisiona parte trasera', 'parte trasera derecha']",1
+1.9528958,1.3147224,['mi parte delantera'],5
+1.0305338,-2.14585,['colisiona parte trasera'],4
+1.632629,0.9439864,['parte trasera derecha'],5
+-0.7441901,-0.04589665,['colisiona parte trasera'],1
+1.4838088,-0.77598107,['mi parte delantera'],3
+-0.7470433,-0.043968532,"['colisiona parte delantera', 'parte delantera parte']",1
+-0.73732024,-0.04525776,['mi parte delantera'],1
+1.881936,0.5376561,['mi parte delantera'],7
+1.7582654,0.3993223,"['su parte delantera', 'parte delantera parte']",7
+1.1139176,-0.3021445,"['su parte delantera', 'parte delantera parte']",6
+-0.7382077,-0.052073527,"['colisiona parte trasera', 'parte trasera izquierda']",1
+1.41058,2.1607196,"['colisiona parte delantera', 'parte delantera izquierda']",2
+-0.7458805,-0.04450434,['colisiona parte trasera'],1
+1.2912053,-0.23969088,['mi parte delantera'],6
+1.1841855,-0.29688597,['colisiona parte trasera'],6
+2.6294935,-0.18499926,"['colisiona parte trasera', 'parte trasera izquierda']",0
+-0.7401178,-0.040064186,"['mi parte delantera', 'parte delantera izquierda']",1
+1.1684166,-0.8421003,['parte delantera derecha'],3
+1.6345041,-1.7306958,['parte trasera izquierda'],3
+-0.7415159,-0.045374975,['mi parte delantera'],1
+0.94727427,2.3971922,['parte delantera parte'],2
+1.9126772,-1.442674,['colisiona parte delantera'],3
+-0.74017686,-0.049211413,['parte delantera derecha'],1
+-0.7401947,-0.042572718,"['colisiona parte delantera', 'parte delantera parte']",1
+-0.7422003,-0.043095175,"['mi parte delantera', 'parte delantera izquierda']",1
+1.8783396,-0.3829896,['mi parte delantera'],0
+-0.73648936,-0.035819624,['mi parte delantera'],1
+1.7706635,2.3468814,['mi parte delantera'],2
+-0.7420933,-0.038480133,['su parte trasera'],1
+1.2468989,-0.28116047,['parte trasera derecha'],6
+-0.738509,-0.045828752,['mi parte delantera'],1
+-0.74174744,-0.03764115,"['parte trasera derecha', 'su parte trasera']",1
+-0.7392295,-0.04988944,['su parte trasera'],1
+-0.73905754,-0.042343162,"['parte trasera derecha', 'su parte trasera']",1
+-0.73552173,-0.04452059,"['mi parte delantera', 'parte delantera izquierda']",1
+-0.7431134,-0.043192856,"['parte delantera derecha', 'parte delantera izquierda']",1
+1.4961442,0.8712781,['parte delantera derecha'],5
+-0.7433218,-0.043846887,['parte trasera derecha'],1
+-0.7391939,-0.044594612,['colisiona parte trasera'],1
+-0.74439603,-0.04099992,['mi parte delantera'],1
+-0.7387409,-0.044601183,['mi parte delantera'],1
+-0.7409751,-0.039104328,['colisiona parte trasera'],1
+-0.7411068,-0.041099496,"['su parte delantera', 'parte delantera parte']",1
+-0.7359719,-0.045962986,['mi parte delantera'],1
+-0.7404787,-0.04537994,"['parte trasera izquierda', 'parte trasera derecha']",1
+-0.7462195,-0.04886465,['parte trasera izquierda'],1
+-0.7376583,-0.0407449,"['colisiona parte trasera', 'parte trasera izquierda']",1
+1.288169,1.1682074,['colisiona parte trasera'],5
+-0.74143547,-0.043023236,['mi parte delantera'],1
+-0.74355745,-0.042081952,"['parte delantera izquierda', 'su parte delantera']",1
+-0.74015456,-0.043497965,['parte delantera izquierda'],1
+-0.7479084,-0.045354802,"['colisiona parte trasera', 'parte trasera izquierda', 'parte trasera derecha']",1
+-0.7379492,-0.041512623,['colisiona parte trasera'],1
+1.3080041,-1.3095607,['mi parte delantera'],3
+1.6869277,-1.582691,['mi parte delantera'],3
+-0.7455332,-0.03363257,['su parte delantera'],1
+1.1057111,-2.1254256,['su parte delantera'],4
+1.9638165,-0.7161449,"['colisiona parte trasera', 'parte trasera derecha']",0
+-0.7416215,-0.04893822,"['parte delantera derecha', 'colisiona parte delantera', 'parte trasera izquierda']",1
+-0.7364954,-0.04397266,['colisiona parte trasera'],1
+-0.7416774,-0.0440371,['mi parte delantera'],1
+0.7615185,2.220824,['parte trasera derecha'],2
+1.2602628,-1.2630306,"['parte delantera derecha', 'parte trasera derecha']",3
+1.1854644,-2.214388,['colisiona parte trasera'],4
+1.2273918,-2.8422287,"['parte delantera derecha', 'parte trasera izquierda']",4
+0.8826576,2.3497787,"['parte delantera izquierda', 'su parte delantera']",2
+-0.74478346,-0.038348634,"['mi parte delantera', 'su parte delantera']",1
+-0.7421358,-0.048418514,['parte trasera derecha'],1
+-0.7447881,-0.044766255,"['colisiona parte trasera', 'parte delantera derecha']",1
+-0.73875666,-0.041083664,"['mi parte delantera', 'colisiona parte trasera', 'parte delantera derecha', 'parte trasera izquierda']",1
+-0.7400651,-0.047342688,"['parte delantera derecha', 'colisiona parte delantera', 'parte trasera tercero']",1
+-0.7440875,-0.0447363,['mi parte delantera'],1
+0.9686487,-1.9799305,['colisiona parte trasera'],4
+-0.74601096,-0.045377515,['parte trasera derecha'],1
+-0.73833233,-0.04224548,"['parte delantera derecha', 'colisiona parte delantera']",1
+1.3960693,-1.3086815,['colisiona parte trasera'],3
+-0.7430747,-0.054173984,['parte trasera derecha'],1
+-0.7413225,-0.036360692,"['parte trasera derecha', 'su parte trasera']",1
+-0.74119973,-0.048746668,"['parte trasera derecha', 'su parte trasera']",1
+-0.7424586,-0.039028097,['parte delantera derecha'],1
+-0.73831105,-0.043115105,['parte delantera derecha'],1
+-0.73760146,-0.040015515,"['mi parte delantera', 'colisiona parte trasera']",1
+-0.74364305,-0.043263644,['mi parte delantera'],1
+-0.7427343,-0.04732167,['mi parte delantera'],1
+-0.74232996,-0.04644224,['mi parte delantera'],1
+-0.74040145,-0.043160755,['colisiona parte delantera'],1
+0.9330089,-1.9511126,"['parte trasera derecha', 'su parte trasera']",4
+-0.7478152,-0.042195216,['su parte trasera'],1
+-0.7453187,-0.04745809,['mi parte delantera'],1
+-0.7473402,-0.036981355,"['colisiona parte trasera', 'parte trasera izquierda']",1
+0.89222944,2.3883963,['parte trasera izquierda'],2
+-0.7408352,-0.044425834,"['parte delantera derecha', 'colisiona parte delantera']",1
+1.4457147,0.79091513,"['mi parte delantera', 'parte trasera derecha', 'parte delantera parte']",7
+-0.7486659,-0.047880217,['parte trasera derecha'],1
+0.8173635,2.236624,['mi parte delantera'],2
+0.8552628,2.2923365,"['colisiona parte delantera', 'parte delantera izquierda']",2
+-0.74526167,-0.049399536,['colisiona parte trasera'],1
+-0.7444589,-0.047810283,['parte trasera derecha'],1
+-0.74583477,-0.039812338,"['colisiona parte trasera', 'parte trasera derecha']",1
+-0.74402547,-0.044668205,['mi parte delantera'],1
+1.5126078,1.0282139,"['colisiona parte delantera', 'parte delantera izquierda']",5
+1.9482003,0.92870736,['mi parte delantera'],5
+1.6725564,-1.644084,['mi parte delantera'],3
+-0.7405057,-0.038942788,['parte delantera derecha'],1
+1.3393755,-0.57762915,"['parte delantera izquierda', 'su parte delantera']",6
+-0.7411729,-0.039761484,['su parte delantera'],1
+-0.744574,-0.037665788,['mi parte delantera'],1
+-0.73906595,-0.04964344,['parte trasera izquierda'],1
+-0.7452574,-0.047632508,['mi parte delantera'],1
+-0.7433622,-0.043414187,['parte trasera tercero'],1
+-0.7426219,-0.04492037,"['colisiona parte trasera', 'parte trasera izquierda']",1
+-0.7435857,-0.038775034,['su parte delantera'],1
+1.1596322,-2.1514163,"['colisiona parte trasera', 'su parte trasera']",4
+-0.73902303,-0.04778295,['colisiona parte trasera'],1
+0.95519716,2.5783978,['mi parte delantera'],2
+-0.74671197,-0.038911365,['su parte trasera'],1
+-0.7400468,-0.041087236,['mi parte delantera'],1
+-0.7417496,-0.042573977,['mi parte delantera'],1
+1.0735096,-2.156191,['mi parte delantera'],4
+-0.7437024,-0.045131546,['mi parte delantera'],1
+1.5578693,-2.3134022,['parte delantera derecha'],4
+-0.7464384,-0.0479632,['parte trasera izquierda'],1
+1.4269046,0.68421566,['colisiona parte trasera'],7
+-0.74247164,-0.04160463,['colisiona parte trasera'],1
+1.1527905,-0.33484098,"['parte delantera izquierda', 'su parte delantera']",6
+-0.7429699,-0.043189008,['mi parte delantera'],1
+1.2698989,-0.85938287,['parte trasera izquierda'],3
+0.94659257,2.540651,['colisiona parte delantera'],2
+-0.73898894,-0.045114912,"['parte delantera izquierda', 'parte trasera izquierda', 'parte trasera derecha']",1
+1.2377044,1.0062232,['parte delantera derecha'],5
+-0.74050224,-0.044989016,['colisiona parte trasera'],1
+1.2382566,-0.40633565,"['mi parte delantera', 'colisiona parte trasera', 'parte trasera tercero']",6
+-0.73920107,-0.041721724,['parte delantera derecha'],1
+-0.7436165,-0.040411502,['mi parte delantera'],1
+-0.7469523,-0.04509433,['mi parte delantera'],1
+1.2347126,-0.3433115,['parte delantera derecha'],6
+-0.7432165,-0.039864216,"['colisiona parte trasera', 'parte trasera tercero']",1
+-0.744276,-0.040866803,['mi parte delantera'],1
+-0.74084926,-0.043391097,"['colisiona parte trasera', 'parte trasera tercero']",1
+-0.7337181,-0.042463697,"['parte delantera izquierda', 'parte trasera derecha']",1
+-0.74554616,-0.042663112,"['parte delantera izquierda', 'parte trasera derecha']",1
+1.7800316,0.82529986,['mi parte delantera'],5
+-0.73298305,-0.04268383,['parte delantera derecha'],1
+-0.74771124,-0.040173877,['colisiona parte delantera'],1
+-0.74337727,-0.04743203,['parte delantera parte'],1
+-0.74671715,-0.052469317,['parte trasera derecha'],1
+-0.74124306,-0.04081286,"['colisiona parte trasera', 'su parte delantera']",1
+-0.7400495,-0.039232265,['parte delantera izquierda'],1
+-0.74279696,-0.046882123,['parte trasera derecha'],1
+-0.746879,-0.043133557,"['su parte delantera', 'parte delantera parte']",1
+-0.7415679,-0.043744434,['su parte delantera'],1
+-0.7429094,-0.04285157,['colisiona parte delantera'],1
+-0.74111766,-0.03987817,"['colisiona parte trasera', 'parte delantera derecha', 'parte trasera izquierda']",1
+1.6045339,1.595153,"['colisiona parte delantera', 'parte delantera izquierda']",5
+-0.7374381,-0.036828794,"['su parte delantera', 'parte delantera parte']",1
+-0.74222976,-0.037767056,['mi parte delantera'],1
+-0.7403816,-0.051391885,"['su parte delantera', 'parte delantera parte']",1
+-0.74522746,-0.052238487,['parte delantera derecha'],1
+-0.74399835,-0.04239724,"['parte delantera derecha', 'colisiona parte delantera']",1
+0.85051894,2.3186312,['parte delantera derecha'],2
+-0.7406656,-0.052194472,['colisiona parte trasera'],1
+0.9578096,2.5399148,['mi parte delantera'],2
+-0.7455726,-0.046858124,['colisiona parte trasera'],1
+0.9441994,2.478102,['mi parte delantera'],2
+-0.7397788,-0.048512526,"['parte delantera derecha', 'colisiona parte delantera', 'parte delantera parte']",1
+-0.74187726,-0.041462015,"['colisiona parte delantera', 'parte delantera izquierda']",1
+1.3674526,-0.30164236,['mi parte delantera'],6
+1.2927504,-1.2415712,['parte delantera derecha'],3
+-0.74158317,-0.03935087,['mi parte delantera'],1
+-0.74077713,-0.045541495,['mi parte delantera'],1
+-0.7443598,-0.045451876,['colisiona parte trasera'],1
+-0.7443413,-0.04496614,"['parte delantera derecha', 'parte trasera derecha']",1
+-0.738872,-0.041597553,"['colisiona parte delantera', 'parte delantera parte']",1
+-0.7377155,-0.046620883,['colisiona parte trasera'],1
+0.9400807,2.5187502,"['parte delantera izquierda', 'parte trasera derecha']",2
+-0.7417882,-0.042077176,['su parte trasera'],1
+-0.7443807,-0.045574542,"['parte delantera derecha', 'colisiona parte delantera', 'parte trasera izquierda']",1
+2.1508656,-1.6201793,"['parte delantera derecha', 'colisiona parte delantera']",3
+-0.74286187,-0.045856994,['colisiona parte trasera'],1
+-0.7392117,-0.03797522,['colisiona parte trasera'],1
+-0.740249,-0.04512153,"['parte delantera derecha', 'parte trasera izquierda']",1
+-0.740539,-0.039571553,"['colisiona parte trasera', 'parte trasera izquierda']",1
+-0.74367803,-0.043309603,['colisiona parte trasera'],1
+1.2728493,-0.23774582,"['mi parte delantera', 'parte delantera derecha', 'parte trasera derecha']",6
+-0.7413457,-0.0441044,"['parte delantera derecha', 'colisiona parte delantera', 'parte trasera izquierda']",1
+1.7112646,-1.317243,['su parte trasera'],3
+-0.7408441,-0.049867284,"['parte delantera derecha', 'colisiona parte delantera', 'parte delantera izquierda']",1
+-0.7441976,-0.040741105,['colisiona parte trasera'],1
+-0.7464936,-0.039922312,['colisiona parte delantera'],1
+-0.7435791,-0.04046738,"['colisiona parte delantera', 'parte delantera izquierda']",1
+1.4068487,1.5480897,['su parte trasera'],5
+1.4759433,-0.77757204,['mi parte delantera'],3
+1.2188895,-0.38062617,"['parte trasera izquierda', 'su parte trasera']",6
+-0.74186635,-0.04223426,"['parte delantera derecha', 'colisiona parte delantera', 'parte trasera izquierda']",1
+1.4092277,-1.2837868,"['colisiona parte delantera', 'parte delantera izquierda', 'su parte delantera', 'parte delantera parte']",3
+-0.74514043,-0.0462456,['colisiona parte trasera'],1
+-0.73650944,-0.04379326,"['parte delantera derecha', 'su parte delantera', 'parte trasera izquierda']",1
+1.1393129,-2.078222,['parte trasera tercero'],4
+0.7890028,2.3708293,['parte delantera parte'],2
+0.9991368,2.522894,['parte trasera tercero'],2
+-0.74280125,-0.04283572,['parte delantera derecha'],1
+-0.74063855,-0.04602775,"['colisiona parte trasera', 'parte trasera derecha']",1
+-0.7426096,-0.044864558,['mi parte delantera'],1
+-0.74197936,-0.047021925,"['colisiona parte trasera', 'parte delantera izquierda']",1
+-0.74508065,-0.03614378,"['parte delantera izquierda', 'su parte delantera']",1
+-0.74133927,-0.045860033,['colisiona parte trasera'],1
+-0.7376412,-0.03945226,['parte trasera izquierda'],1
+-0.7406106,-0.04905413,"['mi parte delantera', 'parte delantera parte']",1
+1.0700321,-2.19455,"['su parte delantera', 'parte delantera parte']",4
+-0.7410762,-0.04438606,['su parte trasera'],1
+-0.7423803,-0.040040597,"['mi parte delantera', 'parte trasera izquierda', 'su parte trasera']",1
+-0.7420434,-0.042859547,['parte delantera izquierda'],1
+1.492219,1.0507101,"['mi parte delantera', 'parte delantera derecha', 'colisiona parte delantera']",5
+-0.74164605,-0.040689196,['parte delantera parte'],1
+-0.7433161,-0.05421571,['mi parte delantera'],1
+-0.7468918,-0.043126702,['colisiona parte trasera'],1
+-0.74068105,-0.04789042,['mi parte delantera'],1
+-0.7436886,-0.040558286,['parte delantera derecha'],1
+-0.7436873,-0.0411923,['mi parte delantera'],1
+0.9361957,2.3543527,['colisiona parte trasera'],2
+-0.73542833,-0.042860907,['su parte trasera'],1
+1.2958633,-1.8706203,"['parte delantera derecha', 'colisiona parte delantera']",4
+1.1831269,-0.88635015,['colisiona parte trasera'],3
+1.7398666,-1.4862912,"['parte delantera derecha', 'parte delantera izquierda', 'su parte delantera']",3
+1.0988822,-2.0615141,"['mi parte delantera', 'parte delantera parte']",4
+-0.73815215,-0.039460532,['parte trasera izquierda'],1
+0.92640096,2.5426621,"['parte delantera derecha', 'parte trasera izquierda', 'su parte trasera']",2
+1.8268948,-0.05437651,['mi parte delantera'],0
+-0.7396197,-0.03843984,['mi parte delantera'],1
+1.1429294,-0.48347297,['mi parte delantera'],6
+1.5238119,-2.5362155,"['mi parte delantera', 'su parte trasera']",4
+-0.74898255,-0.041782133,['su parte delantera'],1
+1.1002885,-2.235387,"['colisiona parte trasera', 'parte trasera derecha']",4
+-0.74367297,-0.041396957,"['su parte delantera', 'parte delantera parte']",1
+-0.74416065,-0.040983647,['parte delantera izquierda'],1
+0.91359675,2.3996928,"['colisiona parte trasera', 'parte trasera derecha']",2
+-0.7422154,-0.044230774,['parte delantera derecha'],1
+-0.7427004,-0.047722004,['colisiona parte trasera'],1
+-0.74245584,-0.04108377,"['parte delantera derecha', 'colisiona parte delantera']",1
+0.8816331,2.3695412,"['mi parte delantera', 'su parte trasera']",2
+1.2094196,0.39295644,['parte trasera derecha'],7
+1.2341056,0.30431503,"['parte delantera izquierda', 'parte trasera derecha']",7
+-0.74194205,-0.038566165,['su parte trasera'],1
+2.2096655,-1.7340624,"['colisiona parte trasera', 'parte trasera derecha']",3
+-0.7372187,-0.047009815,['parte trasera izquierda'],1
+1.2150004,-1.0977648,['parte trasera tercero'],3
+-0.7406616,-0.043243643,['su parte delantera'],1
+-0.74474037,-0.04114768,"['parte delantera derecha', 'su parte delantera']",1
+1.0538462,-2.0947664,['parte trasera derecha'],4
+0.8382607,2.29924,['colisiona parte trasera'],2
+1.3506058,-1.3153433,['parte trasera derecha'],3
+1.0330166,-1.5107211,['parte delantera derecha'],3
+0.99155515,-2.1833344,['colisiona parte trasera'],4
+1.4840273,-0.9642745,['mi parte delantera'],3
+-0.74236214,-0.035970442,['colisiona parte delantera'],1
+-0.7393364,-0.040695038,"['parte delantera derecha', 'colisiona parte delantera', 'parte delantera izquierda']",1
+1.3753438,-0.2347481,"['su parte delantera', 'parte delantera parte']",6
+-0.7428209,-0.038805947,['parte delantera derecha'],1
+1.1968342,1.9071853,['colisiona parte delantera'],2
+-0.7488015,-0.047588814,['parte delantera izquierda'],1
+-0.7419657,-0.04749402,"['parte delantera derecha', 'colisiona parte delantera']",1
+1.3026818,-1.2762399,"['mi parte delantera', 'parte delantera parte']",3
+-0.74085003,-0.048455432,['parte trasera izquierda'],1
+1.2705423,-2.2113347,['parte delantera izquierda'],4
+-0.74403316,-0.039844926,['su parte trasera'],1
+-0.7436411,-0.044560682,['mi parte delantera'],1
+-0.74384874,-0.045485795,['mi parte delantera'],1
+1.3749611,-0.30569813,['parte trasera izquierda'],6
+-0.739529,-0.052319232,"['mi parte delantera', 'parte delantera parte']",1
+-0.7453788,-0.048760638,"['mi parte delantera', 'parte delantera derecha']",1
+1.9385986,-0.37443954,['mi parte delantera'],0
+-0.7386556,-0.041806035,['mi parte delantera'],1
+-0.74110615,-0.045762625,"['su parte delantera', 'parte delantera parte']",1
+0.79301286,2.2727442,"['parte delantera derecha', 'colisiona parte delantera', 'parte delantera izquierda']",2
+1.1179508,-2.1576238,['colisiona parte trasera'],4
+-0.74430645,-0.044863958,['parte trasera izquierda'],1
+-0.7362505,-0.04291445,['parte delantera derecha'],1
+-0.7431174,-0.04335366,"['mi parte delantera', 'parte trasera derecha']",1
+-0.74172425,-0.04710258,['parte trasera izquierda'],1
+-0.7451254,-0.04479288,['parte trasera derecha'],1
+1.4308226,-1.3359716,"['parte delantera derecha', 'colisiona parte delantera']",3
+-0.7385022,-0.0434636,['colisiona parte trasera'],1
+-0.74404407,-0.045736294,['mi parte delantera'],1
+-0.73439515,-0.041171838,['mi parte delantera'],1
+1.135514,-0.3363006,['mi parte delantera'],6
+-0.74517995,-0.052454956,"['colisiona parte delantera', 'parte delantera izquierda']",1
+-0.7433332,-0.047813542,['mi parte delantera'],1
+-0.7448093,-0.037626795,"['mi parte delantera', 'parte delantera izquierda']",1
+-0.74479324,-0.04161988,['colisiona parte trasera'],1
+-0.7417944,-0.044752836,['su parte trasera'],1
+-0.7464834,-0.040976737,['mi parte delantera'],1
+-0.7444092,-0.045489497,"['colisiona parte delantera', 'parte delantera izquierda']",1
+1.0391525,-2.053114,"['colisiona parte delantera', 'parte delantera izquierda']",4
+1.3736607,-1.3462018,"['parte delantera izquierda', 'parte trasera derecha', 'su parte trasera']",3
+-0.7393648,-0.042447366,['mi parte delantera'],1
+-0.7410301,-0.044994805,"['colisiona parte delantera', 'parte delantera parte']",1
+-0.74865097,-0.046016205,['mi parte delantera'],1
+-0.7428957,-0.050177168,"['parte delantera derecha', 'colisiona parte delantera']",1
+-0.73910457,-0.04785933,['colisiona parte delantera'],1
+-0.7405585,-0.04604369,['mi parte delantera'],1
+-0.7437237,-0.047379937,['parte delantera izquierda'],1
+-0.738914,-0.038618203,['mi parte delantera'],1
+-0.7411385,-0.041537505,['colisiona parte delantera'],1
+-0.7410633,-0.042992007,['colisiona parte trasera'],1
+2.23478,-0.8460629,"['colisiona parte trasera', 'parte trasera izquierda']",0
+1.5320749,-1.0489852,['mi parte delantera'],3
+-0.74293184,-0.043070864,"['mi parte delantera', 'parte delantera parte']",1
+-0.7452286,-0.039108805,['parte delantera derecha'],1
+-0.7396071,-0.0390989,['parte delantera izquierda'],1
+-0.74433964,-0.045961026,"['parte delantera izquierda', 'su parte delantera']",1
+1.2148242,-0.38933468,"['parte delantera derecha', 'colisiona parte delantera', 'parte delantera izquierda']",6
+-0.74176466,-0.04128959,['mi parte delantera'],1
+-0.7418783,-0.037310958,"['parte delantera derecha', 'colisiona parte delantera', 'parte trasera derecha']",1
+1.0933225,-0.32255018,"['mi parte delantera', 'parte delantera parte']",6
+1.7002423,0.33086696,['mi parte delantera'],7
+1.0049592,2.3908937,['colisiona parte trasera'],2
+-0.7378508,-0.049579386,['mi parte delantera'],1
+0.97124135,2.6774476,['colisiona parte trasera'],2
+-0.73916763,-0.043993227,['mi parte delantera'],1
+-0.74549466,-0.04328394,['mi parte delantera'],1
+-0.74120545,-0.045490555,['colisiona parte trasera'],1
+1.0041375,2.503934,['colisiona parte trasera'],2
+-0.7442957,-0.046986923,['parte trasera izquierda'],1
+-0.741259,-0.046220247,['mi parte delantera'],1
+-0.7401534,-0.042706016,['mi parte delantera'],1
+-0.73934996,-0.04150691,['colisiona parte delantera'],1
+-0.7374498,-0.048693083,['colisiona parte trasera'],1
+-0.73940843,-0.03514504,['colisiona parte trasera'],1
+-0.7397498,-0.040319376,['mi parte delantera'],1
+-0.7419673,-0.037989765,['parte delantera derecha'],1
+-0.7359902,-0.04342434,['colisiona parte delantera'],1
+-0.7416382,-0.045467682,['su parte trasera'],1
+-0.7378463,-0.046065453,"['parte delantera derecha', 'colisiona parte delantera', 'parte delantera izquierda']",1
+-0.74620235,-0.04217674,['parte delantera parte'],1
+-0.74417454,-0.044430017,['colisiona parte trasera'],1
+1.1710764,-0.30955106,['mi parte delantera'],6
+-0.7386,-0.045994993,['mi parte delantera'],1
+1.9920456,-0.5737382,['colisiona parte trasera'],0
+-0.7378326,-0.041832782,['mi parte delantera'],1
+-0.7416706,-0.043489825,['parte delantera derecha'],1
+1.3859448,-0.18060172,['parte delantera izquierda'],6
+-0.742916,-0.0473426,['mi parte delantera'],1
+0.96590525,2.4403803,['colisiona parte trasera'],2
+1.6897566,-2.1934783,['colisiona parte trasera'],4
+1.2123413,-0.9674401,['colisiona parte trasera'],3
+-0.7368639,-0.042790316,['parte delantera izquierda'],1
+1.5827496,-0.5015389,['parte trasera derecha'],0
+-0.73954594,-0.04518423,['mi parte delantera'],1
+1.1255127,1.1978265,['colisiona parte trasera'],5
+-0.7433624,-0.044187073,"['parte delantera derecha', 'colisiona parte delantera', 'parte trasera izquierda']",1
+-0.742282,-0.038628835,"['mi parte delantera', 'parte delantera derecha']",1
+1.3019086,-1.1885113,['mi parte delantera'],3
+0.9395646,2.558731,['colisiona parte trasera'],2
+1.579616,-0.7394294,['colisiona parte trasera'],0
+0.9559114,-2.1630185,['mi parte delantera'],4
+1.3279229,-1.3927578,['colisiona parte trasera'],3
+-0.7404612,-0.037238073,['su parte trasera'],1
+-0.7457506,-0.04379678,"['parte delantera izquierda', 'su parte delantera', 'parte trasera izquierda']",1
+-0.7380855,-0.04043371,['colisiona parte trasera'],1
+2.0392325,-2.1526015,['mi parte delantera'],4
+0.8893259,2.2718742,['mi parte delantera'],2
+1.4269143,-0.49103138,"['colisiona parte trasera', 'parte trasera izquierda']",6
+-0.7418163,-0.036001243,"['mi parte delantera', 'parte delantera izquierda', 'parte trasera izquierda', 'su parte trasera']",1
+-0.7375157,-0.038844246,['colisiona parte trasera'],1
+-0.74040294,-0.036653202,['mi parte delantera'],1
+0.92979884,2.4388616,"['colisiona parte trasera', 'parte trasera izquierda']",2
+-0.74433124,-0.045310818,"['mi parte delantera', 'parte trasera derecha', 'parte delantera parte']",1
+0.871321,2.4482846,"['colisiona parte delantera', 'parte delantera izquierda']",2
+-0.7478764,-0.044592187,"['mi parte delantera', 'parte delantera derecha', 'parte delantera izquierda', 'su parte delantera']",1
+-0.73889655,-0.04301965,['su parte trasera'],1
+-0.74004316,-0.04953461,['mi parte delantera'],1
+-0.74455357,-0.049695488,['colisiona parte trasera'],1
+-0.7382623,-0.04755174,"['parte delantera derecha', 'colisiona parte delantera', 'parte delantera izquierda']",1
+-0.7432494,-0.041483648,['parte delantera izquierda'],1
+0.98771083,-0.36476114,['colisiona parte delantera'],6
+1.6303333,-0.39653298,['su parte trasera'],0
+1.1408134,0.3424842,"['parte delantera derecha', 'colisiona parte delantera']",7
+0.9151407,2.3861923,"['parte delantera izquierda', 'parte trasera izquierda']",2
+1.3404394,-0.9879657,['colisiona parte delantera'],3
+-0.7413226,-0.042462155,['colisiona parte trasera'],1
+0.9537313,2.418929,['su parte trasera'],2
+-0.73400205,-0.048224658,['mi parte delantera'],1
+2.02555,0.5390027,['parte trasera derecha'],7
+1.1004162,-2.3362117,['mi parte delantera'],4
+-0.7417112,-0.05107336,"['parte delantera izquierda', 'parte trasera derecha']",1
+0.98157424,0.37780055,"['parte delantera izquierda', 'parte trasera izquierda']",7
+-0.7506591,-0.045932066,['colisiona parte delantera'],1
+-0.74568546,-0.045214694,"['mi parte delantera', 'parte trasera derecha', 'parte delantera parte']",1
+1.289649,-1.6345263,['mi parte delantera'],3
+1.0252067,-2.0538683,['mi parte delantera'],4
+-0.7397414,-0.04520431,"['colisiona parte delantera', 'parte delantera izquierda']",1
+0.9762075,2.4687517,"['mi parte delantera', 'su parte trasera']",2
+-0.7371079,-0.041483548,['mi parte delantera'],1
+-0.7429458,-0.040667076,['colisiona parte trasera'],1
+-0.7456177,-0.05046996,"['mi parte delantera', 'parte delantera izquierda', 'parte trasera derecha']",1
+1.4126495,-0.191049,"['parte trasera izquierda', 'su parte trasera']",6
+-0.73998237,-0.046962824,['parte trasera izquierda'],1
+0.82904255,2.330274,['colisiona parte trasera'],2
+0.9454225,2.4550962,"['mi parte delantera', 'colisiona parte trasera']",2
+-0.74005395,-0.04233943,['mi parte delantera'],1
+-0.7389932,-0.04413861,['colisiona parte delantera'],1
+1.051354,2.6794317,['mi parte delantera'],2
+0.8069556,2.4077964,['parte delantera derecha'],2
+-0.7429018,-0.046645302,['mi parte delantera'],1
+-0.7408978,-0.047234915,"['su parte delantera', 'parte delantera parte']",1
+1.1747806,-0.45852435,['mi parte delantera'],6
+-0.74581575,-0.052652862,['mi parte delantera'],1
+-0.7455774,-0.040347762,['colisiona parte delantera'],1
+1.2872955,-1.0163356,"['parte delantera izquierda', 'parte trasera derecha']",3
+1.1088996,-2.133626,"['parte delantera derecha', 'parte trasera derecha']",4
+-0.7416622,-0.04428358,['parte delantera derecha'],1
+1.0825677,-2.0565517,"['mi parte delantera', 'parte trasera izquierda']",4
+-0.74283224,-0.037985984,['parte trasera izquierda'],1
+1.4424175,-0.09120626,"['su parte delantera', 'parte delantera parte']",6
+-0.74583143,-0.043208335,['parte delantera derecha'],1
+0.8760379,2.3605337,['colisiona parte trasera'],2
+-0.7437971,-0.044506393,['mi parte delantera'],1
+-0.7434716,-0.034222446,['su parte trasera'],1
+1.2775156,-0.8862591,['parte trasera izquierda'],3
+-0.74145967,-0.04259271,"['parte delantera derecha', 'colisiona parte delantera']",1
+-0.74027103,-0.03843098,['mi parte delantera'],1
+1.1500866,-0.24570529,['colisiona parte delantera'],6
+1.9711027,-2.1076763,['colisiona parte trasera'],4
+1.1814139,-0.40242526,['mi parte delantera'],6
+-0.7476518,-0.03880805,"['mi parte delantera', 'parte trasera izquierda']",1
+-0.74702024,-0.046777043,"['mi parte delantera', 'parte trasera derecha']",1
+1.2211485,-2.286889,['mi parte delantera'],4
+-0.74475276,-0.043355893,['mi parte delantera'],1
+-0.7440891,-0.03961737,"['parte delantera derecha', 'parte trasera izquierda']",1
+-0.7408471,-0.046661407,['mi parte delantera'],1
+-0.7421392,-0.045300756,"['parte delantera derecha', 'su parte delantera']",1
+-0.73828125,-0.04290037,['colisiona parte trasera'],1
+-0.74130034,-0.041322824,"['mi parte delantera', 'colisiona parte delantera']",1
+-0.74660444,-0.052676752,['colisiona parte trasera'],1
+-0.7433677,-0.041938476,['colisiona parte delantera'],1
+2.3036547,-0.4288395,['parte delantera izquierda'],0
+-0.74947846,-0.03701435,"['mi parte delantera', 'parte delantera izquierda', 'parte trasera izquierda']",1
+-0.74524873,-0.039606273,"['colisiona parte trasera', 'parte delantera derecha']",1
+-0.7423303,-0.039401665,['mi parte delantera'],1
+-0.7439919,-0.0511071,"['colisiona parte trasera', 'parte trasera izquierda']",1
+-0.74057496,-0.047423348,"['colisiona parte trasera', 'parte trasera derecha']",1
+-0.7451281,-0.0459235,"['colisiona parte trasera', 'parte trasera tercero']",1
+-0.7464533,-0.045788858,"['mi parte delantera', 'colisiona parte trasera', 'parte delantera derecha', 'parte trasera izquierda']",1
+-0.74010235,-0.044701003,['mi parte delantera'],1
+1.1467335,-0.3336653,['colisiona parte delantera'],6
+1.0057445,2.5796514,"['parte delantera derecha', 'colisiona parte delantera']",2
+-0.7463697,-0.044426773,"['parte delantera derecha', 'colisiona parte delantera']",1
+-0.74347806,-0.0463126,"['parte delantera derecha', 'parte delantera izquierda', 'su parte delantera']",1
+-0.7433963,-0.040283423,['mi parte delantera'],1
+-0.73729545,-0.048153106,['parte delantera derecha'],1
+0.93000394,2.4377077,"['colisiona parte trasera', 'parte trasera derecha']",2
+1.1502873,-0.32284284,['colisiona parte delantera'],6
+2.0839405,-0.7716698,['parte delantera derecha'],0
+-0.7387473,-0.04176454,"['colisiona parte trasera', 'parte delantera derecha', 'parte trasera izquierda']",1
+0.9347541,2.4571946,['parte delantera derecha'],2
+-0.74449915,-0.042622898,['su parte trasera'],1
+-0.73747724,-0.04693808,['mi parte delantera'],1
+-0.74181396,-0.04094139,"['parte delantera derecha', 'colisiona parte delantera']",1
+-0.74373585,-0.050170206,['mi parte delantera'],1
+1.983611,-0.9741045,"['parte delantera derecha', 'colisiona parte delantera', 'parte trasera izquierda', 'su parte trasera']",0
+1.3431908,-1.5376935,"['parte trasera derecha', 'su parte trasera']",3
+-0.74469465,-0.04158373,['colisiona parte trasera'],1
+-0.7459724,-0.043694668,['mi parte delantera'],1
+1.3542721,-1.458872,"['parte delantera derecha', 'colisiona parte delantera', 'parte delantera parte']",3
+-0.73660153,-0.042814597,['mi parte delantera'],1
+-0.7442224,-0.044980757,"['colisiona parte delantera', 'parte delantera parte']",1
+-0.74570346,-0.046100125,"['parte trasera izquierda', 'su parte trasera']",1
+-0.73950326,-0.04274255,['mi parte delantera'],1
+0.961945,2.5002406,['mi parte delantera'],2
+-0.73862535,-0.04758706,['parte delantera izquierda'],1
+-0.74799454,-0.036911905,"['colisiona parte trasera', 'parte trasera derecha']",1
+1.1190363,-0.33974844,['colisiona parte trasera'],6
+1.0777569,-0.31814554,['su parte trasera'],6
+-0.742149,-0.042553693,['colisiona parte delantera'],1
+-0.74450505,-0.040593695,['su parte trasera'],1
+-0.74120665,-0.039152063,['parte delantera derecha'],1
+-0.7443597,-0.04590222,['colisiona parte trasera'],1
+-0.7410514,-0.042651203,['mi parte delantera'],1
+1.4111822,1.235181,['colisiona parte trasera'],5
+1.2025902,-1.2753148,"['colisiona parte delantera', 'parte delantera izquierda']",3
+-0.7374371,-0.037583344,['mi parte delantera'],1
+-0.7407999,-0.03609883,"['colisiona parte trasera', 'parte trasera derecha']",1
+-0.74663526,-0.038242728,"['colisiona parte trasera', 'parte delantera derecha', 'parte trasera izquierda']",1
+-0.743501,-0.048352994,"['colisiona parte delantera', 'parte trasera derecha']",1
+-0.74133897,-0.048309986,['parte delantera derecha'],1
+-0.7447355,-0.04079746,['colisiona parte delantera'],1
+-0.7473607,-0.049290463,"['mi parte delantera', 'parte delantera parte']",1
+1.606999,-1.3250346,['mi parte delantera'],3
+-0.74089146,-0.04155681,['su parte trasera'],1
+-0.74020237,-0.044148594,['mi parte delantera'],1
+1.1636136,-0.58194894,['colisiona parte trasera'],6
+1.3020543,-1.2439768,"['mi parte delantera', 'colisiona parte delantera', 'parte delantera izquierda', 'parte trasera izquierda', 'su parte trasera']",3
+-0.7418079,-0.052121356,['mi parte delantera'],1
+-0.7426944,-0.045237195,"['parte trasera derecha', 'su parte trasera']",1
+-0.7402381,-0.04412128,['mi parte delantera'],1
+1.911141,1.0097977,['parte trasera izquierda'],5
+-0.74011743,-0.04712473,"['parte delantera derecha', 'parte trasera izquierda']",1
+-0.7455658,-0.046269517,"['parte delantera derecha', 'colisiona parte delantera', 'parte delantera izquierda']",1
+1.2392054,0.43005908,['mi parte delantera'],7
+1.1018414,-0.38335282,['parte trasera derecha'],6
+-0.7413298,-0.050174784,['parte delantera derecha'],1
+-0.7478069,-0.048791938,['mi parte delantera'],1
+-0.7399201,-0.03807838,['mi parte delantera'],1
+-0.7412502,-0.041703902,"['mi parte delantera', 'parte delantera parte']",1
+-0.74547726,-0.047135014,"['parte delantera derecha', 'colisiona parte delantera']",1
+-0.7394404,-0.046712182,"['colisiona parte trasera', 'su parte delantera']",1
+-0.74197084,-0.041394357,['mi parte delantera'],1
+1.7927259,-2.4172108,['mi parte delantera'],4
+1.1219012,-0.6520977,['colisiona parte trasera'],6
+-0.7404782,-0.0390042,['parte delantera derecha'],1
+-0.7478142,-0.04390868,['mi parte delantera'],1
+-0.74463284,-0.053122908,['parte trasera izquierda'],1
+1.9060321,1.0116069,['su parte delantera'],5
+-0.7414307,-0.05287614,['mi parte delantera'],1
+-0.74275297,-0.037044212,"['colisiona parte trasera', 'parte delantera derecha', 'parte trasera derecha']",1
+0.88785833,2.3605843,['su parte trasera'],2
+-0.7433743,-0.04718651,['mi parte delantera'],1
+2.076227,0.6099737,"['colisiona parte delantera', 'parte delantera parte']",7
+1.0181873,-0.2722525,['su parte delantera'],6
+-0.74126154,-0.04503153,"['mi parte delantera', 'colisiona parte trasera', 'parte delantera parte']",1
+1.5598024,-0.4401737,['parte delantera parte'],6
+1.0984873,-0.4052082,['parte delantera parte'],6
+-0.7382603,-0.036982242,"['parte trasera izquierda', 'su parte trasera']",1
+-0.7442903,-0.042784456,['mi parte delantera'],1
+-0.7413808,-0.045135275,['mi parte delantera'],1
+1.2226245,-2.276914,['parte delantera izquierda'],4
+0.93262804,2.4269786,['parte delantera parte'],2
+-0.74512386,-0.046183303,['mi parte delantera'],1
+-0.74365884,-0.046914306,"['mi parte delantera', 'parte delantera parte']",1
+-0.7492945,-0.046023477,['mi parte delantera'],1
+-0.7462919,-0.04392383,"['parte delantera derecha', 'colisiona parte delantera']",1
+1.0546412,-2.1138558,['parte delantera izquierda'],4
+-0.7419335,-0.048607953,['mi parte delantera'],1
+0.8466757,2.3230436,['mi parte delantera'],2
+1.2747297,0.25964454,"['parte trasera derecha', 'su parte trasera']",7
+-0.7398427,-0.04797958,['mi parte delantera'],1
+1.0371183,-0.6297959,"['colisiona parte trasera', 'parte trasera izquierda']",6
+0.9630676,2.489732,"['colisiona parte delantera', 'parte delantera parte']",2
+-0.7451901,-0.047601566,['colisiona parte delantera'],1
+1.186483,-0.33497468,['colisiona parte delantera'],6
+0.8742082,2.3684456,['colisiona parte delantera'],2
+-0.7451368,-0.040452242,['colisiona parte trasera'],1
+-0.7412036,-0.049869407,"['colisiona parte trasera', 'parte trasera tercero']",1
+1.1328202,2.689217,['mi parte delantera'],2
+-0.74540585,-0.040227138,['mi parte delantera'],1
+-0.74006385,-0.049861982,"['parte delantera derecha', 'colisiona parte delantera', 'parte delantera izquierda']",1
+-0.7409788,-0.043169845,['mi parte delantera'],1
+-0.7453896,-0.049562085,"['colisiona parte delantera', 'parte delantera parte']",1
+-0.7447778,-0.0396857,['colisiona parte delantera'],1
+1.3185118,-2.4475615,"['colisiona parte delantera', 'parte delantera parte']",4
+-0.7370335,-0.037650563,['mi parte delantera'],1
+-0.74287295,-0.04817286,['mi parte delantera'],1
+-0.7442087,-0.046505086,['parte trasera izquierda'],1
+-0.73923373,-0.04015364,['parte trasera derecha'],1
+-0.7393848,-0.03306413,"['parte trasera derecha', 'su parte trasera']",1
+-0.74615335,-0.05081909,['colisiona parte delantera'],1
+-0.7368623,-0.046358097,"['parte delantera izquierda', 'su parte delantera', 'parte trasera derecha']",1
+-0.7443598,-0.04151177,"['mi parte delantera', 'colisiona parte trasera']",1
+1.349741,-1.4295447,['mi parte delantera'],3
+1.451764,0.55666256,['mi parte delantera'],7
+-0.7423668,-0.04916681,['parte trasera derecha'],1
+1.1161419,-2.1174634,['mi parte delantera'],4
+1.6294065,-1.2783123,"['mi parte delantera', 'parte delantera parte']",3
+1.2642342,-0.24690595,['colisiona parte trasera'],6
+-0.73885405,-0.04614469,"['colisiona parte delantera', 'parte delantera izquierda']",1
+1.6069779,-0.9493984,['colisiona parte delantera'],3
+-0.7393361,-0.04155857,['su parte trasera'],1
+-0.74095285,-0.04367141,"['mi parte delantera', 'parte delantera derecha', 'parte trasera izquierda', 'su parte trasera']",1
+-0.7405013,-0.046377916,['mi parte delantera'],1
+-0.7446643,-0.04299733,"['colisiona parte trasera', 'parte trasera derecha']",1
+-0.742632,-0.046592303,"['colisiona parte trasera', 'parte delantera izquierda', 'parte trasera derecha', 'parte delantera parte']",1
+-0.74280626,-0.054782115,['colisiona parte trasera'],1
+-0.73903155,-0.04770891,['mi parte delantera'],1
+1.5937562,-0.46730375,"['parte delantera derecha', 'colisiona parte delantera']",0
+-0.7372112,-0.046601184,['mi parte delantera'],1
+-0.74500203,-0.046429582,['mi parte delantera'],1
+-0.7437246,-0.038960736,['mi parte delantera'],1
+1.0387512,-1.9772418,"['colisiona parte trasera', 'parte delantera derecha', 'parte trasera izquierda']",4
+-0.7437037,-0.041202098,"['colisiona parte trasera', 'parte delantera derecha', 'parte trasera izquierda']",1
+-0.744047,-0.050736792,"['parte delantera izquierda', 'parte trasera izquierda']",1
+-0.7339553,-0.044524465,['colisiona parte trasera'],1
+-0.73975825,-0.04008189,"['colisiona parte trasera', 'parte trasera derecha']",1
+1.2147951,-2.3380842,['mi parte delantera'],4
+-0.7443458,-0.046049315,['parte delantera derecha'],1
+-0.73558813,-0.047858912,"['mi parte delantera', 'parte delantera parte']",1
+-0.739052,-0.046010796,"['mi parte delantera', 'parte delantera derecha']",1
+2.0375974,-0.8986616,['parte trasera izquierda'],0
+-0.7414973,-0.050372977,['colisiona parte trasera'],1
+1.6625428,-2.3725615,['parte delantera izquierda'],4
+-0.73977506,-0.045265608,"['mi parte delantera', 'colisiona parte delantera']",1
+1.226384,-2.1876676,['mi parte delantera'],4
+-0.7401274,-0.04659178,['colisiona parte trasera'],1
+1.7307792,0.22567269,['colisiona parte trasera'],7
+1.6940224,-1.1592476,['mi parte delantera'],3
+-0.73731315,-0.042603172,"['mi parte delantera', 'parte delantera parte']",1
+-0.73710847,-0.037046134,"['mi parte delantera', 'colisiona parte trasera']",1
+1.3143,-0.34227142,['parte trasera derecha'],6
+-0.74880135,-0.045401707,"['parte trasera izquierda', 'su parte trasera']",1
+1.299859,-0.9480462,"['parte trasera derecha', 'su parte trasera']",3
+-0.73472154,-0.040561333,"['mi parte delantera', 'colisiona parte trasera']",1
+1.051665,-2.1083615,"['parte delantera derecha', 'colisiona parte delantera', 'parte delantera izquierda']",4
+1.2375246,-0.3303812,"['parte trasera derecha', 'su parte trasera']",6
+-0.7428315,-0.039447654,['parte trasera izquierda'],1
+-0.74154544,-0.041996643,"['colisiona parte delantera', 'parte delantera izquierda', 'parte trasera derecha']",1
+1.3986995,-0.49112105,"['mi parte delantera', 'parte delantera derecha']",6
+-0.7384818,-0.0425708,['mi parte delantera'],1
+-0.7422914,-0.04182917,['mi parte delantera'],1
+-0.7452266,-0.047882497,['mi parte delantera'],1
+-0.746238,-0.040147964,['mi parte delantera'],1
+-0.74601257,-0.041447658,['mi parte delantera'],1
+1.4353462,-0.35701507,['mi parte delantera'],6
+-0.742433,-0.044756867,['colisiona parte trasera'],1
+0.9310167,2.3742654,['colisiona parte trasera'],2
+-0.74293774,-0.043108094,['parte trasera izquierda'],1
+-0.74109197,-0.041871082,['su parte trasera'],1
+1.236348,-1.0252117,"['mi parte delantera', 'parte delantera izquierda', 'parte delantera parte']",3
+1.4399334,-1.0162824,['su parte trasera'],3
+2.1458755,0.31115866,"['colisiona parte trasera', 'parte delantera izquierda', 'parte trasera izquierda']",7
+-0.7425827,-0.04040649,['colisiona parte trasera'],1
+-0.74114954,-0.040271934,['mi parte delantera'],1
+-0.74454087,-0.04841776,['colisiona parte trasera'],1
+1.1166469,-2.1433291,['su parte trasera'],4
+-0.7404676,-0.047191627,"['parte delantera derecha', 'su parte delantera']",1
+-0.74342996,-0.0446306,['colisiona parte delantera'],1
+-0.7488366,-0.04216862,['parte trasera izquierda'],1
+-0.7362237,-0.051965185,['parte delantera izquierda'],1
+1.744874,-0.81759644,"['parte delantera izquierda', 'parte trasera derecha']",0
+-0.74428904,-0.043394905,['su parte trasera'],1
+-0.745538,-0.04287356,['mi parte delantera'],1
+1.9228717,0.51410335,"['mi parte delantera', 'parte delantera parte']",7
+1.2057446,1.1043983,['colisiona parte delantera'],5
+-0.73975486,-0.045590077,"['colisiona parte trasera', 'parte trasera derecha']",1
+-0.7408599,-0.041205045,['parte trasera izquierda'],1
+1.9025449,0.5627388,['colisiona parte trasera'],7
+-0.73948246,-0.039489638,['parte trasera izquierda'],1
+-0.7435421,-0.03852154,['colisiona parte delantera'],1
+-0.7387954,-0.04885608,['parte trasera izquierda'],1
+1.0155311,-0.2945445,"['parte delantera derecha', 'colisiona parte delantera']",6
+1.4828895,-2.046645,"['colisiona parte trasera', 'parte trasera izquierda']",4
+-0.7404308,-0.05531481,['colisiona parte trasera'],1
+-0.74496925,-0.04016592,['mi parte delantera'],1
+0.87805766,2.3898556,['mi parte delantera'],2
+-0.7445179,-0.041070458,"['colisiona parte trasera', 'parte delantera izquierda']",1
+-0.7459068,-0.05019105,['su parte trasera'],1
+-0.74575096,-0.04218438,"['colisiona parte trasera', 'parte trasera derecha']",1
+-0.7329632,-0.040625207,['parte trasera izquierda'],1
+1.0474509,-2.3064444,['mi parte delantera'],4
+-0.7457692,-0.04830617,['parte delantera izquierda'],1
+-0.741251,-0.041625995,['mi parte delantera'],1
+1.3069793,-0.023086544,"['colisiona parte delantera', 'parte delantera izquierda']",6
+-0.7393509,-0.043227497,"['colisiona parte trasera', 'parte trasera derecha']",1
+-0.7389626,-0.04623823,['su parte delantera'],1
+-0.7450704,-0.03954984,['mi parte delantera'],1
+-0.74272895,-0.045045655,"['parte delantera izquierda', 'parte trasera derecha']",1
+1.1577059,-2.1680734,"['parte delantera derecha', 'colisiona parte delantera']",4
+1.3306781,-0.9146665,['colisiona parte trasera'],3
+1.452436,2.3720932,['colisiona parte trasera'],2
+-0.74375886,-0.040171422,['su parte trasera'],1
+-0.74200684,-0.04498467,"['mi parte delantera', 'colisiona parte trasera', 'parte trasera derecha']",1
+-0.73997724,-0.039652675,"['colisiona parte delantera', 'parte trasera derecha']",1
+1.5980598,1.0952052,['parte delantera derecha'],5
+-0.7477447,-0.042728916,['parte delantera derecha'],1
+1.1883514,-0.15646853,['colisiona parte trasera'],6
+1.8351018,1.7417334,"['mi parte delantera', 'su parte trasera']",5
+1.3261373,-0.5614382,['parte delantera izquierda'],6
+-0.73832,-0.049576316,"['colisiona parte trasera', 'parte trasera izquierda']",1
+-0.7397043,-0.039369933,['mi parte delantera'],1
+-0.745674,-0.040365104,['mi parte delantera'],1
+-0.74625564,-0.046669204,['mi parte delantera'],1
+-0.74801147,-0.045011397,['parte delantera derecha'],1
+-0.7406177,-0.044145208,"['mi parte delantera', 'parte delantera parte']",1
+1.1929872,1.6086662,['su parte trasera'],5
+1.1941766,1.0805017,['mi parte delantera'],5
+0.8014907,2.264897,"['colisiona parte delantera', 'parte delantera izquierda']",2
+-0.7429356,-0.04287133,"['colisiona parte delantera', 'parte delantera izquierda']",1
+-0.74100107,-0.0477274,"['parte delantera derecha', 'su parte delantera', 'parte delantera parte']",1
+1.10038,-2.197761,"['colisiona parte trasera', 'parte trasera derecha']",4
+0.9022425,2.3584785,['mi parte delantera'],2
+-0.7411787,-0.043931313,['parte trasera tercero'],1
+1.1432453,-0.3366451,['mi parte delantera'],6
+-0.73909724,-0.042549226,['parte delantera derecha'],1
+-0.7421513,-0.041667953,"['su parte delantera', 'parte delantera parte']",1
+0.84838545,2.4474194,"['colisiona parte trasera', 'parte trasera derecha']",2
+-0.74549073,-0.041521687,"['mi parte delantera', 'parte delantera izquierda', 'su parte delantera', 'parte delantera parte']",1
+0.8818365,-1.9276031,"['colisiona parte trasera', 'parte trasera izquierda']",4
+-0.74108356,-0.040935613,['parte trasera izquierda'],1
+1.2556823,-0.21419677,"['parte trasera izquierda', 'su parte trasera']",6
+1.4621931,-0.43592638,['mi parte delantera'],6
+-0.74817544,-0.052320506,"['mi parte delantera', 'parte delantera derecha']",1
+1.036389,-2.0049274,"['colisiona parte trasera', 'parte trasera izquierda', 'parte trasera derecha']",4
+-0.7361962,-0.04321306,['su parte delantera'],1
+2.3382034,-0.14322127,['mi parte delantera'],0
+-0.74027795,-0.041939426,['colisiona parte trasera'],1
+-0.7383754,-0.043542624,['colisiona parte delantera'],1
+-0.7476593,-0.0449757,['mi parte delantera'],1
+-0.74918413,-0.04899348,['parte delantera derecha'],1
+1.562398,1.9076754,['mi parte delantera'],5
+-0.73987585,-0.04669847,"['mi parte delantera', 'parte delantera derecha', 'parte delantera parte']",1
+1.2663003,-0.9215949,['mi parte delantera'],3
+1.8545527,-0.70762306,['colisiona parte trasera'],0
+-0.74514204,-0.04077728,['colisiona parte delantera'],1
+0.979645,2.3947527,"['parte delantera parte', 'parte trasera tercero']",2
+0.88164794,2.4757648,['parte delantera derecha'],2
+-0.7415261,-0.043706223,"['parte delantera derecha', 'colisiona parte delantera']",1
+-0.74319637,-0.04308015,['mi parte delantera'],1
+0.9566222,2.354547,"['parte delantera derecha', 'colisiona parte delantera']",2
+1.3806041,1.001321,['mi parte delantera'],5
+-0.74096125,-0.04115839,['colisiona parte trasera'],1
+-0.74299616,-0.04466313,['mi parte delantera'],1
+1.1843092,0.39585432,['mi parte delantera'],7
+-0.74362206,-0.037996937,"['colisiona parte delantera', 'su parte delantera', 'su parte trasera']",1
+1.4689176,-2.2658153,['parte delantera derecha'],4
+1.4013138,1.1194342,"['mi parte delantera', 'parte delantera derecha']",5
+-0.738867,-0.05018035,['mi parte delantera'],1
+-0.74527824,-0.045204777,"['parte delantera derecha', 'colisiona parte delantera']",1
+0.96267,-0.5091906,['parte delantera izquierda'],6
+-0.74148387,-0.040837497,"['mi parte delantera', 'parte delantera derecha']",1
+-0.74036866,-0.04149078,['parte trasera derecha'],1
+-0.74135935,-0.04410168,['colisiona parte trasera'],1
+1.6857839,-1.867907,['mi parte delantera'],4
+-0.74434274,-0.04124173,['mi parte delantera'],1
+-0.74305564,-0.037832115,['mi parte delantera'],1
+-0.74814445,-0.042821836,['parte trasera izquierda'],1
+1.0922275,-0.39814198,"['mi parte delantera', 'parte delantera derecha']",6
+-0.7427917,-0.04587186,['su parte trasera'],1
+1.2391154,-2.228797,"['su parte delantera', 'parte delantera parte']",4
+-0.74079967,-0.04237764,"['mi parte delantera', 'parte delantera parte']",1
+-0.73987776,-0.043259013,['mi parte delantera'],1
+1.4543979,-0.61736643,['mi parte delantera'],6
+1.538734,1.2240661,['parte delantera derecha'],5
+-0.74159336,-0.04108353,['colisiona parte trasera'],1
+1.1779754,-1.2206104,['mi parte delantera'],3
+1.6408583,-1.0863622,['colisiona parte delantera'],3
+-0.7463886,-0.04807388,['mi parte delantera'],1
+-0.7467561,-0.046792097,['su parte trasera'],1
+-0.7481528,-0.044258635,"['parte trasera derecha', 'su parte trasera']",1
+1.3738726,-0.20135981,['mi parte delantera'],6
+-0.74118274,-0.037174094,['mi parte delantera'],1
+-0.7427421,-0.04097695,['parte delantera izquierda'],1
+1.6798164,-2.2732084,['parte trasera derecha'],4
+-0.74303144,-0.04944406,['colisiona parte trasera'],1
+-0.74770576,-0.042212963,['parte delantera izquierda'],1
+-0.740287,-0.04119283,['mi parte delantera'],1
+1.3070543,-0.9371252,['mi parte delantera'],3
+1.9103876,0.6878681,['colisiona parte trasera'],7
+1.2101574,0.45888907,"['su parte delantera', 'parte delantera parte']",7
+1.8735731,0.08214171,['mi parte delantera'],7
+-0.7450682,-0.045504753,"['mi parte delantera', 'parte delantera parte']",1
+-0.74180573,-0.044080917,['mi parte delantera'],1
+1.3224976,-1.3244393,['mi parte delantera'],3
+-0.7390927,-0.052070208,"['mi parte delantera', 'colisiona parte delantera']",1
+1.1386572,-2.1621082,['su parte trasera'],4
+1.3511863,-1.3094485,['parte trasera izquierda'],3
+-0.7460265,-0.045409124,['parte delantera derecha'],1
+1.1911587,-0.32666475,"['colisiona parte trasera', 'parte trasera derecha']",6
+1.0907027,-2.0981247,['parte trasera izquierda'],4
+-0.74970764,-0.033450276,['colisiona parte trasera'],1
+-0.7472525,-0.03905176,['parte trasera derecha'],1
+0.6729721,2.2785912,"['parte delantera izquierda', 'su parte delantera']",2
+-0.741046,-0.043147568,"['mi parte delantera', 'colisiona parte delantera', 'parte delantera izquierda']",1
+-0.7416559,-0.044826247,['mi parte delantera'],1
+-0.73936504,-0.050926782,['parte delantera parte'],1
+1.1167245,-0.4079219,"['mi parte delantera', 'parte trasera tercero']",6
+1.5655075,-0.9172101,['su parte delantera'],3
+1.3297275,0.9703446,['parte delantera izquierda'],5
+1.1322856,-0.38983193,['colisiona parte trasera'],6
+-0.74925375,-0.04698939,['su parte trasera'],1
+-0.7377809,-0.042275794,['parte delantera derecha'],1
+1.0566015,-0.29955646,['mi parte delantera'],6
+-0.745776,-0.04779728,"['parte delantera derecha', 'colisiona parte delantera', 'parte delantera parte']",1
+1.2000774,-0.5316656,['parte trasera derecha'],6
+-0.73552364,-0.049330737,['su parte trasera'],1
+1.4061632,-0.5366215,['colisiona parte trasera'],6
+1.0484902,2.6532955,['parte delantera izquierda'],2
+1.1164418,-0.8986982,"['mi parte delantera', 'parte delantera izquierda']",3
+1.0915234,-0.48722342,['mi parte delantera'],6
+-0.7384595,-0.04049881,"['parte delantera derecha', 'su parte delantera']",1
+-0.7421376,-0.047655057,"['parte delantera derecha', 'colisiona parte delantera']",1
+-0.74376845,-0.043719895,['su parte trasera'],1
+-0.7397943,-0.039282646,['parte trasera izquierda'],1
+-0.74160725,-0.0432619,['su parte trasera'],1
+1.2615227,-0.26432946,"['colisiona parte trasera', 'su parte trasera']",6
+-0.74446166,-0.040527757,['mi parte delantera'],1
+-0.74375427,-0.03775883,"['parte delantera derecha', 'su parte delantera']",1
+0.8755181,2.4838276,['parte trasera izquierda'],2
+0.94005007,2.487642,"['parte delantera derecha', 'colisiona parte delantera']",2
+-0.74496925,-0.039124474,['mi parte delantera'],1
+-0.7373364,-0.042301856,"['parte trasera derecha', 'su parte trasera']",1
+-0.7463357,-0.056793153,['colisiona parte trasera'],1
+-0.7392125,-0.048971806,['colisiona parte trasera'],1
+-0.74297005,-0.040752888,"['colisiona parte trasera', 'parte trasera izquierda']",1
+-0.74363947,-0.039906245,['su parte trasera'],1
+1.2353398,-0.7945383,['mi parte delantera'],6
+1.234394,2.7379212,['colisiona parte trasera'],2
+0.9378319,1.8557376,['parte delantera derecha'],2
+0.82331204,2.3172064,"['parte trasera izquierda', 'su parte trasera']",2
+-0.7429696,-0.04639291,['colisiona parte trasera'],1
+0.8849823,2.3070762,['colisiona parte trasera'],2
+1.9099698,1.056469,"['mi parte delantera', 'su parte delantera', 'parte delantera parte']",5
+-0.7411476,-0.058149293,"['parte delantera derecha', 'parte trasera derecha', 'su parte trasera']",1
+1.5038464,-0.7971814,"['colisiona parte delantera', 'parte delantera parte', 'parte trasera tercero']",3
+-0.73951036,-0.040824983,['colisiona parte trasera'],1
+-0.74175966,-0.043839246,"['parte trasera izquierda', 'su parte trasera']",1
+-0.743588,-0.046803214,"['su parte delantera', 'parte delantera parte']",1
+-0.7407126,-0.0387729,['parte trasera derecha'],1
+0.9654337,-2.0133705,['su parte delantera'],4
+1.3887131,-0.97561014,['colisiona parte trasera'],3
+-0.7382025,-0.05082984,"['mi parte delantera', 'parte delantera izquierda']",1
+-0.7369431,-0.047087785,['colisiona parte trasera'],1
+0.9925033,-0.31961808,['parte trasera derecha'],6
+1.2808112,0.51164865,"['mi parte delantera', 'su parte trasera']",7
+-0.7481153,-0.048041064,['su parte delantera'],1
+-0.7468606,-0.041149303,"['mi parte delantera', 'colisiona parte trasera', 'parte trasera izquierda', 'parte delantera parte']",1
+-0.7454986,-0.041749977,['colisiona parte delantera'],1
+1.1080431,-0.7940981,['mi parte delantera'],6
+1.2539269,-1.2973416,"['mi parte delantera', 'su parte trasera']",3
+1.5388355,-0.40669218,['su parte trasera'],6
+-0.7413444,-0.041829977,['colisiona parte trasera'],1
+-0.74458456,-0.040894207,"['parte delantera derecha', 'parte delantera izquierda', 'su parte delantera']",1
+-0.73749393,-0.039573614,['parte delantera parte'],1
+1.2275833,-2.3008366,"['mi parte delantera', 'parte delantera parte']",4
+-0.74345875,-0.052955333,['parte delantera parte'],1
+0.9685653,2.3875623,"['mi parte delantera', 'parte delantera parte']",2
+0.84948725,2.3733144,['su parte delantera'],2
+-0.7453569,-0.043774366,['su parte delantera'],1
+-0.7406095,-0.040769268,"['parte delantera derecha', 'su parte delantera', 'su parte trasera']",1
+-0.74124074,-0.044924535,['mi parte delantera'],1
+-0.7398334,-0.047577888,"['colisiona parte delantera', 'parte delantera parte']",1
+-0.73959804,-0.043668263,['mi parte delantera'],1
+1.0075772,2.5674658,['mi parte delantera'],2
+-0.7456305,-0.046198215,"['colisiona parte trasera', 'parte trasera derecha']",1
+-0.7415319,-0.041258585,['mi parte delantera'],1
+-0.7411636,-0.044549298,['parte delantera derecha'],1
+-0.7436639,-0.04987851,['colisiona parte delantera'],1
+-0.75081736,-0.055718664,['mi parte delantera'],1
+1.5662524,-0.6009305,"['mi parte delantera', 'parte delantera derecha']",0
+-0.7435571,-0.051092435,['colisiona parte trasera'],1
+0.96004194,2.5279958,['colisiona parte trasera'],2
+0.97682536,1.042877,"['parte delantera derecha', 'colisiona parte delantera']",5
+-0.7441107,-0.04210861,"['su parte delantera', 'parte delantera parte']",1
+-0.74512404,-0.040741716,['colisiona parte trasera'],1
+1.2974029,-2.2029462,"['colisiona parte trasera', 'parte trasera derecha']",4
+-0.74006975,-0.045069635,['colisiona parte trasera'],1
+-0.7405683,-0.04181116,['colisiona parte trasera'],1
+-0.7490885,-0.044092257,['parte delantera parte'],1
+-0.7396285,-0.04241696,"['colisiona parte delantera', 'parte delantera izquierda']",1
+-0.73627335,-0.04121941,['parte trasera tercero'],1
+-0.7383197,-0.039188843,"['colisiona parte trasera', 'parte trasera derecha']",1
+1.3089544,-0.36947498,['mi parte delantera'],6
+0.9042964,2.334041,['mi parte delantera'],2
+1.6521317,-0.634599,['parte trasera derecha'],0
+1.5193689,-0.45963597,['su parte trasera'],6
+-0.7454669,-0.046684995,['parte delantera izquierda'],1
+-0.7402206,-0.039753105,"['colisiona parte delantera', 'parte delantera izquierda']",1
+-0.7435252,-0.048422106,['colisiona parte trasera'],1
+-0.7453897,-0.037004136,"['mi parte delantera', 'colisiona parte trasera', 'parte delantera derecha', 'su parte trasera']",1
+2.0096896,-1.1791222,"['colisiona parte trasera', 'parte trasera izquierda']",3
+0.8560713,2.2230587,"['mi parte delantera', 'colisiona parte trasera']",2
+-0.7450429,-0.033103794,['mi parte delantera'],1
+-0.7469587,-0.038637474,['su parte trasera'],1
+-0.74108833,-0.03837376,"['parte delantera izquierda', 'su parte delantera']",1
+1.3705776,0.7605687,['colisiona parte trasera'],7
+-0.7417056,-0.045615695,['parte delantera parte'],1
+-0.7494983,-0.045423966,['parte trasera izquierda'],1
+0.87354106,2.3864338,['colisiona parte trasera'],2
+-0.7439059,-0.042030655,"['mi parte delantera', 'parte delantera parte']",1
+1.6836247,-0.50372773,"['parte delantera derecha', 'parte trasera izquierda', 'su parte trasera']",0
+-0.7392422,-0.045350038,"['mi parte delantera', 'parte delantera derecha', 'parte trasera izquierda', 'su parte trasera']",1
+-0.7434961,-0.044323836,['parte delantera izquierda'],1
+1.1562704,-0.38673535,['mi parte delantera'],6
+0.93719655,2.4715195,['mi parte delantera'],2
+-0.74108046,-0.04962948,"['mi parte delantera', 'colisiona parte trasera', 'parte trasera izquierda']",1
+-0.7475553,-0.04834204,['mi parte delantera'],1
+0.9992503,-0.43650833,['colisiona parte trasera'],6
+-0.7363277,-0.05020998,['mi parte delantera'],1
+-0.74223584,-0.041992072,['parte delantera izquierda'],1
+-0.7368714,-0.040929426,['mi parte delantera'],1
+-0.7479932,-0.04799422,['su parte trasera'],1
+0.6576768,2.1316295,['colisiona parte trasera'],2
+-0.74244565,-0.03919327,"['mi parte delantera', 'parte trasera izquierda', 'parte delantera parte']",1
+-0.74728566,-0.042885598,['parte trasera izquierda'],1
+-0.74908614,-0.044130404,"['colisiona parte trasera', 'parte trasera izquierda']",1
+1.1143314,-0.3171433,['mi parte delantera'],6
+-0.7394112,-0.041772768,['colisiona parte trasera'],1
+-0.74224406,-0.038602367,"['colisiona parte trasera', 'parte trasera derecha']",1
+-0.7477007,-0.05134088,['su parte trasera'],1
+-0.7399106,-0.04347183,['parte trasera tercero'],1
+-0.74313587,-0.045221463,"['mi parte delantera', 'parte delantera parte']",1
+1.207191,-2.1877942,"['mi parte delantera', 'parte delantera derecha']",4
+1.2167729,-2.7452555,"['colisiona parte trasera', 'parte trasera derecha']",4
+-0.73784244,-0.04420543,"['parte delantera derecha', 'colisiona parte delantera']",1
+0.78732336,2.1782284,['mi parte delantera'],2
+1.4446201,2.2328322,['colisiona parte trasera'],2
+-0.7370665,-0.04180821,"['parte delantera derecha', 'su parte delantera', 'parte trasera izquierda', 'su parte trasera', 'parte delantera parte', 'parte trasera tercero']",1
+1.028651,-0.36520997,['su parte trasera'],6
+1.1583759,-0.52440333,"['parte delantera derecha', 'colisiona parte delantera']",6
+-0.73834795,-0.04064049,['colisiona parte trasera'],1
+-0.7373925,-0.046661373,['mi parte delantera'],1
+-0.737545,-0.05075792,"['parte delantera derecha', 'su parte delantera']",1
+-0.74324226,-0.04218314,"['colisiona parte delantera', 'parte delantera izquierda']",1
+-0.7423668,-0.03888187,['parte trasera izquierda'],1
+-0.74745935,-0.045041677,"['colisiona parte delantera', 'parte delantera izquierda']",1
+1.8526837,-0.17332819,['colisiona parte trasera'],0
+1.6493454,-0.94222146,['parte trasera derecha'],3
+0.9179291,2.341053,['mi parte delantera'],2
+-0.74081224,-0.041736946,"['parte delantera derecha', 'colisiona parte delantera', 'parte trasera derecha']",1
+-0.74208933,-0.043049946,"['mi parte delantera', 'colisiona parte trasera']",1
+-0.7355215,-0.04813823,"['su parte delantera', 'parte delantera parte']",1
+-0.7431423,-0.044438172,['mi parte delantera'],1
+1.4800557,-1.5405178,"['colisiona parte delantera', 'parte delantera parte', 'parte trasera tercero']",3
+1.331367,2.3648078,"['colisiona parte trasera', 'parte trasera tercero']",2
+-0.7396604,-0.047699396,"['parte delantera izquierda', 'su parte delantera']",1
+-0.73770386,-0.04449151,['mi parte delantera'],1
+-0.7433379,-0.04136495,['mi parte delantera'],1
+0.9200402,2.3813846,"['parte trasera derecha', 'su parte trasera']",2
+-0.7445885,-0.041598808,"['colisiona parte trasera', 'parte trasera derecha']",1
+-0.7426657,-0.04986445,['colisiona parte trasera'],1
+1.239885,-2.2947416,"['parte trasera izquierda', 'su parte trasera']",4
+-0.74274313,-0.041732095,['su parte trasera'],1
+0.89085317,2.3771605,"['colisiona parte trasera', 'parte trasera tercero']",2
+-0.74787754,-0.047319643,"['parte delantera derecha', 'colisiona parte delantera', 'parte trasera izquierda']",1
+-0.7431782,-0.042550378,['mi parte delantera'],1
+-0.7395836,-0.050315116,"['mi parte delantera', 'parte delantera derecha']",1
+-0.7408681,-0.04885432,['mi parte delantera'],1
+1.0357883,-2.0258718,['colisiona parte trasera'],4
+0.9498946,2.3534102,['mi parte delantera'],2
+1.0528839,2.5868077,"['colisiona parte delantera', 'parte delantera izquierda', 'parte trasera derecha']",2
+-0.74395585,-0.042772707,['mi parte delantera'],1
+1.2250206,-2.3448923,"['su parte delantera', 'parte delantera parte']",4
+-0.7392729,-0.044434402,"['parte delantera derecha', 'colisiona parte delantera']",1
+-0.7473258,-0.04154336,"['mi parte delantera', 'parte delantera parte']",1
+-0.739025,-0.047020443,['mi parte delantera'],1
+-0.7430828,-0.0452432,['parte trasera derecha'],1
+-0.7420828,-0.052725337,['mi parte delantera'],1
+-0.74724334,-0.05115752,"['parte trasera derecha', 'su parte trasera']",1
+-0.74871886,-0.046106566,"['colisiona parte trasera', 'parte delantera izquierda', 'su parte delantera', 'parte trasera derecha']",1
+-0.74704623,-0.045780163,['mi parte delantera'],1
+-0.7417075,-0.039996337,['parte delantera derecha'],1
+-0.74248946,-0.045744795,['parte delantera derecha'],1
+-0.74583274,-0.047335964,['mi parte delantera'],1
+-0.743895,-0.042193107,"['parte delantera izquierda', 'su parte delantera']",1
+1.0034765,-2.0118246,['colisiona parte trasera'],4
+-0.7405415,-0.046731442,['mi parte delantera'],1
+-0.74063474,-0.042697962,['colisiona parte trasera'],1
+1.2595583,-0.90819854,['su parte trasera'],3
+-0.73913246,-0.036009848,"['parte delantera izquierda', 'su parte delantera']",1
+0.89870816,2.4416974,['mi parte delantera'],2
+-0.74472606,-0.04373609,['colisiona parte trasera'],1
+0.99460566,2.5485196,['parte delantera derecha'],2
+-0.74589515,-0.04024573,['mi parte delantera'],1
+-0.7413811,-0.051715333,"['colisiona parte trasera', 'parte trasera izquierda']",1
+-0.74204016,-0.044872098,"['parte trasera izquierda', 'su parte trasera']",1
+-0.7413673,-0.047546618,"['su parte delantera', 'parte delantera parte']",1
+-0.74070776,-0.045927126,"['mi parte delantera', 'parte delantera parte']",1
+1.0798988,-0.30111685,['colisiona parte trasera'],6
+1.1089228,-2.1691947,['parte delantera derecha'],4
+-0.74312854,-0.038839508,['parte trasera derecha'],1
+-0.74615127,-0.057002917,"['parte delantera izquierda', 'parte delantera parte']",1
+-0.742041,-0.043749046,['mi parte delantera'],1
+-0.74497557,-0.03899962,['parte trasera tercero'],1
+1.0607169,-1.9929479,['parte trasera derecha'],4
+0.7830776,2.2002475,['colisiona parte trasera'],2
+1.0108703,-0.3946069,"['parte trasera izquierda', 'su parte trasera']",6
+-0.7441176,-0.04182793,['parte trasera izquierda'],1
+1.1567924,-0.39695317,['mi parte delantera'],6
+1.4163946,-0.19373885,['su parte delantera'],6
+-0.74528635,-0.041990448,['parte trasera derecha'],1
+-0.7387542,-0.04509401,['su parte trasera'],1
+1.6585281,-0.9075507,['su parte delantera'],3
+-0.74464554,-0.047391187,['su parte trasera'],1
+1.3440263,1.1428021,"['parte trasera izquierda', 'su parte trasera']",5
+-0.7417199,-0.04397383,['mi parte delantera'],1
+-0.7417972,-0.038257603,['parte trasera izquierda'],1
+1.2109913,-2.2557108,"['colisiona parte trasera', 'parte trasera izquierda']",4
+-0.7432192,-0.048494577,['colisiona parte trasera'],1
+-0.7423001,-0.03909922,['su parte delantera'],1
+-0.74691087,-0.047907844,['parte trasera derecha'],1
+-0.7404984,-0.041159663,"['parte trasera izquierda', 'parte trasera derecha', 'su parte trasera']",1
+0.99500024,2.5896692,"['parte delantera derecha', 'su parte delantera']",2
+-0.7448858,-0.040677965,"['mi parte delantera', 'parte delantera derecha', 'parte trasera izquierda', 'su parte trasera']",1
+-0.7458397,-0.044602312,['su parte trasera'],1
+-0.7484669,-0.049479075,"['su parte delantera', 'parte delantera parte']",1
+-0.7447185,-0.040413808,"['parte delantera izquierda', 'parte trasera derecha']",1
+-0.74195784,-0.041944373,"['mi parte delantera', 'su parte trasera']",1
+-0.74011785,-0.04380663,['mi parte delantera'],1
+1.1551535,2.769217,['su parte trasera'],2
+1.1730385,-2.1693835,['mi parte delantera'],4
+-0.74422705,-0.042308856,['colisiona parte trasera'],1
+0.9154135,2.3564022,"['colisiona parte trasera', 'parte trasera derecha']",2
+1.2347691,-0.30533144,['colisiona parte trasera'],6
+-0.7402686,-0.045193624,['su parte trasera'],1
+-0.7413675,-0.046537373,['mi parte delantera'],1
+-0.7449641,-0.043486685,['mi parte delantera'],1
+-0.7365864,-0.042661697,"['colisiona parte trasera', 'parte trasera tercero']",1
+-0.7398514,-0.044228744,['colisiona parte trasera'],1
+1.0916032,-0.52620566,['colisiona parte trasera'],6
+0.87324107,2.3327103,['su parte trasera'],2
+1.1953895,-2.2108214,['su parte delantera'],4
+-0.73570323,-0.044997964,['su parte delantera'],1
+-0.7456575,-0.046853192,"['colisiona parte trasera', 'parte trasera derecha']",1
+-0.73499185,-0.04434432,['parte trasera izquierda'],1
+-0.74366176,-0.0519486,['parte delantera derecha'],1
+1.0611956,-2.264914,"['parte trasera derecha', 'su parte trasera']",4
+-0.74202156,-0.039543793,"['colisiona parte trasera', 'parte trasera derecha']",1
+-0.74651736,-0.037623182,['colisiona parte delantera'],1
+-0.7388652,-0.033462968,"['parte delantera izquierda', 'parte trasera izquierda']",1
+-0.7399007,-0.048843402,['mi parte delantera'],1
+-0.747213,-0.033677697,['colisiona parte trasera'],1
+1.1010876,-2.0695071,"['parte delantera derecha', 'su parte delantera']",4
+-0.74602103,-0.04026027,['parte delantera derecha'],1
+-0.7424231,-0.042912748,"['parte delantera derecha', 'su parte delantera']",1
+-0.74463457,-0.044959348,"['parte delantera derecha', 'colisiona parte delantera']",1
+-0.74062514,-0.043244436,['su parte trasera'],1
+-0.7397452,-0.040911186,"['parte delantera derecha', 'colisiona parte delantera']",1
+-0.74076796,-0.047517035,"['parte trasera izquierda', 'su parte trasera']",1
+1.2227942,-0.7385646,"['su parte delantera', 'parte delantera parte']",6
+1.4415568,-1.3294598,"['colisiona parte trasera', 'parte trasera izquierda']",3
+-0.738256,-0.034726296,['colisiona parte trasera'],1
+0.9849903,2.6430762,"['colisiona parte delantera', 'parte delantera parte', 'parte trasera tercero']",2
+-0.74252844,-0.048458673,"['mi parte delantera', 'parte delantera parte', 'parte trasera tercero']",1
+-0.7427267,-0.041413404,"['mi parte delantera', 'parte delantera derecha']",1
+-0.7420083,-0.047634214,['mi parte delantera'],1
+0.94277275,-2.083706,['su parte trasera'],4
+-0.7327013,-0.048129607,['mi parte delantera'],1
+-0.7420254,-0.04596262,['colisiona parte trasera'],1
+-0.74252486,-0.05001598,['parte trasera derecha'],1
+-0.7429756,-0.048496764,"['parte delantera izquierda', 'su parte delantera', 'parte trasera derecha']",1
+-0.7414591,-0.040347405,['mi parte delantera'],1
+-0.7448252,-0.04318236,['mi parte delantera'],1
+-0.7458485,-0.03774528,['su parte delantera'],1
+-0.73988384,-0.039491862,['mi parte delantera'],1
+-0.7391295,-0.0440917,['su parte delantera'],1
+2.108482,-0.8699475,['mi parte delantera'],0
+1.1997678,0.8803352,['colisiona parte trasera'],5
+-0.74055296,-0.038290586,"['colisiona parte trasera', 'su parte trasera']",1
+0.734813,2.2631938,['colisiona parte trasera'],2
+-0.7465439,-0.04446994,['mi parte delantera'],1
+-0.73780394,-0.047671236,['parte delantera derecha'],1
+-0.7409884,-0.041082036,"['mi parte delantera', 'parte delantera derecha']",1
+-0.7365535,-0.046853308,['mi parte delantera'],1
+-0.74447626,-0.04882167,"['colisiona parte trasera', 'parte delantera derecha', 'colisiona parte delantera']",1
+-0.7473576,-0.044321384,['colisiona parte trasera'],1
+-0.74134815,-0.03464491,"['parte delantera derecha', 'su parte delantera']",1
+0.866431,-1.9016668,"['parte delantera derecha', 'colisiona parte delantera']",4
+1.2666243,-2.3287506,"['mi parte delantera', 'parte delantera izquierda']",4
+0.97881395,2.5108237,['parte trasera izquierda'],2
+-0.74312574,-0.0535836,['colisiona parte trasera'],1
+0.9708951,-2.11125,"['colisiona parte trasera', 'parte trasera izquierda']",4
+1.448833,-0.2855123,"['colisiona parte delantera', 'parte delantera izquierda']",6
+-0.7415983,-0.042067435,['colisiona parte trasera'],1
+-0.74274683,-0.050817437,"['parte delantera izquierda', 'parte trasera derecha']",1
+-0.7423547,-0.047214434,"['colisiona parte delantera', 'parte delantera izquierda']",1
+-0.7395137,-0.04651653,['su parte trasera'],1
+-0.74305195,-0.053983007,"['parte delantera derecha', 'colisiona parte delantera']",1
+1.7262402,-0.8560935,"['colisiona parte delantera', 'parte delantera parte']",0
+-0.7392547,-0.04777397,['colisiona parte trasera'],1
+1.045724,-2.1445374,['colisiona parte trasera'],4
+1.0610435,2.6871693,"['mi parte delantera', 'parte delantera derecha', 'colisiona parte delantera']",2
+-0.7395163,-0.039183795,['colisiona parte trasera'],1
+0.8678802,2.2625675,"['colisiona parte trasera', 'parte trasera izquierda']",2
+1.6604701,-1.6451225,['parte delantera parte'],3
+1.681526,0.22127755,['parte delantera derecha'],7
+0.96209794,-2.0520017,['parte trasera derecha'],4
+-0.7448406,-0.038296293,['mi parte delantera'],1
+0.8395876,2.2160795,['parte delantera derecha'],2
+1.6468586,-1.8155679,"['parte trasera derecha', 'su parte trasera']",4
+-0.7394211,-0.04558124,['mi parte delantera'],1
+-0.7405259,-0.040724657,['mi parte delantera'],1
+-0.7410918,-0.04507216,['colisiona parte trasera'],1
+-0.7484028,-0.036506034,['mi parte delantera'],1
+1.7946059,1.9528644,"['mi parte delantera', 'su parte delantera']",5
+-0.7360681,-0.048451994,"['mi parte delantera', 'parte delantera derecha']",1
+1.15849,-0.53432924,['parte trasera derecha'],6
+1.5564798,2.7084699,['colisiona parte trasera'],2
+-0.7442138,-0.044827517,"['parte delantera derecha', 'colisiona parte delantera']",1
+-0.73963684,-0.041939896,['colisiona parte trasera'],1
+-0.7426705,-0.046372596,"['parte delantera derecha', 'colisiona parte delantera']",1
+-0.7458722,-0.042986836,"['colisiona parte trasera', 'parte trasera derecha']",1
+1.390941,-0.3089918,['colisiona parte delantera'],6
+-0.7460698,-0.05210072,['mi parte delantera'],1
+-0.7443035,-0.046344846,"['mi parte delantera', 'parte delantera derecha', 'su parte delantera']",1
+-0.738918,-0.046299223,"['mi parte delantera', 'su parte delantera', 'parte delantera parte']",1
+-0.7430588,-0.044974804,"['colisiona parte trasera', 'parte trasera tercero']",1
+0.7560688,2.1968281,['colisiona parte trasera'],2
+-0.73554635,-0.04433781,['parte trasera derecha'],1
+-0.74278784,-0.044503372,"['colisiona parte trasera', 'su parte delantera', 'parte trasera izquierda']",1
+-0.7443018,-0.041911427,['mi parte delantera'],1
+-0.74067533,-0.047638357,"['colisiona parte trasera', 'parte trasera izquierda']",1
+1.1534011,-2.221311,['mi parte delantera'],4
+1.6924628,-0.77800244,"['colisiona parte trasera', 'parte trasera derecha']",0
+-0.74020195,-0.044426095,"['parte delantera derecha', 'colisiona parte delantera']",1
+1.2816147,-0.607896,"['mi parte delantera', 'parte delantera derecha', 'parte delantera izquierda', 'su parte delantera']",6
+1.1184689,-0.35076275,['mi parte delantera'],6
+1.1173459,-0.41976878,['mi parte delantera'],6
+1.2397912,-0.56496096,['mi parte delantera'],6
+-0.7436406,-0.04989099,['colisiona parte delantera'],1
+-0.7419238,-0.04421573,"['mi parte delantera', 'parte delantera parte']",1
+1.1375526,-1.1710742,"['parte delantera izquierda', 'su parte delantera', 'parte trasera izquierda']",3
+-0.73909414,-0.037102565,"['parte delantera derecha', 'parte trasera izquierda']",1
+-0.74027914,-0.038699802,['mi parte delantera'],1
+1.2556919,-0.3760005,['parte delantera parte'],6
+-0.7436408,-0.03534708,"['parte delantera derecha', 'colisiona parte delantera']",1
+1.14322,-2.1298723,"['parte delantera izquierda', 'parte trasera derecha', 'su parte trasera']",4
+-0.74688905,-0.04776627,"['parte trasera izquierda', 'su parte trasera']",1
+-0.7396567,-0.043337718,"['mi parte delantera', 'parte delantera derecha', 'parte delantera parte']",1
+1.3041804,-0.26971775,"['parte delantera derecha', 'su parte delantera']",6
+-0.7389358,-0.043596137,['parte delantera izquierda'],1
+-0.73914707,-0.042629328,"['su parte delantera', 'parte delantera parte']",1
+0.8549791,2.338365,['su parte trasera'],2
+-0.74039775,-0.049240936,"['mi parte delantera', 'parte delantera parte']",1
+-0.74266136,-0.04303151,['su parte delantera'],1
+1.1925646,-1.2922388,['mi parte delantera'],3
+-0.7406839,-0.047848433,['parte trasera izquierda'],1
+-0.74370295,-0.04910911,"['colisiona parte trasera', 'parte trasera derecha']",1
+-0.7426518,-0.04208901,"['parte delantera izquierda', 'su parte delantera']",1
+-0.74508697,-0.04613613,['colisiona parte delantera'],1
+-0.73956245,-0.049304835,['mi parte delantera'],1
+-0.7468663,-0.043506484,['colisiona parte trasera'],1
+-0.74087536,-0.039548688,['parte delantera izquierda'],1
+-0.74286604,-0.04466207,"['colisiona parte delantera', 'parte delantera izquierda']",1
+-0.7424019,-0.044610463,['colisiona parte trasera'],1
+-0.7385905,-0.03667797,"['colisiona parte delantera', 'parte delantera izquierda', 'parte trasera derecha']",1
+-0.7441729,-0.048937783,['parte delantera izquierda'],1
+-0.7400437,-0.036919944,['su parte trasera'],1
+-0.74283665,-0.036671296,['colisiona parte trasera'],1
+0.7390561,2.1925478,['parte trasera izquierda'],2
+-0.7427668,-0.04175419,['su parte trasera'],1
+-0.74509776,-0.048788216,"['parte delantera izquierda', 'su parte delantera', 'parte delantera parte']",1
+-0.7404291,-0.040122233,['colisiona parte trasera'],1
+-0.7411554,-0.048102915,['colisiona parte trasera'],1
+1.3293307,-1.3322195,['mi parte delantera'],3
+-0.73751926,-0.045231353,['mi parte delantera'],1
+1.4480143,-1.2976037,"['parte trasera derecha', 'su parte trasera']",3
+1.1943079,-0.33555496,['su parte trasera'],6
+-0.7389418,-0.044966407,['su parte trasera'],1
+1.8049253,2.1483915,['mi parte delantera'],2
+0.89619666,2.4282908,"['mi parte delantera', 'su parte delantera', 'parte delantera parte']",2
+-0.74704874,-0.044218525,"['mi parte delantera', 'parte delantera izquierda', 'su parte delantera']",1
+-0.74618894,-0.052570276,"['mi parte delantera', 'parte delantera derecha']",1
+-0.74332875,-0.040158983,"['parte delantera derecha', 'colisiona parte delantera']",1
+-0.73575926,-0.042564392,['mi parte delantera'],1
+0.93349576,2.3282428,['parte trasera izquierda'],2
+-0.7410851,-0.04129939,"['colisiona parte trasera', 'parte delantera izquierda', 'su parte delantera', 'parte trasera derecha']",1
+-0.7375678,-0.048381876,"['su parte delantera', 'parte delantera parte']",1
+1.4998679,-0.5830678,['mi parte delantera'],6
+-0.7457656,-0.04519747,"['mi parte delantera', 'su parte delantera']",1
+-0.7459196,-0.04811404,['su parte delantera'],1
+1.6600703,0.9145187,['colisiona parte trasera'],5
+0.9326571,2.440766,['mi parte delantera'],2
+-0.7354096,-0.04245888,"['parte delantera derecha', 'parte trasera izquierda']",1
+-0.7417351,-0.047346912,['parte trasera izquierda'],1
+-0.74295574,-0.0459993,['su parte delantera'],1
+-0.7353598,-0.04765464,['mi parte delantera'],1
+1.0164503,-2.022768,['su parte trasera'],4
+-0.7404695,-0.036359776,"['parte delantera derecha', 'parte delantera parte']",1
+1.030973,0.11625136,['mi parte delantera'],6
+1.534732,-0.9464955,"['su parte delantera', 'parte delantera parte']",3
+-0.7417375,-0.041381743,['parte delantera derecha'],1
+1.3108846,-0.90862226,"['colisiona parte trasera', 'parte trasera derecha']",3
+-0.7403457,-0.04885485,"['mi parte delantera', 'parte delantera derecha', 'parte delantera izquierda', 'su parte delantera']",1
+-0.738186,-0.037439972,"['mi parte delantera', 'parte delantera izquierda']",1
+-0.74142104,-0.04201747,['colisiona parte trasera'],1
+1.1835953,-2.2925162,"['colisiona parte trasera', 'parte trasera izquierda']",4
+0.9403344,-0.47605148,"['parte delantera derecha', 'parte delantera izquierda']",6
+0.8462029,2.2932525,"['parte delantera derecha', 'colisiona parte delantera', 'parte delantera izquierda', 'su parte delantera']",2
+1.1287044,-0.41876215,"['parte trasera izquierda', 'su parte trasera']",6
+-0.7463132,-0.04389023,['parte delantera izquierda'],1
+-0.7492154,-0.05287735,"['colisiona parte delantera', 'parte delantera izquierda']",1
+-0.7441416,-0.04457576,['colisiona parte trasera'],1
+-0.74252594,-0.041883595,['colisiona parte trasera'],1
+-0.7394723,-0.043525416,['mi parte delantera'],1
+-0.746447,-0.042122375,['colisiona parte delantera'],1
+-0.7473257,-0.04715946,['colisiona parte trasera'],1
+-0.745103,-0.044925638,['mi parte delantera'],1
+-0.7443677,-0.048858415,['su parte trasera'],1
+-0.74108833,-0.047130875,['colisiona parte trasera'],1
+-0.7425148,-0.046177294,['mi parte delantera'],1
+-0.7418329,-0.043247312,['colisiona parte trasera'],1
+0.9928723,2.447362,['mi parte delantera'],2
+1.0177555,-0.3834137,"['mi parte delantera', 'parte delantera derecha', 'parte trasera izquierda', 'su parte trasera']",6
+-0.7440621,-0.045699466,['mi parte delantera'],1
+1.0147988,2.612155,"['parte delantera derecha', 'su parte delantera', 'parte delantera parte']",2
+-0.7408207,-0.0504206,"['colisiona parte delantera', 'parte delantera izquierda']",1
+1.8890276,0.6563085,"['colisiona parte delantera', 'parte delantera parte']",7
+0.79177296,2.0531855,['mi parte delantera'],2
+-0.74077296,-0.047449276,['mi parte delantera'],1
+-0.7415002,-0.044682264,['su parte delantera'],1
+-0.7446597,-0.046265066,['colisiona parte trasera'],1
+-0.73905313,-0.041841142,"['mi parte delantera', 'colisiona parte trasera']",1
+-0.74701107,-0.05129785,['mi parte delantera'],1
+0.9121279,2.4298844,"['parte delantera derecha', 'su parte delantera']",2
+1.1379738,-0.3207532,"['parte trasera derecha', 'su parte trasera']",6
+-0.74324864,-0.046546407,"['mi parte delantera', 'parte delantera derecha']",1
+1.1348054,-1.3333912,['mi parte delantera'],3
+-0.74174,-0.045265228,['mi parte delantera'],1
+1.235224,-1.7012926,['mi parte delantera'],4
+-0.7424331,-0.04865772,"['colisiona parte delantera', 'parte delantera izquierda', 'su parte trasera']",1
+0.9687513,-0.30422878,['su parte trasera'],6
+-0.74784017,-0.046319846,['parte trasera derecha'],1
+1.516007,1.1770157,['mi parte delantera'],5
+-0.7450641,-0.038142875,"['colisiona parte trasera', 'su parte delantera', 'parte trasera derecha']",1
+-0.7375228,-0.042151283,"['parte delantera derecha', 'colisiona parte delantera']",1
+-0.7427578,-0.039749198,['su parte delantera'],1
+1.2779636,-0.9327503,['mi parte delantera'],3
+-0.74577594,-0.039354637,['parte delantera derecha'],1
+-0.748443,-0.04322431,"['mi parte delantera', 'parte delantera izquierda']",1
+1.8272933,0.8974587,"['mi parte delantera', 'parte delantera parte']",5
+-0.7431854,-0.046167623,['colisiona parte trasera'],1
+-0.7447007,-0.04498565,['mi parte delantera'],1
+-0.7426087,-0.04939005,"['colisiona parte delantera', 'parte delantera izquierda', 'parte trasera derecha']",1
+-0.7397893,-0.040376086,"['colisiona parte trasera', 'parte trasera derecha']",1
+-0.74008214,-0.045328923,"['parte delantera izquierda', 'parte trasera derecha']",1
+0.89586174,-0.34133413,['mi parte delantera'],6
+-0.7459868,-0.0488262,['parte trasera derecha'],1
+-0.7447473,-0.045126364,"['parte delantera izquierda', 'su parte delantera']",1
+-0.74414283,-0.044313766,"['colisiona parte trasera', 'su parte delantera', 'parte trasera derecha']",1
+-0.7365424,-0.039293345,['mi parte delantera'],1
+0.9571095,-1.8617463,"['mi parte delantera', 'su parte trasera']",4
+0.7243876,2.2731078,"['colisiona parte delantera', 'parte delantera izquierda', 'su parte delantera', 'parte trasera derecha']",2
+-0.73993057,-0.039043613,['mi parte delantera'],1
+1.3285849,-0.3682077,"['mi parte delantera', 'parte delantera parte']",6
+1.2790202,-0.9793519,['colisiona parte trasera'],3
+1.1764693,-0.6777615,['parte trasera izquierda'],6
+0.9452133,2.3037248,['parte trasera tercero'],2
+-0.7380671,-0.04684987,['mi parte delantera'],1
+1.2116452,-0.32877722,"['mi parte delantera', 'parte delantera parte']",6
+-0.73585147,-0.041769527,['su parte trasera'],1
+1.0603933,-2.2077394,['mi parte delantera'],4
+0.98146206,2.5410678,['su parte trasera'],2
+-0.7422657,-0.050412007,['mi parte delantera'],1
+-0.7365303,-0.04190723,['mi parte delantera'],1
+1.3344473,0.4648151,['colisiona parte trasera'],7
+-0.73980546,-0.044209298,['colisiona parte trasera'],1
+-0.73695785,-0.04572811,['colisiona parte delantera'],1
+-0.7427452,-0.0476611,['colisiona parte delantera'],1
+1.4079821,-0.17979836,['parte trasera izquierda'],6
+-0.7521867,-0.03747871,['colisiona parte trasera'],1
+-0.7422021,-0.039920077,"['parte delantera derecha', 'colisiona parte delantera', 'parte trasera izquierda']",1
+-0.74364537,-0.043978997,"['parte delantera derecha', 'parte delantera izquierda']",1
+0.951705,2.3119233,['colisiona parte trasera'],2
+-0.7474654,-0.05175696,"['mi parte delantera', 'parte delantera izquierda']",1
+0.7073403,2.072912,"['colisiona parte trasera', 'parte trasera derecha']",2
+-0.7474547,-0.043154556,['colisiona parte trasera'],1
+-0.7434385,-0.04900725,"['colisiona parte trasera', 'parte delantera derecha', 'parte trasera izquierda']",1
+-0.741312,-0.045616984,['colisiona parte trasera'],1
+-0.7421568,-0.04476116,"['parte delantera derecha', 'colisiona parte delantera', 'parte delantera izquierda']",1
+-0.7430141,-0.045785937,['mi parte delantera'],1
+-0.74154156,-0.050792616,['mi parte delantera'],1
+1.6976832,-0.95797366,"['colisiona parte delantera', 'parte delantera izquierda']",3
+-0.74609643,-0.053458955,"['mi parte delantera', 'colisiona parte delantera', 'parte delantera izquierda']",1
+-0.7431903,-0.036855992,['parte delantera izquierda'],1
+-0.73913634,-0.047803435,['parte delantera izquierda'],1
+-0.739526,-0.03631387,"['mi parte delantera', 'colisiona parte delantera', 'parte delantera parte']",1
+-0.7449153,-0.035564657,['mi parte delantera'],1
+0.95452255,2.4272752,"['colisiona parte trasera', 'parte delantera derecha', 'su parte delantera', 'parte trasera izquierda']",2
+-0.7404137,-0.04925488,"['colisiona parte delantera', 'parte delantera izquierda']",1
+1.4133679,0.027053252,['su parte trasera'],7
+0.9124068,-1.9701087,['mi parte delantera'],4
+-0.7404504,-0.05248659,['mi parte delantera'],1
+1.2853026,1.3659092,['colisiona parte trasera'],5
+1.048457,-1.9992006,"['parte delantera izquierda', 'parte trasera derecha']",4
+1.0492032,-0.286303,"['parte delantera izquierda', 'su parte delantera', 'parte trasera derecha']",6
+1.1055716,-0.6917375,['mi parte delantera'],6
+-0.7412571,-0.05184945,['colisiona parte trasera'],1
+1.6484622,0.32585105,['su parte trasera'],7
+1.4952445,-1.9135138,['colisiona parte trasera'],4
+0.9404228,2.384446,['su parte trasera'],2
+-0.7401503,-0.042202447,"['parte delantera derecha', 'su parte delantera', 'parte delantera parte']",1
+-0.7450711,-0.040659055,"['colisiona parte trasera', 'parte trasera izquierda']",1
+-0.7435138,-0.03796417,['parte delantera izquierda'],1
+-0.7389419,-0.04123559,['parte trasera tercero'],1
+-0.7474019,-0.049097322,['parte trasera izquierda'],1
+1.9777131,-1.2088294,"['mi parte delantera', 'parte delantera izquierda']",3
+-0.7378036,-0.039333,['colisiona parte trasera'],1
+1.4219509,-2.1101015,"['colisiona parte trasera', 'parte trasera izquierda']",4
+-0.74712896,-0.040113132,"['colisiona parte trasera', 'parte trasera izquierda']",1
+-0.7435091,-0.04356367,['mi parte delantera'],1
+2.2261713,0.11448549,"['colisiona parte delantera', 'parte delantera izquierda']",0
+-0.74405843,-0.044319402,['colisiona parte trasera'],1
+1.3740948,-0.17896964,"['su parte delantera', 'parte delantera parte']",6
+-0.7413662,-0.052288774,['parte delantera derecha'],1
+-0.7397619,-0.039545443,['parte trasera derecha'],1
+-0.74443644,-0.04535789,"['colisiona parte delantera', 'parte delantera izquierda']",1
+-0.745445,-0.0476606,['parte trasera izquierda'],1
+-0.74380803,-0.03711128,['parte delantera parte'],1
+-0.7466237,-0.04487301,['mi parte delantera'],1
+-0.74150306,-0.04481979,"['parte trasera izquierda', 'su parte trasera']",1
+0.8863515,2.3295734,['su parte trasera'],2
+1.0790832,-0.3230315,['mi parte delantera'],6
+-0.74730885,-0.046345115,"['mi parte delantera', 'parte trasera derecha']",1
+1.3768438,-0.35164943,['mi parte delantera'],6
+1.3877984,-0.43853775,"['parte delantera derecha', 'su parte delantera', 'parte trasera izquierda']",6
+-0.73925674,-0.052417368,['parte trasera izquierda'],1
+1.4597114,-0.24989308,"['parte delantera derecha', 'colisiona parte delantera']",6
+1.0629125,2.6483872,['mi parte delantera'],2
+1.1136746,-0.3016812,"['parte delantera izquierda', 'su parte trasera']",6
+1.4515699,-2.5373855,['mi parte delantera'],4
+-0.74401116,-0.044802,['su parte delantera'],1
+-0.7395789,-0.050609387,"['parte delantera izquierda', 'su parte delantera', 'parte delantera parte']",1
+-0.74256915,-0.045507684,['su parte delantera'],1
+-0.7430698,-0.04393691,['mi parte delantera'],1
+-0.74450934,-0.041971434,"['colisiona parte trasera', 'parte trasera derecha']",1
+1.1666096,-0.36690465,"['parte delantera derecha', 'colisiona parte delantera']",6
+-0.74562633,-0.042955015,['mi parte delantera'],1
+-0.7446812,-0.044806097,"['mi parte delantera', 'parte delantera derecha']",1
+-0.7424484,-0.038056828,['parte trasera izquierda'],1
+-0.74844384,-0.042319603,['colisiona parte trasera'],1
+-0.7367877,-0.041700363,"['colisiona parte delantera', 'parte delantera izquierda']",1
+1.1360698,-0.3873945,"['mi parte delantera', 'colisiona parte delantera', 'parte delantera parte']",6
+1.4665033,-2.4608994,"['parte delantera derecha', 'colisiona parte delantera', 'su parte delantera']",4
+1.128352,-0.32322165,"['su parte delantera', 'su parte trasera']",6
+-0.7489848,-0.03780482,['colisiona parte trasera'],1
+-0.7399828,-0.03995779,"['mi parte delantera', 'su parte trasera']",1
+-0.74580187,-0.048317924,['mi parte delantera'],1
+-0.7445081,-0.046803974,['colisiona parte trasera'],1
+1.2258756,-0.3036406,"['mi parte delantera', 'parte delantera derecha', 'parte trasera izquierda', 'parte delantera parte']",6
+-0.74084324,-0.045036733,['parte delantera derecha'],1
+-0.7445828,-0.03819289,"['colisiona parte trasera', 'parte trasera izquierda']",1
+0.8833316,2.4136593,"['colisiona parte trasera', 'parte trasera izquierda', 'parte trasera derecha', 'su parte trasera']",2
+-0.7469364,-0.04859886,['mi parte delantera'],1
+-0.74117297,-0.040876966,['colisiona parte trasera'],1
+-0.7450908,-0.042335317,['mi parte delantera'],1
+-0.74791265,-0.042330682,['parte delantera izquierda'],1
+1.4884584,-0.5667974,['parte delantera izquierda'],6
+0.9348638,2.422428,"['parte delantera derecha', 'parte trasera izquierda']",2
+-0.7458539,-0.04913948,"['parte delantera derecha', 'colisiona parte delantera']",1
+1.621207,-0.9915286,['mi parte delantera'],3
+-0.74278516,-0.04315661,['mi parte delantera'],1
+1.7792295,-1.1871973,['mi parte delantera'],3
+-0.7442819,-0.039512146,"['parte delantera derecha', 'parte trasera izquierda']",1
+-0.7470588,-0.037965674,['colisiona parte trasera'],1
+-0.7391358,-0.046640616,"['su parte delantera', 'parte delantera parte']",1
+-0.74748576,-0.051332492,['mi parte delantera'],1
+-0.7402607,-0.047702458,"['parte delantera derecha', 'colisiona parte delantera']",1
+-0.7437785,-0.04097815,['colisiona parte delantera'],1
+-0.74153143,-0.04586952,"['parte delantera izquierda', 'su parte delantera']",1
+-0.7426534,-0.041934412,['parte delantera izquierda'],1
+-0.742099,-0.046085153,,1
+1.0842508,-2.0809045,,4
+-0.7379668,-0.04566782,,1
+0.85832715,2.2331157,,2
+1.9142836,0.5160558,,7
+-0.73657656,-0.03870627,,1
+0.94976,2.447417,,2
+-0.73900306,-0.046595193,,1
+-0.7427549,-0.043917473,,1
+1.362784,0.3303689,,7
+1.9221272,-0.78942186,,0
+0.7914683,2.4168732,,2
+-0.73968625,-0.04246354,,1
+-0.74611443,-0.044496685,,1
+-0.74356806,-0.042930435,,1
+-0.74164325,-0.046645887,,1
+-0.74078757,-0.049382683,,1
+0.7370486,2.2959723,,2
+-0.7437964,-0.040518872,,1
+-0.7418902,-0.044291355,,1
+-0.7377517,-0.047840394,,1
+-0.7347242,-0.048617207,,1
+-0.7368951,-0.043130297,,1
+-0.7423666,-0.04428293,,1
+-0.7432376,-0.041646387,,1
+-0.73868656,-0.039895855,,1
+1.1225291,-0.42396572,,6
+-0.73510987,-0.045518264,,1
+-0.743657,-0.038461078,,1
+1.2709872,-2.76512,,4
+-0.7437358,-0.04118856,,1
+-0.74481714,-0.035543207,,1
+-0.74330837,-0.038930368,,1
+-0.7456506,-0.045378882,,1
+-0.7437949,-0.03743047,,1
+-0.74685395,-0.04663027,,1
+-0.739273,-0.04688601,,1
+-0.7390108,-0.046746776,,1
+1.0773485,-2.1396174,,4
+-0.7446524,-0.0458682,,1
+-0.7447408,-0.0415331,,1
+-0.74190545,-0.03953206,,1
+1.2838308,-0.3224342,,6
+-0.7437967,-0.04149746,,1
+-0.7459984,-0.04448736,,1
+1.1945674,-0.23543668,,6
+-0.74344045,-0.04859033,,1
+-0.74633944,-0.046073534,,1
+-0.7447912,-0.044277452,,1
+-0.7438268,-0.049627177,,1
+1.2754349,-0.34968296,,6
+-0.7440409,-0.044275545,,1
+0.9728221,-0.23454867,,6
+-0.7406409,-0.04623798,,1
+1.0163622,-2.0070975,,4
+0.87963456,2.3567283,,2
+1.0578408,-2.1048765,,4
+-0.7462957,-0.043063585,,1
+-0.7441215,-0.046149764,,1
+-0.7380513,-0.03798656,,1
+-0.7413143,-0.04151568,,1
+-0.7445187,-0.04517867,,1
+-0.74394333,-0.045513485,,1
+1.5069402,-0.74879616,,0
+-0.741284,-0.0475617,,1
+-0.74341553,-0.04262945,,1
+-0.7441248,-0.038251624,,1
+-0.74094236,-0.040846713,,1
+-0.7377452,-0.04317116,,1
+-0.74195623,-0.04411593,,1
+-0.74301344,-0.04725811,,1
+-0.7446536,-0.04879344,,1
+-0.74344766,-0.050006174,,1
+-0.7444784,-0.044024184,,1
+0.9263497,2.3617942,,2
+-0.7443819,-0.03782848,,1
+1.732567,-1.8452274,,4
+-0.74180144,-0.046505865,,1
+-0.743802,-0.046345633,,1
+-0.738748,-0.039114762,,1
+-0.7388679,-0.047307994,,1
+-0.7386403,-0.046282068,,1
+1.7720114,-2.0136902,,4
+-0.7455579,-0.049223457,,1
+-0.7449073,-0.042500596,,1
+-0.7437899,-0.045253254,,1
+1.2775308,-1.3404058,,3
+-0.7435256,-0.04350638,,1
+1.1756209,-0.31052205,,6
+-0.73956764,-0.051806424,,1
+-0.7487964,-0.048188567,,1
+-0.7379971,-0.04554736,,1
+-0.7430271,-0.052051365,,1
+-0.7481295,-0.039156433,,1
+1.079051,-0.3951863,,6
+-0.74154073,-0.044241898,,1
+-0.7433631,-0.044087294,,1
+-0.7426359,-0.043033868,,1
+1.8228055,2.8936863,,2
+0.8118336,2.2823982,,2
+-0.739961,-0.048016377,,1
+1.3934338,-0.22788121,,6
+-0.74133426,-0.039219346,,1
+-0.7432693,-0.04946416,,1
+-0.74290663,-0.044112474,,1
+-0.745672,-0.04576184,,1
+-0.7464099,-0.044424802,,1
+-0.7416897,-0.034348153,,1
+0.7358443,2.1094055,,2
+1.0118657,-1.965372,,4
+-0.7461745,-0.046272215,,1
+-0.743986,-0.04569907,,1
+-0.74530697,-0.044542007,,1
+1.716804,0.63986653,,7
+-0.73974466,-0.041115213,,1
+-0.7327961,-0.04217344,,1
+-0.7399044,-0.044912823,,1
+0.96288365,2.5174363,,2
+-0.7415738,-0.03744551,,1
+-0.74685484,-0.046560388,,1
+-0.7406794,-0.04283187,,1
+-0.74676776,-0.042776458,,1
+-0.74489987,-0.03927818,,1
+-0.7413284,-0.04214738,,1
+-0.74013036,-0.038514435,,1
+-0.74373096,-0.04854822,,1
+1.7148803,-1.0729561,,3
+0.9362755,2.378802,,2
+-0.7441249,-0.045437083,,1
+-0.74285203,-0.036247466,,1
+-0.7436235,-0.040737983,,1
+1.309966,-0.90933025,,3
+-0.7415122,-0.041591704,,1
+-0.7345024,-0.045211345,,1
+1.6790218,-1.0772593,,3
+-0.7401942,-0.04538795,,1
+-0.748034,-0.043403085,,1
+1.6710275,-0.79359335,,0
+0.93985474,2.440002,,2
+-0.73967713,-0.04747289,,1
+1.3643723,-1.3197181,,3
+-0.74658203,-0.043744814,,1
+1.2106909,-0.39677536,,6
+0.68794346,2.142954,,2
+-0.7440615,-0.037304696,,1
+-0.7369737,-0.048588585,,1
+-0.7373088,-0.04623522,,1
+-0.74351865,-0.046028495,,1
+-0.7401984,-0.04585067,,1
+0.79905874,2.2156954,,2
+-0.7456216,-0.04449601,,1
+-0.74862874,-0.043405406,,1
+-0.7419316,-0.048244994,,1
+-0.74253243,-0.05044802,,1
+-0.74257344,-0.036627386,,1
+-0.7353828,-0.041508686,,1
+1.5350453,2.772958,,2
+-0.74376625,-0.047084894,,1
+1.6130525,-0.4316803,,0
+-0.74776214,-0.039935183,,1
+-0.74495685,-0.04049874,,1
+-0.7410408,-0.049462866,,1
+1.9856644,-1.9619373,,4
+-0.7414041,-0.049898006,,1
+-0.74262625,-0.047273245,,1
+-0.74351925,-0.051732924,,1
+0.93480945,2.3897464,,2
+-0.7409611,-0.04816723,,1
+0.9620661,2.5517128,,2
+1.055024,-2.054401,,4
+1.0919676,-0.13560516,,6
+0.82428944,2.2668896,,2
+-0.7399271,-0.050926235,,1
+1.2595408,-0.8803378,,3
+-0.7437175,-0.050874908,,1
+-0.7410968,-0.046460476,,1
+-0.73928064,-0.04149353,,1
+1.2841017,0.32276037,,7
+0.9108391,2.2728508,,2
+-0.7453478,-0.037900362,,1
+-0.7466387,-0.048351325,,1
+1.725929,-2.5650463,,4
+-0.7442237,-0.043036804,,1
+-0.74331945,-0.039297756,,1
+-0.7421445,-0.041960705,,1
+-0.73973763,-0.046087503,,1
+-0.7432371,-0.041200634,,1
+1.3972299,-0.28630918,,6
+0.75453913,2.2328355,,2
+-0.74527097,-0.046652783,,1
+-0.7493936,-0.046604402,,1
+1.4804889,0.055864427,,7
+1.1909634,0.33054698,,7
+-0.73842955,-0.047600795,,1
+-0.74200153,-0.047382254,,1
+-0.74159193,-0.045830097,,1
+1.2953216,0.29450598,,7
+1.3786929,1.106206,,5
+-0.74332345,-0.040090676,,1
+-0.7443856,-0.0406814,,1
+-0.74499625,-0.04479166,,1
+-0.742778,-0.04407363,,1
+-0.7406057,-0.04367216,,1
+1.3368058,1.1015633,,5
+1.313714,-0.71798676,,6
+-0.7380452,-0.042452242,,1
+-0.7353896,-0.053872723,,1
+-0.7454102,-0.04808051,,1
+-0.7421894,-0.043085404,,1
+1.0320622,2.6320078,,2
+0.9306481,2.4136963,,2
+-0.74187326,-0.03563181,,1
+-0.73574173,-0.03860032,,1
+-0.74535614,-0.04181634,,1
+-0.7399274,-0.046898138,,1
+1.1822071,-0.6255741,,6
+-0.7427156,-0.04015614,,1
+-0.7407333,-0.03993768,,1
+1.3883564,1.1306934,,5
+-0.738248,-0.048027262,,1
+-0.7464522,-0.036261443,,1
+0.91761094,2.378001,,2
+-0.7426813,-0.050722167,,1
+2.364139,1.3326006,,5
+-0.7417689,-0.040001526,,1
+-0.7437417,-0.037400205,,1
+-0.7397578,-0.04955877,,1
+-0.7348492,-0.046182375,,1
+-0.74504906,-0.045751482,,1
+-0.7366853,-0.03518892,,1
+-0.73670584,-0.039255787,,1
+0.8781478,2.464048,,2
+-0.7413401,-0.04836428,,1
+1.2432452,-0.5387835,,6
+-0.74170834,-0.04253088,,1
+-0.7397716,-0.03624721,,1
+1.1312791,-0.47734132,,6
+-0.739845,-0.039607454,,1
+-0.7446724,-0.04261662,,1
+0.96374434,2.4487817,,2
+-0.74150115,-0.038081232,,1
+-0.7434427,-0.04772817,,1
+0.9424524,2.5105233,,2
+-0.7437738,-0.04777799,,1
+-0.74495333,-0.04781829,,1
+1.7906846,-1.1104263,,3
+-0.7427353,-0.03960485,,1
+-0.74679774,-0.037632894,,1
+0.89964306,2.4381413,,2
+1.0872943,-2.0616338,,4
+1.8844638,0.88779134,,5
+1.2172663,-0.31085005,,6
+0.9438691,-0.33536515,,6
+-0.7494641,-0.048104167,,1
+-0.7452393,-0.04027463,,1
+-0.74571663,-0.03670289,,1
+-0.7477274,-0.04987571,,1
+-0.7433378,-0.047893915,,1
+-0.7450301,-0.0447466,,1
+-0.74132043,-0.04511616,,1
+-0.7496155,-0.04689421,,1
+-0.7366941,-0.040027667,,1
+1.1965474,-0.4267864,,6
+-0.74488634,-0.050284397,,1
+-0.73542273,-0.046439417,,1
+1.0857874,-2.2931125,,4
+-0.7427865,-0.050332554,,1
+-0.7433228,-0.04249086,,1
+-0.74442226,-0.048970766,,1
+-0.7411802,-0.032859463,,1
+-0.73934495,-0.030680092,,1
+-0.7412361,-0.039393883,,1
+-0.7362103,-0.04512764,,1
+-0.7398218,-0.04567441,,1
+1.9654081,-0.21069326,,0
+0.94318104,2.4099302,,2
+0.9132551,2.3938966,,2
+-0.7393185,-0.046518415,,1
+1.4408072,-0.997464,,3
+1.0432037,2.5662284,,2
+-0.741367,-0.0438119,,1
+1.3669258,0.576456,,7
+-0.7436155,-0.04141262,,1
+1.1391606,-0.28848162,,6
+1.6279846,0.7163498,,7
+-0.7453496,-0.04563549,,1
+0.99748236,2.5798378,,2
+-0.74257207,-0.040830616,,1
+-0.73556083,-0.049974676,,1
+-0.74464977,-0.048540514,,1
+-0.7504272,-0.035440885,,1
+-0.7464712,-0.044842914,,1
+0.79536885,2.2867036,,2
+-0.74149173,-0.039335247,,1
+-0.7428136,-0.042679466,,1
+1.3678648,-0.9769423,,3
+-0.74353904,-0.04752003,,1
+-0.7394368,-0.043313794,,1
+-0.7412359,-0.049308226,,1
+-0.7428947,-0.044276517,,1
+-0.74737626,-0.040228754,,1
+1.3587004,-1.2921399,,3
+-0.74053705,-0.044440314,,1
+-0.74431,-0.045168158,,1
+-0.7374409,-0.04546624,,1
+1.8553269,-0.9917544,,0
+-0.74434215,-0.039964233,,1
+-0.74176556,-0.03942954,,1
+-0.73489857,-0.04386401,,1
+-0.74321836,-0.045694217,,1
+1.0102991,-0.274415,,6
+-0.74080664,-0.03876337,,1
+-0.7513855,-0.043231983,,1
+-0.73895746,-0.047089983,,1
+-0.7371639,-0.048155516,,1
+-0.7437098,-0.03894305,,1
+1.637088,-0.84641236,,0
+-0.74165344,-0.05286858,,1
+-0.738521,-0.04239577,,1
+-0.74426895,-0.046450004,,1
+-0.74000794,-0.047938265,,1
+-0.740048,-0.040200233,,1
+1.1717453,1.1515607,,5
+-0.7411482,-0.04924543,,1
+-0.73887515,-0.04446008,,1
+-0.7528909,-0.03929151,,1
+-0.74342674,-0.036308363,,1
+0.9635634,2.38724,,2
+-0.7360717,-0.047347397,,1
+-0.7396282,-0.044776525,,1
+-0.7408161,-0.046727486,,1
+0.93291336,2.4884913,,2
+1.3002172,-1.3386587,,3
+0.90553844,2.5188596,,2
+2.140171,2.7500618,,2
+-0.747492,-0.04133706,,1
+-0.7385633,-0.041758474,,1
+-0.74873954,-0.04067311,,1
+-0.73895353,-0.043140497,,1
+1.1796436,-2.176758,,4
+-0.7390049,-0.054769136,,1
+-0.7439075,-0.042427227,,1
+-0.7450438,-0.0427846,,1
+-0.73743695,-0.041475587,,1
+-0.7388854,-0.03647742,,1
+-0.74333686,-0.040271632,,1
+1.6221834,-0.80307454,,0
+1.2003627,-0.30813348,,6
+1.317812,-0.30612856,,6
+1.4175545,1.708934,,5
+0.9562612,2.3606524,,2
+1.6014677,-2.194301,,4
+1.4637946,-2.1329172,,4
+1.036769,-2.081057,,4
+-0.74202365,-0.04798631,,1
+-0.7457509,-0.036339004,,1
+0.86061585,2.348885,,2
+-0.7465444,-0.03866092,,1
+-0.7395149,-0.0370978,,1
+-0.7425145,-0.04230252,,1
+1.5210254,-0.50248164,,6
+-0.7455615,-0.04455814,,1
+1.0339262,2.6577766,,2
+-0.7411277,-0.045920026,,1
+0.7936245,2.230874,,2
+0.98772675,2.46172,,2
+-0.74056005,-0.042581964,,1
+-0.74537325,-0.04626245,,1
+-0.7384991,-0.042501178,,1
+-0.74492157,-0.040177897,,1
+1.3169714,-2.1871796,,4
+-0.7435997,-0.043068625,,1
+-0.74424034,-0.039696097,,1
+-0.7407881,-0.04379368,,1
+-0.74053293,-0.041234612,,1
+-0.7390657,-0.04280249,,1
+1.229725,-2.6366806,,4
+-0.7407474,-0.043561224,,1
+-0.7394906,-0.039637517,,1
+-0.7412705,-0.040535234,,1
+-0.74407923,-0.04876138,,1
+1.7663649,-1.1994283,,3
+-0.7438799,-0.045018006,,1
+1.154278,-2.0872898,,4
+1.3675053,-2.6267207,,4
+-0.7425559,-0.039329886,,1
+-0.7375811,-0.046673547,,1
+-0.749034,-0.04688234,,1
+0.85672206,2.3386965,,2
+1.0065033,-0.2830177,,6
+1.4027718,2.7290735,,2
+-0.7458756,-0.046294045,,1
+-0.74395555,-0.042150363,,1
+1.0391136,1.5827231,,5
+-0.7431291,-0.047424484,,1
+-0.74422526,-0.044053614,,1
+-0.74178916,-0.04807819,,1
+-0.7416616,-0.04954567,,1
+-0.7401256,-0.044722877,,1
+-0.73933184,-0.038722534,,1
+1.2965999,-1.0310894,,3
+-0.7414673,-0.043779995,,1
+1.1802435,-2.244347,,4
+-0.7401478,-0.047518913,,1
+1.203781,-0.6726364,,6
+-0.73921496,-0.04196992,,1
+-0.7462969,-0.044202216,,1
+-0.7420906,-0.041662745,,1
+0.8289859,1.8970512,,2
+0.84463286,2.3308756,,2
+1.1446099,-2.2673423,,4
+-0.7367816,-0.041997623,,1
+-0.74287075,-0.040176883,,1
+-0.740582,-0.039103474,,1
+-0.7414566,-0.039682176,,1
+1.1636893,-2.3270328,,4
+0.9106802,2.3394105,,2
+-0.7440836,-0.04081835,,1
+-0.7414739,-0.039789487,,1
+1.4707656,2.0680988,,2
+-0.7460902,-0.045921754,,1
+-0.7411723,-0.04047072,,1
+-0.7364314,-0.04941173,,1
+-0.7443386,-0.045413256,,1
+1.3521414,0.6685288,,7
+-0.7415499,-0.05248677,,1
+1.3238611,-1.458371,,3
+-0.7381932,-0.043613598,,1
+-0.74630225,-0.04979645,,1
+2.225043,-0.678537,,0
+-0.7399367,-0.052346375,,1
+-0.7447944,-0.047385428,,1
+-0.737317,-0.040947445,,1
+-0.7424606,-0.0467027,,1
+-0.7464648,-0.046454374,,1
+-0.74445736,-0.041587323,,1
+2.1408951,-1.1158377,,0
+1.6287408,0.3906417,,7
+1.5124605,-0.9583197,,3
+-0.74591833,-0.04414904,,1
+-0.74391747,-0.042527482,,1
+-0.74195176,-0.039579768,,1
+-0.7409754,-0.040891536,,1
+-0.7382503,-0.038623594,,1
+1.8994863,-0.78817,,0
+-0.7460376,-0.043905433,,1
+1.1764127,-1.0085975,,3
+2.180673,-1.4819968,,3
+-0.74694234,-0.045989856,,1
+-0.7415243,-0.047272515,,1
+-0.7460031,-0.046042323,,1
+-0.7472187,-0.037731603,,1
+-0.7451955,-0.040028464,,1
+1.3002555,2.2363741,,2
+0.89020956,2.295329,,2
+0.98086,2.4587498,,2
+-0.7407322,-0.041165203,,1
+-0.7410365,-0.043507624,,1
+0.8570508,2.327805,,2
+-0.7433429,-0.046129562,,1
+-0.743275,-0.042299636,,1
+1.0740786,2.6390553,,2
+-0.7419757,-0.04904275,,1
+0.9628987,2.5016952,,2
+-0.7425832,-0.046956256,,1
+-0.74250305,-0.048269574,,1
+-0.7416837,-0.049942687,,1
+-0.7418526,-0.04856532,,1
+0.9744658,2.497395,,2
+-0.7413324,-0.049133718,,1
+-0.74002594,-0.042258233,,1
+1.0412838,-2.133857,,4
+-0.74483764,-0.04631755,,1
+1.0364511,-2.142977,,4
+-0.7525949,-0.03944972,,1
+-0.7461659,-0.04593245,,1
+-0.73707527,-0.048932288,,1
+1.3236359,-0.9753973,,3
+-0.7457899,-0.047844786,,1
+-0.74056023,-0.04115146,,1
+-0.7437902,-0.043028645,,1
+-0.7409852,-0.047670875,,1
+-0.74043685,-0.046022017,,1
+1.2788637,-0.15985249,,6
+-0.7451136,-0.040943667,,1
+1.808965,2.8679411,,2
+1.1709158,-0.30173007,,6
+-0.7431612,-0.04841259,,1
+-0.7498027,-0.046241555,,1
+-0.74341214,-0.040486485,,1
+1.2749778,-2.0935345,,4
+-0.7450626,-0.041225433,,1
+-0.7499469,-0.035396546,,1
+-0.74301195,-0.04231631,,1
+1.1524844,-2.1790092,,4
+0.892721,2.3516636,,2
+1.0128777,-2.1496847,,4
+-0.7429829,-0.040916417,,1
+-0.74177796,-0.040903814,,1
+1.1597785,-0.310277,,6
+-0.7410906,-0.046326276,,1
+-0.7408069,-0.0359933,,1
+1.6525999,-0.005887045,,7
+1.2297868,-0.35278532,,6
+-0.7350284,-0.045887332,,1
+-0.7440699,-0.045843277,,1
+-0.73927355,-0.045625515,,1
+-0.74044377,-0.043522082,,1
+1.1874921,-1.0908738,,3
+1.0285193,-0.47921762,,6
+-0.7459565,-0.04727339,,1
+-0.7457817,-0.04535238,,1
+-0.7416893,-0.046458494,,1
+1.5550797,-1.4984381,,3
+-0.7376752,-0.04695469,,1
+-0.742158,-0.041596923,,1
+-0.7440823,-0.047056545,,1
+1.3159212,-0.20720445,,6
+-0.7431556,-0.050728165,,1
+-0.7426832,-0.052856233,,1
+-0.7444317,-0.04836876,,1
+0.87102175,2.3958879,,2
+-0.74313843,-0.048920386,,1
+-0.7449401,-0.04703553,,1
+-0.7470935,-0.040704545,,1
+-0.74356943,-0.043487787,,1
+-0.74410343,-0.043883666,,1
+1.2122828,2.2560048,,2
+-0.73591965,-0.04201878,,1
+-0.7419631,-0.050979894,,1
+1.2821778,-0.3626685,,6
+-0.74302065,-0.04154937,,1
+-0.7430726,-0.04632794,,1
+-0.74252343,-0.045547135,,1
+-0.7424692,-0.038612407,,1
+-0.74376273,-0.038660385,,1
+-0.7451886,-0.046934497,,1
+1.6324295,-2.4176934,,4
+1.2750503,-1.0087173,,3
+-0.74182886,-0.044231288,,1
+-0.7359106,-0.042982265,,1
+1.1803163,-2.2787423,,4
+1.1202071,-0.9684632,,3
+1.0399487,-0.28789234,,6
+-0.74683404,-0.050217953,,1
+1.241591,-0.9471947,,3
+1.3939252,-0.5882787,,6
+-0.741864,-0.037706044,,1
+-0.73798704,-0.043848697,,1
+-0.7360372,-0.045929488,,1
+-0.74553525,-0.043091122,,1
+1.6309673,-1.924534,,4
+1.1227508,-2.1681414,,4
+-0.7393305,-0.048375025,,1
+-0.74594927,-0.04965919,,1
+-0.7401903,-0.040057674,,1
+1.004387,2.5191054,,2
+-0.7467798,-0.04238519,,1
+-0.74064684,-0.049860604,,1
+0.81202,2.1407673,,2
+1.307505,-2.411412,,4
+-0.7464346,-0.04546783,,1
+1.4480659,-0.23108083,,6
+1.2479681,-2.289324,,4
+-0.74422425,-0.049181987,,1
+-0.74913156,-0.0507318,,1
+1.1951427,-0.9882401,,3
+-0.74896765,-0.047940124,,1
+1.0027602,2.4181767,,2
+-0.7425541,-0.043626733,,1
+-0.74277234,-0.050808094,,1
+1.0758473,-0.5535279,,6
+-0.747439,-0.041822605,,1
+-0.7407212,-0.04900974,,1
+-0.74290127,-0.044276603,,1
+-0.74190867,-0.044830013,,1
+-0.7398303,-0.04365511,,1
+-0.745657,-0.048305944,,1
+-0.7379568,-0.03551404,,1
+-0.7403334,-0.045994185,,1
+0.73097026,2.1366806,,2
+-0.74353725,-0.047878455,,1
+-0.7406087,-0.04646451,,1
+-0.7430306,-0.04053707,,1
+-0.74209666,-0.038987774,,1
+-0.7462438,-0.048271358,,1
+-0.7386501,-0.050512243,,1
+1.5659811,-0.62298393,,0
+-0.74292976,-0.040720135,,1
+-0.7463954,-0.039602056,,1
+-0.74088144,-0.049229734,,1
+-0.74692595,-0.028911663,,1
+-0.742157,-0.03877217,,1
+-0.7419537,-0.047195792,,1
+1.473923,-2.458063,,4
+1.3219998,0.3332279,,7
+-0.73974556,-0.047303192,,1
+-0.73710066,-0.043432415,,1
+1.0145007,2.56528,,2
+-0.73744863,-0.04347358,,1
+-0.7433293,-0.03950166,,1
+1.8788402,-1.2384162,,3
+-0.7421921,-0.04914026,,1
+-0.7435859,-0.04878494,,1
+1.3001003,-0.5258732,,6
+-0.74657226,-0.044901848,,1
+0.97390956,-2.115131,,4
+-0.74148214,-0.04868226,,1
+-0.7438416,-0.04740298,,1
+-0.7424032,-0.042083245,,1
+-0.7386403,-0.042899113,,1
+1.205579,-2.2111638,,4
+1.5166091,-0.2552035,,6
+-0.7400868,-0.03805609,,1
+-0.7435884,-0.040725414,,1
+-0.742672,-0.044155493,,1
+-0.74286795,-0.04429203,,1
+-0.73709273,-0.041515045,,1
+-0.74660295,-0.042931266,,1
+-0.74037564,-0.047316022,,1
+-0.7396582,-0.042706776,,1
+-0.7445369,-0.043491848,,1
+1.9025908,-1.2913215,,3
+1.4286551,-1.2412981,,3
+-0.7344238,-0.04061521,,1
+-0.74710387,-0.04300714,,1
+-0.74086213,-0.043155182,,1
+-0.74476856,-0.040708225,,1
+1.0947747,-0.332237,,6
+-0.7424705,-0.04654497,,1
+-0.7323934,-0.045865227,,1
+1.1780784,-0.2926999,,6
+-0.7404822,-0.050925,,1
+-0.7385869,-0.044590976,,1
+1.0577383,-1.9790186,,4
+1.6065027,0.95850164,,5
+1.0666189,-0.44794658,,6
+-0.75036293,-0.052901506,,1
+-0.7395705,-0.040161263,,1
+-0.74413013,-0.051016096,,1
+-0.74617577,-0.04568749,,1
+-0.7395123,-0.041740645,,1
+-0.7481722,-0.043235514,,1
+-0.74429387,-0.040145174,,1
+1.4195194,-2.4360487,,4
+-0.7394975,-0.0477631,,1
+0.8957209,2.4370425,,2
+-0.7505225,-0.045119055,,1
+0.9262315,2.4032598,,2
+0.98931897,2.459228,,2
+-0.7439704,-0.04192508,,1
+0.9006164,-0.40639848,,6
+-0.74342376,-0.04401698,,1
+1.234062,2.064719,,2
+1.4599298,-0.29073742,,6
+-0.7437328,-0.039752085,,1
+1.007291,2.567815,,2
+-0.73866355,-0.047040235,,1
+-0.74755245,-0.048195317,,1
+1.6876557,-0.4755442,,0
+-0.74582326,-0.041886356,,1
+1.740403,-0.4724763,,0
+1.5511415,0.5000746,,7
+1.6396836,-2.5461233,,4
+-0.7406393,-0.041244064,,1
+0.8417653,2.3667507,,2
+1.8604054,0.54159474,,7
+0.8761157,2.2644258,,2
+-0.746621,-0.04699498,,1
+1.0677611,-0.28184387,,6
+1.6969764,1.0587602,,5
+-0.7429895,-0.04705985,,1
+1.5173831,-2.3533437,,4
+-0.7405197,-0.036764726,,1
+-0.7505251,-0.04441916,,1
+-0.739671,-0.041880425,,1
+-0.740385,-0.04527495,,1
+-0.7421901,-0.051161993,,1
+-0.74700075,-0.053648517,,1
+1.4899948,2.072678,,2
+-0.7412454,-0.042250816,,1
+-0.7484569,-0.041307937,,1
+-0.73709667,-0.04185911,,1
+-0.74341375,-0.04769851,,1
+1.0247643,-2.4218633,,4
+1.3425831,-0.9635977,,3
+-0.7440163,-0.047711723,,1
+-0.74315983,-0.038406085,,1
+-0.7495717,-0.036362268,,1
+-0.74332494,-0.04288451,,1
+1.4737288,-0.8784988,,3
+0.930368,2.349464,,2
+-0.7408401,-0.044244867,,1
+-0.7465562,-0.03867948,,1
+-0.7420085,-0.043969583,,1
+-0.73977673,-0.04368897,,1
+-0.74074715,-0.045952182,,1
+0.7927709,1.6284018,,2
+-0.7443341,-0.051042024,,1
+-0.741227,-0.044336013,,1
+-0.743536,-0.03525223,,1
+-0.74485475,-0.054172646,,1
+1.7923633,-2.8698084,,4
+1.2422698,0.33341038,,7
+0.92137784,2.4381833,,2
+1.2212851,-2.2696497,,4
+-0.7455043,-0.04626068,,1
+-0.74752694,-0.04795015,,1
+1.1961629,-0.29351097,,6
+-0.7482717,-0.04504186,,1
+0.8970838,2.3839438,,2
+-0.7397868,-0.037423804,,1
+0.987947,-0.3055567,,6
+-0.7403273,-0.045682084,,1
+-0.74117637,-0.042757273,,1
+-0.7461037,-0.0451012,,1
+0.9453809,2.3829286,,2
+1.6208371,1.770527,,5
+-0.7384961,-0.049372084,,1
+-0.73569113,-0.039978065,,1
+0.61275864,2.201413,,2
+-0.74636084,-0.04643932,,1
+1.0712,-2.1544695,,4
+-0.7516699,-0.044284355,,1
+-0.7423016,-0.03755294,,1
+-0.74040556,-0.04195279,,1
+1.1073409,-0.28051695,,6
+-0.74331707,-0.04422257,,1
+-0.7407594,-0.04326788,,1
+2.3015594,1.2675699,,5
+1.1299492,-0.36129007,,6
+1.6899705,-0.44274262,,0
+-0.74470526,-0.04205935,,1
+-0.7370796,-0.05034144,,1
+-0.7430309,-0.0477646,,1
+-0.73840886,-0.04476175,,1
+-0.7383813,-0.04342713,,1
+-0.7417689,-0.043697383,,1
+0.84161276,2.3152606,,2
+-0.7420728,-0.050039593,,1
+-0.7504189,-0.049234476,,1
+-0.7431177,-0.047888972,,1
+-0.7414242,-0.042977292,,1
+-0.74580544,-0.044916056,,1
+-0.74240744,-0.0429225,,1
+1.2999918,-0.5112415,,6
+-0.7438227,-0.048475295,,1
+0.7986118,2.0972126,,2
+-0.7470527,-0.05101984,,1
+1.0976664,-2.2002776,,4
+-0.7397685,-0.052212346,,1
+0.9722909,2.4488487,,2
+0.94960594,2.3045566,,2
+-0.73977214,-0.04657712,,1
+1.487175,0.13459595,,7
+-0.7413985,-0.04009813,,1
+0.9600577,-0.3300429,,6
+-0.74293554,-0.04808491,,1
+-0.7415813,-0.04803884,,1
+1.2693132,0.9084026,,5
+0.9649715,2.5341067,,2
+1.806042,-0.42221805,,0
+1.1614455,-0.55511963,,6
+-0.7398239,-0.04893508,,1
+-0.7414612,-0.045693472,,1
+1.3582115,1.0822581,,5
+1.2359099,-1.2682104,,3
+-0.74614453,-0.042582218,,1
+-0.7400478,-0.040522117,,1
+-0.73758817,-0.054751974,,1
+-0.738641,-0.05119348,,1
+-0.7442264,-0.044036902,,1
+1.1041833,-2.1379745,,4
+-0.7418037,-0.042743225,,1
+-0.7470057,-0.04445156,,1
+-0.7426872,-0.05270063,,1
+-0.7426615,-0.045383573,,1
+0.8774781,2.2861545,,2
+-0.7426667,-0.035257414,,1
+-0.7430942,-0.046265163,,1
+0.9447716,2.5277367,,2
+-0.74389726,-0.042934608,,1
+0.9990158,2.504485,,2
+-0.7401463,-0.044552878,,1
+-0.73766625,-0.05072463,,1
+1.3058875,-0.8116806,,3
+0.9565441,1.8236209,,2
+-0.749096,-0.044263717,,1
+-0.7443261,-0.048415765,,1
+-0.74416775,-0.04674746,,1
+-0.7480765,-0.044739332,,1
+-0.74710935,-0.043509096,,1
+-0.739677,-0.042426843,,1
+-0.7472566,-0.041909814,,1
+1.4092932,-0.23062262,,6
+2.0595608,0.9426482,,5
+-0.7399656,-0.047596816,,1
+-0.7430898,-0.051090866,,1
+-0.7491206,-0.043185487,,1
+-0.7438451,-0.0487652,,1
+-0.7328553,-0.042489562,,1
+-0.74410176,-0.051554702,,1
+1.0336263,2.743733,,2
+-0.73861635,-0.05515204,,1
+-0.74259776,-0.04216583,,1
+0.9448127,2.513405,,2
+0.81898206,2.268673,,2
+0.9170121,-0.28639793,,6
+1.1475931,-2.1629016,,4
+-0.744426,-0.04085143,,1
+-0.73851657,-0.045424353,,1
+-0.73815477,-0.047697753,,1
+0.9171859,2.3726048,,2
+1.133285,-0.29852408,,6
+-0.74431515,-0.044581987,,1
+-0.7438552,-0.046802986,,1
+-0.73880774,-0.043778077,,1
+0.93903595,2.4079428,,2
+-0.73951393,-0.034567308,,1
+-0.7395074,-0.047707513,,1
+1.1988864,-0.2287302,,6
+-0.74758214,-0.04368142,,1
+-0.7398353,-0.052871782,,1
+1.9773742,-0.7156044,,0
+0.49932072,1.8648202,,2
+1.057132,2.690146,,2
+1.2330562,-0.5516148,,6
+-0.7468143,-0.04284634,,1
+-0.733733,-0.043448575,,1
+-0.7402971,-0.040775925,,1
+-0.74204284,-0.047002003,,1
+-0.7456084,-0.044455383,,1
+-0.73934853,-0.042631242,,1
+1.2874414,-1.3496631,,3
+-0.7425266,-0.043829694,,1
+-0.7400966,-0.039154667,,1
+-0.7402711,-0.04891062,,1
+-0.7373241,-0.04559622,,1
+1.1319524,-2.1494002,,4
+-0.74216694,-0.048886877,,1
+-0.74441093,-0.047375266,,1
+-0.7498129,-0.044064865,,1
+-0.7362405,-0.04249923,,1
+-0.7368168,-0.044528067,,1
+-0.7439257,-0.042844906,,1
+1.1861119,-0.52051926,,6
+-0.7429768,-0.037701763,,1
+-0.74609953,-0.05366979,,1
+-0.7405059,-0.050990876,,1
+-0.7415663,-0.043515578,,1
+-0.7415777,-0.04677708,,1
+0.76958114,2.2731276,,2
+0.8859576,2.4718444,,2
+1.0949152,-2.0901358,,4
+2.0244648,0.9025207,,5
+0.84252834,2.3141348,,2
+1.7893311,2.299,,2
+-0.74129444,-0.042616036,,1
+-0.74430686,-0.048980027,,1
+0.9644075,2.4802866,,2
+0.9591552,2.5179324,,2
+-0.7447956,-0.039429396,,1
+1.0296323,2.5942616,,2
+-0.74600506,-0.039840776,,1
+1.3925415,-0.3199238,,6
+-0.7400283,-0.041483305,,1
+-0.73939973,-0.036244724,,1
+-0.7427014,-0.043341372,,1
+-0.74459857,-0.047668416,,1
+-0.74317867,-0.041025806,,1
+-0.74683917,-0.048630845,,1
+-0.7467669,-0.03954051,,1
+-0.7400897,-0.041870225,,1
+-0.7400645,-0.034394655,,1
+-0.74684554,-0.040595785,,1
+-0.7405631,-0.04762278,,1
+-0.7401728,-0.035618328,,1
+-0.74038184,-0.047089454,,1
+1.2438225,-0.99191207,,3
+-0.74617857,-0.05087002,,1
+-0.7391401,-0.047127232,,1
+-0.7418931,-0.043157104,,1
+1.1407944,-0.35044235,,6
+-0.7376958,-0.045782454,,1
+1.4864658,-2.4038737,,4
+-0.7435597,-0.040840257,,1
+-0.7427961,-0.042937208,,1
+1.2284361,-0.83949566,,3
+-0.74432206,-0.041813686,,1
+-0.7383278,-0.04538938,,1
+-0.7473675,-0.045132406,,1
+-0.7398351,-0.040888175,,1
+1.0312486,-2.1634378,,4
+1.371703,-1.2144505,,3
+-0.7433943,-0.046898473,,1
+-0.7452543,-0.041025076,,1
+-0.74476147,-0.049252596,,1
+-0.7457361,-0.045310635,,1
+-0.7416846,-0.043833878,,1
+-0.74816734,-0.04878172,,1
+-0.73912746,-0.03775217,,1
+-0.74253726,-0.047706384,,1
+-0.7402525,-0.036678042,,1
+-0.7441056,-0.047133595,,1
+-0.7453323,-0.044647556,,1
+-0.7427885,-0.04970435,,1
+1.5898359,-0.0943378,,6
+1.3395593,1.7297758,,5
+-0.7442453,-0.044584785,,1
+0.91008,2.452013,,2
+1.3307463,1.152157,,5
+2.4455318,1.211772,,5
+-0.73807126,-0.037718914,,1
+-0.73937386,-0.049075365,,1
+-0.73989284,-0.03949274,,1
+-0.74693143,-0.045051116,,1
+-0.74200684,-0.04971739,,1
+-0.73651165,-0.051932894,,1
+1.0912776,0.37342104,,7
+1.197524,-0.42123404,,6
+-0.75033486,-0.043007314,,1
+1.0670434,-2.190329,,4
+-0.73932314,-0.041086596,,1
+-0.74306077,-0.037408024,,1
+1.2908016,-0.29453582,,6
+-0.74411434,-0.043318875,,1
+-0.7431479,-0.04541883,,1
+1.0388558,-0.37670943,,6
+-0.74084276,-0.036350317,,1
+0.90688294,2.3812475,,2
+-0.7453138,-0.044946708,,1
+-0.74330205,-0.041734762,,1
+-0.7450782,-0.05087721,,1
+-0.7477093,-0.048441775,,1
+-0.7406349,-0.040769998,,1
+-0.7402739,-0.053715184,,1
+-0.7433301,-0.04561179,,1
+-0.7390018,-0.039178383,,1
+1.6786277,0.34168518,,7
+1.3224744,-1.2413925,,3
+-0.73776406,-0.04484137,,1
+1.1527102,-0.2808213,,6
+-0.7409319,-0.0428928,,1
+-0.74056256,-0.038611084,,1
+1.2634004,-2.2457325,,4
+-0.7445205,-0.048931424,,1
+1.0897392,-0.5577818,,6
+-0.7389864,-0.04597914,,1
+-0.74266106,-0.05195694,,1
+-0.74281526,-0.04507937,,1
+1.5692134,1.1691532,,5
+-0.7408088,-0.038987532,,1
+-0.74433696,-0.042081647,,1
+-0.7433931,-0.044176426,,1
+-0.7387734,-0.04578855,,1
+-0.7456122,-0.04205629,,1
+-0.7451679,-0.042841576,,1
+-0.7387132,-0.041928146,,1
+-0.7422352,-0.03912948,,1
+-0.74061775,-0.04190149,,1
+-0.74487495,-0.05392525,,1
+-0.741296,-0.037568968,,1
+0.9916573,2.451646,,2
+-0.73537403,-0.04790943,,1
+1.5212628,0.13914599,,7
+-0.7475351,-0.047460757,,1
+1.699549,-0.59396964,,0
+-0.7407874,-0.036453165,,1
+-0.7378,-0.044611182,,1
+1.2078906,-0.22858323,,6
+1.1766142,-0.7672991,,6
+-0.73520976,-0.04327348,,1
+-0.74264514,-0.04992247,,1
+-0.74557537,-0.042958762,,1
+-0.73759097,-0.046990026,,1
+-0.7432517,-0.039973665,,1
+1.2212735,-0.38433066,,6
+1.6353962,-0.8908129,,3
+-0.7385885,-0.050381783,,1
+-0.7406533,-0.04542668,,1
+-0.7444817,-0.047407556,,1
+-0.74248344,-0.053211298,,1
+0.8496088,2.345909,,2
+-0.74148977,-0.047766905,,1
+-0.7423896,-0.04427983,,1
+1.3383669,0.34407523,,7
+-0.736615,-0.04372704,,1
+-0.74090314,-0.04273983,,1
+-0.7420434,-0.050921664,,1
+-0.7424155,-0.046121687,,1
+-0.7389915,-0.05211634,,1
+1.3239913,-0.91004354,,3
+-0.74238044,-0.05339648,,1
+-0.7425409,-0.04502509,,1
+-0.74454707,-0.03252846,,1
+-0.7356257,-0.04545416,,1
+-0.7420638,-0.041513063,,1
+1.4626863,-0.39542583,,6
+-0.7390702,-0.042173717,,1
+0.9139003,2.459354,,2
+-0.73893,-0.051512692,,1
+-0.7503622,-0.040605243,,1
+-0.7375852,-0.045621112,,1
+-0.74189514,-0.051610764,,1
+-0.7417432,-0.04033199,,1
+1.699236,-1.0355501,,3
+1.1344326,-2.2654188,,4
+0.85886043,-1.9739437,,4
+-0.7382427,-0.03733149,,1
+-0.74170655,-0.042749815,,1
+1.186105,-2.5965683,,4
+-0.7459921,-0.046192046,,1
+1.2803309,-0.2115992,,6
+-0.741952,-0.04422787,,1
+-0.74361193,-0.04192822,,1
+0.9307485,2.493561,,2
+-0.7457804,-0.04253861,,1
+-0.7436551,-0.042957596,,1
+-0.740705,-0.0441403,,1
+1.0334339,-2.0205064,,4
+-0.74316347,-0.0482719,,1
+1.0510544,-0.37727818,,6
+-0.74163306,-0.048015088,,1
+1.4489344,-0.7338993,,6
+-0.74794656,-0.04950132,,1
+1.0197822,-2.029324,,4
+-0.74035203,-0.049587827,,1
+-0.740464,-0.04301127,,1
+1.0939491,-2.1263862,,4
+-0.7463981,-0.04392128,,1
+-0.74057215,-0.044884235,,1
+-0.7422515,-0.04461427,,1
+1.4651288,2.1372645,,2
+-0.7429076,-0.038467016,,1
+-0.7412263,-0.042591274,,1
+1.3675394,-1.1574117,,3
+-0.7447874,-0.038154013,,1
+2.0591934,0.58348477,,7
+1.2605293,-2.3936343,,4
+-0.7440686,-0.041248843,,1
+1.8679293,-0.7603977,,0
+2.151729,0.98579,,5
+1.3032598,-1.2348102,,3
+-0.74329454,-0.039916415,,1
+-0.7407754,-0.051004272,,1
+-0.73976856,-0.046240468,,1
+-0.7429625,-0.055461615,,1
+-0.7441142,-0.050058357,,1
+-0.74492306,-0.046799805,,1
+1.1992086,0.27410597,,7
+-0.7458915,-0.03774642,,1
+1.1832883,-2.1891,,4
+-0.7419325,-0.038565442,,1
+-0.74143547,-0.042916745,,1
+1.2728721,2.536949,,2
+0.9772726,-2.0037577,,4
+-0.74622864,-0.04209559,,1
+-0.7442788,-0.047556486,,1
+1.2814884,-1.1105869,,3
+-0.7429332,-0.046971627,,1
+1.5296983,0.8070846,,5
+-0.7421889,-0.03676183,,1
+-0.7445834,-0.04094139,,1
+-0.74019194,-0.040900145,,1
+1.2674258,0.35597008,,7
+-0.7418833,-0.046075217,,1
+-0.74109775,-0.044326853,,1
+1.211752,-0.21037795,,6
+-0.74554706,-0.043709777,,1
+-0.7402321,-0.0407735,,1
+1.137394,-0.29447168,,6
+1.017389,2.493873,,2
+-0.74300325,-0.042188898,,1
+-0.73768514,-0.049916096,,1
+-0.7431553,-0.047753807,,1
+-0.73620695,-0.044530164,,1
+2.0455558,1.8006586,,5
+-0.74381256,-0.042047683,,1
+1.3763748,-0.17984056,,6
+1.0261134,-2.0336046,,4
+1.2727592,-0.5707504,,6
+-0.7409025,-0.046086267,,1
+-0.74230886,-0.039627735,,1
+-0.7444112,-0.04668208,,1
+-0.7400093,-0.048954967,,1
+1.2760513,1.1099999,,5
+-0.7401913,-0.03582003,,1
+1.3996704,2.7101076,,2
+1.1960286,1.0177398,,5
+-0.73634756,-0.042643894,,1
+-0.7459772,-0.037879385,,1
+-0.74184287,-0.04221051,,1
+-0.7443236,-0.038703453,,1
+-0.742793,-0.049980212,,1
+-0.7446093,-0.042557288,,1
+-0.73967636,-0.0452186,,1
+-0.7409686,-0.03999141,,1
+1.0376552,2.6871893,,2
+-0.73981726,-0.04286446,,1
+1.3024963,0.41386425,,7
+1.1140771,0.31626078,,7
+-0.7395642,-0.038941544,,1
+-0.73934925,-0.050808482,,1
+-0.74276334,-0.048837606,,1
+1.1173623,-0.17149195,,6
+-0.7440057,-0.042855375,,1
+0.6752791,2.2779672,,2
+1.5548,0.4185526,,7
+-0.74060094,-0.03728672,,1
+0.9393954,2.451857,,2
+-0.7394372,-0.0435241,,1
+0.9343006,2.4357572,,2
+-0.7458295,-0.047928285,,1
+-0.7408306,-0.04178813,,1
+-0.74232435,-0.04420958,,1
+-0.7445515,-0.042420153,,1
+-0.74028003,-0.04434718,,1
+-0.7385488,-0.050411873,,1
+-0.7315901,-0.046811875,,1
+-0.7315715,-0.045378726,,1
+-0.7458719,-0.045580693,,1
+-0.74077266,-0.04912416,,1
+-0.7438806,-0.055421796,,1
+-0.74028224,-0.048593033,,1
+-0.74839014,-0.045909487,,1
+-0.7416431,-0.040759336,,1
+1.6055561,-2.4736485,,4
+-0.7439433,-0.04165542,,1
+-0.7460378,-0.03772815,,1
+-0.7446798,-0.05665304,,1
+-0.74868417,-0.040590744,,1
+-0.7384195,-0.041481595,,1
+-0.744177,-0.051103607,,1
+-0.74148023,-0.044825796,,1
+-0.7428155,-0.03917469,,1
+0.8480871,2.3112013,,2
+1.0801328,-0.2833694,,6
+-0.74870986,-0.047038913,,1
+-0.7343392,-0.036593772,,1
+1.3186731,-0.3887972,,6
+-0.74372566,-0.043291904,,1
+0.9036008,2.2889023,,2
+-0.7378152,-0.044193864,,1
+-0.73981667,-0.041333694,,1
+-0.7413896,-0.045667354,,1
+1.1343328,1.020201,,5
+-0.74051976,-0.046883233,,1
+-0.73669666,-0.038859323,,1
+-0.74036634,-0.04180245,,1
+-0.74038786,-0.04323985,,1
+-0.73682225,-0.046208844,,1
+-0.73915905,-0.041575506,,1
+1.0913738,-2.2937803,,4
+1.1898164,-2.2302098,,4
+-0.73783726,-0.045693297,,1
+-0.74461544,-0.046009414,,1
+-0.74065334,-0.05086625,,1
+-0.7434946,-0.041686866,,1
+-0.74664336,-0.04753747,,1
+-0.73536325,-0.042609237,,1
+-0.7501777,-0.04178053,,1
+-0.7435427,-0.046944764,,1
+-0.74367803,-0.050441198,,1
+-0.7479104,-0.038836777,,1
+-0.745545,-0.04825353,,1
+-0.7447369,-0.044489086,,1
+-0.7430305,-0.04360627,,1
+0.9615588,-0.50945115,,6
+-0.74431735,-0.035222974,,1
+-0.74401337,-0.04060823,,1
+1.6549648,0.9439075,,5
+-0.74545616,-0.0497152,,1
+-0.73830664,-0.041553378,,1
+-0.7432973,-0.049686503,,1
+1.0001032,-2.028298,,4
+1.6563398,-2.0878694,,4
+-0.7410212,-0.042327896,,1
+-0.73836577,-0.041285463,,1
+-0.7436751,-0.03760991,,1
+-0.7450321,-0.043155883,,1
+-0.7437052,-0.048032444,,1
+-0.7381193,-0.051003322,,1
+-0.73908806,-0.042922236,,1
+-0.7390744,-0.043009903,,1
+-0.7473281,-0.042301763,,1
+1.1944098,-2.2474995,,4
+-0.7490439,-0.045943044,,1
+0.94465953,-2.0568683,,4
+1.309054,1.0532061,,5
+-0.74487287,-0.03867822,,1
+-0.74361795,-0.040755976,,1
+1.5869802,-0.5288707,,0
+-0.7438774,-0.049366247,,1
+-0.74411577,-0.045235228,,1
+-0.7397183,-0.04269976,,1
+1.831825,0.45689055,,7
+-0.74672407,-0.04560456,,1
+1.3218533,-2.607971,,4
+0.9662234,2.562491,,2
+-0.742088,-0.043020178,,1
+-0.7376424,-0.046715014,,1
+-0.7374552,-0.052532792,,1
+1.1086639,2.8146708,,2
+-0.7473213,-0.04995632,,1
+1.3630943,-1.3835251,,3
+-0.7371099,-0.041377127,,1
+1.270512,-0.29067406,,6
+1.1713233,-0.53824466,,6
+1.3944838,-0.6711811,,6
+-0.7468436,-0.03999923,,1
+-0.73876005,-0.03652974,,1
+-0.7400937,-0.035505995,,1
+-0.7446388,-0.0422867,,1
+1.1008245,-2.1132648,,4
+-0.7483655,-0.053394243,,1
+-0.7437655,-0.045574337,,1
+-0.7436156,-0.044456407,,1
+1.4759828,0.73439306,,7
+1.6974123,-1.5500716,,3
+-0.7445124,-0.03615693,,1
+-0.7390454,-0.042953167,,1
+-0.7398624,-0.04750123,,1
+-0.73771507,-0.039599728,,1
+-0.74531895,-0.044597853,,1
+-0.73978764,-0.036634296,,1
+1.2385015,0.38043332,,7
+0.88950473,2.325822,,2
+-0.74000055,-0.046847526,,1
+-0.7350474,-0.048440408,,1
+-0.73472756,-0.043433208,,1
+-0.7470907,-0.048364293,,1
+1.4225309,-0.2631782,,6
+-0.7411018,-0.039034333,,1
+-0.7430149,-0.03734594,,1
+-0.7405567,-0.042759728,,1
+-0.74162215,-0.039170384,,1
+-0.7394123,-0.051984336,,1
+-0.74689275,-0.046420228,,1
+-0.7447225,-0.046192575,,1
+1.8983085,-0.17185052,,0
+-0.7363628,-0.03540531,,1
+-0.74154264,-0.045044035,,1
+1.1297904,-2.1679308,,4
+1.3230897,1.0828791,,5
+1.2095402,-0.8798724,,3
+1.0892106,-2.2482982,,4
+1.3785957,3.0480936,,2
+-0.74026424,-0.047600605,,1
+1.69657,-0.9650613,,3
+-0.7435196,-0.04922597,,1
+-0.74234015,-0.04892703,,1
+-0.74206346,-0.04256391,,1
+-0.74234396,-0.03922904,,1
+-0.7394031,-0.040872175,,1
+1.5149816,1.1289144,,5
+-0.7386329,-0.05003277,,1
+-0.74546367,-0.048789952,,1
+-0.739791,-0.04330116,,1
+-0.7437069,-0.048486926,,1
+-0.74211955,-0.04747558,,1
+-0.7425093,-0.045806497,,1
+-0.7458016,-0.049130067,,1
+-0.7430613,-0.042268064,,1
+-0.74636143,-0.051621173,,1
+-0.7503139,-0.041908193,,1
+-0.74556017,-0.04259393,,1
+1.1644076,-0.55261225,,6
+-0.7461011,-0.0355281,,1
+-0.74330866,-0.04920728,,1
+0.9316228,2.4766247,,2
+0.86868024,2.4366257,,2
+-0.73641515,-0.047097526,,1
+1.2103349,0.55854255,,7
+0.9658898,2.5458598,,2
+1.0570769,-2.0984912,,4
+-0.7360383,-0.053953595,,1
+-0.74944156,-0.05050047,,1
+-0.7409675,-0.046359766,,1
+-0.7394841,-0.037906896,,1
+-0.74488455,-0.043950588,,1
+0.8282798,2.3241165,,2
+-0.74808604,-0.046653833,,1
+-0.7418885,-0.044453055,,1
+-0.74460685,-0.04713445,,1
+1.1459991,-0.5304604,,6
+0.8326346,2.3841105,,2
+-0.742851,-0.04381213,,1
+1.2958062,-0.13714291,,6
+-0.7415475,-0.042236425,,1
+-0.7462395,-0.04396216,,1
+1.1780953,-2.2834396,,4
+-0.7472658,-0.046981063,,1
+-0.74175197,-0.04741019,,1
+-0.7410581,-0.03833356,,1
+1.4456711,1.9243418,,2
+-0.7399709,-0.04794951,,1
+-0.74452984,-0.041446786,,1
+-0.7427632,-0.04547925,,1
+1.2897553,-0.9164678,,3
+-0.7391193,-0.038781554,,1
+-0.740503,-0.050245035,,1
+-0.7435717,-0.045193855,,1
+-0.7413838,-0.038002744,,1
+-0.74347824,-0.050058555,,1
+-0.7439335,-0.039809316,,1
+-0.7407667,-0.0415602,,1
+-0.7426923,-0.04314225,,1
+-0.7425074,-0.041003264,,1
+1.2148368,-2.705949,,4
+-0.7414315,-0.0520775,,1
+-0.73946816,-0.044195905,,1
+0.68163687,2.0072303,,2
+1.2158382,-2.393494,,4
+-0.7435211,-0.037273858,,1
+1.6396171,-2.25315,,4
+-0.737505,-0.043145318,,1
+-0.7446901,-0.04511462,,1
+-0.73717797,-0.04354178,,1
+-0.747165,-0.041262604,,1
+-0.7370892,-0.041173607,,1
+-0.7399031,-0.040111125,,1
+-0.7417244,-0.044913147,,1
+1.3546212,-0.23749511,,6
+1.8803053,0.4681757,,7
+-0.7376265,-0.04966178,,1
+1.5488286,2.64976,,2
+-0.74797535,-0.04659007,,1
+1.5585225,1.1834639,,5
+-0.74140126,-0.041086856,,1
+-0.7392053,-0.045442987,,1
+1.293461,-2.8375335,,4
+-0.74482685,-0.046281744,,1
+-0.7400814,-0.042141777,,1
+-0.74417007,-0.040286325,,1
+-0.74359006,-0.036299314,,1
+1.2973115,-0.5749048,,6
+0.84652156,2.345059,,2
+0.96026945,-2.0719972,,4
+1.5964763,0.7345094,,7
+-0.7437896,-0.048596784,,1
+-0.7433438,-0.040446762,,1
+-0.74668616,-0.04374309,,1
+-0.7385581,-0.037042703,,1
+-0.7374589,-0.047395125,,1
+1.318719,-0.3109074,,6
+-0.74567944,-0.048021708,,1
+-0.73795104,-0.04195677,,1
+-0.749076,-0.049163662,,1
+-0.7444254,-0.04428054,,1
+1.3902109,-0.38636085,,6
+1.1735584,-2.2019076,,4
+0.83974314,2.3951888,,2
+-0.74219793,-0.043455906,,1
+-0.73556507,-0.05088642,,1
+-0.73547316,-0.04856183,,1
+-0.7418361,-0.054836713,,1
+-0.7426967,-0.043990355,,1
+-0.74682564,-0.048855133,,1
+-0.74931,-0.04262203,,1
+-0.7405406,-0.039106827,,1
+1.7985901,-0.25344792,,0
+-0.7410272,-0.041282352,,1
+1.5423259,-0.688584,,0
+1.3131291,-0.83651227,,3
+-0.73991334,-0.044397425,,1
+1.0669518,-0.78325015,,6
+-0.7478833,-0.045015953,,1
+-0.7437579,-0.04142782,,1
+0.89579767,-1.8624767,,4
+-0.7430062,-0.046262763,,1
+-0.7407102,-0.04923983,,1
+1.3699869,-1.3574805,,3
+-0.74455523,-0.041055012,,1
+-0.74041504,-0.04488891,,1
+-0.7425275,-0.04346582,,1
+-0.73660123,-0.04259879,,1
+-0.744342,-0.045670252,,1
+-0.74190426,-0.050883207,,1
+-0.74569947,-0.034111794,,1
+0.8874001,2.408272,,2
+-0.74238646,-0.04690286,,1
+-0.74597055,-0.043219987,,1
+1.4302195,-1.5980831,,3
+1.6208925,0.8746515,,5
+-0.7380714,-0.042026166,,1
+1.780271,0.91234607,,5
+-0.7461673,-0.042430528,,1
+0.702738,2.2377543,,2
+2.435553,1.0788144,,5
+2.1255379,-0.41626427,,0
+-0.74452907,-0.0426097,,1
+-0.74396074,-0.050659925,,1
+-0.74229896,-0.037124272,,1
+-0.7364841,-0.04412398,,1
+-0.73586744,-0.047521096,,1
+-0.74536383,-0.045163915,,1
+1.1785347,-0.02715024,,6
+-0.7442302,-0.043416165,,1
+0.97341084,2.4450138,,2
+1.0654067,2.587235,,2
+-0.74100035,-0.04002775,,1
+2.064703,-0.91874135,,0
+-0.7403526,-0.050068952,,1
+1.1971338,-2.401187,,4
+1.0665225,-2.1226914,,4
+-0.74665177,-0.04686601,,1
+-0.7388424,-0.04136783,,1
+1.9945877,-0.5568731,,0
+1.2395356,-0.36252573,,6
+2.083332,-0.26102626,,0
+1.1794723,-1.3950348,,3
+0.8008007,2.356899,,2
+1.176199,1.674402,,5
+-0.7318548,-0.042625878,,1
+-0.74396825,-0.043747246,,1
+-0.74723,-0.037464578,,1
+-0.74319,-0.04310525,,1
+-0.74484354,-0.04461473,,1
+-0.7431916,-0.038485054,,1
+-0.736933,-0.050817434,,1
+-0.7449041,-0.0388919,,1
+-0.7426443,-0.0462845,,1
+-0.7375087,-0.044888727,,1
+0.75870836,2.1504538,,2
+-0.7415871,-0.04647949,,1
+-0.7393948,-0.042363346,,1
+-0.7377543,-0.045206055,,1
+-0.73923147,-0.048141696,,1
+-0.7389042,-0.04675743,,1
+-0.73363346,-0.044727646,,1
+-0.7424466,-0.040233314,,1
+-0.7432908,-0.044339705,,1
+1.1762682,-2.2950563,,4
+-0.7455629,-0.035972245,,1
+-0.7487485,-0.037846692,,1
+-0.74542,-0.04929582,,1
+-0.7430226,-0.04294127,,1
+-0.74496186,-0.048043158,,1
+-0.741122,-0.046015218,,1
+1.0043801,2.4060843,,2
+-0.7379317,-0.042100884,,1
+-0.7435714,-0.037795514,,1
+1.8244776,-1.4716343,,3
+-0.74194,-0.046064686,,1
+-0.7365289,-0.03382221,,1
+-0.7499948,-0.03958902,,1
+0.9499413,2.5644197,,2
+-0.74529564,-0.044646095,,1
+-0.73785806,-0.051923558,,1
+-0.7483473,-0.041950192,,1
+-0.74195486,-0.03834355,,1
+-0.74456584,-0.04681772,,1
+2.05771,0.886219,,5
+1.5152826,-0.53480715,,6
+1.6385378,2.1184857,,2
+-0.75045705,-0.048435867,,1
+0.9056133,2.4101276,,2
+-0.739743,-0.041776404,,1
+1.4288949,-1.319803,,3
+-0.7477675,-0.047691096,,1
+-0.7335049,-0.042266674,,1
+-0.7426069,-0.046636038,,1
+0.98897696,2.6134052,,2
+-0.7414555,-0.04237365,,1
+1.5438666,-0.94190544,,3
+-0.7459578,-0.047466774,,1
+-0.7440636,-0.04609327,,1
+1.5006248,-2.1956441,,4
+-0.7405612,-0.04700866,,1
+-0.7417645,-0.04885338,,1
+0.93988115,2.482659,,2
+-0.7418696,-0.044318978,,1
+-0.74123615,-0.049679957,,1
+1.1195532,-0.29637355,,6
+1.1271226,-0.30993208,,6
+1.0209122,2.5266402,,2
+-0.7406988,-0.04549983,,1
+-0.74338,-0.03780283,,1
+1.6161435,-0.20165186,,6
+-0.74305385,-0.043501697,,1
+1.1174053,-2.155978,,4
+-0.7455092,-0.048173677,,1
+-0.7461326,-0.051516064,,1
+0.99623007,2.5144331,,2
+-0.74576724,-0.045476988,,1
+1.0422544,-2.1821623,,4
+1.275077,-0.2460277,,6
+-0.7505956,-0.04699332,,1
+1.2710494,-0.0755986,,6
+1.0639501,2.600975,,2
+-0.7474673,-0.039762948,,1
+0.9573336,-1.9263121,,4
+1.184309,-0.3187212,,6
+0.91595536,2.4886565,,2
+-0.7456714,-0.04401682,,1
+-0.74458146,-0.041996133,,1
+-0.7426804,-0.053529836,,1
+-0.74189025,-0.04431104,,1
+-0.74242413,-0.03964252,,1
+-0.74164885,-0.0445709,,1
+-0.743133,-0.040601354,,1
+-0.74427706,-0.039211858,,1
+-0.7424195,-0.049695037,,1
+-0.7425854,-0.04974089,,1
+-0.7486382,-0.04266527,,1
+-0.7436696,-0.038276855,,1
+-0.74370044,-0.043058384,,1
+1.3623996,-2.3460202,,4
+-0.7466166,-0.043466117,,1
+-0.7447121,-0.04457683,,1
+1.5865678,-0.74097323,,0
+-0.7476938,-0.045826286,,1
+-0.7409885,-0.041985586,,1
+1.928917,0.8792818,,5
+1.8249866,1.6786753,,5
+-0.7454437,-0.040124793,,1
+-0.7403922,-0.043245263,,1
+-0.74308836,-0.051591653,,1
+-0.745294,-0.04656726,,1
+-0.7404652,-0.044770967,,1
+1.1159513,-2.2579288,,4
+-0.7442488,-0.050313544,,1
+0.9420752,-0.33612645,,6
+-0.7418087,-0.038320128,,1
+-0.74429035,-0.044176005,,1
+-0.7398969,-0.039523385,,1
+-0.73853755,-0.038471818,,1
+-0.73849636,-0.05270685,,1
+1.3096312,-1.3897943,,3
+1.3912841,0.2769638,,7
+-0.7381856,-0.04028597,,1
+0.9097184,2.3717818,,2
+2.0503392,0.6321608,,7
+1.3961337,-1.2821667,,3
+-0.7402189,-0.04507215,,1
+-0.74617755,-0.040520992,,1
+-0.7429301,-0.043082654,,1
+0.9432495,-2.0298984,,4
+-0.7408738,-0.04306253,,1
+-0.7410041,-0.05197209,,1
+-0.7390281,-0.04072334,,1
+-0.7379157,-0.045015417,,1
+2.2678351,-0.64676714,,0
+-0.7442726,-0.041663744,,1
+-0.7414749,-0.034978095,,1
+1.3353251,-0.8669676,,3
+-0.74464107,-0.03908719,,1
+-0.74154705,-0.043815136,,1
+-0.74291015,-0.058568146,,1
+-0.7458606,-0.04244545,,1
+-0.7432358,-0.038226996,,1
+0.9662571,2.4227438,,2
+-0.7426725,-0.047004756,,1
+1.3154119,0.33017597,,7
+-0.7412848,-0.04646033,,1
+1.2906073,-1.279507,,3
+-0.7376703,-0.04901909,,1
+-0.73941547,-0.04928199,,1
+1.3080318,-0.11540685,,6
+-0.74797404,-0.046055544,,1
+-0.73752946,-0.0489865,,1
+-0.74473846,-0.044712618,,1
+-0.7435131,-0.044541728,,1
+1.1161269,0.343925,,7
+1.2747124,-0.24555926,,6
+1.6393363,-0.9008044,,3
+-0.74459374,-0.043362733,,1
+0.83184314,2.2503746,,2
+1.2653348,-0.93590856,,3
+-0.7411641,-0.050161988,,1
+1.353758,-1.9271333,,4
+-0.74636984,-0.042717375,,1
+0.92014974,-2.00526,,4
+1.1956524,0.1838061,,7
+-0.7369131,-0.035691578,,1
+-0.74731386,-0.04196512,,1
+1.2262213,-1.3029101,,3
+-0.74368,-0.05132429,,1
+-0.7398679,-0.045257412,,1
+1.8808243,-1.5440702,,3
+-0.74079645,-0.0495996,,1
+1.435575,0.020646276,,7
+-0.74176425,-0.038300887,,1
+1.5679628,0.96169513,,5
+-0.73606694,-0.04546306,,1
+-0.7418251,-0.045458462,,1
+1.3630431,-0.22310078,,6
+-0.7443799,-0.04148184,,1
+-0.7429049,-0.041964676,,1
+-0.74191225,-0.03637914,,1
+-0.7471988,-0.042603314,,1
+1.3604312,1.3714132,,5
+-0.74312305,-0.04344521,,1
+-0.7400409,-0.037115566,,1
+-0.73845375,-0.037312366,,1
+-0.74372685,-0.04760049,,1
+1.4077797,-1.3449514,,3
+0.95143753,1.3280464,,5
+-0.7424407,-0.038236357,,1
+-0.7423817,-0.04233927,,1
+0.8836769,2.285966,,2
+1.3466338,-0.3457572,,6
+-0.7435591,-0.04190731,,1
+-0.7386409,-0.047590196,,1
+-0.738816,-0.049128313,,1
+-0.7376052,-0.047880974,,1
+-0.74234796,-0.039385084,,1
+1.0270574,2.6404366,,2
+0.9873356,-1.8834587,,4
+1.2118776,-2.563726,,4
+-0.7461157,-0.046103884,,1
+-0.7469014,-0.047894016,,1
+0.97521895,-1.9368594,,4
+1.3037626,-0.30307966,,6
+0.9646933,2.4446294,,2
+-0.74187493,-0.0445847,,1
+-0.74297005,-0.04285049,,1
+-0.7447625,-0.04698138,,1
+0.92959064,2.4423263,,2
+-0.740657,-0.0388984,,1
+-0.7448986,-0.042981073,,1
+2.4060073,-0.47566098,,0
+-0.7447321,-0.041806217,,1
+-0.7434257,-0.041126434,,1
+-0.7421163,-0.04793722,,1
+-0.74281484,-0.049363445,,1
+1.0194274,-2.2190018,,4
+-0.7359941,-0.036321677,,1
+-0.73972493,-0.039573975,,1
+1.0686232,-2.0412772,,4
+-0.7438878,-0.042365894,,1
+-0.7412793,-0.03906358,,1
+-0.7443106,-0.043262742,,1
+-0.7391819,-0.05223408,,1
+1.2921613,-0.3408873,,6
+-0.7425878,-0.04559613,,1
+-0.74341863,-0.044552367,,1
+1.1989406,0.16981186,,7
+1.2844518,0.4136175,,7
+-0.74533844,-0.047297165,,1
+-0.73957866,-0.04236405,,1
+-0.7412999,-0.045058705,,1
+1.5322932,-2.5845096,,4
+-0.7361644,-0.050833244,,1
+-0.7504339,-0.043784615,,1
+1.1804819,-0.9048234,,3
+1.2072272,-0.37131006,,6
+-0.7402566,-0.04223357,,1
+-0.74114317,-0.048016567,,1
+-0.7426201,-0.04082384,,1
+1.5659846,-1.2847031,,3
+1.6684762,-1.8977385,,4
+-0.7444556,-0.045047503,,1
+-0.7369968,-0.048102852,,1
+-0.739986,-0.043099932,,1
+1.2007728,-0.40152422,,6
+-0.7399814,-0.048579276,,1
+1.5291381,-1.1350048,,3
+0.8399069,2.3337266,,2
+-0.7492669,-0.041858643,,1
+1.0576956,-2.12762,,4
+-0.7376648,-0.050251715,,1
+-0.7420285,-0.05007208,,1
+-0.7413489,-0.042760767,,1
+-0.7408595,-0.04469081,,1
+-0.7419281,-0.047510814,,1
+-0.7424209,-0.037741844,,1
+1.8712894,-0.07590357,,0
+1.0181097,-0.29261386,,6
+1.5213782,0.08605158,,7
+-0.7477558,-0.04212712,,1
+1.5951623,-0.41073263,,0
+1.3072892,-0.18369466,,6
+-0.7428924,-0.04416526,,1
+1.3618191,-0.48083556,,6
+-0.7457479,-0.045034084,,1
+-0.73935974,-0.043610375,,1
+1.651991,-0.7264913,,0
+-0.74225634,-0.043086898,,1
+1.8644463,0.7861573,,5
+1.1944529,-2.1591706,,4
+1.0228155,-2.0158389,,4
+2.4909055,0.69813263,,5
+2.7747877,2.1706338,,5
+-0.745491,-0.041645534,,1
+-0.74112415,-0.043575056,,1
+1.2471212,1.6406575,,5
+0.98397285,2.594325,,2
+1.2679772,-0.30173498,,6
+-0.7402759,-0.039043512,,1
+-0.7377241,-0.04346411,,1
+0.97060394,2.4421985,,2
+-0.7476114,-0.042764157,,1
+-0.74453545,-0.04443985,,1
+-0.7379303,-0.046640176,,1
+-0.73770463,-0.046461232,,1
+-0.7443423,-0.046610214,,1
+0.9894935,-2.0665433,,4
+-0.74410075,-0.045517955,,1
+-0.7423472,-0.05033431,,1
+-0.7386852,-0.044634435,,1
+-0.74440926,-0.047548614,,1
+1.3979037,-1.3202686,,3
+-0.7432178,-0.04460416,,1
+1.2758363,-1.1575892,,3
+-0.74196994,-0.038178798,,1
+-0.7418715,-0.05361171,,1
+0.9585593,2.4287682,,2
+-0.7394582,-0.04316521,,1
+0.84000456,2.2254171,,2
+-0.7467188,-0.047739968,,1
+1.2143883,0.34946486,,7
+-0.74328697,-0.04273939,,1
+-0.7414754,-0.035580114,,1
+-0.74069834,-0.048456196,,1
+-0.7484349,-0.04734794,,1
+0.9353237,2.5170076,,2
+1.1939249,0.45052242,,7
+0.66327864,2.1061676,,2
+1.0162222,-2.075108,,4
+-0.7407463,-0.04512475,,1
+1.9802086,-1.3626907,,3
+-0.73696387,-0.049580585,,1
+-0.7456994,-0.052034035,,1
+1.0786176,-2.0835798,,4
+-0.73682547,-0.040757015,,1
+-0.74279106,-0.048564743,,1
+0.97950083,2.5854437,,2
+-0.7476718,-0.04068802,,1
+-0.7425959,-0.04189548,,1
+-0.74336344,-0.040506586,,1
+-0.73686624,-0.04780674,,1
+1.155009,-0.3223489,,6
+1.3813087,1.3597128,,5
+-0.73872685,-0.044386666,,1
+-0.7431278,-0.0484704,,1
+-0.7457295,-0.04553943,,1
+0.86968243,2.293969,,2
+1.7091925,-1.5427928,,3
+1.0863336,-2.0485032,,4
+-0.7377541,-0.04738311,,1
+-0.7418217,-0.03922481,,1
+-0.7469316,-0.04783717,,1
+-0.7414509,-0.049909063,,1
+1.401647,0.041613784,,7
+-0.7443296,-0.04802856,,1
+1.4794264,-0.59866494,,6
+-0.74807584,-0.03765929,,1
+-0.7454401,-0.039948385,,1
+-0.7405846,-0.037412234,,1
+-0.7468058,-0.04996909,,1
+-0.74533814,-0.051567715,,1
+-0.7453695,-0.044701498,,1
+-0.74437517,-0.047409274,,1
+-0.7418203,-0.039859165,,1
+-0.7391966,-0.049229354,,1
+-0.74475735,-0.040442623,,1
+1.1182121,1.5813513,,5
+-0.739292,-0.046997115,,1
+-0.7394029,-0.053735573,,1
+-0.7434213,-0.03968305,,1
+1.2767543,-0.9211979,,3
+-0.74310994,-0.03843503,,1
+1.1650581,-2.1735182,,4
+1.1933677,-2.2407846,,4
+-0.7408053,-0.043951828,,1
+-0.7416629,-0.04154173,,1
+1.3344333,-0.623634,,6
+1.0946217,-2.0965948,,4
+1.3101628,-1.3770725,,3
+1.6381848,-0.6212301,,0
+1.3557837,-0.33644444,,6
+2.0056472,-0.4009018,,0
+-0.74217093,-0.047841676,,1
+-0.7432539,-0.045334704,,1
+-0.7368924,-0.041408382,,1
+-0.74193054,-0.04096584,,1
+-0.748933,-0.043336846,,1
+-0.7490465,-0.041518155,,1
+-0.74114674,-0.048499133,,1
+1.7084981,0.44906473,,7
+-0.74091166,-0.042639665,,1
+-0.740157,-0.041643873,,1
+1.1322794,-2.313791,,4
+1.1180761,-2.2430997,,4
+-0.74866605,-0.043188088,,1
+-0.74535686,-0.048434384,,1
+-0.7407642,-0.044916037,,1
+-0.74020845,-0.048159037,,1
+-0.7444777,-0.04683888,,1
+-0.74673057,-0.04886535,,1
+-0.73983616,-0.04606276,,1
+-0.7395994,-0.04845049,,1
+-0.7409652,-0.04478699,,1
+1.7096437,0.86116225,,5
+1.2286032,-2.2494078,,4
+1.6211008,-2.1973498,,4
+-0.74063414,-0.049630642,,1
+-0.74338984,-0.04525122,,1
+1.3741233,1.1571009,,5
+-0.73926884,-0.04851674,,1
+-0.74028254,-0.040170956,,1
+1.0618942,-0.36710066,,6
+1.2423427,-1.3394234,,3
+-0.73624283,-0.042664096,,1
+-0.7464764,-0.04710385,,1
+-0.74877644,-0.04266425,,1
+-0.7461187,-0.04921678,,1
+-0.74472445,-0.046870526,,1
+-0.74328995,-0.052145947,,1
+1.100649,2.7703528,,2
+1.0249276,-0.25763062,,6
+1.7501435,-1.1426868,,3
+0.7969099,2.3333874,,2
+-0.7362139,-0.046043217,,1
+-0.7413823,-0.04900565,,1
+1.0892384,2.5460994,,2
+1.1284677,-2.2030287,,4
+-0.74356,-0.045422718,,1
+-0.74100614,-0.0494844,,1
+0.9915506,2.502172,,2
+-0.7411332,-0.043763362,,1
+-0.7403183,-0.049874954,,1
+-0.7375458,-0.046737995,,1
+-0.7469079,-0.041479003,,1
+-0.7456764,-0.045604065,,1
+1.1275839,2.236676,,2
+1.5150371,1.5248307,,5
+-0.7423369,-0.043295775,,1
+-0.7413987,-0.04377817,,1
+-0.7480771,-0.03918831,,1
+-0.74285555,-0.044951476,,1
+-0.74768823,-0.050346237,,1
+1.4041922,-1.341456,,3
+-0.7413181,-0.037955485,,1
+-0.7430632,-0.037152134,,1
+1.0343556,-2.080484,,4
+1.8795117,-0.6222042,,0
+-0.7348932,-0.037642933,,1
+-0.741661,-0.0506613,,1
+0.9855807,-2.035325,,4
+-0.7403209,-0.031243963,,1
+-0.75033367,-0.037177168,,1
+1.5983322,-0.39650655,,0
+-0.740636,-0.04361996,,1
+-0.74229944,-0.04146818,,1
+-0.7421995,-0.048695643,,1
+1.6908274,-2.6550493,,4
+1.2231776,-0.22185913,,6
+-0.74490935,-0.046009127,,1
+-0.7467653,-0.049593125,,1
+-0.74688685,-0.044128723,,1
+0.8760689,2.2933598,,2
+1.6980472,2.4956052,,2
+-0.74394894,-0.044351935,,1
+-0.741533,-0.041724145,,1
+1.5518407,1.6167262,,5
+-0.7396755,-0.038475107,,1
+-0.74270827,-0.04376847,,1
+-0.744095,-0.03733766,,1
+2.59013,-1.0142941,,0
+-0.7409535,-0.034654237,,1
+-0.74217266,-0.04622839,,1
+-0.74699354,-0.04196152,,1
+1.07167,-2.1204484,,4
+1.2871277,-1.2866068,,3
+-0.743448,-0.049520865,,1
+1.5999644,-1.8961339,,4
+0.8040447,2.2037191,,2
+1.9776949,-2.0112028,,4
+-0.74308515,-0.05398922,,1
+-0.7385042,-0.046182983,,1
+0.69680303,2.1622396,,2
+-0.7397205,-0.044168457,,1
+-0.74043626,-0.043783896,,1
+-0.73645043,-0.054740272,,1
+-0.742126,-0.043238103,,1
+-0.7427237,-0.045609232,,1
+1.5245789,-2.4180422,,4
+-0.7423546,-0.048987567,,1
+1.3803304,-0.51256233,,6
+1.1004884,1.8317146,,2
+-0.742847,-0.038593184,,1
+0.94691724,2.3004706,,2
+-0.7386601,-0.04461205,,1
+-0.74713856,-0.04795009,,1
+0.9660138,2.4207401,,2
+0.80935204,2.2355795,,2
+-0.73462176,-0.045491822,,1
+-0.74048257,-0.04423666,,1
+-0.7472421,-0.03737366,,1
+-0.74520797,-0.047008634,,1
+-0.73894703,-0.049381763,,1
+1.198123,-0.25844878,,6
+1.5966944,2.1458654,,2
+-0.739515,-0.046579883,,1
+-0.74087477,-0.04251149,,1
+1.5071354,-0.7946483,,3
+1.6725479,-1.0862423,,3
+-0.74216753,-0.04948944,,1
+0.7992819,2.3077433,,2
+1.2703481,1.0578483,,5
+-0.75255805,-0.0473568,,1
+-0.74088204,-0.04479866,,1
+1.7151664,-0.6047361,,0
+-0.74214405,-0.048668597,,1
+1.735155,-1.1439811,,3
+-0.7393121,-0.04697679,,1
+-0.7483009,-0.04834161,,1
+-0.7445259,-0.03787616,,1
+2.258051,-0.6001353,,0
+-0.74369675,-0.04387096,,1
+-0.73953617,-0.04024496,,1
+1.7173834,1.896796,,5
+-0.74232864,-0.04679516,,1
+1.5829723,0.15904367,,7
+-0.7487086,-0.04302136,,1
+1.1343068,-0.42098936,,6
+-0.7415457,-0.04994979,,1
+-0.7469145,-0.04172474,,1
+-0.7414531,-0.03438343,,1
+1.5523077,1.1003668,,5
+-0.74289477,-0.046693716,,1
+-0.7447062,-0.038571186,,1
+-0.7414477,-0.045275904,,1
+-0.74696356,-0.032916505,,1
+1.2912401,-0.3423661,,6
+-0.7394789,-0.04089652,,1
+-0.7447489,-0.04074152,,1
+-0.738271,-0.04389694,,1
+1.359717,2.6233046,,2
+-0.7390481,-0.050166707,,1
+-0.73344535,-0.047022387,,1
+-0.7383047,-0.04212612,,1
+1.3701246,0.38938805,,7
+-0.7420856,-0.049645584,,1
+-0.7436647,-0.04834621,,1
+-0.7415756,-0.04420283,,1
+0.92227113,2.3928761,,2
+1.2226434,-0.8485598,,3
+-0.7393437,-0.037904933,,1
+1.4480569,-2.5691905,,4
+-0.7432799,-0.05112838,,1
+-0.7426881,-0.03339838,,1
+-0.74907535,-0.050895795,,1
+1.9255564,-0.1998658,,0
+1.3849146,-0.32348052,,6
+-0.74203616,-0.038104508,,1
+-0.7421028,-0.04105787,,1
+0.8867816,2.3738565,,2
+-0.7410602,-0.045845762,,1
+1.0200514,-2.1579072,,4
+1.1284016,-0.53937036,,6
+-0.74288374,-0.049530983,,1
+-0.7402643,-0.039818477,,1
+1.3947256,-0.70061636,,6
+-0.74396724,-0.047945764,,1
+1.1520672,-2.1977487,,4
+-0.74469775,-0.04392462,,1
+-0.73921126,-0.042118248,,1
+-0.735867,-0.046710297,,1
+2.1188188,-1.2780885,,3
+-0.7434845,-0.037691165,,1
+-0.7434351,-0.042785253,,1
+-0.74524796,-0.044054106,,1
+-0.7434623,-0.044133235,,1
+-0.7413533,-0.04016002,,1
+1.0827119,-0.5846997,,6
+-0.7390528,-0.049088463,,1
+-0.7476612,-0.045571804,,1
+1.3277376,-0.3621409,,6
+0.9804511,-1.9562172,,4
+-0.7408808,-0.04066931,,1
+1.1840024,-0.8462751,,3
+1.3578385,-0.25795922,,6
+1.1128811,1.1870781,,5
+1.0786787,-2.2206712,,4
+-0.74937165,-0.04646673,,1
+1.0648919,-2.0552766,,4
+-0.7412211,-0.052178293,,1
+-0.7411818,-0.043182656,,1
+-0.73893046,-0.050731026,,1
+0.91614866,2.383643,,2
+-0.7347155,-0.042490132,,1
+-0.7418975,-0.047861245,,1
+-0.7409068,-0.043979906,,1
+-0.73892856,-0.043490343,,1
+0.89989024,2.4457724,,2
+1.8036389,-0.9430418,,0
+1.2634861,-0.29310498,,6
+-0.7419074,-0.041586526,,1
+1.3469924,-0.20056805,,6
+0.8594305,2.368298,,2
+1.8281115,2.4561617,,2
+1.0250076,1.9231452,,2
+-0.7397045,-0.040611636,,1
+-0.7513144,-0.044897612,,1
+1.6099061,2.5165286,,2
+-0.7424194,-0.04521677,,1
+1.6908945,-0.47926226,,0
+-0.7417153,-0.042544045,,1
+-0.7457456,-0.048330583,,1
+-0.7425492,-0.049127348,,1
+-0.74190766,-0.034718614,,1
+1.0432106,2.6049662,,2
+-0.7459275,-0.047143362,,1
+-0.74147177,-0.04656676,,1
+1.285436,-0.9740825,,3
+1.5357422,-2.5914967,,4
+1.6447033,1.157588,,5
+-0.74784195,-0.03991308,,1
+-0.7418741,-0.03419515,,1
+-0.7426564,-0.044760004,,1
+0.7386583,2.2523863,,2
+-0.7429772,-0.049471803,,1
+-0.73646384,-0.046752974,,1
+1.2437985,1.4483612,,5
+1.156938,0.2853181,,7
+1.1676354,-2.1582928,,4
+-0.7377245,-0.039426744,,1
+0.9091902,2.3461623,,2
+1.8724189,-0.88858753,,0
+-0.7439523,-0.039822195,,1
+1.0867443,-0.91283506,,3
+-0.7426692,-0.049876507,,1
+-0.7474323,-0.042106695,,1
+-0.74428153,-0.046804994,,1
+1.2192181,0.2666424,,7
+-0.74088687,-0.041945722,,1
+-0.743814,-0.043858267,,1
+-0.7375231,-0.04229947,,1
+-0.74261546,-0.036938746,,1
+-0.7439491,-0.044315565,,1
+1.0011294,2.576144,,2
+-0.74024135,-0.049293887,,1
+1.4198083,-0.17303242,,6
+1.20743,0.76367706,,7
+0.8744921,2.4677377,,2
+-0.74518675,-0.04261991,,1
+1.1662978,1.0415974,,5
+-0.7380721,-0.042619944,,1
+-0.7407413,-0.04742125,,1
+1.1440945,-0.27648687,,6
+-0.73846906,-0.034841124,,1
+-0.74372613,-0.046958353,,1
+1.8897818,-1.9927973,,4
+-0.7443729,-0.049599223,,1
+-0.7379918,-0.037718404,,1
+-0.7453036,-0.03836012,,1
+-0.74110883,-0.04989764,,1
+-0.7379045,-0.048129324,,1
+1.923757,1.1535503,,5
+1.3462902,0.87983954,,5
+1.073849,-2.25567,,4
+-0.7416658,-0.046203513,,1
+-0.74207836,-0.044718362,,1
+-0.7406553,-0.044190306,,1
+1.4839174,-2.5316606,,4
+-0.7455275,-0.043826275,,1
+-0.7389505,-0.042710893,,1
+-0.74658394,-0.047869842,,1
+-0.74204296,-0.044685412,,1
+-0.738469,-0.046261992,,1
+1.6557688,-0.7719406,,0
+1.2092458,-0.2569234,,6
+1.3643703,-0.8623414,,3
+1.1728795,-0.49869204,,6
+1.5757312,-0.5338766,,0
+1.1556959,-2.144891,,4
+-0.7405638,-0.049863715,,1
+-0.74086475,-0.048520856,,1
+1.0308703,-2.1223254,,4
+-0.74457216,-0.04802202,,1
+-0.7437576,-0.041601904,,1
+-0.7411253,-0.046238378,,1
+1.044519,2.4507618,,2
+1.1635033,-0.40999255,,6
+-0.74374384,-0.03973008,,1
+-0.73990375,-0.05479732,,1
+1.0929402,-2.1172717,,4
+-0.74647933,-0.04428434,,1
+-0.7471743,-0.04442129,,1
+-0.7388794,-0.046802618,,1
+-0.7394229,-0.041312337,,1
+-0.74169767,-0.045497105,,1
+0.9278251,2.511274,,2
+-0.749831,-0.04152173,,1
+-0.7471627,-0.043254573,,1
+-0.742357,-0.049027473,,1
+-0.73881763,-0.047155157,,1
+1.3385934,-0.30754307,,6
+-0.74071294,-0.046971682,,1
+-0.73490155,-0.03667106,,1
+-0.7446253,-0.051002994,,1
+-0.7418865,-0.047594495,,1
+-0.74187064,-0.038671046,,1
+1.090009,-2.0816488,,4
+0.93172663,2.4831858,,2
+1.1159173,-2.1072514,,4
+-0.73808783,-0.045268815,,1
+-0.7385438,-0.047328845,,1
+0.91646236,2.283081,,2
+-0.74184924,-0.039681092,,1
+1.4459214,0.077944614,,7
+-0.74183506,-0.046304263,,1
+-0.7415106,-0.044767793,,1
+-0.73393446,-0.048210215,,1
+-0.73630196,-0.046137195,,1
+-0.73794395,-0.046497434,,1
+-0.7359847,-0.04197815,,1
+0.9035438,2.3993795,,2
+1.5214342,0.48176447,,7
+-0.74428993,-0.038110204,,1
+1.1999463,-0.7799328,,6
+-0.7380882,-0.040059127,,1
+-0.73989075,-0.046175696,,1
+-0.7451996,-0.048384026,,1
+-0.7387272,-0.037094124,,1
+1.6196821,0.5944927,,7
+-0.7475836,-0.051005907,,1
+-0.7387962,-0.04620323,,1
+-0.7427386,-0.04314312,,1
+-0.74251264,-0.044926494,,1
+0.81953156,2.2736056,,2
+-0.7443547,-0.035452362,,1
+0.8486826,2.431449,,2
+1.2374989,0.37035012,,7
+1.3020272,-2.389684,,4
+1.257837,0.5763387,,7
+0.7647297,2.3571854,,2
+1.2613139,0.19029339,,7
+-0.74236864,-0.047463078,,1
+-0.73704,-0.041905977,,1
+-0.7471693,-0.041377213,,1
+-0.73525554,-0.040090192,,1
+-0.7370741,-0.045646757,,1
+-0.7426562,-0.042644575,,1
+-0.7446742,-0.050366767,,1
+-0.74450976,-0.05157928,,1
+-0.7506449,-0.04561669,,1
+1.468058,-1.1589799,,3
+1.3155086,2.049011,,2
+-0.74000007,-0.04121269,,1
+-0.7461846,-0.04769656,,1
+-0.74468136,-0.04216766,,1
+0.8828919,2.2357008,,2
+-0.73922706,-0.04273575,,1
+0.88864905,2.358481,,2
+0.935356,2.3871372,,2
+-0.7477517,-0.049020138,,1
+-0.7414496,-0.04642449,,1
+-0.73834294,-0.052360754,,1
+-0.74258566,-0.04068494,,1
+1.9600456,-0.7605655,,0
+-0.7357128,-0.04520617,,1
+-0.7424481,-0.046991874,,1
+-0.7425648,-0.04364036,,1
+-0.7440411,-0.047428228,,1
+-0.7414239,-0.04035548,,1
+-0.73563516,-0.037028246,,1
+-0.73779434,-0.04804341,,1
+-0.741455,-0.050409086,,1
+-0.7475734,-0.047129553,,1
+-0.7475102,-0.041749172,,1
+-0.7417654,-0.04309938,,1
+-0.74418426,-0.045775287,,1
+-0.7409999,-0.044781163,,1
+-0.74666345,-0.048778363,,1
+1.3761512,-0.23210289,,6
+-0.74229485,-0.03904566,,1
+1.2019327,-1.187521,,3
+-0.7406481,-0.04234613,,1
+0.95067096,2.423086,,2
+-0.7388923,-0.044765208,,1
+1.5812277,-1.6590127,,3
+1.2746943,-0.46801668,,6
+-0.74147236,-0.04865926,,1
+-0.7427553,-0.04315344,,1
+-0.747655,-0.03995309,,1
+-0.74013984,-0.041285846,,1
+-0.74218154,-0.04171741,,1
+-0.7424664,-0.041891225,,1
+-0.7397531,-0.049527634,,1
+1.1205285,0.4157947,,7
+0.8780013,2.4651291,,2
+0.9178603,-0.29714596,,6
+1.5771903,1.0189947,,5
+0.919622,2.8122044,,2
+-0.74392456,-0.044465613,,1
+-0.73888737,-0.04478748,,1
+1.1652567,-2.1662388,,4
+-0.7428135,-0.042569876,,1
+-0.73996234,-0.045394305,,1
+0.9934636,2.5328324,,2
+-0.7447393,-0.038269296,,1
+1.2505281,-1.6526477,,3
+1.822616,-2.2541862,,4
+-0.7437516,-0.043811683,,1
+1.8767598,-1.4423608,,3
+0.8511108,2.3445702,,2
+-0.7390734,-0.0422216,,1
+1.3626117,-1.2950255,,3
+1.4457222,-0.3216647,,6
+-0.742911,-0.043527864,,1
+-0.7359796,-0.04141887,,1
+1.3756866,-1.6626712,,3
+-0.7445523,-0.048361838,,1
+-0.7406575,-0.043894127,,1
+-0.74632955,-0.054594774,,1
+-0.7457054,-0.047753327,,1
+-0.74307,-0.036680114,,1
+-0.7411074,-0.04805291,,1
+1.0163386,2.460143,,2
+-0.7396922,-0.04220754,,1
+1.3441828,1.1741428,,5
+1.6218419,-1.294094,,3
+-0.7392081,-0.046321817,,1
+0.94241756,2.4918807,,2
+-0.74508107,-0.035503343,,1
+-0.74309975,-0.04858356,,1
+0.99623895,2.8965075,,2
+-0.7426444,-0.046015784,,1
+1.2043982,-2.3146908,,4
+-0.7394533,-0.052088752,,1
+1.158083,-1.007974,,3
+-0.7424388,-0.043311834,,1
+-0.74681634,-0.049630657,,1
+-0.7475375,-0.039565414,,1
+1.8833944,0.5746341,,7
+-0.7464461,-0.050610717,,1
+-0.7484461,-0.045763284,,1
+1.0630113,2.6815798,,2
+1.1063521,2.573008,,2
+-0.744262,-0.048005298,,1
+-0.74412054,-0.03875348,,1
+-0.74034625,-0.044668894,,1
+-0.743359,-0.047641274,,1
+1.3984809,-0.30913755,,6
+-0.7466045,-0.04373091,,1
+0.82864106,2.3110683,,2
+1.1759125,-0.46015576,,6
+-0.7396651,-0.050069038,,1
+-0.7438684,-0.042979505,,1
+-0.745111,-0.046386134,,1
+0.905405,2.337864,,2
+-0.74817324,-0.042315003,,1
+0.6978245,1.911953,,2
+-0.73984444,-0.0461347,,1
+-0.75123686,-0.04285162,,1
+1.2054936,-2.267807,,4
+1.0784541,-2.0861235,,4
+-0.74632627,-0.033852287,,1
+1.1768874,-0.22787039,,6
+1.0498654,-0.40830398,,6
+1.1959469,-0.98385525,,3
+1.0293807,-1.9930984,,4
+1.703931,-1.3629866,,3
+-0.7397426,-0.054451443,,1
+1.9326977,-0.71377003,,0
+-0.7443096,-0.03874737,,1
+-0.74466974,-0.04157925,,1
+-0.74103284,-0.04684242,,1
+-0.7441025,-0.043312274,,1
+0.96081024,-2.0759246,,4
+1.2870783,0.5639441,,7
+-0.74599504,-0.046898637,,1
+-0.74426925,-0.0462578,,1
+1.7063951,-2.7255812,,4
+-0.7367378,-0.039995357,,1
+-0.7422082,-0.046912447,,1
+-0.74330854,-0.051307604,,1
+1.0949336,-2.0702848,,4
+-0.73917264,-0.049719263,,1
+1.2295407,-1.9084381,,4
+1.1431882,-2.3216321,,4
+-0.7429169,-0.043244287,,1
+-0.740767,-0.046222083,,1
+1.2597119,-0.808891,,3
+-0.7458244,-0.0452462,,1
+0.8059494,2.2184718,,2
+-0.7465108,-0.040408757,,1
+-0.7444726,-0.04276362,,1
+-0.7501663,-0.045997687,,1
+-0.74357414,-0.044839446,,1
+0.88456845,2.3849423,,2
+-0.73541224,-0.037884083,,1
+-0.7419906,-0.048430435,,1
+-0.7473767,-0.043109395,,1
+1.6315986,-0.63436484,,0
+-0.74426705,-0.0386596,,1
+-0.7411763,-0.044447128,,1
+1.2837037,1.5355732,,5
+-0.73762155,-0.046523254,,1
+-0.73832214,-0.046415698,,1
+-0.74214405,-0.038393993,,1
+-0.74152535,-0.04271165,,1
+-0.7459091,-0.044059366,,1
+1.3288624,-0.4740662,,6
+-0.7402661,-0.04181267,,1
+1.1944764,-0.5738632,,6
+1.0048652,3.27994,,2
+0.82590926,2.4054706,,2
+1.2475523,-2.1842887,,4
+1.5137464,-0.5051456,,6
+1.3413095,-0.27947742,,6
+-0.73783064,-0.04049517,,1
+-0.7417745,-0.039623376,,1
+-0.74401194,-0.052879058,,1
+-0.7404084,-0.043670245,,1
+-0.7420286,-0.04714111,,1
+0.8109281,2.3818402,,2
+-0.74918544,-0.044535045,,1
+-0.74335545,-0.047452267,,1
+-0.7396392,-0.044806827,,1
+-0.7409337,-0.05076351,,1
+-0.7439813,-0.051689498,,1
+-0.7455871,-0.04574567,,1
+-0.7362637,-0.04186376,,1
+-0.74301153,-0.041803084,,1
+-0.74390054,-0.038327076,,1
+-0.74264985,-0.04590873,,1
+0.88497007,2.256596,,2
+-0.74609625,-0.047107205,,1
+0.9693557,-2.081854,,4
+1.2487346,-1.3907611,,3
+1.5225723,-0.9061763,,3
+-0.7437342,-0.04042504,,1
+1.0896674,2.7460465,,2
+1.1750286,-2.23109,,4
+1.388699,-0.39287156,,6
+-0.7440025,-0.046858132,,1
+-0.74083436,-0.04068301,,1
+-0.74464047,-0.0392804,,1
+1.1476698,-2.0706794,,4
+1.2491779,-0.3782264,,6
+-0.743688,-0.03849843,,1
+-0.7410475,-0.04393391,,1
+1.6631029,0.6827078,,7
+-0.73791397,-0.047295786,,1
+1.7388332,-2.2773824,,4
+-0.7420828,-0.04667164,,1
+-0.7443709,-0.04470289,,1
+1.1968775,-0.7312005,,6
+-0.74113405,-0.038800865,,1
+-0.73942447,-0.05003096,,1
+2.0800948,0.5872106,,7
+-0.74556905,-0.049106814,,1
+1.1753452,-0.86438864,,3
+-0.7383857,-0.040123906,,1
+-0.73417753,-0.051719464,,1
+-0.743888,-0.04462862,,1
+-0.7415943,-0.04468307,,1
+1.9673029,0.9481541,,5
+-0.7425862,-0.047187418,,1
+0.9472632,-2.0708227,,4
+-0.74359053,-0.037238833,,1
+-0.74026257,-0.044349235,,1
+-0.7450222,-0.04548833,,1
+-0.7421086,-0.051915463,,1
+1.3521742,-2.3006907,,4
+-0.7458004,-0.040915623,,1
+1.7814406,-1.7020525,,3
+-0.7492172,-0.042728376,,1
+-0.74544173,-0.051283125,,1
+0.79031074,2.3493228,,2
+-0.74512976,-0.04472373,,1
+-0.74073666,-0.03510344,,1
+-0.74317443,-0.04715359,,1
+-0.7441657,-0.04533438,,1
+-0.74934864,-0.044351894,,1
+1.3338985,-0.60884875,,6
+-0.7397729,-0.03822145,,1
+-0.74529487,-0.043337423,,1
+-0.74190676,-0.04401163,,1
+-0.74252176,-0.042215873,,1
+0.9517275,-2.050899,,4
+-0.7386218,-0.04069806,,1
+-0.7420408,-0.046875395,,1
+1.6525863,1.0163316,,5
+1.1163402,-0.30705002,,6
+1.3063323,-1.2952808,,3
+-0.743144,-0.044436436,,1
+-0.73960906,-0.04840241,,1
+2.01266,-0.38920626,,0
+1.1544598,-0.91920924,,3
+-0.7450014,-0.043710515,,1
+-0.74347866,-0.038849838,,1
+1.1756983,1.0831951,,5
+0.7225209,2.1014395,,2
+2.3586628,-0.7841637,,0
+-0.74265206,-0.04193445,,1
+-0.7416066,-0.042682976,,1
+-0.7387755,-0.03700477,,1
+-0.74083453,-0.04647604,,1
+-0.7482255,-0.042761035,,1
+-0.7405544,-0.042463537,,1
+-0.7416814,-0.04478464,,1
+-0.74176586,-0.04307804,,1
+1.3010546,-0.37032732,,6
+-0.7389531,-0.047311537,,1
+-0.73840857,-0.044267237,,1
+-0.7434974,-0.044669054,,1
+-0.74716365,-0.050158873,,1
+-0.74350184,-0.049361736,,1
+-0.73706204,-0.045824155,,1
+0.8487345,2.2951438,,2
+1.490488,1.3602399,,5
+-0.7391216,-0.040224366,,1
+0.89464587,2.4208627,,2
+-0.7416666,-0.047282327,,1
+2.2008212,-0.33501893,,0
+-0.7431708,-0.044955026,,1
+-0.7461833,-0.042142227,,1
+1.2931665,-0.8635161,,3
+1.8082434,-0.5071873,,0
+-0.73975813,-0.04812166,,1
+0.90066004,2.2893248,,2
+-0.7412865,-0.043083772,,1
+-0.7480294,-0.049604274,,1
+1.0348779,-0.6448266,,6
+0.89269155,2.2872453,,2
+-0.73397154,-0.047837876,,1
+1.2496128,0.5108591,,7
+-0.7431012,-0.031779557,,1
+-0.74388,-0.034238048,,1
+-0.73799956,-0.04697176,,1
+-0.7412592,-0.0431741,,1
+-0.743278,-0.038809516,,1
+2.0966167,0.48166636,,7
+1.2617791,0.32098228,,7
+0.8817513,2.3110628,,2
+1.7108861,-2.3342874,,4
+-0.7401934,-0.051251974,,1
+-0.74437004,-0.057026062,,1
+-0.74080145,-0.045231663,,1
+-0.74418867,-0.04640388,,1
+-0.74330884,-0.0390922,,1
+-0.7434776,-0.04148792,,1
+-0.74445003,-0.045428973,,1
+1.606779,-0.6605868,,0
+-0.7455263,-0.047022272,,1
+-0.74735016,-0.040777348,,1
+-0.74473566,-0.04084627,,1
+-0.7436532,-0.043070633,,1
+-0.73835,-0.047197487,,1
+-0.7425032,-0.04555083,,1
+-0.7452158,-0.051058237,,1
+0.7847824,2.182672,,2
+-0.7381859,-0.043265827,,1
+-0.7429257,-0.047162466,,1
+1.6439672,1.3002834,,5
+-0.7340407,-0.04955142,,1
+-0.7453031,-0.044772685,,1
+1.3089803,-0.9817953,,3
+1.1998054,-2.3403444,,4
+-0.7426833,-0.04425072,,1
+1.3801582,-0.69931483,,6
+1.6594594,2.3971782,,2
+-0.74060607,-0.037865594,,1
+-0.74849427,-0.03945803,,1
+-0.7450765,-0.048805393,,1
+2.0470648,-0.51977426,,0
+1.541152,0.34487814,,7
+1.1580184,-2.1325686,,4
+-0.73910874,-0.04432347,,1
+-0.74313456,-0.047311835,,1
+1.5457815,1.13101,,5
+-0.73719615,-0.046448465,,1
+-0.7422898,-0.041338693,,1
+-0.7433375,-0.04301814,,1
+-0.739039,-0.0466579,,1
+-0.74641407,-0.045266543,,1
+-0.73984075,-0.041986853,,1
+0.8182642,2.1342578,,2
+1.168958,-2.1860793,,4
+-0.7401297,-0.038053412,,1
+-0.73809457,-0.03520845,,1
+-0.7424311,-0.043176185,,1
+-0.7430809,-0.041771647,,1
+1.6011994,1.0843626,,5
+1.0776708,-0.30138323,,6
+-0.74329525,-0.04280088,,1
+1.818918,-1.5808321,,3
+-0.74140894,-0.053357042,,1
+-0.74904144,-0.04004353,,1
+1.5905583,-2.808993,,4
+-0.7411804,-0.04949773,,1
+-0.74186236,-0.042682093,,1
+0.9096334,2.499472,,2
+-0.7387213,-0.04442718,,1
+-0.7440263,-0.046344478,,1
+1.1635286,-2.223547,,4
+0.87146676,2.422832,,2
+-0.74506205,-0.050014682,,1
+-0.7427872,-0.04855184,,1
+-0.7429504,-0.048315194,,1
+-0.7444131,-0.053208172,,1
+1.1313502,-0.52335757,,6
+-0.744632,-0.04614417,,1
+-0.7480915,-0.044714443,,1
+-0.74676716,-0.051617883,,1
+-0.739956,-0.040064815,,1
+-0.7406446,-0.035202254,,1
+-0.7475266,-0.045157544,,1
+-0.73854595,-0.047647092,,1
+-0.742467,-0.046728242,,1
+0.9781729,-0.38661435,,6
+1.6484014,-1.061992,,3
+-0.742076,-0.05296282,,1
+-0.7414483,-0.043571647,,1
+-0.73973775,-0.04537659,,1
+-0.7425421,-0.039636634,,1
+-0.75044286,-0.044869635,,1
+1.2001841,-0.43480206,,6
+-0.7440973,-0.041800626,,1
+-0.74437153,-0.051201772,,1
+-0.7451887,-0.04509843,,1
+0.8082854,2.230926,,2
+0.8215148,2.2867672,,2
+-0.7428581,-0.042410765,,1
+0.82946163,2.389909,,2
+1.5732768,-0.94726557,,3
+-0.74248594,-0.04755275,,1
+-0.74505955,-0.04583173,,1
+-0.7436678,-0.044684127,,1
+1.2624012,-2.1436834,,4
+1.6145084,0.562046,,7
+-0.74350744,-0.046430666,,1
+0.8753075,2.3703773,,2
+-0.73873246,-0.05112511,,1
+1.520766,-0.54432213,,6
+1.0522343,-0.31573713,,6
+1.3068483,-0.06728285,,6
+-0.74385,-0.041851718,,1
+1.0954502,-0.53227115,,6

@@ -62,13 +62,16 @@ def getNGrams(corpus,number):
     n_series = pd.Series(nltk.ngrams(tokens, number))
     n_values = n_series.value_counts().index
     n_counts = n_series.value_counts().values
-    for ngram in n_values:
-        string = ' '.join(i for i in ngram)
-        if(checkWrongContext(string)):
-            array.append(string)
+    vector = [(n_values[i],n_counts[i]) for i in range(len(n_values))]
+    for value in vector:
+        if(int(value[1]) >= 100):
+            string = ' '.join(i for i in value[0])
+            if(checkWrongContext(string)):
+                array.append(string)
     print(f'Cantidad TOTAL de NGRAMAS [{len(n_values)}]')
     print(f'Reduccion de NGRAMAS [{len(array)}]')
     return array
+
 df = pd.read_csv('../dataset/casos/auto.csv')
 
 # df_model = get_concordance(df['descripcion'])
@@ -77,32 +80,53 @@ df = pd.read_csv('../dataset/casos/auto.csv')
 def searchNGramIndex(corpus,ngrams):
     array = []
     for index, row in enumerate(corpus):
+        string = []
         for ngram in ngrams:
             if(re.search(ngram,row)):
-                array.append(TaggedDocument(nltk.tokenize.word_tokenize(ngram),[index]))
+                string.append(ngram)
+        if len(string) != 0:
+            array.append(TaggedDocument(string,[index]))        
     return array
+"""
+pca = PCA(n_components=2, svd_solver='full', whiten=True)
+pcaVectors = pca.fit_transform(modelVectors)
 
+kmeans = KMeans(n_clusters=8, random_state=fixSeed)
+kmeans.fit(pcaVectors)
+pca_df = pd.DataFrame(data=pcaVectors, columns=['x', 'y'])
+ax.scatter(pca_df.x, pca_df.y, s=15)
 
+tokenizedCorpus = [list(nltk.ngrams(word_tokenize(i), 3)) for i in df['descripcion']]
+"""
 ngramTagged = searchNGramIndex(df['descripcion'],getNGrams(df['descripcion'],3))
 
-tokenizedCorpus = [nltk.tokenize.word_tokenize(i) for i in df['descripcion']].copy()
-# model = Doc2Vec(ngramTagged, vector_size=100, window=2, min_count=2, workers=7)
-d2v_model = Doc2Vec(ngramTagged, vector_size = 100, window = 10, min_count = 10, workers=7, dm = 1,alpha=0.025, min_alpha=0.001)
+#Forma del taggedDocument [['ngrama','ngrama',etc],['indice']]
 
-d2v_model.train(ngramTagged, total_examples= d2v_model.corpus_count, epochs=20,start_alpha=0.002, end_alpha=0.016)
+# tokenizedCorpus = [nltk.tokenize.word_tokenize(i) for i in df['descripcion']].copy()
 
-kmeans_model = KMeans(n_clusters=4, init='k-means++', max_iter=100)
+d2v_model = Doc2Vec(ngramTagged, vector_size = 300, window = 10, min_count = 10, workers=7, dm = 1,alpha=0.05, min_alpha=0.001)
 
-X = kmeans_model.fit(d2v_model.docvecs.doctag_syn0)
+d2v_model.train(ngramTagged, total_examples= d2v_model.corpus_count, epochs=1000,start_alpha=0.002, end_alpha=0.016)
+
+kmeans_model = KMeans(n_clusters=8, init='k-means++', max_iter=300)
+
+
+## Fitting with all vectors
+pca = PCA(n_components=2,svd_solver='full', whiten=True).fit(d2v_model.docvecs.doctag_syn0)
+
+datapoint = pca.transform(d2v_model.docvecs.doctag_syn0) #Vectores de 2 Dimensiones
+X = kmeans_model.fit(datapoint)
+pca_df = pd.DataFrame(data=datapoint, columns=['x', 'y'])
 labels=kmeans_model.labels_.tolist()
-l = kmeans_model.fit_predict(d2v_model.docvecs.doctag_syn0)
-pca = PCA(n_components=2).fit(d2v_model.docvecs.doctag_syn0)
-datapoint = pca.transform(d2v_model.docvecs.doctag_syn0)
-plt.figure()
-label1 = ['#FFFF00', '#008000', '#0000FF', '#800080']
-color = [label1[i] for i in labels]
-plt.scatter(datapoint[:, 0], datapoint[:, 1], c=color)
-centroids = kmeans_model.cluster_centers_
-centroidpoint = pca.transform(centroids)
-plt.scatter(centroidpoint[:, 0], centroidpoint[:, 1], marker='^', s=150, c='#000000')
-plt.show()
+# l = kmeans_model.fit_predict(datapoint)
+
+import seaborn as sns
+
+pca_df['descripcion'] = pd.Series([i[0] for i in ngramTagged])
+pca_df['cluster'] = pd.Series(kmeans_model.labels_)
+
+sns.lmplot('x', 'y', data=pca_df, hue='cluster', fit_reg=False)
+
+plt.savefig('test_cluster_sns.png')
+
+pca_df.to_csv('../dataset/pca_cluster.csv', index=False, header=True)

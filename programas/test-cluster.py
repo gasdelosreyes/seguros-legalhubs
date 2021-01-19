@@ -64,10 +64,26 @@ def getNGrams(corpus,number):
     n_counts = n_series.value_counts().values
     vector = [(n_values[i],n_counts[i]) for i in range(len(n_values))]
     for value in vector:
-        if(int(value[1]) >= 100):
-            string = ' '.join(i for i in value[0])
-            if(checkWrongContext(string)):
-                array.append(string)
+        if(number == 2):
+            if(int(value[1]) >= 200):
+                string = ' '.join(i for i in value[0])
+                if(checkWrongContext(string)):
+                    array.append(string)
+        if(number == 3):
+            if(int(value[1]) >= 100):
+                string = ' '.join(i for i in value[0])
+                if(checkWrongContext(string)):
+                    array.append(string)
+        if(number == 4):
+            if(int(value[1]) >= 40):
+                string = ' '.join(i for i in value[0])
+                if(checkWrongContext(string)):
+                    array.append(string)
+        if(number == 5):
+            if(int(value[1]) >= 20):
+                string = ' '.join(i for i in value[0])
+                if(checkWrongContext(string)):
+                    array.append(string)
     print(f'Cantidad TOTAL de NGRAMAS [{len(n_values)}]')
     print(f'Reduccion de NGRAMAS [{len(array)}]')
     return array
@@ -85,7 +101,7 @@ def searchNGramIndex(corpus,ngrams):
             if(re.search(ngram,row)):
                 string.append(ngram)
         if len(string) != 0:
-            array.append(TaggedDocument(string,[index]))        
+            array.append(TaggedDocument(string,[index]))
     return array
 """
 pca = PCA(n_components=2, svd_solver='full', whiten=True)
@@ -98,7 +114,10 @@ ax.scatter(pca_df.x, pca_df.y, s=15)
 
 tokenizedCorpus = [list(nltk.ngrams(word_tokenize(i), 3)) for i in df['descripcion']]
 """
-ngramTagged = searchNGramIndex(df['descripcion'],getNGrams(df['descripcion'],3))
+ngramTagged = searchNGramIndex(df['descripcion'],getNGrams(df['descripcion'],2))
+ngramTagged += searchNGramIndex(df['descripcion'],getNGrams(df['descripcion'],3))
+ngramTagged += searchNGramIndex(df['descripcion'],getNGrams(df['descripcion'],4))
+ngramTagged += searchNGramIndex(df['descripcion'],getNGrams(df['descripcion'],5))
 
 #Forma del taggedDocument [['ngrama','ngrama',etc],['indice']]
 
@@ -108,13 +127,14 @@ d2v_model = Doc2Vec(ngramTagged, vector_size = 300, window = 10, min_count = 10,
 
 d2v_model.train(ngramTagged, total_examples= d2v_model.corpus_count, epochs=1000,start_alpha=0.002, end_alpha=0.016)
 
-kmeans_model = KMeans(n_clusters=8, init='k-means++', max_iter=300)
+kmeans_model = KMeans(n_clusters=8, init='k-means++', max_iter=500)
 
-
+## d2v_model.docvecs.vectors_docs and d2v_model.docvecs.doctag_syn0 are the same)
 ## Fitting with all vectors
-pca = PCA(n_components=2,svd_solver='full', whiten=True).fit(d2v_model.docvecs.doctag_syn0)
 
-datapoint = pca.transform(d2v_model.docvecs.doctag_syn0) #Vectores de 2 Dimensiones
+pca = PCA(n_components=2,svd_solver='full', whiten=True).fit(d2v_model.docvecs.vectors_docs)
+
+datapoint = pca.transform(d2v_model.docvecs.vectors_docs) #Vectores de 2 Dimensiones
 X = kmeans_model.fit(datapoint)
 pca_df = pd.DataFrame(data=datapoint, columns=['x', 'y'])
 labels=kmeans_model.labels_.tolist()

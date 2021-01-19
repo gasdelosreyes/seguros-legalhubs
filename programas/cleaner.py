@@ -59,7 +59,7 @@ def cleaner(w):
                        ['d ', ''],
                        ['dfs', ''],
                        ['agaramond', ''],
-                       ['ff','']])
+                       ['ff', '']])
     w = w.lower()
     w = w.replace('descripcion hecho', '')
     w = re.sub(r'[^\w\s]', '', w)
@@ -70,14 +70,32 @@ def cleaner(w):
     return w
 
 
+def changeRegex(row):
+    vector = [
+        (r'.?vh.*?', 'vehiculo'),
+        (r'der.*?', 'derecha'), (r'lat.*?', 'parte'), (r'av.*?', 'avenida'), (r'posterior', 'delantera'),
+        (r'amb.*?', 'ambulancia'), (r'tercero .* impacta', 'tercero impacta'), (r'desde izq.*?', 'en parte izquierda'), (r'parte parte', 'parte'), (r'parte parte parte', 'parte'),
+        (r'vh.*?', 'vehiculo'), (r'colis.*?', 'colisiona'), (r'\scho.*?', 'colisiona'), (r'impac.*?', ' colisiona'), (r'parte lateral', 'parte'),
+        (r'su delat.*?', 'su parte delantera'), (r'aseg.*?', 'asegurado'), (r'emb.*?', 'colisiona'), (r'redg.*?', ''), (r'paragolpe delantera', 'parte delantera'),
+        (r'frente delantero', 'parte delantera'), (r'de atras', 'en parte trasera'), (r'por detras', 'en parte trasera'), (r'parte conductor', 'parte izquierda'),
+        (r'golp.*?', ' colisiona'), (r'delant.*?', 'delantera'), (r'contacto', 'colisiona'), (r'parte acompanante', 'parte derecha'), (r'parte medio', 'parte')
+    ]
+    for value in vector:
+        oldString = ' ' + value[0] + ' '
+        newString = ' ' + value[1] + ' '
+        row = re.sub(oldString, newString, row)
+    return row
+
+
 def changeStrings(row):
     vector = [
-        (r'vw','vehiculo'),(r'veh','vehiculo'),(r'vena','venia'),(r'guardabarro','parte'),(r'guardabarros','parte'),
+        (r'vw', 'vehiculo'), (r'veh', 'vehiculo'), (r'vena', 'venia'), (r'guardabarro', 'parte'), (r'guardabarros', 'parte'), (r'vhl', 'vehiculo'),
         (r'derecho', 'derecha'), (r'delantero', 'delantera'), (r'trasero', 'trasera'), (r'frontal', 'parte delantera'), (r'lado', 'parte'),
-        (r'frente delantero', 'parte delantera'), (r'de atras', 'en parte trasera'), (r'pb','parte'), (r'puerta', 'parte'), (r'parte lateral', 'parte'),
-        (r'conmi','con mi'), (r'choque', 'mi parte delantera'),(r'circ','circulaba'), (r'stro','siniestro'), (r'ero','tercero'),(r'gge','garage'),
-        (r' p ', ' parte '), (r'contra\s', 'con '), (r'por detras', 'en parte trasera'), (r'detras','trasera'), (r'roza', 'colisiona'),
-        (r' ro ', ' tercero '),(r'gral','general'),(r'paragolpes delantera','parte delantera'),(r'paragolpes','delantera'),(r'paragolpe','delantera'), (r'trompa','delantera'),(r'parte parte', 'parte')
+        (r'pb', 'parte'), (r'puerta', 'parte'),
+        (r'conmi', 'con mi'), (r'choque', 'mi parte delantera'), (r'circ', 'circulaba'), (r'stro', 'siniestro'), (r'ero', 'tercero'), (r'gge', 'garage'),
+        (r' p ', ' parte '), (r'contra\s', 'con '), (r'detras', 'trasera'), (r'atras', 'trasera'), (r'atraz', 'trasera'), (r'roza', 'colisiona'),
+        (r' ro ', ' tercero '), (r'gral', 'general'), (r'paragolpe', 'delantera'), (r'trompa', 'delantera'), (r'izq', 'izquierda'),
+        (r'toco', 'colisiona'), (r'adelante', 'delantera'), (r'izquierdo', 'izquierda'), (r'posterior', 'delantera'), ('con', ''), ('por', '')
     ]
     words = []
     for w in row.split():
@@ -88,23 +106,46 @@ def changeStrings(row):
     row = ' '.join(words)
     return row
 
+
 def changeRegex(row):
-    vector = [ 
-        (r' izq.*? ', ' izquierda '),(r'\sder.*? ',' derecha ') , (r'lat.*? ', 'parte '), (r'av.*? ', 'avenida '),
-        (r'amb.*? ', 'ambulancia '),(r'tercero .* impacta', 'tercero impacta'), (r'desde izq.*? ', 'en parte izquierda '),
-        (r'vh.*? ', 'vehiculo '), (r'colis.*? ', 'colisiona '), (r'\scho.*? ', ' colisiona '),(r'\simpac.*? ', ' colisiona '),
-        (r'su delat.*? ', 'su parte delantera '), (r'aseg.*? ', 'asegurado '), (r'emb.*? ', 'colisiona '), (r'redg.*? ',''),
-        (r' golp.*? ',' colisiona ')
+    vector = [
+        (r'\sder.*? ', ' derecha '), (r'lat.*? ', 'parte '), (r'av.*? ', 'avenida '), (r'posterior', 'delantera'),
+        (r'amb.*? ', 'ambulancia '), (r'tercero .* impacta', 'tercero impacta'), (r'desde izq.*? ', 'en parte izquierda '), (r'parte parte', 'parte'), (r'parte parte parte', 'parte'),
+        (r'vh.*? ', 'vehiculo '), (r'colis.*? ', 'colisiona '), (r'\scho.*? ', ' colisiona '), (r'\simpac.*? ', ' colisiona '), (r'parte lateral', 'parte'),
+        (r'su delat.*? ', 'su parte delantera '), (r'aseg.*? ', 'asegurado '), (r'emb.*? ', 'colisiona '), (r'redg.*? ', ''), (r'paragolpe delantera', 'parte delantera'),
+        (r'frente delantero', 'parte delantera'), (r'de atras', 'en parte trasera'), (r'por detras', 'en parte trasera'), (r'parte conductor', 'parte izquierda'),
+        (r' golp.*? ', ' colisiona '), (r'delant.*? ', 'delantera '), (r'contacto', 'colisiona'), (r'parte acompanante', 'parte derecha'), (r'parte medio', 'parte'), (r'mi frente', 'mi parte delantera'),
+        (r'delantera delantera', 'delantera'), (r'auto', r'vehiculo'), (r'vehiculo', ''), (r'costado', 'parte')
     ]
     for value in vector:
-        row = re.sub(value[0],value[1], row)
+        row = re.sub(value[0], value[1], row)
     return row
+
+
+def ratios(w):
+    try:
+        dic = [
+            'trasera', 'delantera', 'izquierda', 'derecha', 'acompanante'
+        ]
+        aux = 0
+        word = ''
+        for i in dic:
+            if (aux <= fuzz.ratio(w, i) and 80 <= fuzz.ratio(w, i)):
+                aux = fuzz.ratio(w, i)
+                word = i
+        if word != '':
+            #print(str(w) + '    CAMBIE POR    ' + str(word))
+            return word
+        return w
+    except TypeError:
+        return w
+
 
 def cleanRatios(w):
     try:
-        if(len(w) < 4):
+        if(len(w) <= 5):
             return w
-        dic = ['izquierda','derecha','izquierdo','derecho', 'paragolpe']
+        dic = ['izquierda', 'derecha', 'izquierdo', 'derecho', 'paragolpe']
         aux = 0
         word = ''
         for i in dic:
@@ -112,42 +153,50 @@ def cleanRatios(w):
                 aux = fuzz.partial_ratio(w, i)
                 word = i
         if word != '':
-            print(str(w) + '    CAMBIE POR    ' + str(word))
+            #print(str(w) + '    CAMBIE POR    ' + str(word))
             return word
         return w
     except TypeError:
         return w
 
-# def convertionCleanRow(row):
-#     row = row.split()
-#     words = []
-#     for w in row:
-#         words.append(cleanRatios(w))
-#         row = ' '.join(words)
-#     return row
+
+def repeated(row):
+    row = row.split()
+    i = 0
+    while i < len(row) - 1:
+        if row[i] == row[i + 1]:
+            del row[i]
+        i += 1
+    return ' '.join(row)
+
 
 def clean(serie):
     """
     Limpia la columna donde estan las descripciones 
-
     :function: estructura todas las descripciones
     :returns: devuelve la misma descripcion pero con las palabras de to_rep a for_rep
-
     """
     for index, row in enumerate(serie):
-        serie.iloc[index] = ' '.join(list(map(cleanRatios,row.split())))
-    
+        serie.iloc[index] = ' '.join(list(map(cleanRatios, row.split())))
+
+    for index, row in enumerate(serie):
+        serie.iloc[index] = ' '.join(list(map(ratios, row.split())))
+
     for index, row in enumerate(serie):
         serie.iloc[index] = changeStrings(row)
 
     for index, row in enumerate(serie):
         serie.iloc[index] = changeRegex(row)
-    
-    return serie 
+
+    serie = pd.Series(list(map(repeated, serie)))
+
+    return serie
+
 
 def nonStop(w):
     return ' '.join(i for i in w.split() if i not in ['el', 'la', 'los', 'las', 'ellos', 'nosotros', 'lo', 'le',
-                                                      'que', 'un', 'se', 'de', 'a', 'y', 'sobre', 'cuando', 'do', 'una'])
+                                                      'que', 'un', 'se', 'de', 'a', 'y', 'sobre', 'cuando', 'do', 'una',
+                                                      'en', 'del', 'al', 'me', 'ella'])
 
 
 def separador(ds):
@@ -194,8 +243,24 @@ if __name__ == "__main__":
         Divide el DataFrame en 4 DataFrames, cada uno por categoria.
     '''
     auto, moto, bici, peaton = separador(dataframe)
-    
+    # from matplotlib import pyplot as plt
     auto.to_csv('../dataset/casos/auto.csv', index=False, header=True)
     moto.to_csv('../dataset/casos/moto.csv', index=False, header=True)
     bici.to_csv('../dataset/casos/bici.csv', index=False, header=True)
     peaton.to_csv('../dataset/casos/peaton.csv', index=False, header=True)
+
+    # auto_df1 = df1[df1['cod_accidente'] == 'aa']
+    # # Data to plot
+    # labels = ['COMPROMETIDA', 'DISCUTIDA', 'SIN RESPONSABILIDAD', 'CONCURRENTE']
+    # compro = len(df1['responsabilidad'][df1['responsabilidad'] == 'COMPROMETIDA'])
+    # concu = len(df1['responsabilidad'][df1['responsabilidad'] == 'CONCURRENTE'])
+    # sin = len(df1['responsabilidad'][df1['responsabilidad'] == 'SIN RESPONSABILIDAD'])
+    # disc = len(df1['responsabilidad'][df1['responsabilidad'] == 'DISCUTIDA'])
+    # sizes = [compro, disc, sin, concu]
+    # colors = ['gold', 'yellowgreen', 'lightcoral', 'lightskyblue']
+    # explode = (0.1, 0, 0, 0)  # explode 1st slice
+
+    # # Plot
+    # plt.pie(sizes, explode=explode, labels=labels, colors=colors,
+    #         autopct='%1.1f%%', shadow=True, startangle=140)
+    # plt.savefig('resposabilidad_auto_datos_laCaja.png')

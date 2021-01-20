@@ -202,10 +202,10 @@ def is_in(words, grams):
 
 def is_trivial(descripciones):
 
-    pentaGrams = analisis(descripciones, 6, True)
+    pentaGrams = analisis(descripciones, 5, True)
     lado_aseg, lado_ter = [], []
     for i in range(len(pentaGrams) - 1):
-        gram = is_in(['parte'], pentaGrams[str(i)])
+        gram = is_in(['mi'], pentaGrams[str(i)])
         if gram:
             lado_aseg.append([gram, i])
         gram = is_in(['su', 'tercero'], pentaGrams[str(i)])
@@ -218,24 +218,25 @@ def is_trivial(descripciones):
 if __name__ == "__main__":
     df = pd.read_csv('~/Documentos/LegalHub/dataset/casos/auto.csv')
     lado_aseg, lado_ter = is_trivial(df['descripcion'])
-    tokenizedCorpus = [i[0] for i in lado_aseg]
+    # tokenizedCorpus = [i[0] for i in lado_aseg]
+    tokenizedCorpus = [i[0] for i in lado_ter]
     # df_model = get_concordance(df['descripcion'])
     # tokenizedCorpus = [list(nltk.ngrams(word_tokenize(i), 2)) for i in df['descripcion']]
     # tokenizedCorpus += [list(nltk.ngrams(word_tokenize(i), 3)) for i in df['descripcion']]
     # tokenizedCorpus += [list(nltk.ngrams(word_tokenize(i), 4)) for i in df['descripcion']]
-    # tokenizedCorpus += [list(nltk.ngrams(word_tokenize(i), 5)) for i in df['descripcion']]
+    # tokenizedCorpus = [list(nltk.ngrams(word_tokenize(i), 5)) for i in df['descripcion']]
     # tokenizedCorpus += [nltk.tokenize.word_tokenize(i) for i in df_model]
     print(len(tokenizedCorpus))
     bowCorpus = [TaggedDocument([' '.join(tup) for tup in words], [idx_tag]) for idx_tag, words in
                  enumerate(tokenizedCorpus)]
     fixSeed = 774965317
     np.random.seed(fixSeed)
-    model = Doc2Vec(bowCorpus, vector_size=300, seed=fixSeed, dm=1, epochs=750)
+    model = Doc2Vec(bowCorpus, vector_size=300, seed=fixSeed, dm=1, epochs=1000)
     modelVectors = model.docvecs.vectors_docs
     pca = PCA(n_components=2, svd_solver='full', whiten=True)
     pcaVectors = pca.fit_transform(modelVectors)
 
-    kmeans = KMeans(n_clusters=5, random_state=fixSeed)
+    kmeans = KMeans(n_clusters=8, random_state=fixSeed)
     kmeans.fit(pcaVectors)
     pca_df = pd.DataFrame(data=pcaVectors, columns=['x', 'y'])
     fig = plt.figure(figsize=(15, 15))
@@ -265,12 +266,13 @@ if __name__ == "__main__":
     ax.grid()
     # plt.show()
     ax.scatter(pca_df.x, pca_df.y, s=15)
-    plt.savefig('test_plot.png')
+    plt.savefig('penta_tercero_test.png')
     pca_df['descripcion'] = pd.Series(tokenizedCorpus)
     pca_df['cluster'] = pd.Series(kmeans.labels_)
     sns.lmplot('x', 'y', data=pca_df, hue='cluster', fit_reg=False)
-    plt.savefig('test_cluster_sns.png')
-    pca_df.to_csv('parte_test.csv')
+    # plt.show()
+    plt.savefig('penta_tercero_test_sns.png')
+    pca_df.to_csv('tetra_test.csv')
     # direcciones = ['delantera', 'trasera', 'izquierda', 'derecha']
     # for direccion in direcciones:
     #     for j in range(8):

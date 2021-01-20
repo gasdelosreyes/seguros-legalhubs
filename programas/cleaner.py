@@ -7,7 +7,6 @@ from nltk.probability import FreqDist
 from nltk.text import Text, ConcordanceIndex
 from nltk.tokenize import word_tokenize
 
-
 def read_file(path, sheet_name=None):
     """
         Lee el archivo y devuelve un dataframe
@@ -59,7 +58,7 @@ def cleaner(w):
                        ['d ', ''],
                        ['dfs', ''],
                        ['agaramond', ''],
-                       ['ff', '']])
+                       ['ff','']])
     w = w.lower()
     w = w.replace('descripcion hecho', '')
     w = re.sub(r'[^\w\s]', '', w)
@@ -68,34 +67,16 @@ def cleaner(w):
     for row in vector:
         w = w.replace(row[0], row[1])
     return w
-
-
-def changeRegex(row):
-    vector = [
-        (r'.?vh.*?', 'vehiculo'),
-        (r'der.*?', 'derecha'), (r'lat.*?', 'parte'), (r'av.*?', 'avenida'), (r'posterior', 'delantera'),
-        (r'amb.*?', 'ambulancia'), (r'tercero .* impacta', 'tercero impacta'), (r'desde izq.*?', 'en parte izquierda'), (r'parte parte', 'parte'), (r'parte parte parte', 'parte'),
-        (r'vh.*?', 'vehiculo'), (r'colis.*?', 'colisiona'), (r'\scho.*?', 'colisiona'), (r'impac.*?', ' colisiona'), (r'parte lateral', 'parte'),
-        (r'su delat.*?', 'su parte delantera'), (r'aseg.*?', 'asegurado'), (r'emb.*?', 'colisiona'), (r'redg.*?', ''), (r'paragolpe delantera', 'parte delantera'),
-        (r'frente delantero', 'parte delantera'), (r'de atras', 'en parte trasera'), (r'por detras', 'en parte trasera'), (r'parte conductor', 'parte izquierda'),
-        (r'golp.*?', ' colisiona'), (r'delant.*?', 'delantera'), (r'contacto', 'colisiona'), (r'parte acompanante', 'parte derecha'), (r'parte medio', 'parte')
-    ]
-    for value in vector:
-        oldString = ' ' + value[0] + ' '
-        newString = ' ' + value[1] + ' '
-        row = re.sub(oldString, newString, row)
-    return row
-
-
+#matriz de correlacion
 def changeStrings(row):
     vector = [
-        (r'vw', 'vehiculo'), (r'veh', 'vehiculo'), (r'vena', 'venia'), (r'guardabarro', 'parte'), (r'guardabarros', 'parte'), (r'vhl', 'vehiculo'),
+        (r'vhl','vehiculo'),(r'vw','vehiculo'),(r'veh','vehiculo'),(r'vena','venia'),(r'guardabarro','parte'),(r'guardabarros','parte'),(r'auto','vehiculo'),(r'automovil','vehiculo'),(r'costado','parte'),
         (r'derecho', 'derecha'), (r'delantero', 'delantera'), (r'trasero', 'trasera'), (r'frontal', 'parte delantera'), (r'lado', 'parte'),
-        (r'pb', 'parte'), (r'puerta', 'parte'),
-        (r'conmi', 'con mi'), (r'choque', 'mi parte delantera'), (r'circ', 'circulaba'), (r'stro', 'siniestro'), (r'ero', 'tercero'), (r'gge', 'garage'),
-        (r' p ', ' parte '), (r'contra\s', 'con '), (r'detras', 'trasera'), (r'atras', 'trasera'), (r'atraz', 'trasera'), (r'roza', 'colisiona'),
-        (r' ro ', ' tercero '), (r'gral', 'general'), (r'paragolpe', 'delantera'), (r'trompa', 'delantera'), (r'izq', 'izquierda'),
-        (r'toco', 'colisiona'), (r'adelante', 'delantera'), (r'izquierdo', 'izquierda'), (r'posterior', 'delantera'), ('con', ''), ('por', '')
+        (r'pb','parte'), (r'puerta', 'parte'),
+        (r'conmi','con mi'), (r'choque', 'mi parte delantera'),(r'circ','circulaba'), (r'stro','siniestro'), (r'ero','tercero'),(r'gge','garage'),
+        (r' p ', ' parte '), (r'contra\s', 'con '), (r'detras','trasera'),(r'atras','trasera'), (r'roza', 'colisiona'),
+        (r' ro ', ' tercero '),(r'gral','general'),(r'paragolpe','delantera'), (r'trompa','delantera'),(r'izq', 'izquierda'),
+        (r'toco','colisiona'),(r'adelante','delantera'),(r'izquierdo','izquierda'),(r'posterior','delantera'),(r'vehiculo','')
     ]
     words = []
     for w in row.split():
@@ -106,26 +87,43 @@ def changeStrings(row):
     row = ' '.join(words)
     return row
 
-
 def changeRegex(row):
-    vector = [
-        (r'\sder.*? ', ' derecha '), (r'lat.*? ', 'parte '), (r'av.*? ', 'avenida '), (r'posterior', 'delantera'),
-        (r'amb.*? ', 'ambulancia '), (r'tercero .* impacta', 'tercero impacta'), (r'desde izq.*? ', 'en parte izquierda '), (r'parte parte', 'parte'), (r'parte parte parte', 'parte'),
-        (r'vh.*? ', 'vehiculo '), (r'colis.*? ', 'colisiona '), (r'\scho.*? ', ' colisiona '), (r'\simpac.*? ', ' colisiona '), (r'parte lateral', 'parte'),
-        (r'su delat.*? ', 'su parte delantera '), (r'aseg.*? ', 'asegurado '), (r'emb.*? ', 'colisiona '), (r'redg.*? ', ''), (r'paragolpe delantera', 'parte delantera'),
-        (r'frente delantero', 'parte delantera'), (r'de atras', 'en parte trasera'), (r'por detras', 'en parte trasera'), (r'parte conductor', 'parte izquierda'),
-        (r' golp.*? ', ' colisiona '), (r'delant.*? ', 'delantera '), (r'contacto', 'colisiona'), (r'parte acompanante', 'parte derecha'), (r'parte medio', 'parte'), (r'mi frente', 'mi parte delantera'),
-        (r'delantera delantera', 'delantera'), (r'auto', r'vehiculo'), (r'vehiculo', ''), (r'costado', 'parte')
+    vector = [ 
+        (r'*vh.*?', 'vehiculo'),(r'*izq.*?','izquierda'),(r'*der.*?','derecha'),(r'*trase.*?','trasera'),
+        (r'*envest.*?','colisiona'),(r'*envist.*?','colisiona'),(r'*embest.*?','colisiona'),
+        (r'der.*?','derecha') , (r'lat.*?', 'parte'), (r'av.*?', 'avenida'), (r'posterior','delantera'),
+        (r'amb.*?', 'ambulancia'),(r'tercero .* impacta', 'tercero impacta'), (r'desde izq.*?', 'en parte izquierda'),
+        (r'colis.*?', 'colisiona'), (r'*cho.*?', 'colisiona'),(r'impac.*?', ' colisiona'), (r'parte lateral', 'parte'),
+        (r'su delat.*?', 'su parte delantera'), (r'aseg.*?', 'asegurado'), (r'emb.*?', 'colisiona'), (r'redg.*?',''),
+        (r'paragolpe delantera','parte delantera'),
+        (r'frente delantero', 'parte delantera'), (r'de atras', 'en parte trasera'), (r'por detras', 'en parte trasera'),(r'parte conductor','parte izquierda'),
+        (r'golp.*?',' colisiona'),(r'delant.*?','delantera'),(r'contacto','colisiona'),(r'parte acompanante','parte derecha'),(r'parte medio','parte')
     ]
     for value in vector:
-        row = re.sub(value[0], value[1], row)
+        oldString = ' ' + value[0] + ' '
+        newString = ' ' + value[1] + ' '
+        if(re.search(oldString,row)):
+            row = re.sub(oldString,newString, row)
+        elif(re.search(f'{vector[0]}',row)):
+            row = re.sub(vector[0],vector[1], row)
     return row
 
+def divideParts(row):
+    vector = ['su','mi','tercero','asegurado','vehiculo','parte','colisiona','lateral','delantera',
+    'derecha','izquierda','trasera','delantero','derecho','izquierdo','trasero','paragolpe','acompanante',
+    'acompadante','guardabarro','guardabarros','auto']
+    for a in vector:
+        for b in vector:
+            string = a + b
+            if(re.search(f' {string} ',row) or re.search(rf' {string}$',row)):
+                newString = a + ' ' + b
+                row = re.sub(string,newString, row)
+    return row
 
 def ratios(w):
     try:
         dic = [
-            'trasera', 'delantera', 'izquierda', 'derecha', 'acompanante'
+            'trasera','delantera','izquierda','derecha','acompanante','atras','vehiculo','embesti'
         ]
         aux = 0
         word = ''
@@ -134,18 +132,16 @@ def ratios(w):
                 aux = fuzz.ratio(w, i)
                 word = i
         if word != '':
-            #print(str(w) + '    CAMBIE POR    ' + str(word))
             return word
         return w
     except TypeError:
         return w
 
-
 def cleanRatios(w):
     try:
         if(len(w) <= 5):
             return w
-        dic = ['izquierda', 'derecha', 'izquierdo', 'derecho', 'paragolpe']
+        dic = ['izquierda','derecha','izquierdo','derecho', 'paragolpe','vehiculo']
         aux = 0
         word = ''
         for i in dic:
@@ -153,14 +149,12 @@ def cleanRatios(w):
                 aux = fuzz.partial_ratio(w, i)
                 word = i
         if word != '':
-            #print(str(w) + '    CAMBIE POR    ' + str(word))
             return word
         return w
     except TypeError:
         return w
 
-
-def repeated(row):
+def deleteRepeated(row):
     row = row.split()
     i = 0
     while i < len(row) - 1:
@@ -170,34 +164,62 @@ def repeated(row):
     return ' '.join(row)
 
 
+def changePersons(row):
+    words = [('mi','asegurado')]
+    vector = ['delantera','derecha','trasera','izquierda']
+    for word in words:
+        for value in vector:
+            oldString = word[0] +  ' ' + value
+            oldStringv2 = word[0] +  ' parte'
+            newString = word[1] + ' parte ' + value
+            newStringv2 = word[1] +  ' parte'
+            if(re.search(oldString,row)):
+                row = re.sub(oldString,newString,row)
+            elif(re.search(oldStringv2,row)):
+                row = re.sub(oldStringv2,newStringv2,row)
+    return row
+
 def clean(serie):
     """
     Limpia la columna donde estan las descripciones 
     :function: estructura todas las descripciones
     :returns: devuelve la misma descripcion pero con las palabras de to_rep a for_rep
     """
-    for index, row in enumerate(serie):
-        serie.iloc[index] = ' '.join(list(map(cleanRatios, row.split())))
 
     for index, row in enumerate(serie):
-        serie.iloc[index] = ' '.join(list(map(ratios, row.split())))
+        serie.iloc[index] = changeRegex(row)
+
+    for index, row in enumerate(serie):
+        serie.iloc[index] = changeStrings(row)
+
+    for index, row in enumerate(serie):
+        serie.iloc[index] = divideParts(row)
+
+    
+    for index, row in enumerate(serie):
+        serie.iloc[index] = ' '.join(list(map(cleanRatios,row.split())))
+    
+    for index, row in enumerate(serie):
+        serie.iloc[index] = ' '.join(list(map(ratios,row.split())))
 
     for index, row in enumerate(serie):
         serie.iloc[index] = changeStrings(row)
 
     for index, row in enumerate(serie):
         serie.iloc[index] = changeRegex(row)
+    
+    serie = pd.Series(list(map(deleteRepeated, serie)))
 
-    serie = pd.Series(list(map(repeated, serie)))
-
-    return serie
-
+    for index, row in enumerate(serie):
+        serie.iloc[index] = changePersons(row)
+        
+    return serie 
 
 def nonStop(w):
+    #me
     return ' '.join(i for i in w.split() if i not in ['el', 'la', 'los', 'las', 'ellos', 'nosotros', 'lo', 'le',
                                                       'que', 'un', 'se', 'de', 'a', 'y', 'sobre', 'cuando', 'do', 'una',
-                                                      'en', 'del', 'al', 'me', 'ella'])
-
+                                                      'en', 'del', 'al','ella','del','por','con','no','si','ni','en'])
 
 def separador(ds):
     """
@@ -213,7 +235,6 @@ def separador(ds):
     ds_b = ds[ds['cod_accidente'] == 'aci']
     ds_p = ds[ds['cod_accidente'] == 'peaton']
     return ds_a, ds_m, ds_b, ds_p
-
 
 if __name__ == "__main__":
     df1 = read_file('../dataset/casos_universidad.xlsx')

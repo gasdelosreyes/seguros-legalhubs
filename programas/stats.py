@@ -7,21 +7,21 @@ from cluster import *
 from wordcloud import WordCloud
 
 
-def plotHist(dic, nombre):
+def plotHist(dic, nombre, sub_folder=''):
 	"dic = { clave:str, valor:int }"
 	plt.clf()
 	plt.title(nombre)
 	plt.xlabel('%')
 	plt.barh(list(dic.keys())[:20], [i * 100 for i in list(dic.values())[:20]])
-	plt.savefig('hist_' + nombre + '.png')
+	plt.savefig(sub_folder + 'hist_' + nombre + '.png')
 
 
-def plotWordCloud(text, nombre):
+def plotWordCloud(text, nombre, sub_folder=''):
 	wordcloud = WordCloud(max_font_size=50, max_words=50, background_color="white").generate(text)
 	plt.imshow(wordcloud, interpolation='bilinear')
 	plt.axis("off")
 	plt.title(nombre)
-	plt.savefig('wordcloud_' + nombre + '.png')
+	plt.savefig(sub_folder + 'wordcloud_' + nombre + '.png')
 
 
 df = pd.read_csv('../dataset/casos/auto.csv')
@@ -32,5 +32,5 @@ for responsabilidad in responsabilidades:
 	for i in resp:
 		fstring += i
 	resp = pd.Series(fstring)
-	plotHist(dict(resp.value_counts(normalize=True)), responsabilidad + '1')
-	plotWordCloud(' '.join(fstring), responsabilidad + '1')
+	plotHist(dict(resp.value_counts(normalize=True)), responsabilidad + '1', sub_folder='plots/')
+	plotWordCloud(' '.join(fstring), responsabilidad + '1', sub_folder='plots/')

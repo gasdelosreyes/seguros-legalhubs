@@ -109,71 +109,17 @@ def filterGrams(gram):
 
 
 directionWords = ['izquierda', 'derecha', 'delantera', 'trasera']
+grlWords = directionWords + ['asegurado', 'colisiona', 'tercero', 'parte']
 
-"""
-(mi, parte, delantera)              500
-(colisiona, parte, trasera)         310
-(parte, delantera, derecha)         239
-(colisiona, parte, delantera)       199
-(parte, delantera, izquierda)       187
-(su, parte, delantera)              177
-(parte, trasera, izquierda)         174
-(parte, trasera, derecha)           172
-(su, parte, trasera)                156
-(parte, delantera, parte)           153
-(parte, trasera, vehiculo)          120
-(parte, trasera, parte)              96
-(trasera, vehiculo, tercero)         95
-(delantera, parte, trasera)          94
-(parte, delantera, vehiculo)         92
-(colisiona, parte, izquierda)        90
-(marcha, trasera, colisiona)         87
-(colisiona, parte, derecha)          85
-(vehiculo, circulaba, delantera)     68
-(marcha, trasera, para)              66
-            #########
-(colisiona, su, parte, delantera)           96
-(parte, delantera, parte, trasera)          72
-(colisiona, su, parte, trasera)             71
-(parte, trasera, vehiculo, tercero)         63
-(colisiona, parte, delantera, derecha)      57
-(su, parte, delantera, parte)               55
-(tercero, colisiona, parte, trasera)        50
-(mi, parte, delantera, parte)               47
-(colisiona, parte, trasera, vehiculo)       46
-(colisiona, parte, delantera, izquierda)    45
-(colisiona, parte, trasera, izquierda)      42
-(colisiona, mi, parte, delantera)           42
-(mi, parte, delantera, auto)                41
-(parte, delantera, vehiculo, asegurado)     39
-(colisiona, parte, trasera, derecha)        39
-(tercero, colisiona, parte, delantera)      38
-(colisiona, parte, trasera, parte)          35
-(su, parte, delantera, izquierda)           34
-(parte, trasera, parte, delantera)          34
-(parte, delantera, derecha, vehiculo)       32
-            #########
-(colisiona, su, parte, delantera, parte)              42
-(su, parte, delantera, parte, trasera)                33
-(vehiculo, tercero, colisiona, parte, delantera)      25
-(vehiculo, tercero, colisiona, parte, trasera)        25
-(tercero, colisiona, su, parte, delantera)            22
-(mi, parte, delantera, parte, trasera)                20
-(parte, delantera, parte, trasera, vehiculo)          19
-(colisiona, parte, trasera, vehiculo, tercero)        19
-(parte, delantera, vehiculo, asegurado, parte)        17
-(parte, delantera, parte, trasera, tercero)           17
-(colisiona, su, parte, delantera, derecha)            17
-(colisiona, su, parte, delantera, izquierda)          17
-(asegurado, parte, trasera, vehiculo, tercero)        16
-(parte, delantera, derecha, vehiculo, asegurado)      16
-(delantera, vehiculo, asegurado, parte, trasera)      16
-(mi, parte, delantera, su, parte)                     15
-(colisiona, parte, delantera, vehiculo, asegurado)    15
-(colisiona, parte, delantera, parte, trasera)         15
-(delantera, parte, trasera, vehiculo, tercero)        15
-(trasera, vehiculo, tercero, no, hubo)                15
-"""
+
+def reClean(row):
+    row = row.split()
+    i = 0
+    while i < len(row):
+        if row[i] not in grlWords:
+            del row[i]
+        i += 1
+    return ' '.join(row)
 
 
 def analisis(descripciones, n_grams, dic=False):
@@ -190,22 +136,27 @@ def analisis(descripciones, n_grams, dic=False):
     return grams
 
 
-def is_in(words, grams):
+def direccionInTupla(tupla):
+    for direccion in directionWords:
+        if direccion in tupla:
+            return True
+    return False
+
+
+def is_in(words, grams, pos=0):
     tuplas = []
     for tupla in grams:
         for word in words:
-            for direccion in directionWords:
-                if word == tupla[0] and direccion in tupla:
-                    tuplas.append(tupla)
+            if word == tupla[pos] and direccionInTupla(tupla):
+                tuplas.append(tupla)
     return tuplas
 
 
-def is_trivial(descripciones):
-
-    pentaGrams = analisis(descripciones, 5, True)
+def is_trivial(descripciones, n_grams=3):
+    pentaGrams = analisis(descripciones, n_grams, True)
     lado_aseg, lado_ter = [], []
     for i in range(len(pentaGrams) - 1):
-        gram = is_in(['mi'], pentaGrams[str(i)])
+        gram = is_in(['asegurado'], pentaGrams[str(i)])
         if gram:
             lado_aseg.append([gram, i])
         gram = is_in(['su', 'tercero'], pentaGrams[str(i)])
@@ -217,9 +168,10 @@ def is_trivial(descripciones):
 
 if __name__ == "__main__":
     df = pd.read_csv('~/Documentos/LegalHub/dataset/casos/auto.csv')
-    lado_aseg, lado_ter = is_trivial(df['descripcion'])
-    # tokenizedCorpus = [i[0] for i in lado_aseg]
-    tokenizedCorpus = [i[0] for i in lado_ter]
+    df['descripcion'] = pd.Series(list(map(reClean, df['descripcion'])))
+    lado_aseg, lado_ter = is_trivial(df['descripcion'], 5)
+    file_name = 'lado_aseg_pentagrama'
+    tokenizedCorpus = [i[0] for i in lado_aseg]
     # df_model = get_concordance(df['descripcion'])
     # tokenizedCorpus = [list(nltk.ngrams(word_tokenize(i), 2)) for i in df['descripcion']]
     # tokenizedCorpus += [list(nltk.ngrams(word_tokenize(i), 3)) for i in df['descripcion']]
@@ -229,19 +181,34 @@ if __name__ == "__main__":
     print(len(tokenizedCorpus))
     bowCorpus = [TaggedDocument([' '.join(tup) for tup in words], [idx_tag]) for idx_tag, words in
                  enumerate(tokenizedCorpus)]
+
     fixSeed = 774965317
     np.random.seed(fixSeed)
+
     model = Doc2Vec(bowCorpus, vector_size=300, seed=fixSeed, dm=1, epochs=1000)
     modelVectors = model.docvecs.vectors_docs
+
     pca = PCA(n_components=2, svd_solver='full', whiten=True)
     pcaVectors = pca.fit_transform(modelVectors)
 
     kmeans = KMeans(n_clusters=8, random_state=fixSeed)
     kmeans.fit(pcaVectors)
+
     pca_df = pd.DataFrame(data=pcaVectors, columns=['x', 'y'])
+    pca_df['idx_descripcion'] = pd.Series([i[1] for i in lado_aseg])
+
     fig = plt.figure(figsize=(15, 15))
     ax = fig.add_subplot(111)
-    print('dimension reduced= ', silhouette_score(pcaVectors, kmeans.labels_, metric='euclidean'))
+    print('silhouette_score = ', silhouette_score(pcaVectors, kmeans.labels_, metric='euclidean'))
+    ax.grid()
+    ax.scatter(pca_df.x, pca_df.y, s=15)
+    plt.savefig(file_name + '.png')
+    pca_df['descripcion'] = pd.Series(tokenizedCorpus)
+    pca_df['cluster'] = pd.Series(kmeans.labels_)
+    sns.lmplot('x', 'y', data=pca_df, hue='cluster', fit_reg=False)
+    plt.savefig(file_name + '_sns.png')
+    pca_df.to_csv(file_name + '.csv')
+
     # k = 0
     # rans = []
     # while k < 5:
@@ -263,16 +230,6 @@ if __name__ == "__main__":
     # c = hist[xidx, yidx]
     # ax1.scatter(x, y, c=c)
 
-    ax.grid()
-    # plt.show()
-    ax.scatter(pca_df.x, pca_df.y, s=15)
-    plt.savefig('penta_tercero_test.png')
-    pca_df['descripcion'] = pd.Series(tokenizedCorpus)
-    pca_df['cluster'] = pd.Series(kmeans.labels_)
-    sns.lmplot('x', 'y', data=pca_df, hue='cluster', fit_reg=False)
-    # plt.show()
-    plt.savefig('penta_tercero_test_sns.png')
-    pca_df.to_csv('tetra_test.csv')
     # direcciones = ['delantera', 'trasera', 'izquierda', 'derecha']
     # for direccion in direcciones:
     #     for j in range(8):

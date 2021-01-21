@@ -7,10 +7,6 @@ from nltk.probability import FreqDist
 from nltk.text import Text, ConcordanceIndex
 from nltk.tokenize import word_tokenize
 
-fileCreated = open("divideStrings.txt","w")
-filetwoCreated = open("stringsChanges.txt","w")
-filethreeCreated = open("regexChanges.txt","w")
-fileratioCreated = open("ratioChanges.txt","w")
 def read_file(path, sheet_name=None):
     """
         Lee el archivo y devuelve un dataframe
@@ -86,10 +82,7 @@ def changeStrings(row):
     for w in row.split():
         for value in vector:
             if(w == value[0]):
-                filetwoCreated.write(row+ '\n')
-                filetwoCreated.write('STRING ORIGINAL: ' + w + '\n')
                 w = value[1]
-                filetwoCreated.write('STRING CAMBIADO: ' + w + '\n')
         words.append(w)
     row = ' '.join(words)
     return row
@@ -98,46 +91,46 @@ def changeRegex(row):
     vector = [ 
         (r'*vh.*?', 'vehiculo'),(r'*izq.*?','izquierda'),(r'*der.*?','derecha'),(r'*trase.*?','trasera'),
         (r'*envest.*?','colisiona'),(r'*envist.*?','colisiona'),(r'*embest.*?','colisiona'),
-        (r'der.*?','derecha') , (r'lat.*?', 'parte'), (r'av.*?', 'avenida'), (r'posterior','delantera'),
         (r'amb.*?', 'ambulancia'),(r'tercero .* impacta', 'tercero impacta'), (r'desde izq.*?', 'en parte izquierda'),
-        (r'colis.*?', 'colisiona'), (r'*cho.*?', 'colisiona'),(r'impac.*?', ' colisiona'), (r'parte lateral', 'parte'),
-        (r'su delat.*?', 'su parte delantera'), (r'aseg.*?', 'asegurado'), (r'emb.*?', 'colisiona'), (r'redg.*?',''),
-        (r'paragolpe delantera','parte delantera'),
-        (r'frente delantero', 'parte delantera'), (r'de atras', 'en parte trasera'), (r'por detras', 'en parte trasera'),(r'parte conductor','parte izquierda'),
-        (r'golp.*?',' colisiona'),(r'delant.*?','delantera'),(r'contacto','colisiona'),(r'parte acompanante','parte derecha'),(r'parte medio','parte')
+        (r'colis.*?', 'colisiona'), (r'*cho.*?', 'colisiona'),(r'impac.*?', ' colisiona')
     ]
     for value in vector:
         oldString = ' ' + value[0] + ' '
         newString = ' ' + value[1] + ' '
         if(re.search(oldString,row)):
-            filethreeCreated.write(row+ '\n')
-            filethreeCreated.write('STRING ORIGINAL: ' + oldString + '\n')
-            filethreeCreated.write('STRING CAMBIADO: ' + newString + '\n')
             row = re.sub(oldString,newString, row)
-        elif(re.search(f'{vector[0]}',row)):
-            filethreeCreated.write('STRING ORIGINAL: ' + oldString + '\n')
-            filethreeCreated.write('STRING CAMBIADO: ' + newString + '\n')
-            row = re.sub(vector[0],vector[1], row)
+    vector2 = [
+        (r'su delat.*?', 'su parte delantera'), (r'aseg.*?', 'asegurado'), (r'emb.*?', 'colisiona'), (r'redg.*?',''),
+        (r'paragolpe delantera','parte delantera'), (r'posterior','delantera'), (r'av.*?', 'avenida'), (r'der.*?','derecha') , (r'lat.*?', 'parte'),
+        (r'frente delantero', 'parte delantera'), (r'de atras', 'en parte trasera'), (r'por detras', 'en parte trasera'),(r'parte conductor','parte izquierda'),
+        (r'golp.*?',' colisiona'),(r'delant.*?','delantera'),(r'contacto','colisiona'),(r'parte acompanante','parte derecha'),(r'parte medio','parte'), (r'parte lateral', 'parte')
+    ]
+    for value in vector2:
+        oldString = value[0] + ' '
+        newString = value[1] + ' '
+        if(re.search(oldString,row)):
+            row = re.sub(oldString,newString, row)
     return row
 
-def divideParts(row):
-    vector = ['su','mi','tercero','asegurado','vehiculo','parte','colisiona','lateral','delantera',
+vector = ['su','mi','tercero','asegurado','vehiculo','parte','colisiona','lateral','delantera',
     'derecha','izquierda','trasera','delantero','derecho','izquierdo','trasero','paragolpe','acompanante',
     'acompadante','guardabarro','guardabarros','auto']
-    for a in vector:
-        for b in vector:
-            string = a + b
-            if(re.search(f' {string} ',row) or re.search(rf' {string}$',row)):
-                fileCreated.write(row+ '\n')
-                fileCreated.write('STRING ERRADO ' + '\n')
-                fileCreated.write(string + '\n')
-                newString = a + ' ' + b
-                row = re.sub(string,newString, row)
-                fileCreated.write('CAMBIADO ' + '\n')
-                fileCreated.write(row + '\n')
-                fileCreated.write('STRING CAMBIADO ' + '\n')
-                fileCreated.write(newString + '\n')
+
+unitedStrings = []
+separatedStrings = []
+for a in vector:
+    for b in vector:
+        unitedStrings.append(a+b)
+        separatedStrings.append((a,b))
+unitedStrings = np.array(unitedStrings)
+separatedStrings = np.array(separatedStrings)
+
+def divideParts(row):
+    for i in range(len(unitedStrings)):
+        newString = separatedStrings[i][0] + ' ' + separatedStrings[i][1]
+        row = re.sub(unitedStrings[i],newString, row)
     return row
+        # if re.search(r' '+unitedStrings[i],row) or re.search(' '+unitedStrings[i]+' ',row):
 
 def ratios(w):
     try:
@@ -151,7 +144,6 @@ def ratios(w):
                 aux = fuzz.ratio(w, i)
                 word = i
         if word != '':
-            fileratioCreated.write(str(w) + '    CAMBIE POR    ' + str(word) + '\n')
             return word
         return w
     except TypeError:
@@ -169,11 +161,25 @@ def cleanRatios(w):
                 aux = fuzz.partial_ratio(w, i)
                 word = i
         if word != '':
-            fileratioCreated.write(str(w) + '    CAMBIE POR    ' + str(word) + '\n')
             return word
         return w
     except TypeError:
         return w
+
+def changePersons(row):
+    words = [('mi','asegurado')]
+    vector = ['delantera','derecha','trasera','izquierda']
+    for word in words:
+        for value in vector:
+            oldString = word[0] +  ' ' + value
+            oldStringv2 = word[0] +  ' parte'
+            newString = word[1] + ' parte ' + value
+            newStringv2 = word[1] +  ' parte'
+            if(re.search(oldString,row)):
+                row = re.sub(oldString,newString,row)
+            elif(re.search(oldStringv2,row)):
+                row = re.sub(oldStringv2,newStringv2,row)
+    return row
 
 def deleteRepeated(row):
     row = row.split()
@@ -201,16 +207,11 @@ def clean(serie):
 
     for index, row in enumerate(serie):
         serie.iloc[index] = divideParts(row)
-
     
     for index, row in enumerate(serie):
-        fileratioCreated.write('PARCIAL RATIO CHANGE'+ '\n')
-        fileratioCreated.write(row + '\n')
         serie.iloc[index] = ' '.join(list(map(cleanRatios,row.split())))
     
     for index, row in enumerate(serie):
-        fileratioCreated.write('RATIO CHANGE'+ '\n')
-        fileratioCreated.write(row + '\n')
         serie.iloc[index] = ' '.join(list(map(ratios,row.split())))
 
     for index, row in enumerate(serie):
@@ -219,11 +220,10 @@ def clean(serie):
     for index, row in enumerate(serie):
         serie.iloc[index] = changeRegex(row)
     
-    fileCreated.close()
-    filetwoCreated.close()
-    filethreeCreated.close()
-    fileratioCreated.close()
     serie = pd.Series(list(map(deleteRepeated, serie)))
+
+    for index, row in enumerate(serie):
+        serie.iloc[index] = changePersons(row)
 
     return serie 
 

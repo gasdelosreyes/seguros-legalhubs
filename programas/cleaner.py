@@ -1,10 +1,13 @@
-import re
 import nltk
 import numpy as np
 import pandas as pd
+import re
+import time
+
 from fuzzywuzzy import fuzz
 from nltk.probability import FreqDist
-from nltk.text import Text, ConcordanceIndex
+from nltk.text import ConcordanceIndex
+from nltk.text import Text
 from nltk.tokenize import word_tokenize
 
 def read_file(path, sheet_name=None):
@@ -76,12 +79,13 @@ def changeStrings(row):
         (r'conmi','con mi'), (r'choque', 'mi parte delantera'),(r'circ','circulaba'), (r'stro','siniestro'), (r'ero','tercero'),(r'gge','garage'),
         (r' p ', ' parte '), (r'contra\s', 'con '), (r'detras','trasera'),(r'atras','trasera'), (r'roza', 'colisiona'),
         (r' ro ', ' tercero '),(r'gral','general'),(r'paragolpe','delantera'), (r'trompa','delantera'),(r'izq', 'izquierda'),
-        (r'toco','colisiona'),(r'adelante','delantera'),(r'izquierdo','izquierda'),(r'posterior','delantera'),(r'vehiculo','')
+        (r'toco','colisiona'),(r'toca','colisiona'),(r'roza','colisiona'),(r'adelante','delantera'),(r'izquierdo','izquierda'),(r'posterior','delantera'),(r'vehiculo',''),
+        (r'raspon','colisiona'),(r'zona','parte')
     ]
     words = []
     for w in row.split():
         for value in vector:
-            if(w == value[0]):
+            if w == value[0]:
                 w = value[1]
         words.append(w)
     row = ' '.join(words)
@@ -91,33 +95,52 @@ def changeRegex(row):
     vector = [ 
         (r'*vh.*?', 'vehiculo'),(r'*izq.*?','izquierda'),(r'*der.*?','derecha'),(r'*trase.*?','trasera'),
         (r'*envest.*?','colisiona'),(r'*envist.*?','colisiona'),(r'*embest.*?','colisiona'),
-        (r'der.*?','derecha') , (r'lat.*?', 'parte'), (r'av.*?', 'avenida'), (r'posterior','delantera'),
         (r'amb.*?', 'ambulancia'),(r'tercero .* impacta', 'tercero impacta'), (r'desde izq.*?', 'en parte izquierda'),
-        (r'colis.*?', 'colisiona'), (r'*cho.*?', 'colisiona'),(r'impac.*?', ' colisiona'), (r'parte lateral', 'parte'),
-        (r'su delat.*?', 'su parte delantera'), (r'aseg.*?', 'asegurado'), (r'emb.*?', 'colisiona'), (r'redg.*?',''),
-        (r'paragolpe delantera','parte delantera'),
-        (r'frente delantero', 'parte delantera'), (r'de atras', 'en parte trasera'), (r'por detras', 'en parte trasera'),(r'parte conductor','parte izquierda'),
-        (r'golp.*?',' colisiona'),(r'delant.*?','delantera'),(r'contacto','colisiona'),(r'parte acompanante','parte derecha'),(r'parte medio','parte')
+        (r'colis.*?', 'colisiona'), (r'*cho.*?', 'colisiona'),(r'impac.*?', ' colisiona')
     ]
+
     for value in vector:
         oldString = ' ' + value[0] + ' '
         newString = ' ' + value[1] + ' '
-        if(re.search(oldString,row)):
-            row = re.sub(oldString,newString, row)
-        elif(re.search(f'{vector[0]}',row)):
-            row = re.sub(vector[0],vector[1], row)
+        row = re.sub(oldString,newString, row)
+
+    vector2 = [
+        (r'su delat.*?', 'su parte delantera'), (r'aseg.*?', 'asegurado'), (r'emb.*?', 'colisiona'), (r'redg.*?',''),
+        (r'paragolpe delantera','parte delantera'), (r'posterior','delantera'), (r'av.*?', 'avenida'), (r'der.*?','derecha') , (r'lat.*?', 'parte'),
+        (r'frente delantero', 'parte delantera'), (r'de atras', 'en parte trasera'), (r'por detras', 'en parte trasera'),(r'parte conductor','parte izquierda'),
+        (r'golp.*?',' colisiona'),(r'delant.*?','delantera'),(r'contacto','colisiona'),(r'parte acompanante','parte derecha'),(r'parte medio','parte'), (r'parte lateral', 'parte')
+    ]
+
+    for value in vector2:
+        oldString = value[0] + ' '
+        newString = value[1] + ' '
+        row = re.sub(oldString,newString, row)
+    row = re.sub(r'embes.*$','colisiona',row)
+    row = re.sub(r'embes.$','colisiona',row)
+    row = re.sub(r'embes*$','colisiona',row)
+    row = re.sub(r'embesti$','colisiona',row)
     return row
 
-def divideParts(row):
-    vector = ['su','mi','tercero','asegurado','vehiculo','parte','colisiona','lateral','delantera',
+
+vector = ['su','mi','tercero','asegurado','vehiculo','parte','colisiona','lateral','delantera',
     'derecha','izquierda','trasera','delantero','derecho','izquierdo','trasero','paragolpe','acompanante',
     'acompadante','guardabarro','guardabarros','auto']
-    for a in vector:
-        for b in vector:
-            string = a + b
-            if(re.search(f' {string} ',row) or re.search(rf' {string}$',row)):
-                newString = a + ' ' + b
-                row = re.sub(string,newString, row)
+
+unitedStrings = []
+separatedStrings = []
+for a in vector:
+    for b in vector:
+        unitedStrings.append(a+b)
+        separatedStrings.append((a,b))
+unitedStrings = np.array(unitedStrings)
+separatedStrings = np.array(separatedStrings)
+
+def divideParts(row):
+    for i in range(len(unitedStrings)):
+        newString = separatedStrings[i][0] + ' ' + separatedStrings[i][1]
+        row = re.sub(unitedStrings[i],newString, row)   
+        # if re.search(r' '+unitedStrings[i],row) or re.search(' '+unitedStrings[i]+' ',row):
+            
     return row
 
 def ratios(w):
@@ -184,35 +207,18 @@ def clean(serie):
     Limpia la columna donde estan las descripciones 
     :function: estructura todas las descripciones
     :returns: devuelve la misma descripcion pero con las palabras de to_rep a for_rep
+    tarda al rededor de 1 min 
     """
 
-    for index, row in enumerate(serie):
-        serie.iloc[index] = changeRegex(row)
-
-    for index, row in enumerate(serie):
-        serie.iloc[index] = changeStrings(row)
-
-    for index, row in enumerate(serie):
-        serie.iloc[index] = divideParts(row)
-
-    
+    serie = pd.Series(list(map(changeRegex, serie)))
+    serie = pd.Series(list(map(changeStrings, serie)))
+    serie = pd.Series(list(map(divideParts, serie)))
     for index, row in enumerate(serie):
         serie.iloc[index] = ' '.join(list(map(cleanRatios,row.split())))
-    
-    for index, row in enumerate(serie):
         serie.iloc[index] = ' '.join(list(map(ratios,row.split())))
-
-    for index, row in enumerate(serie):
-        serie.iloc[index] = changeStrings(row)
-
-    for index, row in enumerate(serie):
-        serie.iloc[index] = changeRegex(row)
-    
-    serie = pd.Series(list(map(deleteRepeated, serie)))
-
-    for index, row in enumerate(serie):
-        serie.iloc[index] = changePersons(row)
-        
+    serie = pd.Series(list(map(changeStrings, serie)))
+    serie = pd.Series(list(map(changeRegex, serie)))
+    serie = pd.Series(list(map(deleteRepeated, serie)))        
     return serie 
 
 def nonStop(w):
@@ -237,6 +243,7 @@ def separador(ds):
     return ds_a, ds_m, ds_b, ds_p
 
 if __name__ == "__main__":
+    start = time.time()
     df1 = read_file('../dataset/casos_universidad.xlsx')
     df2 = read_file('../dataset/casos_zurich_20201228.xlsx', 'Dataset')
 
@@ -269,6 +276,7 @@ if __name__ == "__main__":
     moto.to_csv('../dataset/casos/moto.csv', index=False, header=True)
     bici.to_csv('../dataset/casos/bici.csv', index=False, header=True)
     peaton.to_csv('../dataset/casos/peaton.csv', index=False, header=True)
+    print('Tiempo de ejecución: ',round(time.time()-start,2),'s')
 
     # auto_df1 = df1[df1['cod_accidente'] == 'aa']
     # # Data to plot

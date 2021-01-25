@@ -80,7 +80,7 @@ def changeStrings(row):
         (r' p ', ' parte '), (r'contra\s', 'con '), (r'detras','trasera'),(r'atras','trasera'), (r'roza', 'colisiona'),
         (r' ro ', ' tercero '),(r'gral','general'),(r'paragolpe','delantera'), (r'trompa','delantera'),(r'izq', 'izquierda'),
         (r'toco','colisiona'),(r'toca','colisiona'),(r'roza','colisiona'),(r'adelante','delantera'),(r'izquierdo','izquierda'),(r'posterior','delantera'),(r'vehiculo',''),
-        (r'raspon','colisiona'),(r'zona','parte')
+        (r'raspon','colisiona'),(r'zona','parte'),(r'roce','colisiona'),(r'ro','tercero'),(r'raye','colisiona'),(r'aprt','parte')
     ]
     words = []
     for w in row.split():
@@ -108,7 +108,8 @@ def changeRegex(row):
         (r'su delat.*?', 'su parte delantera'), (r'aseg.*?', 'asegurado'), (r'emb.*?', 'colisiona'), (r'redg.*?',''),
         (r'paragolpe delantera','parte delantera'), (r'posterior','delantera'), (r'av.*?', 'avenida'), (r'der.*?','derecha') , (r'lat.*?', 'parte'),
         (r'frente delantero', 'parte delantera'), (r'de atras', 'en parte trasera'), (r'por detras', 'en parte trasera'),(r'parte conductor','parte izquierda'),
-        (r'golp.*?',' colisiona'),(r'delant.*?','delantera'),(r'contacto','colisiona'),(r'parte acompanante','parte derecha'),(r'parte medio','parte'), (r'parte lateral', 'parte')
+        (r'golp.*?',' colisiona'),(r'delant.*?','delantera'),(r'contacto','colisiona'),(r'parte acompanante','parte derecha'),(r'parte medio','parte'), 
+        (r'parte lateral', 'parte'),('sector','parte'),('zona','parte')
     ]
 
     for value in vector2:
@@ -124,7 +125,7 @@ def changeRegex(row):
 
 vector = ['su','mi','tercero','asegurado','vehiculo','parte','colisiona','lateral','delantera',
     'derecha','izquierda','trasera','delantero','derecho','izquierdo','trasero','paragolpe','acompanante',
-    'acompadante','guardabarro','guardabarros','auto']
+    'acompadante','guardabarro','guardabarros','auto','del','agaramond','agaramon','en','estaba','el']
 
 unitedStrings = []
 separatedStrings = []
@@ -276,7 +277,7 @@ if __name__ == "__main__":
     moto.to_csv('../dataset/casos/moto.csv', index=False, header=True)
     bici.to_csv('../dataset/casos/bici.csv', index=False, header=True)
     peaton.to_csv('../dataset/casos/peaton.csv', index=False, header=True)
-    print('Tiempo de ejecución: ',round(time.time()-start,2),'s')
+    print('Tiempo de ejecución: ',round(time.time()-start,2)//60,'min',round(time.time()-start,2)%60,'s')
 
     # auto_df1 = df1[df1['cod_accidente'] == 'aa']
     # # Data to plot

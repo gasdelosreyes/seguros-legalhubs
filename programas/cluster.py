@@ -1,4 +1,3 @@
-import gensim
 import matplotlib.pyplot as plt
 import nltk
 import numpy as np
@@ -6,6 +5,7 @@ import pandas as pd
 import random
 import seaborn as sns
 import sys
+import time
 
 from tqdm import tqdm as tq
 
@@ -109,7 +109,7 @@ def filterGrams(gram):
 
 
 directionWords = ['izquierda', 'derecha', 'delantera', 'trasera']
-grlWords = directionWords + ['asegurado', 'colisiona', 'tercero', 'parte']
+grlWords = directionWords + ['asegurado', 'colisiona', 'tercero', 'parte', 'detenido']
 
 
 def reClean(row):
@@ -118,6 +118,7 @@ def reClean(row):
     while i < len(row):
         if row[i] not in grlWords:
             del row[i]
+            i -= 1
         i += 1
     return ' '.join(row)
 
@@ -147,7 +148,7 @@ def is_in(words, grams, pos=0):
     tuplas = []
     for tupla in grams:
         for word in words:
-            if word == tupla[pos] and direccionInTupla(tupla):
+            if word == tupla[pos]:
                 tuplas.append(tupla)
     return tuplas
 
@@ -167,10 +168,11 @@ def is_trivial(descripciones, n_grams=3):
 
 
 if __name__ == "__main__":
+    start = time.time()
     df = pd.read_csv('~/Documentos/LegalHub/dataset/casos/auto.csv')
-    df['descripcion'] = pd.Series(list(map(reClean, df['descripcion'])))
-    lado_aseg, lado_ter = is_trivial(df['descripcion'], 5)
-    file_name = 'lado_aseg_pentagrama'
+    # df['descripcion'] = pd.Series(list(map(reClean, df['descripcion'])))
+    lado_aseg, lado_ter = is_trivial(df['descripcion'], 4)
+    file_name = 'lado_aseg_tetragrama2'
     tokenizedCorpus = [i[0] for i in lado_aseg]
     # df_model = get_concordance(df['descripcion'])
     # tokenizedCorpus = [list(nltk.ngrams(word_tokenize(i), 2)) for i in df['descripcion']]
@@ -203,7 +205,7 @@ if __name__ == "__main__":
     ax.grid()
     ax.scatter(pca_df.x, pca_df.y, s=15)
     plt.savefig(file_name + '.png')
-    pca_df['descripcion'] = pd.Series(tokenizedCorpus)
+    pca_df['descripcion'] = pd.Series(list2str(tokenizedCorpus))
     pca_df['cluster'] = pd.Series(kmeans.labels_)
     sns.lmplot('x', 'y', data=pca_df, hue='cluster', fit_reg=False)
     plt.savefig(file_name + '_sns.png')
@@ -267,3 +269,5 @@ if __name__ == "__main__":
     sns.lmplot('x', 'y', data=pca_df, hue='cluster', fit_reg=False)
     plt.savefig('test_recluster_sns.png')
     pca_df.to_csv('parte_test.csv')"""
+    t = round(time.time() - start)
+    print('Tiempo transcurrido :', t // 60, 'min:', t % 60, 'seg')

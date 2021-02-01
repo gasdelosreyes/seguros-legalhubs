@@ -102,9 +102,17 @@ def list2str(x): return ' '.join(x)
 
 
 def filterGrams(gram):
+    """
+    verdadero si la cuarta palabra de gram es direccional
+    """
+    longitud = len(gram)
+    # print(longitud)
     for i in directionWords:
         if i in gram:
-            return True
+            if longitud < 5 and i == gram[-1]:
+                return True
+            elif 5 <= longitud and i == gram[3]:
+                return True
     return False
 
 
@@ -153,27 +161,34 @@ def is_in(words, grams, pos=0):
     return tuplas
 
 
-def is_trivial(descripciones, n_grams=3):
+def is_trivial(descripciones, n_grams=3, tercero=0):
     pentaGrams = analisis(descripciones, n_grams, True)
     lado_aseg, lado_ter = [], []
     for i in range(len(pentaGrams) - 1):
         gram = is_in(['asegurado'], pentaGrams[str(i)])
+        # gram += is_in(['asegurado'], pentaGrams[str(i)], pos=0)
         if gram:
             lado_aseg.append([gram, i])
         gram = is_in(['su', 'tercero'], pentaGrams[str(i)])
         if gram:
             lado_ter.append([gram, i])
     print('se encontraron', len(lado_ter), 'descripciones del tercero y ', len(lado_aseg), 'del asegurado')
-    return lado_aseg, lado_ter
+    if tercero:
+        return lado_ter
+    return lado_aseg
 
 
 if __name__ == "__main__":
     start = time.time()
     df = pd.read_csv('~/Documentos/LegalHub/dataset/casos/auto.csv')
     # df['descripcion'] = pd.Series(list(map(reClean, df['descripcion'])))
-    lado_aseg, lado_ter = is_trivial(df['descripcion'], 4)
-    file_name = 'lado_aseg_tetragrama2'
+    lado_aseg = is_trivial(df['descripcion'], 3)
+    # tokenizedCorpus = [i[0] for i in lado_aseg]
+    lado_aseg += is_trivial(df['descripcion'], 4)
+    # tokenizedCorpus += [i[0] for i in lado_aseg]
+    lado_aseg += is_trivial(df['descripcion'], 5)
     tokenizedCorpus = [i[0] for i in lado_aseg]
+    file_name = 'lado_aseg_dataset-final_filtro-nuevo'
     # df_model = get_concordance(df['descripcion'])
     # tokenizedCorpus = [list(nltk.ngrams(word_tokenize(i), 2)) for i in df['descripcion']]
     # tokenizedCorpus += [list(nltk.ngrams(word_tokenize(i), 3)) for i in df['descripcion']]
@@ -205,11 +220,12 @@ if __name__ == "__main__":
     ax.grid()
     ax.scatter(pca_df.x, pca_df.y, s=15)
     plt.savefig(file_name + '.png')
-    pca_df['descripcion'] = pd.Series(list2str(tokenizedCorpus))
+    pca_df['descripcion'] = pd.Series(tokenizedCorpus)
     pca_df['cluster'] = pd.Series(kmeans.labels_)
     sns.lmplot('x', 'y', data=pca_df, hue='cluster', fit_reg=False)
     plt.savefig(file_name + '_sns.png')
-    pca_df.to_csv(file_name + '.csv')
+    pca_df['responsabilidad'] = df['responsabilidad']
+    pca_df.to_csv(file_name + '.csv', index=False)
 
     # k = 0
     # rans = []

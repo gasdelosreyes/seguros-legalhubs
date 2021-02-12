@@ -36,7 +36,6 @@ def calcWeight(descripcion, x, y):
 	if 'derecho' in descripcion or 'derecha' in descripcion:
 		x += 2
 	return x, y
-# %%
 
 
 def set_pie(responsabilidad):
@@ -108,65 +107,73 @@ def plotCar(df, file_name, clusters_list=range(8), show=1):
 	# centro.figure(figsize=(20, 20))
 	for i in range(len(resp)):
 		if resp[i] == 'COMPROMETIDA' or resp[i] == 'CONCURRENTE':
-			centro.plot(x_final[i], y_final[i], '.', alpha=0.2, markersize=15, color='skyblue')
+			centro.plot(x_final[i], y_final[i], '.', alpha=0.2, markersize=15, color='#4D4CD0')
 		elif resp[i] == 'SIN RESPONSABILIDAD' or resp[i] == 'DISCUTIDA':
 			centro.plot(x_final[i], y_final[i], 'rx', markersize=18)
 
 	labels, sizes, colors = set_pie(delantera_izquierda)
 	delantera_izquierda = plt.subplot2grid(dimension, (0, 0), colspan=2, rowspan=3)
 	delantera_izquierda.axis('off')
-	# delantera_izquierda.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140, textprops={'size': 20})
-	patches, texts = delantera_izquierda.pie(sizes, colors=colors, shadow=True, startangle=180)
-	plt.legend(patches, labels, loc="best", fontsize=20)
+	delantera_izquierda.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140, textprops={'size': 40})
+	# patches, texts = delantera_izquierda.pie(sizes, colors=colors, shadow=True, startangle=180)
+	plt.title('Delantera izquierda', fontsize=30)
+	# plt.legend(patches, labels, loc="best", fontsize=20)
 
 	labels, sizes, colors = set_pie(delantera)
 	delantera = plt.subplot2grid(dimension, (0, 3), colspan=2, rowspan=3)
 	delantera.axis('off')
-	# delantera.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140, textprops={'size': 20})
-	patches, texts = delantera.pie(sizes, colors=colors, shadow=True, startangle=180)
-	plt.legend(patches, labels, loc="best", fontsize=20)
+	delantera.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140, textprops={'size': 40})
+	# patches, texts = delantera.pie(sizes, colors=colors, shadow=True, startangle=180)
+	plt.title('Delantera', fontsize=30)
+	# plt.legend(patches, labels, loc="best", fontsize=20)
 
 	labels, sizes, colors = set_pie(delantera_derecha)
 	delantera_derecha = plt.subplot2grid(dimension, (0, 6), colspan=2, rowspan=3)
 	delantera_derecha.axis('off')
-	# delantera_derecha.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140, textprops={'size': 20})
-	patches, texts = delantera_derecha.pie(sizes, colors=colors, shadow=True, startangle=180)
-	plt.legend(patches, labels, loc="best", fontsize=20)
+	delantera_derecha.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140, textprops={'size': 40})
+	# patches, texts = delantera_derecha.pie(sizes, colors=colors, shadow=True, startangle=180, textprops={'size': 30})
+	plt.title('Delantera derecha', fontsize=30)
+	# plt.legend(patches, labels, loc="best", fontsize=20)
 
 	labels, sizes, colors = set_pie(izquierda)
 	izquierda = plt.subplot2grid(dimension, (5, 0), colspan=2, rowspan=3)
 	izquierda.axis('off')
-	# izquierda.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140, textprops={'size': 20})
-	patches, texts = izquierda.pie(sizes, colors=colors, shadow=True, startangle=180)
-	plt.legend(patches, labels, loc="best", fontsize=20)
+	izquierda.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140, textprops={'size': 40})
+	# patches, texts = izquierda.pie(sizes, colors=colors, shadow=True, startangle=180)
+	plt.title('Izquierda', fontsize=30)
+	# plt.legend(patches, labels, loc="best", fontsize=20)
 
 	labels, sizes, colors = set_pie(derecha)
 	derecha = plt.subplot2grid(dimension, (5, 6), colspan=2, rowspan=3)
 	derecha.axis('off')
-	# derecha.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140, textprops={'size': 20})
-	patches, texts = derecha.pie(sizes, colors=colors, shadow=True, startangle=180)
-	plt.legend(patches, labels, loc="best", fontsize=20)
+	derecha.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140, textprops={'size': 40})
+	# patches, texts = derecha.pie(sizes, colors=colors, shadow=True, startangle=180)
+	plt.title('Derecha', fontsize=30)
+	# plt.legend(patches, labels, loc="best", fontsize=20)
 
 	labels, sizes, colors = set_pie(trasera_izquierda)
 	trasera_izquierda = plt.subplot2grid(dimension, (10, 0), colspan=2, rowspan=3)
 	trasera_izquierda.axis('off')
-	# trasera_izquierda.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140, textprops={'size': 20})
-	patches, texts = trasera_izquierda.pie(sizes, colors=colors, shadow=True, startangle=180)
-	plt.legend(patches, labels, loc="best", fontsize=20)
+	trasera_izquierda.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140, textprops={'size': 40})
+	# patches, texts = trasera_izquierda.pie(sizes, colors=colors, shadow=True, startangle=180)
+	plt.title('Trasera izquierda', fontsize=30)
+	# plt.legend(patches, labels, loc="best", fontsize=20)
 
 	labels, sizes, colors = set_pie(trasera)
 	trasera = plt.subplot2grid(dimension, (10, 3), colspan=2, rowspan=3)
 	trasera.axis('off')
-	# trasera.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140, textprops={'size': 20})
-	patches, texts = trasera.pie(sizes, colors=colors, shadow=True, startangle=180)
-	plt.legend(patches, labels, loc="best", fontsize=20)
+	trasera.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140, textprops={'size': 40})
+	# patches, texts = trasera.pie(sizes, colors=colors, shadow=True, startangle=180)
+	plt.title('Trasera', fontsize=30)
+	# plt.legend(patches, labels, loc="best", fontsize=20)
 
 	labels, sizes, colors = set_pie(trasera_derecha)
 	trasera_derecha = plt.subplot2grid(dimension, (10, 6), colspan=2, rowspan=3)
 	trasera_derecha.axis('off')
-	# trasera_derecha.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140, textprops={'size': 20})
-	patches, texts = trasera_derecha.pie(sizes, colors=colors, shadow=True, startangle=180)
-	plt.legend(patches, labels, loc="best", fontsize=20)
+	trasera_derecha.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140, textprops={'size': 40})
+	# patches, texts = trasera_derecha.pie(sizes, colors=colors, shadow=True, startangle=180)
+	plt.title('Trasera derecha', fontsize=30)
+	# plt.legend(patches, labels, loc="best", fontsize=20)
 
 	out_df = pd.DataFrame(new_df)
 
@@ -205,14 +212,21 @@ def gram2string(gram):
 
 
 def identLocation(descripcion):
-	location = ['calle', r'gara.*?', 'rotonda', 'autopista', 'au', 'avenida', 'cruce', 'cruze', 'esquina', r'estaciona.*?', 'carril', 'ruta']
+	location = ['calle', r'gara\w*', r'roton\w*', 'autopista', 'avenida', 'cruce', 'cruze',
+             r'esquina\w*', r'estacionami\w*', 'carril', 'ruta', r'semaforo\w*']
 	aux = []
 	for loc in location:
-		if re.search(loc, descripcion):
-			aux.append(loc)
+		st = re.search(loc, descripcion)
+		if st:
+			aux.append(st.group())
+			# print(st.group())
 	if aux:
-		return aux
+		return ' '.join(set(aux))
 	return 'desconocido'
+
+
+def conectOrigen(df, i):
+	return df.loc[i, 'descripcion']
 
 
 """
@@ -239,34 +253,25 @@ df = pd.read_csv('../dataset/casos/auto.csv')
 # r'colisiona .*? tercero .*? asegurado'
 # en los casos de arriba "vehiculo asegurado colisiona parte delantera izquierda vehiculo tercero"
 # hay que alargar todo los trigramas y reclusterizar porque cortan mucha información
-if '__main__' == __name__:
-	plotCar(pd.read_csv('recluster_no-overlap.csv'), 'test2', clusters_list=range(10), show=0)
-	# df = pd.read_csv('lado_aseg_dataset-final.csv')
+# %%
+if __name__ == '__main__':
+
+	df = pd.read_csv('recluster_lado_aseg_no-overlap.csv')
+	plotCar(df, 'colision_distribution', clusters_list=range(15), show=0)
 	# df2 = pd.read_csv('../dataset/casos/auto.csv')
-	# df = plotCar(df, 'colision_distribution2', clusters_list=range(1, 8), show=1)
-	# sys.exit()
-	# ubicacion = []
-	# lateral = []
-	# for i in range(len(df3)):
-	# 	if df3.loc[i, 'y'] < 0 and round(df3.loc[i, 'y']) != 0:
-	# 		ubicacion.append('trasera')
-	# 	elif round(df3.loc[i, 'y']) == 0:
-	# 		ubicacion.append('centro')
-	# 	else:
-	# 		ubicacion.append('delantera')
-
-	# 	if df3.loc[i, 'x'] < 0 and round(df3.loc[i, 'x']):
-	# 		lateral.append('izquierda')
-	# 	elif round(df3.loc[i, 'x']) == 0:
-	# 		lateral.append('centro')
-	# 	else:
-	# 		lateral.append('derecha')
-	# df3['ubicacion'] = pd.Series(ubicacion)
-	# df3['lateral'] = pd.Series(lateral)
 	# df['descripcion'] = df['descripcion'].apply(gram2string)
-	# df['location'] = df2['descripcion'].apply(identLocation)
-	# df.to_csv('cluster_dataset-final_con-orig.csv')
-
+	# df['origen'] = df['idx_descripcion'].apply(lambda x: conectOrigen(df2, x))
+	# df['ubicacion_vial'] = df['origen'].apply(identLocation)
+	# df.to_csv('recluster_lado_aseg_no-overlap_vial.csv')
+	# df
+	# # %%
+	# if '__main__' == __name__:
+	# 	df = pd.read_csv('recluster_no-overlap.csv')
+	# 	df2 = pd.read_csv('../dataset/casos/auto.csv')
+	# 	df['descripcion'] = df['descripcion'].apply(gram2string)
+	# 	df['ubicacion_vial'] = df['origen'].apply(identLocation)
+	# 	df.to_csv('cluster_dataset-final_con-orig.csv')
+	# 	df
 	# original = []
 
 	# for i in range(len(df)):

@@ -126,7 +126,7 @@ def solveOverlap(df, cluster_trash):
 	return pd.DataFrame(final)
 
 
-df = pd.read_csv('lado_asegurado/lado_aseg_dataset-final_filtro-nuevo.csv')
+df = pd.read_csv('lado_aseg.csv')
 df_max = solveOverlap(df, cluster_trash=0)
 df_max.to_csv('lado_aseg_no-overlap.csv')
 

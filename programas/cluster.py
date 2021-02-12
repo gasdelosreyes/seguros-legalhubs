@@ -188,7 +188,7 @@ if __name__ == "__main__":
     # tokenizedCorpus += [i[0] for i in lado_aseg]
     lado_aseg += is_trivial(df['descripcion'], 5)
     tokenizedCorpus = [i[0] for i in lado_aseg]
-    file_name = 'lado_aseg_dataset-final_filtro-nuevo'
+    file_name = 'lado_aseg'
     # df_model = get_concordance(df['descripcion'])
     # tokenizedCorpus = [list(nltk.ngrams(word_tokenize(i), 2)) for i in df['descripcion']]
     # tokenizedCorpus += [list(nltk.ngrams(word_tokenize(i), 3)) for i in df['descripcion']]

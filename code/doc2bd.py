@@ -11,6 +11,7 @@ if __name__ == "__main__":
     '''
     dataframe = dfmodule.appendDataFrames(dataframe, dfmodule.read_file_xls('../dataset/casos_universidad.xlsx'), [5, 11, 7])
     dataframe = dfmodule.appendDataFrames(dataframe, dfmodule.read_file_xls('../dataset/casos_zurich_20201228.xlsx', 'Dataset'), [5, 11, 7])
+    dataframe = dfmodule.appendDataFrames(dataframe, dfmodule.read_file_xls('../dataset/casos_sin-responsabilidad.xlsx'), [5, 11, 7])
     dataframe = dataframe.rename(columns={"descripcion_del_hecho - Final": "descripcion"})
     dataframe = dataframe.drop(dfmodule.wrong(dataframe))
     dataframe['descripcion'] = dataframe['descripcion'].apply(dictionary.changeDic,vector=dictionary.codexDic())

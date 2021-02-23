@@ -1,5 +1,7 @@
-import re
 import pandas as pd
+import re
+
+from stats import *
 
 
 def printDic(dic):
@@ -44,6 +46,7 @@ class TablaCasos:
 		df['movimiento'] = pd.Series([caso.get_movement() for caso in self.casos])
 		df['responsabilidad'] = pd.Series([caso.get_responsabilidad() for caso in self.casos])
 		df['impac_position'] = pd.Series([caso.get_impac_position() for caso in self.casos])
+		df['quien'] = pd.Series([caso.get_quien() for caso in self.casos])
 
 		df.to_csv(self.TableName + '.csv', index=False)
 
@@ -59,10 +62,62 @@ class TablaCasos:
 		self.delantera = len([i for i in self.casos if i.get_impac_position() == 'delantera'])
 		self.trasera = len([i for i in self.casos if i.get_impac_position() == 'trasera'])
 		self.ubicaciones_viales = set([i.get_ubicacion_vial() for i in self.casos])
+		self.asegurado = len([i for i in self.casos if i.get_quien() == 'asegurado'])
+		self.tercero = len([i for i in self.casos if i.get_quien() == 'tercero'])
 
 	def status(self):
-		stat = {'casos totales': self.casos_totales, 'comprometidos': self.responsabilidad_comprometido, 'no_comprometidos': self.responsabilidad_no_comprometido, 'en_movimiento': self.movimiento, 'no_movimiento': self.no_movimiento, 'delantera': self.delantera, 'trasera': self.trasera}  # , 'lugares posibles': self.ubicaciones_viales}
+		stat = {'casos totales': self.casos_totales, 'comprometidos': self.responsabilidad_comprometido, 'no_comprometidos': self.responsabilidad_no_comprometido, 'en_movimiento': self.movimiento, 'no_movimiento': self.no_movimiento, 'delantera': self.delantera, 'trasera': self.trasera, 'asegurado_colisiona': self.asegurado, 'tercero_colisiona': self.tercero}  # , 'lugares posibles': self.ubicaciones_viales}
 		printDic(stat)
+
+	def plot_movimiento(self):
+		""" 
+		:returns: devuelve un grafico de torta de 
+		    la proporción de asegurado en movimiento 
+		"""
+		label, sizes, colors = set_pie([caso.get_movement() for caso in self.casos])
+		mov = plt.subplot(111)
+		mov.axis('off')
+		mov.pie(sizes, labels=label, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140)
+		mov.savefig(self.TableName + '_movimiento.png')
+
+	def plot_casos_completos(self):
+		"""
+		:function: un caso completo es aquel totalmente etiquetado
+		:returns: devuelve un grafico de torta de 
+		    la cantidad de casos totalmente etiquetados
+		"""
+		aux = []
+		for caso in self.casos:
+		    if len(caso.get_impac_position()) and caso.get_ubicacion_vial() != 'desconocido' and caso.quien:
+		        aux.append('completo')
+		    elif not len(caso.get_impac_position()) and caso.get_ubicacion_vial() == 'desconocido' and not caso.quien:
+		        aux.append('vacio')
+		    else:
+		        aux.append('parcial')
+		label, sizes, colors = set_pie(aux)
+		pie = plt.subplot(111)
+		pie.axis('off')
+		pie.pie(sizes, labels=label, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140)
+		pie.savefig(self.TableName + '_completitud.png')
+
+	def plot_ubicacion_vial(self):
+		"""
+		:function: las ubicaiones viales serán garaje, estacionamiento, avenida,calle, interseccion,
+		    autopista, esquina, rotonda, carril, cruce, peaje, tunel, semaforo
+		:returns: retorna la proporción de cada ubicación vial
+
+		"""
+		location = ['calle', r'garaje', r'roton\w*', 'autopista', 'avenida', 'cruce', 'cruze', r'esquina\w*', r'estacionami\w*', 'carril', 'ruta', r'semaforo\w*', r'intersec.?', 'tunel', 'aut', 'peaje', 'desconocido']
+		aux = []
+		for loc in location:
+		    for caso in self.casos:
+		        if re.search(loc, caso.get_ubicacion_vial()):
+		            aux.append(loc)
+		label, sizes, colors = set_pie(aux)
+		pie = plt.subplot(111)
+		pie.axis('off')
+		pie(sizes, label=labels, colors=colors, autopct='%1.1f%%', shadow=True, startangle=140)
+		pie.savefig(self.TableName + '_ubicacion_vial.png')
 
 
 class Caso:
@@ -90,7 +145,7 @@ class Caso:
 		return self.responsabilidad
 
 	def get_ubicacion_vial(self):
-		location = ['calle', r'garaje', r'roton\w*', 'autopista', 'avenida', 'cruce', 'cruze', r'esquina\w*', r'estacionami\w*', 'carril', 'ruta', r'semaforo\w*', r'intersec.?', 'tunel', 'aut','peaje']
+		location = ['calle', r'garaje', r'roton\w*', 'autopista', 'avenida', 'cruce', 'cruze', r'esquina\w*', r'estacionami\w*', 'carril', 'ruta', r'semaforo\w*', r'intersec.?', 'tunel', 'aut', 'peaje']
 		aux = []
 		for loc in location:
 			st = re.search(loc, self.descripcion)
@@ -105,13 +160,12 @@ class Caso:
 
 	def get_impac_position(self):
 		delantera = ['delante mio', 'trate de frenar', r'de(?:\s|)frente',
-                    r'no.?(?:pude evitar|lleg.*?)', r'en mi parte (?:delantera|frontal)', r'con mi parte delantera',
-                    'me llevo puesto', r'me \w* en parte delantera', 'con mi frente', r'mi (parte frontal|frente)',
-                    'tercero retroce','lo embisto']  # r'no lleg.*? frenar', r'no lleg.*? a'
-		trasera = ['detras mio', 'marcha atras', r'retrocedo', 'retroceso', 'retrocedi', 'hacia atras', 'soy embestido', r'siento.*?impact.*?', 'reversa', r'asegurado estaba (?:detenido|parado|estacionado)', 'de atras',
-                    'desde atras', r'marcha (atra|a atra)']
-		# derecha = [r'para.*?doblar.*?derecha', 'dobla a la derecha', 'doblar para la derecha']
-		# izquierda = [r'para.*?doblar.*?izquierda', 'dobla a la izquierda', 'doblar para la izquierda']
+                    r'no.?(?:pude evitar|lleg.*?|logro evitar)', r'en asegurado parte (?:delantera|frontal)', r'con asegurado parte delantera',
+                    'me llevo puesto', r'me \w* en parte delantera', 'con asegurado frente', r'asegurado (parte frontal|frente)',
+                    'tercero retroce', 'lo embisto']
+		trasera = ['detras mio', 'marcha atras', r'retrocedo', 'retroceso', 'retrocedi', 'hacia atras', 'soy embestido', r'siento.*?impact.*?', 'reversa',
+                    r'asegurado estaba (?:detenido|parado|estacionado)', 'de atras',
+                    'desde atras', r'marcha (atra|a atra)', 'parte trasera vehiculo asegurado']
 		for sentence in delantera:
 			if re.search(sentence, self.descripcion):
 				self.impac_position = 'delantera'
@@ -120,6 +174,7 @@ class Caso:
 			if re.search(sentence, self.descripcion):
 				self.impac_position = 'trasera'
 				return self.impac_position
+		return self.impac_position
 
 	def get_movement(self):
 		if re.search('circul', self.descripcion) or re.search('venia', self.descripcion):
@@ -146,3 +201,11 @@ class Caso:
 		else:
 			self.movimiento = 'si'
 			return 'si'
+
+	def get_quien(self):
+		if re.search('asegurado colisiona', self.descripcion):
+			self.quien = 'asegurado'
+			return self.quien
+		if re.search('tercero colisiona', self.descripcion):
+			self.quien = 'tercero'
+			return self.quien

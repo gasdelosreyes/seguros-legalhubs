@@ -30,11 +30,8 @@ class TablaCasos:
         for i in self.casos:
             if caso.get_idxDesc() == i.get_idxDesc():
                 exist = True
-
         if not exist:
             self.casos.append(caso)
-            if update:
-                self.update()
 
     def get_casos(self):
         return self.casos
@@ -54,6 +51,7 @@ class TablaCasos:
         df['responsabilidad'] = pd.Series([caso.get_responsabilidad() for caso in self.casos])
         df['impac_position'] = pd.Series([caso.get_impac_position() for caso in self.casos])
         df['quien'] = pd.Series([caso.get_quien() for caso in self.casos])
+        df['responsabilidad_predic'] = pd.Series([caso.get_responsabilidad_predic() for caso in self.casos])
 
         df.to_csv(self.TableName + '.csv', index=False)
 
@@ -71,7 +69,7 @@ class TablaCasos:
         self.delantera += len([i for i in self.casos if i.get_impac_position() == 'delantera izquierda'])
         self.delantera += len([i for i in self.casos if i.get_impac_position() == 'delantera derecha'])
         self.trasera = len([i for i in self.casos if i.get_impac_position() == 'trasera'])
-        self.trasera += len([i for i in self.casos if i.get_impac_position() == 'trasera izquierda']) 
+        self.trasera += len([i for i in self.casos if i.get_impac_position() == 'trasera izquierda'])
         self.trasera += len([i for i in self.casos if i.get_impac_position() == 'trasera derecha'])
         self.ubicaciones_viales = set([i.get_ubicacion_vial() for i in self.casos])
         self.asegurado = len([i for i in self.casos if i.get_quien() == 'asegurado'])
@@ -225,6 +223,7 @@ class Caso:
 
     def __init__(self):
         self.impac_position = ''
+        self.responsabilidad_predic = 0
 
     def set_descripcion(self, descr):
         self.descripcion = descr
@@ -244,6 +243,14 @@ class Caso:
     def get_responsabilidad(self):
         return self.responsabilidad
 
+    def set_responsabilidad_predic(self, pred):
+        """ 
+        asigna la responsabilidad predicha
+        """
+        self.responsabilidad_predic += pred
+
+    def get_responsabilidad_predic(self):
+        return self.responsabilidad_predic
     # def set_descripcion_original(self, original):
     #     self.descripcion_original = original
 
@@ -268,14 +275,14 @@ class Caso:
         delantera = ['delante mio', 'trate de frenar', r'de(?:\s|)frente',
                      r'no.?(?:pude evitar|lleg.*?|logro evitar)', r'en asegurado parte (?:delantera|frontal)', r'con asegurado parte delantera',
                      'me llevo puesto', r'me \w* en parte delantera', 'con asegurado frente', r'asegurado (parte frontal|frente)',
-                     'tercero retroce', 'lo embisto',r'impact*\w','colis.*? .* asegurado parte delantera','asegurado .* colis.*? con su parte delantera',
-                     'parte trasera .* tercero','tercero frena']
+                     'tercero retroce', 'lo embisto', r'impact*\w', 'colis.*? .* asegurado parte delantera', 'asegurado .* colis.*? con su parte delantera',
+                     'parte trasera .* tercero', 'tercero frena']
         trasera = ['detras mio', 'marcha atras', r'retrocedo', 'retroceso', 'retrocedi', 'hacia atras', 'soy embestido', r'siento.*?impact.*?', 'reversa',
                    r'asegurado estaba (?:detenido|parado|estacionado)', 'de atras',
                    'desde atras', r'marcha (atra|a atra)', 'parte trasera vehiculo asegurado']
         for sentence in delantera:
             if re.search(sentence, self.descripcion) and not re.search('marcha atras', self.descripcion):
-                if (re.search('con la parte delantera',self.descripcion) or re.search('con parte delantera',self.descripcion)) and self.get_quien() == 'asegurado':
+                if (re.search('con la parte delantera', self.descripcion) or re.search('con parte delantera', self.descripcion)) and self.get_quien() == 'asegurado':
                     self.impac_position = 'delantera'
                     return self.impac_position
                 words = self.descripcion.split()
@@ -331,7 +338,7 @@ class Caso:
             return 'si'
 
     def get_quien(self):
-        asegurado = ['asegurado colisiona', 'embesti', 'no logro evitar', 'embisto', 'trate de frenar', r'no.?(?:pude evitar|lleg.*?|logro evitar)', 'me llevo puesto', 'delante mio', 'de frente', 'delante de mi', r'(?:colisiono|colisiono con|toco con|impacto con|embistiendolo con|impactando con|colisione con) asegurado parte delantera', 'impacto a vehiculo','asegurado .* colis.*? con su parte delantera','parte trasera .* tercero']
+        asegurado = ['asegurado colisiona', 'embesti', 'no logro evitar', 'embisto', 'trate de frenar', r'no.?(?:pude evitar|lleg.*?|logro evitar)', 'me llevo puesto', 'delante mio', 'de frente', 'delante de mi', r'(?:colisiono|colisiono con|toco con|impacto con|embistiendolo con|impactando con|colisione con) asegurado parte delantera', 'impacto a vehiculo', 'asegurado .* colis.*? con su parte delantera', 'parte trasera .* tercero']
         tercero = ['soy \w{0,2} embes.*?']
         for st in asegurado:
             if re.search(st, self.descripcion):

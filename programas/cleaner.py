@@ -73,9 +73,14 @@ def cleaner(w):
 #matriz de correlacion
 def changeStrings(row):
     vector = [
+<<<<<<< HEAD
         (r'vhl','vehiculo'),(r'vw','vehiculo'),(r'veh','vehiculo'),(r'guardabarro','parte'),(r'guardabarros','parte'),(r'auto','vehiculo'),(r'automovil','vehiculo'),(r'costado','parte'),
         (r'me colisiona', 'tercero colisiona'),
         (r'vena','venia'),(r'derecho', 'derecha'), (r'delantero', 'delantera'), (r'trasero', 'trasera'), (r'frontal', 'parte delantera'), (r'lado', 'parte'),
+=======
+        (r'vhl','vehiculo'),(r'vw','vehiculo'),(r'veh','vehiculo'),(r'vena','venia'),(r'guardabarro','parte'),(r'guardabarros','parte'),(r'auto','vehiculo'),(r'automovil','vehiculo'),(r'costado','parte'),
+        (r'derecho', 'derecha'), (r'delantero', 'delantera'), (r'trasero', 'trasera'), (r'frontal', 'parte delantera'), (r'lado', 'parte'),
+>>>>>>> 93fac689bbe11f443946ed076cfe7599df755316
         (r'pb','parte'), (r'puerta', 'parte'),
         (r'conmi','con mi'), (r'choque', 'mi parte delantera'),(r'circ','circulaba'), (r'stro','siniestro'), (r'ero','tercero'),(r'gge','garage'),
         (r' p ', ' parte '), (r'contra\s', 'con '), (r'detras','trasera'),(r'atras','trasera'), (r'roza', 'colisiona'),
@@ -104,15 +109,22 @@ def changeRegex(row):
         oldString = ' ' + value[0] + ' '
         newString = ' ' + value[1] + ' '
         row = re.sub(oldString,newString, row)
+<<<<<<< HEAD
         print(oldString)
         print(newString)
+=======
+>>>>>>> 93fac689bbe11f443946ed076cfe7599df755316
 
     vector2 = [
         (r'su delat.*?', 'su parte delantera'), (r'aseg.*?', 'asegurado'), (r'emb.*?', 'colisiona'), (r'redg.*?',''),
         (r'paragolpe delantera','parte delantera'), (r'posterior','delantera'), (r'av.*?', 'avenida'), (r'der.*?','derecha') , (r'lat.*?', 'parte'),
         (r'frente delantero', 'parte delantera'), (r'de atras', 'en parte trasera'), (r'por detras', 'en parte trasera'),(r'parte conductor','parte izquierda'),
         (r'golp.*?',' colisiona'),(r'delant.*?','delantera'),(r'contacto','colisiona'),(r'parte acompanante','parte derecha'),(r'parte medio','parte'), 
+<<<<<<< HEAD
         (r'parte lateral', 'parte'),(r'sector','parte'),(r'zona','parte')
+=======
+        (r'parte lateral', 'parte'),('sector','parte'),('zona','parte')
+>>>>>>> 93fac689bbe11f443946ed076cfe7599df755316
     ]
 
     for value in vector2:
@@ -120,6 +132,12 @@ def changeRegex(row):
         newString = value[1] + ' '
         row = re.sub(oldString,newString, row)
     row = re.sub(r'embes.*$','colisiona',row)
+<<<<<<< HEAD
+=======
+    row = re.sub(r'embes.$','colisiona',row)
+    row = re.sub(r'embes*$','colisiona',row)
+    row = re.sub(r'embesti$','colisiona',row)
+>>>>>>> 93fac689bbe11f443946ed076cfe7599df755316
     return row
 
 
@@ -141,6 +159,10 @@ def divideParts(row):
         newString = separatedStrings[i][0] + ' ' + separatedStrings[i][1]
         row = re.sub(unitedStrings[i],newString, row)   
         # if re.search(r' '+unitedStrings[i],row) or re.search(' '+unitedStrings[i]+' ',row):
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 93fac689bbe11f443946ed076cfe7599df755316
     return row
 
 def ratios(w):
@@ -209,7 +231,11 @@ def clean(serie):
     :returns: devuelve la misma descripcion pero con las palabras de to_rep a for_rep
     tarda al rededor de 1 min 
     """
+<<<<<<< HEAD
     serie = pd.Series(list(map(swapStrings,vehicle,serie)))
+=======
+
+>>>>>>> 93fac689bbe11f443946ed076cfe7599df755316
     serie = pd.Series(list(map(changeRegex, serie)))
     serie = pd.Series(list(map(changeStrings, serie)))
     serie = pd.Series(list(map(divideParts, serie)))
@@ -276,4 +302,24 @@ if __name__ == "__main__":
     moto.to_csv('../dataset/casos/moto.csv', index=False, header=True)
     bici.to_csv('../dataset/casos/bici.csv', index=False, header=True)
     peaton.to_csv('../dataset/casos/peaton.csv', index=False, header=True)
+<<<<<<< HEAD
     print('Tiempo de ejecución: ',round(time.time()-start,2)//60,'min',round(time.time()-start,2)%60,'s')
+=======
+    print('Tiempo de ejecución: ',round(time.time()-start,2)//60,'min',round(time.time()-start,2)%60,'s')
+
+    # auto_df1 = df1[df1['cod_accidente'] == 'aa']
+    # # Data to plot
+    # labels = ['COMPROMETIDA', 'DISCUTIDA', 'SIN RESPONSABILIDAD', 'CONCURRENTE']
+    # compro = len(df1['responsabilidad'][df1['responsabilidad'] == 'COMPROMETIDA'])
+    # concu = len(df1['responsabilidad'][df1['responsabilidad'] == 'CONCURRENTE'])
+    # sin = len(df1['responsabilidad'][df1['responsabilidad'] == 'SIN RESPONSABILIDAD'])
+    # disc = len(df1['responsabilidad'][df1['responsabilidad'] == 'DISCUTIDA'])
+    # sizes = [compro, disc, sin, concu]
+    # colors = ['gold', 'yellowgreen', 'lightcoral', 'lightskyblue']
+    # explode = (0.1, 0, 0, 0)  # explode 1st slice
+
+    # # Plot
+    # plt.pie(sizes, explode=explode, labels=labels, colors=colors,
+    #         autopct='%1.1f%%', shadow=True, startangle=140)
+    # plt.savefig('resposabilidad_auto_datos_laCaja.png')
+>>>>>>> 93fac689bbe11f443946ed076cfe7599df755316

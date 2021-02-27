@@ -17,6 +17,8 @@ def general(txt):
     txt = txt.replace('cruze','cruce').replace('cruse','cruce').replace('crus','cruz')
     txt = txt.replace('aboll','aboy')
     txt = txt.replace('rall','ray')
+    txt = txt.replace(' una ',' un ').replace('asegurada','asegurado').replace(' do ',' del ')
+    txt = txt.replace(' la ',' ').replace(' el ',' ').replace(' las ',' ').replace(' los ',' ')
     txt = txt.replace('tracer','traser')
     txt = re.sub(r'[^\w\s]', ' ', txt)
     txt = re.sub(r'\d+',' ',txt)
@@ -43,4 +45,37 @@ def changeRatios(dataframe, vector):
             word = ratio.ratios(w,vector)
             fstring, cantidad = re.subn(r'\ ' + w + r'\ ',r' ' + word + r' ', fstring)
             print(w + ' SE CAMBIO POR ' + word + ' ' + str(cantidad) + ' VECES')
+    return fstring.split(' | ')[:-1]
+
+def deleteRepeated(row):
+    row = row.split()
+    i = 0
+    while i < len(row) - 1:
+        if row[i] == row[i + 1]:
+            del row[i]
+        i += 1
+    return ' '.join(row)
+
+def detectOther(row):
+    if(' su parte ' in row):
+        if(' tercero parte ' in row):
+            row = re.sub(' su parte ',' asegurado parte ',row)
+        elif(' asegurado parte ' in row):
+            row = re.sub(' su parte ',' tercero parte ',row)
+    if(' con parte ' in row):
+        if(' tercero parte ' in row):
+            row = re.sub(' con parte ',' con asegurado parte ',row)
+        elif(' asegurado parte ' in row):
+            row = re.sub(' con parte ',' con tercero parte ',row)
+    if(' en parte ' in row):
+        if(' tercero parte ' in row):
+            row = re.sub(' en parte ',' en asegurado parte ',row)
+        elif(' asegurado parte ' in row):
+            row = re.sub(' en parte ',' en tercero parte ',row)
+    return row
+
+def changeRepeated(dataframe):
+    fstring = ''
+    for row in dataframe:
+        fstring += detectOther(deleteRepeated(row)) + ' | '
     return fstring.split(' | ')[:-1]

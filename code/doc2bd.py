@@ -1,6 +1,5 @@
 import pandas as pd
 from utils import dfmodule, clean, dictionary
-from nltk.tokenize import word_tokenize
 import time
 
 if __name__ == "__main__":

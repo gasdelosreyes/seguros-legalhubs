@@ -133,7 +133,7 @@ def verbsDic():
     ]
 
 def convergeVerbsDic():
-    # IMPACTO Y CHOQUE NO SE TIENEN EN CUENTA POR AMBIGUEDAD
+    # IMPACTO, CHOQUE, TOQUE, ROCE NO SE TIENEN EN CUENTA POR AMBIGUEDAD
     return [
         ((  
             r'impactandome', r'embistiendome', r'chocandome', r'tocandome', r'raspandome',
@@ -176,13 +176,21 @@ def convergeVerbsDic():
             r'raspo',r'danio',r'rozo',r'rayo',r'aboyo',r'golpeo'
         ),r'colisiono'),
         ((
-            r'impacte', r'embesti',r'toque',
-            r'raspe',r'danie',r'roce',r'raye',r'aboye',r'golpee'
+            r'impacte', r'embesti',
+            r'raspe',r'danie',r'raye',r'aboye',r'golpee'
         ),r'colisione'),
         ((
             r'impacta', r'choca',r'toca',r'raspa',r'dania',
             r'roza',r'raya',r'aboya',r'golpea', r'embiste'
         ),r'colisiona'),
+    ]
+
+def convergeVehiclesDic():
+    return [
+        ((r'mi vehiculo',r'vehiculo asegurado',r'vehiculo de asegurado',r'unidad asegurado',r'del asegurado'),r'vehiculo del asegurado'),
+        ((r'vehiculo tercero',r'otro vehiculo',r'del tercero',r'un vehiculo',r'un tercero'),r'vehiculo del tercero'),
+        ((r'al asegurado',r'a asegurado'),r'al vehiculo del asegurado'),
+        ((r'al tercero',r'a tercero'),r'al vehiculo del tercero'),
     ]
 
 def crashDic():

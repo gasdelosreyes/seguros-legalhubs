@@ -399,7 +399,7 @@ for i in range(len(df)):
 tabla.set_caso(caso)
 tabla.update()
 tabla.status()
-ResponsabilityPredictor(tabla)
+# ResponsabilityPredictor(tabla)
 # kpi(tabla)
 
 

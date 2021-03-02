@@ -1,7 +1,7 @@
 import pandas as pd
 import re
 
-from stats import *
+# from stats import *
 
 
 def printDic(dic):
@@ -53,7 +53,7 @@ class TablaCasos:
         df['quien'] = pd.Series([caso.get_quien() for caso in self.casos])
         df['responsabilidad_predic'] = pd.Series([caso.get_responsabilidad_predic() for caso in self.casos])
 
-        df.to_csv(self.TableName + '.csv', index=False)
+        df.to_csv('tmp/' + self.TableName + '.csv', index=False)
 
     def update(self):
         """

@@ -26,27 +26,22 @@ print(len(mov))
 
 dummie_df['movimiento'] = pd.Series(mov)
 
-delantera,delantera_derecha,delantera_izquierda,trasera,trasera_derecha,trasera_izquierda = [],[],[],[],[],[]
+impac_position = []
 for row in df['impac_position']:
     if row == 'delantera':
-        delantera.append(1)
+        impac_position.append(1)
     if row == 'delantera izquierda':
-        delantera.append(2)
+        impac_position.append(2)
     if row == 'delantera derecha':
-        delantera.append(3)
+        impac_position.append(3)
     if row == 'trasera':
-        delantera.append(4)
+        impac_position.append(4)
     if row == 'trasera izquierda':
-        delantera.append(5)
+        impac_position.append(5)
     if row == 'trasera derecha':
-        delantera.append(6)
+        impac_position.append(6)
 
-dummie_df['delantera'] = pd.Series(delantera)
-# dummie_df['delantera_izquierda'] = pd.Series(delantera_izquierda)
-# dummie_df['delantera_derecha'] = pd.Series(delantera_derecha)
-# dummie_df['trasera'] = pd.Series(trasera)
-# dummie_df['trasera_izquierda'] = pd.Series(trasera_izquierda)
-# dummie_df['trasera_derecha'] = pd.Series(trasera_derecha)
+dummie_df['impac_position'] = pd.Series()
 aux = []
 for i in df['responsabilidad']:
     if i == 'COMPROMETIDA' or i == 'DISCUTIDA':

@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from joblib import dump,load
 import matplotlib.pyplot as plt
-import seaborn as sns
+# import seaborn as sns
 import random
 import numpy as np
 import sys
@@ -16,7 +16,7 @@ Preparacion del dataset
 """
 df = pd.read_csv('tmp/Tabla1.csv')
 
-df = df.dropna()
+# df = df.dropna()
 dummie_df = pd.DataFrame()
 # dummie_df = pd.get_dummies(df[['quien']])
 
@@ -63,11 +63,11 @@ for row in df['quien']:
         quien.append(0)
 
 dummie_df['quien'] = pd.Series(quien)
-dummie_df = dummie_df.dropna()
+
+dummie_df = pd.concat([dummie_df[dummie_df['responsabilidad'] == 0].dropna(), dummie_df[dummie_df['responsabilidad'] == 1].dropna().sample(300)])
 
 print(len(dummie_df),len(dummie_df[dummie_df['responsabilidad'] == 0]),len(dummie_df[dummie_df['responsabilidad'] == 1]))
-dummie_df = pd.concat([dummie_df[dummie_df['responsabilidad'] == 0], dummie_df[dummie_df['responsabilidad'] == 1].sample(2*len(dummie_df[dummie_df['responsabilidad'] == 0]))])
-
+# dummie_df = dummie_df.dropna()
 location = ['calle', r'garaje', r'roton\w*', 'autopista', 'avenida', 'cruce', 'cruze', r'esquina\w*', r'estacionami\w*', 'carril', 'ruta', r'semaforo\w*', r'intersec.?', 'tunel', 'peaje']
 
 for loc in location:
@@ -85,9 +85,11 @@ for loc in location:
 clf=KNeighborsClassifier(n_neighbors=8,weights='distance')
 
 x_train, x_test, y_train, y_test = train_test_split(dummie_df[[col for col in dummie_df.columns if col != 'responsabilidad']], dummie_df['responsabilidad'], test_size=0.2, random_state=7)
+print(x_test.shape,y_test.shape)
+
 clf.fit(x_train, y_train)
 print('Precisión con un KNeighborsClassifier: ', clf.score(x_test, y_test))
-dump(clf,'kneighbors_model_seed7.gz')
+dump(clf,'model_kneighbors.pkl')
 # x, y = [], []
 # for n in range(2, 17):
 #     x.append(n)

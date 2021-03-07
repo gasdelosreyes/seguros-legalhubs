@@ -1,78 +1,5 @@
-import re
-
-def get_quien(descripcion):
-    asegurado = ['asegurado colisiona', 'embesti', 'no logro evitar', 'embisto', 'trate de frenar', r'no.?(?:pude evitar|lleg.*?|logro evitar)', 'me llevo puesto', 'delante mio', 'de frente', 'delante de mi', r'(?:colisiono|colisiono con|toco con|impacto con|embistiendolo con|impactando con|colisione con) asegurado parte delantera', 'impacto a vehiculo', 'asegurado .* colis.*? con su parte delantera', 'parte trasera .* tercero']
-    tercero = ['soy \w{0,2} embes.*?']
-    for st in asegurado:
-        if re.search(st, descripcion):
-            return 'asegurado'
-    if re.search('tercero colisiona', descripcion):
-        return 'tercero'
-
-def get_movement(descripcion):
-    if re.search('circul', descripcion) or re.search('venia', descripcion):
-        return 'si'
-    movement_words = [r'\w*ando', r'\w*endo', 'circulaba', 'cirulaba', 'cirulanso', 'circulanso', 'avanzaba', 'frenar', 'doblaba', 'adelantar', 'adelantaba', 'yendo', 'transitando', 'frena de golpe', 'dirigia']
-    no_momvement_words = [r'estacionado', r'dete.?', r'arranc.?', 'saliendo', 'entrando', r'avanz.?', r'manio.?', r'parado.?', 'salia', 'entraba', 'estacionaba', 'estacionando', 'retiraba', 'parad']
-    st_move, st_no_move = False, False
-    for mw in movement_words:
-        if st_move:
-            break
-        st_move = re.search(mw, descripcion)
-    for nmw in no_momvement_words:
-        if st_no_move:
-            break
-        st_no_move = re.search(nmw, descripcion)
-    if st_no_move:
-        return 'no'
-    else:
-        return 'si'
-
-def get_ubicacion_vial(descripcion):
-        location = ['calle', r'garaje', r'roton\w*', 'autopista', 'avenida', 'cruce', 'cruze', r'esquina\w*', r'estacionami\w*', 'carril', 'ruta', r'semaforo\w*', r'intersec.?', 'tunel', 'peaje']
-        aux = []
-        for loc in location:
-            st = re.search(loc, descripcion)
-            if st:
-                aux.append(st.group())
-        if aux:
-            return ' '.join(set(aux))
-        else:
-            return None
-
-def get_impac_position(descripcion):
-        delantera = ['delante mio', 'trate de frenar', r'de(?:\s|)frente',
-                     r'no.?(?:pude evitar|lleg.*?|logro evitar)', r'en asegurado parte (?:delantera|frontal)', r'con asegurado parte delantera',
-                     'me llevo puesto', r'me \w* en parte delantera', 'con asegurado frente', r'asegurado (parte frontal|frente)',
-                     'tercero retroce', 'lo embisto', r'impact*\w', 'colis.*? .* asegurado parte delantera', 'asegurado .* colis.*? con su parte delantera',
-                     'parte trasera .* tercero', 'tercero frena']
-        trasera = ['detras mio', 'marcha atras', r'retrocedo', 'retroceso', 'retrocedi', 'hacia atras', 'soy embestido', r'siento.*?impact.*?', 'reversa',
-                   r'asegurado estaba (?:detenido|parado|estacionado)', 'de atras',
-                   'desde atras', r'marcha (atra|a atra)', 'parte trasera vehiculo asegurado']
-        for sentence in delantera:
-            if re.search(sentence, descripcion) and not re.search('marcha atras', descripcion):
-                if (re.search('con la parte delantera', descripcion) or re.search('con parte delantera', descripcion)) and self.get_quien() == 'asegurado':
-                    return 'delantera'
-                words = descripcion.split()
-                for i in range(len(words) - 1):
-                    if words[i] == 'delantera':
-                        if words[i + 1] == 'izquierda':
-                            return 'delantera izquierda'
-                        elif words[i + 1] == 'derecha':
-                            return 'delantera derecha'
-                return 'delantera'
-        for sentence in trasera:
-            if re.search(sentence, descripcion):
-                words = descripcion.split()
-                for i in range(len(words) - 1):
-                    if words[i] == 'trasera':
-                        if words[i + 1] == 'izquierda':
-                            return 'trasera izquierda'
-                        elif words[i + 1] == 'trasera derecha':
-                            return 'trasera derecha'
-                return 'trasera'
-        return None
-
+from models.features_extraction import ManualExtraction
+import joblib
 
 class ManualClassifier:
     def getResponsable(self):
@@ -93,6 +20,9 @@ class ManualClassifier:
     def getResponsability(self):
         return self.responsability
 
+    def getResponsabilityKNeighbors(self):
+        return self.responsability_kneighbors
+
     def setResponsable(self,value):
         self.responsable = value
 
@@ -110,25 +40,86 @@ class ManualClassifier:
 
     def setResponsability(self,value):
         self.responsability = value
+    
+    def setResponsabilityKNeighbors(self,value):
+        self.responsability_kneighbors = value
 
-    def __init__(self):
+    def chargeModel(self,path):
+        try:
+            return joblib.load(path)
+        except:
+            print('NO SE PUDO CARGAR EL MODELO')
+            return None
+    
+    def __init__(self, kneighbor_model=str):
         self.setResponsable(None)
         self.setAsegImpact(None)
         self.setTercImpact(None)
         self.setVialLocation(None)
         self.setMovement(None)
-        self.setResponsability(None)
+        # self.setResponsabilityManual(None)
+        # self.setResponsabilityANN(None)
+        self.setResponsabilityKNeighbors(None)
+        # self.setResponsabilityDecisionTree(None)
+        # self.modelANN = None
+        self.modelKNeighbors = self.chargeModel(kneighbor_model)
+        # self.modelDecisionTree = None
 
-    def infer_case(self, case_str = str):
-        self.setResponsable(get_quien(case_str))
-        self.setAsegImpact(get_impac_position(case_str))
-        self.setTercImpact(None)
-        self.setVialLocation(get_ubicacion_vial(case_str))
-        self.setMovement(get_movement(case_str))
-        self.setResponsability(None)
+    def get_case_features(self, case_str = str):
+        """
+        case_str = descripcion del caso
+        returns: perfil del accidente sin la predicción de la responsabilidad.
+        """
+        self.setResponsable(ManualExtraction.get_quien(case_str))
+        self.setAsegImpact(ManualExtraction.get_impac_position(case_str))
+        self.setTercImpact('desconocido')
+        self.setVialLocation(ManualExtraction.get_ubicacion_vial(case_str))
+        self.setMovement(ManualExtraction.get_movement(case_str))
         print('RESPONSABLE DEL ACCIDENTE: ' + str(self.getResponsable()))
         print('IMPACTO ASEGURADO: ' + str(self.getAsegImpact()))
         print('IMPACTO TERCERO: ' + str(self.getTercImpact()))
         print('UBICACION VIAL: ' + str(self.getVialLocation()))
         print('ESTADO DE MOVIMIENTO: ' + str(self.getMovement()))
-        print('RESPONSABILIDAD DEL ASEGURADO: ' + str(self.getResponsability()))
+
+    def profile_transform_kneighbors(self):
+        """
+        returns: el perfil codificado en una vector de 18x1:
+        movimiento	impac_position[1-6]	quien[0-1]	
+        calle	garaje	roton\w*	autopista	avenida	    cruce
+        cruze	esquina\w*	estacionami\w*	carril	ruta	semaforo\w*
+        intersec.?	tunel	peaje
+        """
+        import re 
+        import numpy as np 
+
+        vector = []
+        vector.append(1 if self.getMovement() == 'si' else 0)
+        positions = ['delantera','delantera izquierda','delantera derecha','trasera','trasera izquierda','trasera derecha']
+        
+        for i,row in enumerate(positions):
+            if(self.getAsegImpact() != 'desconocido'):
+                if row==self.getAsegImpact():
+                    vector.append(i+1)
+                    break
+            else:
+                vector.append(0)
+                break
+        
+        vector.append(1 if self.getResponsable() == 'asegurado' else 0)
+        location = [ 'calle', r'garaje', r'roton\w*', 'autopista', 'avenida', 'cruce', 'cruze', r'esquina\w*', r'estacionami\w*', 'carril', 'ruta', r'semaforo\w*', r'intersec.?', 'tunel', 'peaje']
+        for i in location:
+            if re.search(i,str(self.getVialLocation())):
+                vector.append(1)
+            else:
+                vector.append(0)
+        # vector += [1 for i in location if re.search(i,self.getVialLocation()) else 0]
+        return vector
+        
+    def infer_responsability_kneighbors(self, vector_features):
+        # print(self.modelKNeighbors.predict([vector_features])[0])
+        predict = self.modelKNeighbors.predict([vector_features])[0]
+        self.setResponsabilityKNeighbors(predict)
+        if(str(self.responsability_kneighbors) == '0'):
+            print('RESPONSABILIDAD KNEIGHBORS: NO COMPROMETIDA')
+        elif(str(self.responsability_kneighbors) == '1'):
+            print('RESPONSABILIDAD KNEIGHBORS: COMPROMETIDA')

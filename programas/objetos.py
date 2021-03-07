@@ -1,7 +1,7 @@
 import pandas as pd
 import re
 
-# from stats import *
+from stats import *
 
 
 def printDic(dic):
@@ -284,15 +284,18 @@ class Caso:
             if re.search(sentence, self.descripcion) and not re.search('marcha atras', self.descripcion):
                 if (re.search('con la parte delantera', self.descripcion) or re.search('con parte delantera', self.descripcion)) and self.get_quien() == 'asegurado':
                     self.impac_position = 'delantera'
+                    self.impac_position_encoded = 1
                     return self.impac_position
                 words = self.descripcion.split()
                 for i in range(len(words) - 1):
                     if words[i] == 'delantera':
                         if words[i + 1] == 'izquierda':
                             self.impac_position = 'delantera izquierda'
+                            self.impac_position_encoded = 2
                             return self.impac_position
                         elif words[i + 1] == 'derecha':
                             self.impac_position = 'delantera derecha'
+                            self.impac_position_encoded = 3
                             return self.impac_position
                 self.impac_position = 'delantera'
                 return self.impac_position
@@ -303,11 +306,14 @@ class Caso:
                     if words[i] == 'trasera':
                         if words[i + 1] == 'izquierda':
                             self.impac_position = 'trasera izquierda'
+                            self.impac_position_encoded = 5
                             return self.impac_position
                         elif words[i + 1] == 'trasera derecha':
                             self.impac_position = 'trasera derecha'
+                            self.impac_position_encoded = 6
                             return self.impac_position
                 self.impac_position = 'trasera'
+                self.impac_position_encoded = 4
                 return self.impac_position
         return self.impac_position
 
@@ -332,9 +338,11 @@ class Caso:
 
         if st_no_move:
             self.movimiento = 'no'
+            self.movimiento_encoded = 0
             return self.movimiento
         else:
             self.movimiento = 'si'
+            self.movimiento_encoded = 1
             return 'si'
 
     def get_quien(self):
@@ -343,8 +351,10 @@ class Caso:
         for st in asegurado:
             if re.search(st, self.descripcion):
                 self.quien = 'asegurado'
+                self.quien_encode = 1
                 return self.quien
 
         if re.search('tercero colisiona', self.descripcion):
             self.quien = 'tercero'
+            self.quien_encode = 0
             return self.quien

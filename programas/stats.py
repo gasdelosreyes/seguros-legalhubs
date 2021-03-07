@@ -3,7 +3,7 @@
 #
 # %%
 from cleaner import *
-from cluster import *
+# from cluster import *
 from wordcloud import WordCloud
 import collections
 

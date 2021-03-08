@@ -1,7 +1,9 @@
 import pandas as pd
 import re
-
+from importlib.machinery import SourceFileLoader
+charts = SourceFileLoader('charts','../code/modules/charts.py').load_module()
 from stats import *
+import matplotlib.pyplot as plt
 
 
 def printDic(dic):
@@ -52,8 +54,7 @@ class TablaCasos:
         df['impac_position'] = pd.Series([caso.get_impac_position() for caso in self.casos])
         df['quien'] = pd.Series([caso.get_quien() for caso in self.casos])
         df['responsabilidad_predic'] = pd.Series([caso.get_responsabilidad_predic() for caso in self.casos])
-
-        df.to_csv('tmp/' + self.TableName + '.csv', index=False)
+        df.to_csv(self.TableName + '.csv', index=False)
 
     def update(self):
         """
@@ -86,10 +87,7 @@ class TablaCasos:
         la proporción de asegurado en movimiento 
         """
         label, sizes, colors = set_pie([caso.get_movement() for caso in self.casos])
-        mov = plt.subplot(111)
-        mov.axis('off')
-        mov.pie(sizes, labels=label, colors=colors, autopct='%1.1f%%', shadow=False, startangle=140)
-        plt.savefig(self.TableName + '_movimiento.png')
+        charts.createPie(data=sizes,labels=label,title= self.TableName + ' - movimiento',save=self.TableName + '_movimiento.png')
 
     def plot_casos_completos(self):
         plt.clf()
@@ -107,10 +105,7 @@ class TablaCasos:
             else:
                 aux.append('parcial')
         label, sizes, colors = set_pie(aux)
-        pie = plt.subplot(111)
-        pie.axis('off')
-        pie.pie(sizes, labels=label, colors=colors, autopct='%1.1f%%', shadow=False, startangle=140)
-        plt.savefig(self.TableName + '_completitud.png')
+        charts.createPie(data=sizes,labels=label,title= self.TableName + ' - completitud',save=self.TableName + '_completitud.png')
 
     def plot_ubicacion_vial(self):
         plt.clf()
@@ -118,7 +113,6 @@ class TablaCasos:
         :function: las ubicaiones viales serán garaje, estacionamiento, avenida,calle, interseccion,
         autopista, esquina, rotonda, carril, cruce, peaje, tunel, semaforo
         :returns: retorna la proporción de cada ubicación vial
-
         """
         location = ['calle', r'garaje', r'roton\w*', 'autopista', 'avenida', 'cruce', r'esquina\w*', r'estacionami\w*', 'carril', 'ruta', r'semaforo\w*', r'intersec.?', 'desconocido']
         explode = [0.1 for i in location]
@@ -127,11 +121,9 @@ class TablaCasos:
             for caso in self.casos:
                 if re.search(loc, caso.get_ubicacion_vial()):
                     aux.append(loc)
-                    labels, sizes, colors = set_pie(aux)
-                    pie = plt.subplot(111)
-                    pie.axis('off')
-                    pie.pie(sizes, labels=labels, explode=explode, colors=colors, autopct='%1.1f%%', shadow=False, startangle=140)
-                    plt.savefig(self.TableName + '_ubicacion_vial.png')
+        labels, sizes, colors = set_pie(aux)
+        charts.createPie(data=sizes,labels=labels,title= self.TableName + ' - ubicacion vial',save=self.TableName + '_ubicacion_vial.png')
+
 
     def plot_posicion_impact(self):
         plt.clf()
@@ -139,7 +131,6 @@ class TablaCasos:
         :function: las ubicaiones viales serán garaje, estacionamiento, avenida,calle, interseccion,
         autopista, esquina, rotonda, carril, cruce, peaje, tunel, semaforo
         :returns: retorna la proporción de cada ubicación vial
-
         """
         aux = []
         for caso in self.casos:
@@ -149,12 +140,8 @@ class TablaCasos:
                 aux.append('trasera')
             else:
                 aux.append('desconocido')
-
         labels, sizes, colors = set_pie(aux)
-        pie = plt.subplot(111)
-        pie.axis('off')
-        pie.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', shadow=False, startangle=140)
-        plt.savefig(self.TableName + '_impact_posicion.png')
+        charts.createPie(data=sizes,labels=labels,title= self.TableName + ' - posicion del impacto',save=self.TableName + '_impact_posicion.png')
 
     def plot_quien(self):
         plt.clf()
@@ -162,7 +149,6 @@ class TablaCasos:
         :function: las ubicaiones viales serán garaje, estacionamiento, avenida,calle, interseccion,
         autopista, esquina, rotonda, carril, cruce, peaje, tunel, semaforo
         :returns: retorna la proporción de cada ubicación vial
-
         """
         aux = []
         for caso in self.casos:
@@ -172,16 +158,11 @@ class TablaCasos:
                 aux.append('tercero')
             else:
                 aux.append('desconocido')
-
         labels, sizes, colors = set_pie(aux)
-        pie = plt.subplot(111)
-        pie.axis('off')
-        pie.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', shadow=False, startangle=140)
-        plt.savefig(self.TableName + '_quien.png')
+        charts.createPie(data=sizes,labels=labels,title=self.TableName + ' - responsable',save=self.TableName + '_quien.png')
 
     def cross_plot(self):
         plt.clf()
-        plt.title('Clasifiación completa')
         aux, aux1, aux2 = [], [], []
         for caso in self.casos:
             if is_complete(caso):
@@ -190,31 +171,14 @@ class TablaCasos:
                 aux1.append(caso.get_responsabilidad())
             else:
                 aux2.append(caso.get_responsabilidad())
-
         label, sizes, colors = set_pie(aux)
-        pie = plt.subplot(111)
-        pie.axis('off')
-        pie.pie(sizes, labels=label, colors=colors, autopct='%1.1f%%', shadow=False, startangle=140)
-        plt.savefig(self.TableName + '_responsabilidad_completo.png')
-
+        charts.createPie(data=sizes,labels=label,title=self.TableName + ' - perfil completo',save=self.TableName + '_responsabilidad_completo.png')
         plt.clf()
-        plt.title('Clasifiación vacía')
-
         label, sizes, colors = set_pie(aux1)
-        pie = plt.subplot(111)
-        pie.axis('off')
-        pie.pie(sizes, labels=label, colors=colors, autopct='%1.1f%%', shadow=False, startangle=140)
-        plt.savefig(self.TableName + '_responsabilidad_vacio.png')
-
+        charts.createPie(data=sizes,labels=label,title=self.TableName + ' - perfil vacío',save=self.TableName + '_responsabilidad_vacio.png')
         plt.clf()
-        plt.title('Clasifiación parcial')
-
         label, sizes, colors = set_pie(aux2)
-        pie = plt.subplot(111)
-        pie.axis('off')
-        pie.pie(sizes, labels=label, colors=colors, autopct='%1.1f%%', shadow=False, startangle=140)
-        plt.savefig(self.TableName + '_responsabilidad_parcial.png')
-
+        charts.createPie(data=sizes,labels=label,title=self.TableName + ' - perfil parcial',save=self.TableName + '_responsabilidad_parcial.png')
 
 class Caso:
     """

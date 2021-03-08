@@ -401,6 +401,13 @@ tabla.update()
 tabla.status()
 # ResponsabilityPredictor(tabla)
 # kpi(tabla)
+tabla.plot_casos_completos()
+tabla.plot_movimiento()
+tabla.plot_posicion_impact()
+tabla.plot_quien()
+tabla.plot_ubicacion_vial()
+tabla.cross_plot()
+
 
 
 tabla.to_csv()

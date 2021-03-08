@@ -52,4 +52,4 @@ def createPie(data=list,labels=list,title='Pie Chart Basic',type='pie',save='pie
     ax.set_title(label=title,loc='left')
     plt.savefig(save)
 
-createPie(data=[375,75,250,300,20,8,78],labels=['flour','sugar','butter','berries','doritos','blabla','prueba'])
+# createPie(data=[375,75,250,300,20,8,78],labels=['flour','sugar','butter','berries','doritos','blabla','prueba'])

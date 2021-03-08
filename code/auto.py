@@ -11,7 +11,7 @@ if __name__ == "__main__":
     dataframe['descripcion'] = clean.changeWords(dataframe['descripcion'], dictionary.carDic())
     dataframe['descripcion'] = clean.changeRatios(dataframe['descripcion'], dictionary.verbsDic())
     dataframe['descripcion'] = clean.changeWords(dataframe['descripcion'], dictionary.convergeVerbsDic())
-    dataframe['descripcion'] = clean.changeWords(dataframe['descripcion'], dictionary.convergeVehicles())
+    dataframe['descripcion'] = clean.changeWords(dataframe['descripcion'], dictionary.convergeVehiclesDic())
     dataframe['descripcion'] = clean.changeWords(dataframe['descripcion'], dictionary.crashDic())
     dataframe['descripcion'] = clean.changeWords(dataframe['descripcion'], dictionary.partsDic())
     dataframe['descripcion'] = clean.changeWords(dataframe['descripcion'], dictionary.orderParts())

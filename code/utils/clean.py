@@ -1,5 +1,5 @@
 import re
-import dictionary, ratio
+from utils import dictionary, ratio
 
 def general(txt):
     """

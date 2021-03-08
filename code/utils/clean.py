@@ -33,7 +33,7 @@ def changeWords(dataframe, vector):
     for value in vector:
         for word in value[0]:
             fstring,cantidad = re.subn(r'\ '+ word + r'\ ',r' '+ value[1] + r' ',fstring)
-            print(word + ' SE CAMBIO POR ' + value[1] + ' ' + str(cantidad) + ' VECES')
+            # print(word + ' SE CAMBIO POR ' + value[1] + ' ' + str(cantidad) + ' VECES')
     return fstring.split(' | ')[:-1]
 
 def changeRatios(dataframe, vector):
